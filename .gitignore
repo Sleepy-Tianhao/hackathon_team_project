@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and local overrides
+.env
+.env.local
+
+# Databases (regenerated from data/sales.csv on startup)
+*.db
+*.sqlite
+*.sqlite3
+data/sales.db*
+
+# Test / dev scratch space
+tests/_tmp/
+.scratch/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

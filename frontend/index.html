@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Forecast</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="card" id="card">
+
+  <header class="card-head">
+    <span class="brand" id="brand"></span>
+    <h1 class="title" id="app-title">Loading…</h1>
+    <p class="subtitle" id="app-subtitle"></p>
+  </header>
+
+  <form class="card-body" id="form" autocomplete="off">
+    <div class="fields" id="fields"></div>
+    <button class="primary" id="submit" type="submit" disabled>Predict</button>
+    <p class="error" id="form-error" hidden></p>
+  </form>
+
+  <section class="card-result" id="result" hidden>
+    <p class="result-headline" id="result-headline"></p>
+    <p class="result-value" id="result-value">—</p>
+    <p class="result-unit" id="result-unit"></p>
+    <p class="result-delta" id="result-delta"></p>
+
+    <div class="explain">
+      <p class="explain-head"><span aria-hidden="true">🤖</span> <span id="explain-title">AI Explanation</span></p>
+      <p class="explain-body" id="result-explanation"></p>
+    </div>
+
+    <p class="meta" id="result-meta"></p>
+  </section>
+
+</main>
+<p class="footer" id="footer"></p>
+
+<script src="app.js"></script>
+</body>
+</html>

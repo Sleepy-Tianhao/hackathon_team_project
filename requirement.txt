@@ -1,0 +1,22 @@
+# SDC Hackathon - 零售销售分析与预测平台
+#
+# 核心 Web 依赖（backend.main 的 FastAPI 部署方式需要）
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.13.4
+starlette==0.41.3
+
+# 数据与机器学习（backend.predictor 需要）
+pandas==2.3.1
+numpy==2.3.2
+scikit-learn==1.9.0
+SQLAlchemy==2.0.52
+joblib==1.5.3
+
+# 配置与 AI 叙事（backend.ai 通过 requests 调用 OpenAI 兼容网关）
+python-dotenv==1.2.3
+requests==2.32.4
+
+# 测试（tests/test_api.py 也可以仅用标准库 unittest 运行）
+pytest==8.3.4
+httpx==0.28.1

@@ -1,0 +1,70 @@
+{
+  "_readme": [
+    "唯一配置源 (single source of truth)：页面标题、输入字段、输出文案、模型插件全部在此声明。",
+    "改这个文件即可换题，无需改任何 HTML/JS/Python。字段说明见 TEMPLATE.md。",
+    "把这个文件替换成 templates/food-demand.json 的内容，即可变成校园食堂需求预测。"
+  ],
+
+  "id": "retail-forecast",
+  "app": {
+    "brand": "SDC",
+    "title": "SMART SALES FORECAST",
+    "subtitle": "AI-powered retail demand prediction",
+    "footer": "模板驱动 · 模型插件可替换 · 外接 API 见 TEMPLATE.md"
+  },
+
+  "dataset": {
+    "path": "data/sales.csv",
+    "date_column": "date",
+    "target": "revenue",
+    "unit": "元",
+    "target_label": "营收"
+  },
+
+  "model": {
+    "plugin": "sales-forecast",
+    "options": {}
+  },
+
+  "fields": [
+    {
+      "name": "store",
+      "label": "Store",
+      "type": "select",
+      "source": "dataset",
+      "column": "store",
+      "required": true,
+      "help": "选择门店"
+    },
+    {
+      "name": "category",
+      "label": "Category",
+      "type": "select",
+      "source": "dataset",
+      "column": "category",
+      "required": true,
+      "help": "选择品类"
+    },
+    {
+      "name": "horizon",
+      "label": "Horizon",
+      "type": "number",
+      "source": "static",
+      "options": [7, 14, 30, 60, 90],
+      "default": 30,
+      "suffix": "days",
+      "required": true,
+      "help": "预测时长"
+    }
+  ],
+
+  "output": {
+    "headline": "Predicted daily revenue",
+    "subheadline": "模型预测的日均营收",
+    "unit": "元",
+    "decimals": 0,
+    "delta_label": "vs. 历史日均",
+    "explanation_title": "AI Explanation",
+    "submit_label": "Predict Revenue"
+  }
+}
