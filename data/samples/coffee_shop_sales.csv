@@ -1,0 +1,1001 @@
+﻿date,drink,weekday,weather,term_phase,cups
+2025-01-06,Latte,Monday,Cloudy,Term,120
+2025-01-06,Americano,Monday,Cloudy,Term,77
+2025-01-06,Matcha,Monday,Cloudy,Term,44
+2025-01-06,Cold Brew,Monday,Cloudy,Term,73
+2025-01-06,Cocoa,Monday,Cloudy,Term,40
+2025-01-07,Latte,Tuesday,Sunny,Exam Week,137
+2025-01-07,Americano,Tuesday,Sunny,Exam Week,105
+2025-01-07,Matcha,Tuesday,Sunny,Exam Week,63
+2025-01-07,Cold Brew,Tuesday,Sunny,Exam Week,78
+2025-01-07,Cocoa,Tuesday,Sunny,Exam Week,48
+2025-01-08,Latte,Wednesday,Cloudy,Exam Week,119
+2025-01-08,Americano,Wednesday,Cloudy,Exam Week,87
+2025-01-08,Matcha,Wednesday,Cloudy,Exam Week,55
+2025-01-08,Cold Brew,Wednesday,Cloudy,Exam Week,91
+2025-01-08,Cocoa,Wednesday,Cloudy,Exam Week,48
+2025-01-09,Latte,Thursday,Sunny,Term,111
+2025-01-09,Americano,Thursday,Sunny,Term,83
+2025-01-09,Matcha,Thursday,Sunny,Term,56
+2025-01-09,Cold Brew,Thursday,Sunny,Term,74
+2025-01-09,Cocoa,Thursday,Sunny,Term,35
+2025-01-10,Latte,Friday,Rain,Term,69
+2025-01-10,Americano,Friday,Rain,Term,52
+2025-01-10,Matcha,Friday,Rain,Term,39
+2025-01-10,Cold Brew,Friday,Rain,Term,49
+2025-01-10,Cocoa,Friday,Rain,Term,27
+2025-01-11,Latte,Saturday,Sunny,Term,50
+2025-01-11,Americano,Saturday,Sunny,Term,39
+2025-01-11,Matcha,Saturday,Sunny,Term,20
+2025-01-11,Cold Brew,Saturday,Sunny,Term,33
+2025-01-11,Cocoa,Saturday,Sunny,Term,28
+2025-01-12,Latte,Sunday,Sunny,Vacation,15
+2025-01-12,Americano,Sunday,Sunny,Vacation,13
+2025-01-12,Matcha,Sunday,Sunny,Vacation,7
+2025-01-12,Cold Brew,Sunday,Sunny,Vacation,9
+2025-01-12,Cocoa,Sunday,Sunny,Vacation,6
+2025-01-13,Latte,Monday,Cloudy,Term,122
+2025-01-13,Americano,Monday,Cloudy,Term,85
+2025-01-13,Matcha,Monday,Cloudy,Term,46
+2025-01-13,Cold Brew,Monday,Cloudy,Term,63
+2025-01-13,Cocoa,Monday,Cloudy,Term,52
+2025-01-14,Latte,Tuesday,Cloudy,Term,87
+2025-01-14,Americano,Tuesday,Cloudy,Term,59
+2025-01-14,Matcha,Tuesday,Cloudy,Term,49
+2025-01-14,Cold Brew,Tuesday,Cloudy,Term,52
+2025-01-14,Cocoa,Tuesday,Cloudy,Term,39
+2025-01-15,Latte,Wednesday,Cloudy,Exam Week,121
+2025-01-15,Americano,Wednesday,Cloudy,Exam Week,95
+2025-01-15,Matcha,Wednesday,Cloudy,Exam Week,55
+2025-01-15,Cold Brew,Wednesday,Cloudy,Exam Week,68
+2025-01-15,Cocoa,Wednesday,Cloudy,Exam Week,50
+2025-01-16,Latte,Thursday,Cloudy,Exam Week,125
+2025-01-16,Americano,Thursday,Cloudy,Exam Week,84
+2025-01-16,Matcha,Thursday,Cloudy,Exam Week,47
+2025-01-16,Cold Brew,Thursday,Cloudy,Exam Week,84
+2025-01-16,Cocoa,Thursday,Cloudy,Exam Week,45
+2025-01-17,Latte,Friday,Hot,Exam Week,97
+2025-01-17,Americano,Friday,Hot,Exam Week,88
+2025-01-17,Matcha,Friday,Hot,Exam Week,51
+2025-01-17,Cold Brew,Friday,Hot,Exam Week,68
+2025-01-17,Cocoa,Friday,Hot,Exam Week,36
+2025-01-18,Latte,Saturday,Hot,Exam Week,65
+2025-01-18,Americano,Saturday,Hot,Exam Week,49
+2025-01-18,Matcha,Saturday,Hot,Exam Week,27
+2025-01-18,Cold Brew,Saturday,Hot,Exam Week,38
+2025-01-18,Cocoa,Saturday,Hot,Exam Week,27
+2025-01-19,Latte,Sunday,Cloudy,Vacation,13
+2025-01-19,Americano,Sunday,Cloudy,Vacation,10
+2025-01-19,Matcha,Sunday,Cloudy,Vacation,9
+2025-01-19,Cold Brew,Sunday,Cloudy,Vacation,9
+2025-01-19,Cocoa,Sunday,Cloudy,Vacation,6
+2025-01-20,Latte,Monday,Sunny,Term,125
+2025-01-20,Americano,Monday,Sunny,Term,85
+2025-01-20,Matcha,Monday,Sunny,Term,47
+2025-01-20,Cold Brew,Monday,Sunny,Term,68
+2025-01-20,Cocoa,Monday,Sunny,Term,47
+2025-01-21,Latte,Tuesday,Sunny,Term,113
+2025-01-21,Americano,Tuesday,Sunny,Term,66
+2025-01-21,Matcha,Tuesday,Sunny,Term,60
+2025-01-21,Cold Brew,Tuesday,Sunny,Term,75
+2025-01-21,Cocoa,Tuesday,Sunny,Term,39
+2025-01-22,Latte,Wednesday,Sunny,Term,104
+2025-01-22,Americano,Wednesday,Sunny,Term,83
+2025-01-22,Matcha,Wednesday,Sunny,Term,52
+2025-01-22,Cold Brew,Wednesday,Sunny,Term,71
+2025-01-22,Cocoa,Wednesday,Sunny,Term,46
+2025-01-23,Latte,Thursday,Cloudy,Term,81
+2025-01-23,Americano,Thursday,Cloudy,Term,73
+2025-01-23,Matcha,Thursday,Cloudy,Term,42
+2025-01-23,Cold Brew,Thursday,Cloudy,Term,64
+2025-01-23,Cocoa,Thursday,Cloudy,Term,43
+2025-01-24,Latte,Friday,Cloudy,Term,80
+2025-01-24,Americano,Friday,Cloudy,Term,84
+2025-01-24,Matcha,Friday,Cloudy,Term,40
+2025-01-24,Cold Brew,Friday,Cloudy,Term,65
+2025-01-24,Cocoa,Friday,Cloudy,Term,39
+2025-01-25,Latte,Saturday,Rain,Exam Week,60
+2025-01-25,Americano,Saturday,Rain,Exam Week,42
+2025-01-25,Matcha,Saturday,Rain,Exam Week,29
+2025-01-25,Cold Brew,Saturday,Rain,Exam Week,30
+2025-01-25,Cocoa,Saturday,Rain,Exam Week,24
+2025-01-26,Latte,Sunday,Cloudy,Term,45
+2025-01-26,Americano,Sunday,Cloudy,Term,28
+2025-01-26,Matcha,Sunday,Cloudy,Term,19
+2025-01-26,Cold Brew,Sunday,Cloudy,Term,27
+2025-01-26,Cocoa,Sunday,Cloudy,Term,22
+2025-01-27,Latte,Monday,Hot,Term,90
+2025-01-27,Americano,Monday,Hot,Term,64
+2025-01-27,Matcha,Monday,Hot,Term,49
+2025-01-27,Cold Brew,Monday,Hot,Term,72
+2025-01-27,Cocoa,Monday,Hot,Term,40
+2025-01-28,Latte,Tuesday,Rain,Exam Week,125
+2025-01-28,Americano,Tuesday,Rain,Exam Week,79
+2025-01-28,Matcha,Tuesday,Rain,Exam Week,51
+2025-01-28,Cold Brew,Tuesday,Rain,Exam Week,68
+2025-01-28,Cocoa,Tuesday,Rain,Exam Week,53
+2025-01-29,Latte,Wednesday,Cloudy,Exam Week,121
+2025-01-29,Americano,Wednesday,Cloudy,Exam Week,90
+2025-01-29,Matcha,Wednesday,Cloudy,Exam Week,57
+2025-01-29,Cold Brew,Wednesday,Cloudy,Exam Week,69
+2025-01-29,Cocoa,Wednesday,Cloudy,Exam Week,44
+2025-01-30,Latte,Thursday,Rain,Exam Week,99
+2025-01-30,Americano,Thursday,Rain,Exam Week,64
+2025-01-30,Matcha,Thursday,Rain,Exam Week,44
+2025-01-30,Cold Brew,Thursday,Rain,Exam Week,66
+2025-01-30,Cocoa,Thursday,Rain,Exam Week,39
+2025-01-31,Latte,Friday,Sunny,Term,85
+2025-01-31,Americano,Friday,Sunny,Term,67
+2025-01-31,Matcha,Friday,Sunny,Term,46
+2025-01-31,Cold Brew,Friday,Sunny,Term,59
+2025-01-31,Cocoa,Friday,Sunny,Term,41
+2025-02-01,Latte,Saturday,Sunny,Term,59
+2025-02-01,Americano,Saturday,Sunny,Term,49
+2025-02-01,Matcha,Saturday,Sunny,Term,29
+2025-02-01,Cold Brew,Saturday,Sunny,Term,44
+2025-02-01,Cocoa,Saturday,Sunny,Term,26
+2025-02-02,Latte,Sunday,Sunny,Vacation,14
+2025-02-02,Americano,Sunday,Sunny,Vacation,11
+2025-02-02,Matcha,Sunday,Sunny,Vacation,8
+2025-02-02,Cold Brew,Sunday,Sunny,Vacation,11
+2025-02-02,Cocoa,Sunday,Sunny,Vacation,6
+2025-02-03,Latte,Monday,Sunny,Term,113
+2025-02-03,Americano,Monday,Sunny,Term,83
+2025-02-03,Matcha,Monday,Sunny,Term,54
+2025-02-03,Cold Brew,Monday,Sunny,Term,72
+2025-02-03,Cocoa,Monday,Sunny,Term,44
+2025-02-04,Latte,Tuesday,Rain,Vacation,29
+2025-02-04,Americano,Tuesday,Rain,Vacation,21
+2025-02-04,Matcha,Tuesday,Rain,Vacation,14
+2025-02-04,Cold Brew,Tuesday,Rain,Vacation,19
+2025-02-04,Cocoa,Tuesday,Rain,Vacation,16
+2025-02-05,Latte,Wednesday,Sunny,Term,112
+2025-02-05,Americano,Wednesday,Sunny,Term,72
+2025-02-05,Matcha,Wednesday,Sunny,Term,50
+2025-02-05,Cold Brew,Wednesday,Sunny,Term,85
+2025-02-05,Cocoa,Wednesday,Sunny,Term,46
+2025-02-06,Latte,Thursday,Cloudy,Term,115
+2025-02-06,Americano,Thursday,Cloudy,Term,77
+2025-02-06,Matcha,Thursday,Cloudy,Term,52
+2025-02-06,Cold Brew,Thursday,Cloudy,Term,65
+2025-02-06,Cocoa,Thursday,Cloudy,Term,42
+2025-02-07,Latte,Friday,Cloudy,Term,78
+2025-02-07,Americano,Friday,Cloudy,Term,70
+2025-02-07,Matcha,Friday,Cloudy,Term,44
+2025-02-07,Cold Brew,Friday,Cloudy,Term,60
+2025-02-07,Cocoa,Friday,Cloudy,Term,38
+2025-02-08,Latte,Saturday,Hot,Term,57
+2025-02-08,Americano,Saturday,Hot,Term,39
+2025-02-08,Matcha,Saturday,Hot,Term,22
+2025-02-08,Cold Brew,Saturday,Hot,Term,31
+2025-02-08,Cocoa,Saturday,Hot,Term,21
+2025-02-09,Latte,Sunday,Hot,Term,44
+2025-02-09,Americano,Sunday,Hot,Term,27
+2025-02-09,Matcha,Sunday,Hot,Term,17
+2025-02-09,Cold Brew,Sunday,Hot,Term,26
+2025-02-09,Cocoa,Sunday,Hot,Term,20
+2025-02-10,Latte,Monday,Cloudy,Term,101
+2025-02-10,Americano,Monday,Cloudy,Term,82
+2025-02-10,Matcha,Monday,Cloudy,Term,43
+2025-02-10,Cold Brew,Monday,Cloudy,Term,55
+2025-02-10,Cocoa,Monday,Cloudy,Term,46
+2025-02-11,Latte,Tuesday,Hot,Vacation,33
+2025-02-11,Americano,Tuesday,Hot,Vacation,26
+2025-02-11,Matcha,Tuesday,Hot,Vacation,17
+2025-02-11,Cold Brew,Tuesday,Hot,Vacation,22
+2025-02-11,Cocoa,Tuesday,Hot,Vacation,15
+2025-02-12,Latte,Wednesday,Sunny,Term,105
+2025-02-12,Americano,Wednesday,Sunny,Term,75
+2025-02-12,Matcha,Wednesday,Sunny,Term,49
+2025-02-12,Cold Brew,Wednesday,Sunny,Term,68
+2025-02-12,Cocoa,Wednesday,Sunny,Term,49
+2025-02-13,Latte,Thursday,Hot,Vacation,33
+2025-02-13,Americano,Thursday,Hot,Vacation,27
+2025-02-13,Matcha,Thursday,Hot,Vacation,14
+2025-02-13,Cold Brew,Thursday,Hot,Vacation,21
+2025-02-13,Cocoa,Thursday,Hot,Vacation,14
+2025-02-14,Latte,Friday,Rain,Term,72
+2025-02-14,Americano,Friday,Rain,Term,58
+2025-02-14,Matcha,Friday,Rain,Term,37
+2025-02-14,Cold Brew,Friday,Rain,Term,50
+2025-02-14,Cocoa,Friday,Rain,Term,31
+2025-02-15,Latte,Saturday,Sunny,Term,73
+2025-02-15,Americano,Saturday,Sunny,Term,48
+2025-02-15,Matcha,Saturday,Sunny,Term,28
+2025-02-15,Cold Brew,Saturday,Sunny,Term,35
+2025-02-15,Cocoa,Saturday,Sunny,Term,26
+2025-02-16,Latte,Sunday,Rain,Vacation,12
+2025-02-16,Americano,Sunday,Rain,Vacation,9
+2025-02-16,Matcha,Sunday,Rain,Vacation,6
+2025-02-16,Cold Brew,Sunday,Rain,Vacation,9
+2025-02-16,Cocoa,Sunday,Rain,Vacation,6
+2025-02-17,Latte,Monday,Sunny,Term,102
+2025-02-17,Americano,Monday,Sunny,Term,94
+2025-02-17,Matcha,Monday,Sunny,Term,51
+2025-02-17,Cold Brew,Monday,Sunny,Term,65
+2025-02-17,Cocoa,Monday,Sunny,Term,46
+2025-02-18,Latte,Tuesday,Rain,Term,98
+2025-02-18,Americano,Tuesday,Rain,Term,69
+2025-02-18,Matcha,Tuesday,Rain,Term,39
+2025-02-18,Cold Brew,Tuesday,Rain,Term,51
+2025-02-18,Cocoa,Tuesday,Rain,Term,35
+2025-02-19,Latte,Wednesday,Cloudy,Term,86
+2025-02-19,Americano,Wednesday,Cloudy,Term,80
+2025-02-19,Matcha,Wednesday,Cloudy,Term,52
+2025-02-19,Cold Brew,Wednesday,Cloudy,Term,49
+2025-02-19,Cocoa,Wednesday,Cloudy,Term,45
+2025-02-20,Latte,Thursday,Sunny,Term,104
+2025-02-20,Americano,Thursday,Sunny,Term,79
+2025-02-20,Matcha,Thursday,Sunny,Term,40
+2025-02-20,Cold Brew,Thursday,Sunny,Term,67
+2025-02-20,Cocoa,Thursday,Sunny,Term,35
+2025-02-21,Latte,Friday,Cloudy,Term,87
+2025-02-21,Americano,Friday,Cloudy,Term,66
+2025-02-21,Matcha,Friday,Cloudy,Term,48
+2025-02-21,Cold Brew,Friday,Cloudy,Term,64
+2025-02-21,Cocoa,Friday,Cloudy,Term,44
+2025-02-22,Latte,Saturday,Rain,Exam Week,56
+2025-02-22,Americano,Saturday,Rain,Exam Week,44
+2025-02-22,Matcha,Saturday,Rain,Exam Week,26
+2025-02-22,Cold Brew,Saturday,Rain,Exam Week,34
+2025-02-22,Cocoa,Saturday,Rain,Exam Week,21
+2025-02-23,Latte,Sunday,Sunny,Vacation,14
+2025-02-23,Americano,Sunday,Sunny,Vacation,10
+2025-02-23,Matcha,Sunday,Sunny,Vacation,8
+2025-02-23,Cold Brew,Sunday,Sunny,Vacation,9
+2025-02-23,Cocoa,Sunday,Sunny,Vacation,8
+2025-02-24,Latte,Monday,Sunny,Term,105
+2025-02-24,Americano,Monday,Sunny,Term,71
+2025-02-24,Matcha,Monday,Sunny,Term,55
+2025-02-24,Cold Brew,Monday,Sunny,Term,66
+2025-02-24,Cocoa,Monday,Sunny,Term,38
+2025-02-25,Latte,Tuesday,Sunny,Term,121
+2025-02-25,Americano,Tuesday,Sunny,Term,89
+2025-02-25,Matcha,Tuesday,Sunny,Term,62
+2025-02-25,Cold Brew,Tuesday,Sunny,Term,68
+2025-02-25,Cocoa,Tuesday,Sunny,Term,50
+2025-02-26,Latte,Wednesday,Cloudy,Term,100
+2025-02-26,Americano,Wednesday,Cloudy,Term,61
+2025-02-26,Matcha,Wednesday,Cloudy,Term,41
+2025-02-26,Cold Brew,Wednesday,Cloudy,Term,67
+2025-02-26,Cocoa,Wednesday,Cloudy,Term,38
+2025-02-27,Latte,Thursday,Sunny,Term,117
+2025-02-27,Americano,Thursday,Sunny,Term,69
+2025-02-27,Matcha,Thursday,Sunny,Term,44
+2025-02-27,Cold Brew,Thursday,Sunny,Term,68
+2025-02-27,Cocoa,Thursday,Sunny,Term,43
+2025-02-28,Latte,Friday,Hot,Term,93
+2025-02-28,Americano,Friday,Hot,Term,68
+2025-02-28,Matcha,Friday,Hot,Term,43
+2025-02-28,Cold Brew,Friday,Hot,Term,54
+2025-02-28,Cocoa,Friday,Hot,Term,34
+2025-03-01,Latte,Saturday,Sunny,Term,55
+2025-03-01,Americano,Saturday,Sunny,Term,39
+2025-03-01,Matcha,Saturday,Sunny,Term,24
+2025-03-01,Cold Brew,Saturday,Sunny,Term,29
+2025-03-01,Cocoa,Saturday,Sunny,Term,28
+2025-03-02,Latte,Sunday,Sunny,Term,48
+2025-03-02,Americano,Sunday,Sunny,Term,35
+2025-03-02,Matcha,Sunday,Sunny,Term,23
+2025-03-02,Cold Brew,Sunday,Sunny,Term,30
+2025-03-02,Cocoa,Sunday,Sunny,Term,19
+2025-03-03,Latte,Monday,Sunny,Term,107
+2025-03-03,Americano,Monday,Sunny,Term,79
+2025-03-03,Matcha,Monday,Sunny,Term,57
+2025-03-03,Cold Brew,Monday,Sunny,Term,85
+2025-03-03,Cocoa,Monday,Sunny,Term,50
+2025-03-04,Latte,Tuesday,Rain,Term,96
+2025-03-04,Americano,Tuesday,Rain,Term,58
+2025-03-04,Matcha,Tuesday,Rain,Term,47
+2025-03-04,Cold Brew,Tuesday,Rain,Term,50
+2025-03-04,Cocoa,Tuesday,Rain,Term,34
+2025-03-05,Latte,Wednesday,Cloudy,Term,110
+2025-03-05,Americano,Wednesday,Cloudy,Term,72
+2025-03-05,Matcha,Wednesday,Cloudy,Term,59
+2025-03-05,Cold Brew,Wednesday,Cloudy,Term,59
+2025-03-05,Cocoa,Wednesday,Cloudy,Term,40
+2025-03-06,Latte,Thursday,Cloudy,Term,102
+2025-03-06,Americano,Thursday,Cloudy,Term,62
+2025-03-06,Matcha,Thursday,Cloudy,Term,42
+2025-03-06,Cold Brew,Thursday,Cloudy,Term,54
+2025-03-06,Cocoa,Thursday,Cloudy,Term,40
+2025-03-07,Latte,Friday,Rain,Term,89
+2025-03-07,Americano,Friday,Rain,Term,54
+2025-03-07,Matcha,Friday,Rain,Term,29
+2025-03-07,Cold Brew,Friday,Rain,Term,61
+2025-03-07,Cocoa,Friday,Rain,Term,33
+2025-03-08,Latte,Saturday,Sunny,Term,59
+2025-03-08,Americano,Saturday,Sunny,Term,40
+2025-03-08,Matcha,Saturday,Sunny,Term,27
+2025-03-08,Cold Brew,Saturday,Sunny,Term,36
+2025-03-08,Cocoa,Saturday,Sunny,Term,27
+2025-03-09,Latte,Sunday,Sunny,Exam Week,51
+2025-03-09,Americano,Sunday,Sunny,Exam Week,44
+2025-03-09,Matcha,Sunday,Sunny,Exam Week,27
+2025-03-09,Cold Brew,Sunday,Sunny,Exam Week,37
+2025-03-09,Cocoa,Sunday,Sunny,Exam Week,27
+2025-03-10,Latte,Monday,Cloudy,Term,95
+2025-03-10,Americano,Monday,Cloudy,Term,70
+2025-03-10,Matcha,Monday,Cloudy,Term,50
+2025-03-10,Cold Brew,Monday,Cloudy,Term,66
+2025-03-10,Cocoa,Monday,Cloudy,Term,45
+2025-03-11,Latte,Tuesday,Cloudy,Term,104
+2025-03-11,Americano,Tuesday,Cloudy,Term,74
+2025-03-11,Matcha,Tuesday,Cloudy,Term,51
+2025-03-11,Cold Brew,Tuesday,Cloudy,Term,76
+2025-03-11,Cocoa,Tuesday,Cloudy,Term,27
+2025-03-12,Latte,Wednesday,Rain,Exam Week,99
+2025-03-12,Americano,Wednesday,Rain,Exam Week,84
+2025-03-12,Matcha,Wednesday,Rain,Exam Week,49
+2025-03-12,Cold Brew,Wednesday,Rain,Exam Week,57
+2025-03-12,Cocoa,Wednesday,Rain,Exam Week,41
+2025-03-13,Latte,Thursday,Rain,Exam Week,110
+2025-03-13,Americano,Thursday,Rain,Exam Week,78
+2025-03-13,Matcha,Thursday,Rain,Exam Week,48
+2025-03-13,Cold Brew,Thursday,Rain,Exam Week,56
+2025-03-13,Cocoa,Thursday,Rain,Exam Week,42
+2025-03-14,Latte,Friday,Sunny,Term,97
+2025-03-14,Americano,Friday,Sunny,Term,67
+2025-03-14,Matcha,Friday,Sunny,Term,44
+2025-03-14,Cold Brew,Friday,Sunny,Term,75
+2025-03-14,Cocoa,Friday,Sunny,Term,38
+2025-03-15,Latte,Saturday,Sunny,Term,64
+2025-03-15,Americano,Saturday,Sunny,Term,36
+2025-03-15,Matcha,Saturday,Sunny,Term,25
+2025-03-15,Cold Brew,Saturday,Sunny,Term,35
+2025-03-15,Cocoa,Saturday,Sunny,Term,23
+2025-03-16,Latte,Sunday,Cloudy,Term,40
+2025-03-16,Americano,Sunday,Cloudy,Term,31
+2025-03-16,Matcha,Sunday,Cloudy,Term,22
+2025-03-16,Cold Brew,Sunday,Cloudy,Term,30
+2025-03-16,Cocoa,Sunday,Cloudy,Term,18
+2025-03-17,Latte,Monday,Rain,Vacation,27
+2025-03-17,Americano,Monday,Rain,Vacation,25
+2025-03-17,Matcha,Monday,Rain,Vacation,16
+2025-03-17,Cold Brew,Monday,Rain,Vacation,20
+2025-03-17,Cocoa,Monday,Rain,Vacation,12
+2025-03-18,Latte,Tuesday,Rain,Term,81
+2025-03-18,Americano,Tuesday,Rain,Term,73
+2025-03-18,Matcha,Tuesday,Rain,Term,38
+2025-03-18,Cold Brew,Tuesday,Rain,Term,64
+2025-03-18,Cocoa,Tuesday,Rain,Term,34
+2025-03-19,Latte,Wednesday,Hot,Term,83
+2025-03-19,Americano,Wednesday,Hot,Term,66
+2025-03-19,Matcha,Wednesday,Hot,Term,44
+2025-03-19,Cold Brew,Wednesday,Hot,Term,60
+2025-03-19,Cocoa,Wednesday,Hot,Term,31
+2025-03-20,Latte,Thursday,Sunny,Term,109
+2025-03-20,Americano,Thursday,Sunny,Term,70
+2025-03-20,Matcha,Thursday,Sunny,Term,47
+2025-03-20,Cold Brew,Thursday,Sunny,Term,49
+2025-03-20,Cocoa,Thursday,Sunny,Term,43
+2025-03-21,Latte,Friday,Cloudy,Term,83
+2025-03-21,Americano,Friday,Cloudy,Term,73
+2025-03-21,Matcha,Friday,Cloudy,Term,43
+2025-03-21,Cold Brew,Friday,Cloudy,Term,60
+2025-03-21,Cocoa,Friday,Cloudy,Term,40
+2025-03-22,Latte,Saturday,Cloudy,Term,50
+2025-03-22,Americano,Saturday,Cloudy,Term,49
+2025-03-22,Matcha,Saturday,Cloudy,Term,23
+2025-03-22,Cold Brew,Saturday,Cloudy,Term,29
+2025-03-22,Cocoa,Saturday,Cloudy,Term,22
+2025-03-23,Latte,Sunday,Cloudy,Term,47
+2025-03-23,Americano,Sunday,Cloudy,Term,30
+2025-03-23,Matcha,Sunday,Cloudy,Term,17
+2025-03-23,Cold Brew,Sunday,Cloudy,Term,26
+2025-03-23,Cocoa,Sunday,Cloudy,Term,15
+2025-03-24,Latte,Monday,Sunny,Exam Week,141
+2025-03-24,Americano,Monday,Sunny,Exam Week,108
+2025-03-24,Matcha,Monday,Sunny,Exam Week,60
+2025-03-24,Cold Brew,Monday,Sunny,Exam Week,78
+2025-03-24,Cocoa,Monday,Sunny,Exam Week,61
+2025-03-25,Latte,Tuesday,Sunny,Term,101
+2025-03-25,Americano,Tuesday,Sunny,Term,66
+2025-03-25,Matcha,Tuesday,Sunny,Term,45
+2025-03-25,Cold Brew,Tuesday,Sunny,Term,67
+2025-03-25,Cocoa,Tuesday,Sunny,Term,45
+2025-03-26,Latte,Wednesday,Hot,Term,89
+2025-03-26,Americano,Wednesday,Hot,Term,61
+2025-03-26,Matcha,Wednesday,Hot,Term,47
+2025-03-26,Cold Brew,Wednesday,Hot,Term,57
+2025-03-26,Cocoa,Wednesday,Hot,Term,38
+2025-03-27,Latte,Thursday,Sunny,Vacation,43
+2025-03-27,Americano,Thursday,Sunny,Vacation,25
+2025-03-27,Matcha,Thursday,Sunny,Vacation,17
+2025-03-27,Cold Brew,Thursday,Sunny,Vacation,21
+2025-03-27,Cocoa,Thursday,Sunny,Vacation,15
+2025-03-28,Latte,Friday,Hot,Term,74
+2025-03-28,Americano,Friday,Hot,Term,64
+2025-03-28,Matcha,Friday,Hot,Term,37
+2025-03-28,Cold Brew,Friday,Hot,Term,62
+2025-03-28,Cocoa,Friday,Hot,Term,40
+2025-03-29,Latte,Saturday,Cloudy,Exam Week,58
+2025-03-29,Americano,Saturday,Cloudy,Exam Week,44
+2025-03-29,Matcha,Saturday,Cloudy,Exam Week,27
+2025-03-29,Cold Brew,Saturday,Cloudy,Exam Week,37
+2025-03-29,Cocoa,Saturday,Cloudy,Exam Week,24
+2025-03-30,Latte,Sunday,Sunny,Term,50
+2025-03-30,Americano,Sunday,Sunny,Term,33
+2025-03-30,Matcha,Sunday,Sunny,Term,23
+2025-03-30,Cold Brew,Sunday,Sunny,Term,27
+2025-03-30,Cocoa,Sunday,Sunny,Term,15
+2025-03-31,Latte,Monday,Rain,Term,87
+2025-03-31,Americano,Monday,Rain,Term,74
+2025-03-31,Matcha,Monday,Rain,Term,50
+2025-03-31,Cold Brew,Monday,Rain,Term,54
+2025-03-31,Cocoa,Monday,Rain,Term,33
+2025-04-01,Latte,Tuesday,Cloudy,Term,98
+2025-04-01,Americano,Tuesday,Cloudy,Term,75
+2025-04-01,Matcha,Tuesday,Cloudy,Term,45
+2025-04-01,Cold Brew,Tuesday,Cloudy,Term,64
+2025-04-01,Cocoa,Tuesday,Cloudy,Term,44
+2025-04-02,Latte,Wednesday,Rain,Term,77
+2025-04-02,Americano,Wednesday,Rain,Term,54
+2025-04-02,Matcha,Wednesday,Rain,Term,38
+2025-04-02,Cold Brew,Wednesday,Rain,Term,57
+2025-04-02,Cocoa,Wednesday,Rain,Term,33
+2025-04-03,Latte,Thursday,Sunny,Term,109
+2025-04-03,Americano,Thursday,Sunny,Term,85
+2025-04-03,Matcha,Thursday,Sunny,Term,42
+2025-04-03,Cold Brew,Thursday,Sunny,Term,70
+2025-04-03,Cocoa,Thursday,Sunny,Term,44
+2025-04-04,Latte,Friday,Cloudy,Term,79
+2025-04-04,Americano,Friday,Cloudy,Term,62
+2025-04-04,Matcha,Friday,Cloudy,Term,40
+2025-04-04,Cold Brew,Friday,Cloudy,Term,55
+2025-04-04,Cocoa,Friday,Cloudy,Term,32
+2025-04-05,Latte,Saturday,Sunny,Term,54
+2025-04-05,Americano,Saturday,Sunny,Term,36
+2025-04-05,Matcha,Saturday,Sunny,Term,29
+2025-04-05,Cold Brew,Saturday,Sunny,Term,35
+2025-04-05,Cocoa,Saturday,Sunny,Term,21
+2025-04-06,Latte,Sunday,Sunny,Term,47
+2025-04-06,Americano,Sunday,Sunny,Term,33
+2025-04-06,Matcha,Sunday,Sunny,Term,19
+2025-04-06,Cold Brew,Sunday,Sunny,Term,34
+2025-04-06,Cocoa,Sunday,Sunny,Term,17
+2025-04-07,Latte,Monday,Sunny,Term,107
+2025-04-07,Americano,Monday,Sunny,Term,88
+2025-04-07,Matcha,Monday,Sunny,Term,52
+2025-04-07,Cold Brew,Monday,Sunny,Term,57
+2025-04-07,Cocoa,Monday,Sunny,Term,53
+2025-04-08,Latte,Tuesday,Hot,Term,84
+2025-04-08,Americano,Tuesday,Hot,Term,67
+2025-04-08,Matcha,Tuesday,Hot,Term,42
+2025-04-08,Cold Brew,Tuesday,Hot,Term,63
+2025-04-08,Cocoa,Tuesday,Hot,Term,39
+2025-04-09,Latte,Wednesday,Cloudy,Term,99
+2025-04-09,Americano,Wednesday,Cloudy,Term,76
+2025-04-09,Matcha,Wednesday,Cloudy,Term,52
+2025-04-09,Cold Brew,Wednesday,Cloudy,Term,49
+2025-04-09,Cocoa,Wednesday,Cloudy,Term,36
+2025-04-10,Latte,Thursday,Rain,Term,70
+2025-04-10,Americano,Thursday,Rain,Term,60
+2025-04-10,Matcha,Thursday,Rain,Term,38
+2025-04-10,Cold Brew,Thursday,Rain,Term,57
+2025-04-10,Cocoa,Thursday,Rain,Term,32
+2025-04-11,Latte,Friday,Sunny,Term,97
+2025-04-11,Americano,Friday,Sunny,Term,63
+2025-04-11,Matcha,Friday,Sunny,Term,50
+2025-04-11,Cold Brew,Friday,Sunny,Term,56
+2025-04-11,Cocoa,Friday,Sunny,Term,44
+2025-04-12,Latte,Saturday,Rain,Term,47
+2025-04-12,Americano,Saturday,Rain,Term,29
+2025-04-12,Matcha,Saturday,Rain,Term,22
+2025-04-12,Cold Brew,Saturday,Rain,Term,31
+2025-04-12,Cocoa,Saturday,Rain,Term,17
+2025-04-13,Latte,Sunday,Rain,Term,47
+2025-04-13,Americano,Sunday,Rain,Term,29
+2025-04-13,Matcha,Sunday,Rain,Term,18
+2025-04-13,Cold Brew,Sunday,Rain,Term,20
+2025-04-13,Cocoa,Sunday,Rain,Term,15
+2025-04-14,Latte,Monday,Cloudy,Term,101
+2025-04-14,Americano,Monday,Cloudy,Term,72
+2025-04-14,Matcha,Monday,Cloudy,Term,54
+2025-04-14,Cold Brew,Monday,Cloudy,Term,76
+2025-04-14,Cocoa,Monday,Cloudy,Term,47
+2025-04-15,Latte,Tuesday,Rain,Term,81
+2025-04-15,Americano,Tuesday,Rain,Term,70
+2025-04-15,Matcha,Tuesday,Rain,Term,41
+2025-04-15,Cold Brew,Tuesday,Rain,Term,55
+2025-04-15,Cocoa,Tuesday,Rain,Term,38
+2025-04-16,Latte,Wednesday,Sunny,Term,101
+2025-04-16,Americano,Wednesday,Sunny,Term,85
+2025-04-16,Matcha,Wednesday,Sunny,Term,45
+2025-04-16,Cold Brew,Wednesday,Sunny,Term,66
+2025-04-16,Cocoa,Wednesday,Sunny,Term,48
+2025-04-17,Latte,Thursday,Sunny,Term,110
+2025-04-17,Americano,Thursday,Sunny,Term,71
+2025-04-17,Matcha,Thursday,Sunny,Term,51
+2025-04-17,Cold Brew,Thursday,Sunny,Term,59
+2025-04-17,Cocoa,Thursday,Sunny,Term,40
+2025-04-18,Latte,Friday,Sunny,Term,99
+2025-04-18,Americano,Friday,Sunny,Term,86
+2025-04-18,Matcha,Friday,Sunny,Term,42
+2025-04-18,Cold Brew,Friday,Sunny,Term,69
+2025-04-18,Cocoa,Friday,Sunny,Term,43
+2025-04-19,Latte,Saturday,Hot,Term,50
+2025-04-19,Americano,Saturday,Hot,Term,35
+2025-04-19,Matcha,Saturday,Hot,Term,27
+2025-04-19,Cold Brew,Saturday,Hot,Term,29
+2025-04-19,Cocoa,Saturday,Hot,Term,20
+2025-04-20,Latte,Sunday,Hot,Term,37
+2025-04-20,Americano,Sunday,Hot,Term,32
+2025-04-20,Matcha,Sunday,Hot,Term,21
+2025-04-20,Cold Brew,Sunday,Hot,Term,27
+2025-04-20,Cocoa,Sunday,Hot,Term,16
+2025-04-21,Latte,Monday,Sunny,Term,110
+2025-04-21,Americano,Monday,Sunny,Term,95
+2025-04-21,Matcha,Monday,Sunny,Term,47
+2025-04-21,Cold Brew,Monday,Sunny,Term,52
+2025-04-21,Cocoa,Monday,Sunny,Term,44
+2025-04-22,Latte,Tuesday,Rain,Term,77
+2025-04-22,Americano,Tuesday,Rain,Term,71
+2025-04-22,Matcha,Tuesday,Rain,Term,38
+2025-04-22,Cold Brew,Tuesday,Rain,Term,57
+2025-04-22,Cocoa,Tuesday,Rain,Term,38
+2025-04-23,Latte,Wednesday,Cloudy,Exam Week,139
+2025-04-23,Americano,Wednesday,Cloudy,Exam Week,87
+2025-04-23,Matcha,Wednesday,Cloudy,Exam Week,59
+2025-04-23,Cold Brew,Wednesday,Cloudy,Exam Week,78
+2025-04-23,Cocoa,Wednesday,Cloudy,Exam Week,49
+2025-04-24,Latte,Thursday,Cloudy,Term,95
+2025-04-24,Americano,Thursday,Cloudy,Term,73
+2025-04-24,Matcha,Thursday,Cloudy,Term,47
+2025-04-24,Cold Brew,Thursday,Cloudy,Term,64
+2025-04-24,Cocoa,Thursday,Cloudy,Term,35
+2025-04-25,Latte,Friday,Sunny,Vacation,34
+2025-04-25,Americano,Friday,Sunny,Vacation,29
+2025-04-25,Matcha,Friday,Sunny,Vacation,18
+2025-04-25,Cold Brew,Friday,Sunny,Vacation,27
+2025-04-25,Cocoa,Friday,Sunny,Vacation,11
+2025-04-26,Latte,Saturday,Cloudy,Term,56
+2025-04-26,Americano,Saturday,Cloudy,Term,35
+2025-04-26,Matcha,Saturday,Cloudy,Term,21
+2025-04-26,Cold Brew,Saturday,Cloudy,Term,36
+2025-04-26,Cocoa,Saturday,Cloudy,Term,18
+2025-04-27,Latte,Sunday,Rain,Term,40
+2025-04-27,Americano,Sunday,Rain,Term,29
+2025-04-27,Matcha,Sunday,Rain,Term,17
+2025-04-27,Cold Brew,Sunday,Rain,Term,21
+2025-04-27,Cocoa,Sunday,Rain,Term,14
+2025-04-28,Latte,Monday,Cloudy,Exam Week,156
+2025-04-28,Americano,Monday,Cloudy,Exam Week,82
+2025-04-28,Matcha,Monday,Cloudy,Exam Week,52
+2025-04-28,Cold Brew,Monday,Cloudy,Exam Week,80
+2025-04-28,Cocoa,Monday,Cloudy,Exam Week,52
+2025-04-29,Latte,Tuesday,Cloudy,Term,107
+2025-04-29,Americano,Tuesday,Cloudy,Term,70
+2025-04-29,Matcha,Tuesday,Cloudy,Term,51
+2025-04-29,Cold Brew,Tuesday,Cloudy,Term,77
+2025-04-29,Cocoa,Tuesday,Cloudy,Term,41
+2025-04-30,Latte,Wednesday,Hot,Term,98
+2025-04-30,Americano,Wednesday,Hot,Term,64
+2025-04-30,Matcha,Wednesday,Hot,Term,37
+2025-04-30,Cold Brew,Wednesday,Hot,Term,54
+2025-04-30,Cocoa,Wednesday,Hot,Term,38
+2025-05-01,Latte,Thursday,Cloudy,Vacation,30
+2025-05-01,Americano,Thursday,Cloudy,Vacation,22
+2025-05-01,Matcha,Thursday,Cloudy,Vacation,12
+2025-05-01,Cold Brew,Thursday,Cloudy,Vacation,22
+2025-05-01,Cocoa,Thursday,Cloudy,Vacation,16
+2025-05-02,Latte,Friday,Rain,Term,76
+2025-05-02,Americano,Friday,Rain,Term,56
+2025-05-02,Matcha,Friday,Rain,Term,29
+2025-05-02,Cold Brew,Friday,Rain,Term,43
+2025-05-02,Cocoa,Friday,Rain,Term,34
+2025-05-03,Latte,Saturday,Cloudy,Term,57
+2025-05-03,Americano,Saturday,Cloudy,Term,38
+2025-05-03,Matcha,Saturday,Cloudy,Term,26
+2025-05-03,Cold Brew,Saturday,Cloudy,Term,30
+2025-05-03,Cocoa,Saturday,Cloudy,Term,20
+2025-05-04,Latte,Sunday,Rain,Term,36
+2025-05-04,Americano,Sunday,Rain,Term,27
+2025-05-04,Matcha,Sunday,Rain,Term,19
+2025-05-04,Cold Brew,Sunday,Rain,Term,27
+2025-05-04,Cocoa,Sunday,Rain,Term,18
+2025-05-05,Latte,Monday,Rain,Vacation,27
+2025-05-05,Americano,Monday,Rain,Vacation,22
+2025-05-05,Matcha,Monday,Rain,Vacation,14
+2025-05-05,Cold Brew,Monday,Rain,Vacation,18
+2025-05-05,Cocoa,Monday,Rain,Vacation,14
+2025-05-06,Latte,Tuesday,Sunny,Term,118
+2025-05-06,Americano,Tuesday,Sunny,Term,64
+2025-05-06,Matcha,Tuesday,Sunny,Term,61
+2025-05-06,Cold Brew,Tuesday,Sunny,Term,61
+2025-05-06,Cocoa,Tuesday,Sunny,Term,40
+2025-05-07,Latte,Wednesday,Cloudy,Term,90
+2025-05-07,Americano,Wednesday,Cloudy,Term,62
+2025-05-07,Matcha,Wednesday,Cloudy,Term,46
+2025-05-07,Cold Brew,Wednesday,Cloudy,Term,65
+2025-05-07,Cocoa,Wednesday,Cloudy,Term,40
+2025-05-08,Latte,Thursday,Sunny,Term,105
+2025-05-08,Americano,Thursday,Sunny,Term,81
+2025-05-08,Matcha,Thursday,Sunny,Term,58
+2025-05-08,Cold Brew,Thursday,Sunny,Term,62
+2025-05-08,Cocoa,Thursday,Sunny,Term,43
+2025-05-09,Latte,Friday,Sunny,Exam Week,135
+2025-05-09,Americano,Friday,Sunny,Exam Week,76
+2025-05-09,Matcha,Friday,Sunny,Exam Week,65
+2025-05-09,Cold Brew,Friday,Sunny,Exam Week,65
+2025-05-09,Cocoa,Friday,Sunny,Exam Week,45
+2025-05-10,Latte,Saturday,Sunny,Exam Week,65
+2025-05-10,Americano,Saturday,Sunny,Exam Week,64
+2025-05-10,Matcha,Saturday,Sunny,Exam Week,39
+2025-05-10,Cold Brew,Saturday,Sunny,Exam Week,44
+2025-05-10,Cocoa,Saturday,Sunny,Exam Week,28
+2025-05-11,Latte,Sunday,Rain,Term,35
+2025-05-11,Americano,Sunday,Rain,Term,27
+2025-05-11,Matcha,Sunday,Rain,Term,17
+2025-05-11,Cold Brew,Sunday,Rain,Term,20
+2025-05-11,Cocoa,Sunday,Rain,Term,16
+2025-05-12,Latte,Monday,Sunny,Term,109
+2025-05-12,Americano,Monday,Sunny,Term,83
+2025-05-12,Matcha,Monday,Sunny,Term,58
+2025-05-12,Cold Brew,Monday,Sunny,Term,62
+2025-05-12,Cocoa,Monday,Sunny,Term,45
+2025-05-13,Latte,Tuesday,Cloudy,Term,105
+2025-05-13,Americano,Tuesday,Cloudy,Term,70
+2025-05-13,Matcha,Tuesday,Cloudy,Term,48
+2025-05-13,Cold Brew,Tuesday,Cloudy,Term,60
+2025-05-13,Cocoa,Tuesday,Cloudy,Term,46
+2025-05-14,Latte,Wednesday,Rain,Term,74
+2025-05-14,Americano,Wednesday,Rain,Term,67
+2025-05-14,Matcha,Wednesday,Rain,Term,33
+2025-05-14,Cold Brew,Wednesday,Rain,Term,60
+2025-05-14,Cocoa,Wednesday,Rain,Term,40
+2025-05-15,Latte,Thursday,Cloudy,Term,96
+2025-05-15,Americano,Thursday,Cloudy,Term,75
+2025-05-15,Matcha,Thursday,Cloudy,Term,49
+2025-05-15,Cold Brew,Thursday,Cloudy,Term,64
+2025-05-15,Cocoa,Thursday,Cloudy,Term,39
+2025-05-16,Latte,Friday,Sunny,Term,101
+2025-05-16,Americano,Friday,Sunny,Term,76
+2025-05-16,Matcha,Friday,Sunny,Term,52
+2025-05-16,Cold Brew,Friday,Sunny,Term,56
+2025-05-16,Cocoa,Friday,Sunny,Term,42
+2025-05-17,Latte,Saturday,Sunny,Exam Week,69
+2025-05-17,Americano,Saturday,Sunny,Exam Week,50
+2025-05-17,Matcha,Saturday,Sunny,Exam Week,32
+2025-05-17,Cold Brew,Saturday,Sunny,Exam Week,40
+2025-05-17,Cocoa,Saturday,Sunny,Exam Week,25
+2025-05-18,Latte,Sunday,Sunny,Term,42
+2025-05-18,Americano,Sunday,Sunny,Term,35
+2025-05-18,Matcha,Sunday,Sunny,Term,21
+2025-05-18,Cold Brew,Sunday,Sunny,Term,32
+2025-05-18,Cocoa,Sunday,Sunny,Term,20
+2025-05-19,Latte,Monday,Hot,Term,104
+2025-05-19,Americano,Monday,Hot,Term,63
+2025-05-19,Matcha,Monday,Hot,Term,48
+2025-05-19,Cold Brew,Monday,Hot,Term,58
+2025-05-19,Cocoa,Monday,Hot,Term,41
+2025-05-20,Latte,Tuesday,Cloudy,Vacation,40
+2025-05-20,Americano,Tuesday,Cloudy,Vacation,26
+2025-05-20,Matcha,Tuesday,Cloudy,Vacation,18
+2025-05-20,Cold Brew,Tuesday,Cloudy,Vacation,18
+2025-05-20,Cocoa,Tuesday,Cloudy,Vacation,15
+2025-05-21,Latte,Wednesday,Sunny,Term,111
+2025-05-21,Americano,Wednesday,Sunny,Term,82
+2025-05-21,Matcha,Wednesday,Sunny,Term,44
+2025-05-21,Cold Brew,Wednesday,Sunny,Term,68
+2025-05-21,Cocoa,Wednesday,Sunny,Term,49
+2025-05-22,Latte,Thursday,Hot,Vacation,33
+2025-05-22,Americano,Thursday,Hot,Vacation,18
+2025-05-22,Matcha,Thursday,Hot,Vacation,16
+2025-05-22,Cold Brew,Thursday,Hot,Vacation,20
+2025-05-22,Cocoa,Thursday,Hot,Vacation,13
+2025-05-23,Latte,Friday,Sunny,Term,91
+2025-05-23,Americano,Friday,Sunny,Term,66
+2025-05-23,Matcha,Friday,Sunny,Term,49
+2025-05-23,Cold Brew,Friday,Sunny,Term,63
+2025-05-23,Cocoa,Friday,Sunny,Term,44
+2025-05-24,Latte,Saturday,Rain,Exam Week,58
+2025-05-24,Americano,Saturday,Rain,Exam Week,36
+2025-05-24,Matcha,Saturday,Rain,Exam Week,24
+2025-05-24,Cold Brew,Saturday,Rain,Exam Week,32
+2025-05-24,Cocoa,Saturday,Rain,Exam Week,27
+2025-05-25,Latte,Sunday,Cloudy,Term,44
+2025-05-25,Americano,Sunday,Cloudy,Term,32
+2025-05-25,Matcha,Sunday,Cloudy,Term,23
+2025-05-25,Cold Brew,Sunday,Cloudy,Term,28
+2025-05-25,Cocoa,Sunday,Cloudy,Term,18
+2025-05-26,Latte,Monday,Cloudy,Term,105
+2025-05-26,Americano,Monday,Cloudy,Term,77
+2025-05-26,Matcha,Monday,Cloudy,Term,53
+2025-05-26,Cold Brew,Monday,Cloudy,Term,66
+2025-05-26,Cocoa,Monday,Cloudy,Term,44
+2025-05-27,Latte,Tuesday,Hot,Term,87
+2025-05-27,Americano,Tuesday,Hot,Term,64
+2025-05-27,Matcha,Tuesday,Hot,Term,39
+2025-05-27,Cold Brew,Tuesday,Hot,Term,63
+2025-05-27,Cocoa,Tuesday,Hot,Term,42
+2025-05-28,Latte,Wednesday,Hot,Term,100
+2025-05-28,Americano,Wednesday,Hot,Term,81
+2025-05-28,Matcha,Wednesday,Hot,Term,44
+2025-05-28,Cold Brew,Wednesday,Hot,Term,73
+2025-05-28,Cocoa,Wednesday,Hot,Term,43
+2025-05-29,Latte,Thursday,Sunny,Term,93
+2025-05-29,Americano,Thursday,Sunny,Term,76
+2025-05-29,Matcha,Thursday,Sunny,Term,51
+2025-05-29,Cold Brew,Thursday,Sunny,Term,61
+2025-05-29,Cocoa,Thursday,Sunny,Term,40
+2025-05-30,Latte,Friday,Rain,Term,67
+2025-05-30,Americano,Friday,Rain,Term,52
+2025-05-30,Matcha,Friday,Rain,Term,34
+2025-05-30,Cold Brew,Friday,Rain,Term,46
+2025-05-30,Cocoa,Friday,Rain,Term,36
+2025-05-31,Latte,Saturday,Rain,Term,42
+2025-05-31,Americano,Saturday,Rain,Term,32
+2025-05-31,Matcha,Saturday,Rain,Term,21
+2025-05-31,Cold Brew,Saturday,Rain,Term,36
+2025-05-31,Cocoa,Saturday,Rain,Term,17
+2025-06-01,Latte,Sunday,Cloudy,Term,45
+2025-06-01,Americano,Sunday,Cloudy,Term,31
+2025-06-01,Matcha,Sunday,Cloudy,Term,20
+2025-06-01,Cold Brew,Sunday,Cloudy,Term,22
+2025-06-01,Cocoa,Sunday,Cloudy,Term,15
+2025-06-02,Latte,Monday,Rain,Term,103
+2025-06-02,Americano,Monday,Rain,Term,65
+2025-06-02,Matcha,Monday,Rain,Term,39
+2025-06-02,Cold Brew,Monday,Rain,Term,55
+2025-06-02,Cocoa,Monday,Rain,Term,36
+2025-06-03,Latte,Tuesday,Sunny,Term,111
+2025-06-03,Americano,Tuesday,Sunny,Term,88
+2025-06-03,Matcha,Tuesday,Sunny,Term,49
+2025-06-03,Cold Brew,Tuesday,Sunny,Term,60
+2025-06-03,Cocoa,Tuesday,Sunny,Term,53
+2025-06-04,Latte,Wednesday,Sunny,Term,106
+2025-06-04,Americano,Wednesday,Sunny,Term,76
+2025-06-04,Matcha,Wednesday,Sunny,Term,55
+2025-06-04,Cold Brew,Wednesday,Sunny,Term,71
+2025-06-04,Cocoa,Wednesday,Sunny,Term,36
+2025-06-05,Latte,Thursday,Sunny,Term,81
+2025-06-05,Americano,Thursday,Sunny,Term,76
+2025-06-05,Matcha,Thursday,Sunny,Term,48
+2025-06-05,Cold Brew,Thursday,Sunny,Term,57
+2025-06-05,Cocoa,Thursday,Sunny,Term,39
+2025-06-06,Latte,Friday,Cloudy,Term,88
+2025-06-06,Americano,Friday,Cloudy,Term,63
+2025-06-06,Matcha,Friday,Cloudy,Term,49
+2025-06-06,Cold Brew,Friday,Cloudy,Term,55
+2025-06-06,Cocoa,Friday,Cloudy,Term,37
+2025-06-07,Latte,Saturday,Hot,Term,54
+2025-06-07,Americano,Saturday,Hot,Term,40
+2025-06-07,Matcha,Saturday,Hot,Term,23
+2025-06-07,Cold Brew,Saturday,Hot,Term,33
+2025-06-07,Cocoa,Saturday,Hot,Term,21
+2025-06-08,Latte,Sunday,Hot,Term,38
+2025-06-08,Americano,Sunday,Hot,Term,30
+2025-06-08,Matcha,Sunday,Hot,Term,19
+2025-06-08,Cold Brew,Sunday,Hot,Term,23
+2025-06-08,Cocoa,Sunday,Hot,Term,18
+2025-06-09,Latte,Monday,Sunny,Term,112
+2025-06-09,Americano,Monday,Sunny,Term,93
+2025-06-09,Matcha,Monday,Sunny,Term,53
+2025-06-09,Cold Brew,Monday,Sunny,Term,76
+2025-06-09,Cocoa,Monday,Sunny,Term,48
+2025-06-10,Latte,Tuesday,Cloudy,Vacation,35
+2025-06-10,Americano,Tuesday,Cloudy,Vacation,21
+2025-06-10,Matcha,Tuesday,Cloudy,Vacation,17
+2025-06-10,Cold Brew,Tuesday,Cloudy,Vacation,21
+2025-06-10,Cocoa,Tuesday,Cloudy,Vacation,17
+2025-06-11,Latte,Wednesday,Rain,Exam Week,108
+2025-06-11,Americano,Wednesday,Rain,Exam Week,81
+2025-06-11,Matcha,Wednesday,Rain,Exam Week,41
+2025-06-11,Cold Brew,Wednesday,Rain,Exam Week,56
+2025-06-11,Cocoa,Wednesday,Rain,Exam Week,53
+2025-06-12,Latte,Thursday,Hot,Term,99
+2025-06-12,Americano,Thursday,Hot,Term,56
+2025-06-12,Matcha,Thursday,Hot,Term,44
+2025-06-12,Cold Brew,Thursday,Hot,Term,59
+2025-06-12,Cocoa,Thursday,Hot,Term,47
+2025-06-13,Latte,Friday,Cloudy,Term,87
+2025-06-13,Americano,Friday,Cloudy,Term,70
+2025-06-13,Matcha,Friday,Cloudy,Term,48
+2025-06-13,Cold Brew,Friday,Cloudy,Term,60
+2025-06-13,Cocoa,Friday,Cloudy,Term,36
+2025-06-14,Latte,Saturday,Sunny,Term,62
+2025-06-14,Americano,Saturday,Sunny,Term,40
+2025-06-14,Matcha,Saturday,Sunny,Term,27
+2025-06-14,Cold Brew,Saturday,Sunny,Term,36
+2025-06-14,Cocoa,Saturday,Sunny,Term,25
+2025-06-15,Latte,Sunday,Sunny,Term,43
+2025-06-15,Americano,Sunday,Sunny,Term,32
+2025-06-15,Matcha,Sunday,Sunny,Term,21
+2025-06-15,Cold Brew,Sunday,Sunny,Term,27
+2025-06-15,Cocoa,Sunday,Sunny,Term,19
+2025-06-16,Latte,Monday,Rain,Term,99
+2025-06-16,Americano,Monday,Rain,Term,67
+2025-06-16,Matcha,Monday,Rain,Term,45
+2025-06-16,Cold Brew,Monday,Rain,Term,50
+2025-06-16,Cocoa,Monday,Rain,Term,33
+2025-06-17,Latte,Tuesday,Rain,Term,99
+2025-06-17,Americano,Tuesday,Rain,Term,68
+2025-06-17,Matcha,Tuesday,Rain,Term,40
+2025-06-17,Cold Brew,Tuesday,Rain,Term,50
+2025-06-17,Cocoa,Tuesday,Rain,Term,33
+2025-06-18,Latte,Wednesday,Rain,Term,75
+2025-06-18,Americano,Wednesday,Rain,Term,64
+2025-06-18,Matcha,Wednesday,Rain,Term,38
+2025-06-18,Cold Brew,Wednesday,Rain,Term,57
+2025-06-18,Cocoa,Wednesday,Rain,Term,35
+2025-06-19,Latte,Thursday,Sunny,Term,102
+2025-06-19,Americano,Thursday,Sunny,Term,75
+2025-06-19,Matcha,Thursday,Sunny,Term,44
+2025-06-19,Cold Brew,Thursday,Sunny,Term,65
+2025-06-19,Cocoa,Thursday,Sunny,Term,37
+2025-06-20,Latte,Friday,Sunny,Term,103
+2025-06-20,Americano,Friday,Sunny,Term,68
+2025-06-20,Matcha,Friday,Sunny,Term,45
+2025-06-20,Cold Brew,Friday,Sunny,Term,63
+2025-06-20,Cocoa,Friday,Sunny,Term,35
+2025-06-21,Latte,Saturday,Cloudy,Term,59
+2025-06-21,Americano,Saturday,Cloudy,Term,31
+2025-06-21,Matcha,Saturday,Cloudy,Term,24
+2025-06-21,Cold Brew,Saturday,Cloudy,Term,35
+2025-06-21,Cocoa,Saturday,Cloudy,Term,24
+2025-06-22,Latte,Sunday,Cloudy,Term,35
+2025-06-22,Americano,Sunday,Cloudy,Term,44
+2025-06-22,Matcha,Sunday,Cloudy,Term,18
+2025-06-22,Cold Brew,Sunday,Cloudy,Term,23
+2025-06-22,Cocoa,Sunday,Cloudy,Term,19
+2025-06-23,Latte,Monday,Cloudy,Term,87
+2025-06-23,Americano,Monday,Cloudy,Term,74
+2025-06-23,Matcha,Monday,Cloudy,Term,58
+2025-06-23,Cold Brew,Monday,Cloudy,Term,73
+2025-06-23,Cocoa,Monday,Cloudy,Term,38
+2025-06-24,Latte,Tuesday,Cloudy,Term,108
+2025-06-24,Americano,Tuesday,Cloudy,Term,68
+2025-06-24,Matcha,Tuesday,Cloudy,Term,48
+2025-06-24,Cold Brew,Tuesday,Cloudy,Term,55
+2025-06-24,Cocoa,Tuesday,Cloudy,Term,52
+2025-06-25,Latte,Wednesday,Sunny,Exam Week,126
+2025-06-25,Americano,Wednesday,Sunny,Exam Week,97
+2025-06-25,Matcha,Wednesday,Sunny,Exam Week,78
+2025-06-25,Cold Brew,Wednesday,Sunny,Exam Week,73
+2025-06-25,Cocoa,Wednesday,Sunny,Exam Week,48
+2025-06-26,Latte,Thursday,Rain,Term,89
+2025-06-26,Americano,Thursday,Rain,Term,57
+2025-06-26,Matcha,Thursday,Rain,Term,39
+2025-06-26,Cold Brew,Thursday,Rain,Term,48
+2025-06-26,Cocoa,Thursday,Rain,Term,32
+2025-06-27,Latte,Friday,Rain,Vacation,26
+2025-06-27,Americano,Friday,Rain,Vacation,24
+2025-06-27,Matcha,Friday,Rain,Vacation,12
+2025-06-27,Cold Brew,Friday,Rain,Vacation,14
+2025-06-27,Cocoa,Friday,Rain,Vacation,12
+2025-06-28,Latte,Saturday,Rain,Term,45
+2025-06-28,Americano,Saturday,Rain,Term,31
+2025-06-28,Matcha,Saturday,Rain,Term,22
+2025-06-28,Cold Brew,Saturday,Rain,Term,25
+2025-06-28,Cocoa,Saturday,Rain,Term,18
+2025-06-29,Latte,Sunday,Cloudy,Exam Week,48
+2025-06-29,Americano,Sunday,Cloudy,Exam Week,40
+2025-06-29,Matcha,Sunday,Cloudy,Exam Week,23
+2025-06-29,Cold Brew,Sunday,Cloudy,Exam Week,28
+2025-06-29,Cocoa,Sunday,Cloudy,Exam Week,22
+2025-06-30,Latte,Monday,Sunny,Term,128
+2025-06-30,Americano,Monday,Sunny,Term,77
+2025-06-30,Matcha,Monday,Sunny,Term,59
+2025-06-30,Cold Brew,Monday,Sunny,Term,67
+2025-06-30,Cocoa,Monday,Sunny,Term,44
+2025-07-01,Latte,Tuesday,Cloudy,Term,95
+2025-07-01,Americano,Tuesday,Cloudy,Term,69
+2025-07-01,Matcha,Tuesday,Cloudy,Term,46
+2025-07-01,Cold Brew,Tuesday,Cloudy,Term,71
+2025-07-01,Cocoa,Tuesday,Cloudy,Term,43
+2025-07-02,Latte,Wednesday,Rain,Term,89
+2025-07-02,Americano,Wednesday,Rain,Term,66
+2025-07-02,Matcha,Wednesday,Rain,Term,39
+2025-07-02,Cold Brew,Wednesday,Rain,Term,53
+2025-07-02,Cocoa,Wednesday,Rain,Term,35
+2025-07-03,Latte,Thursday,Rain,Exam Week,96
+2025-07-03,Americano,Thursday,Rain,Exam Week,84
+2025-07-03,Matcha,Thursday,Rain,Exam Week,45
+2025-07-03,Cold Brew,Thursday,Rain,Exam Week,70
+2025-07-03,Cocoa,Thursday,Rain,Exam Week,45
+2025-07-04,Latte,Friday,Cloudy,Term,81
+2025-07-04,Americano,Friday,Cloudy,Term,79
+2025-07-04,Matcha,Friday,Cloudy,Term,42
+2025-07-04,Cold Brew,Friday,Cloudy,Term,64
+2025-07-04,Cocoa,Friday,Cloudy,Term,34
+2025-07-05,Latte,Saturday,Cloudy,Term,62
+2025-07-05,Americano,Saturday,Cloudy,Term,37
+2025-07-05,Matcha,Saturday,Cloudy,Term,26
+2025-07-05,Cold Brew,Saturday,Cloudy,Term,30
+2025-07-05,Cocoa,Saturday,Cloudy,Term,27
+2025-07-06,Latte,Sunday,Sunny,Term,47
+2025-07-06,Americano,Sunday,Sunny,Term,35
+2025-07-06,Matcha,Sunday,Sunny,Term,23
+2025-07-06,Cold Brew,Sunday,Sunny,Term,29
+2025-07-06,Cocoa,Sunday,Sunny,Term,20
+2025-07-07,Latte,Monday,Rain,Term,94
+2025-07-07,Americano,Monday,Rain,Term,61
+2025-07-07,Matcha,Monday,Rain,Term,38
+2025-07-07,Cold Brew,Monday,Rain,Term,54
+2025-07-07,Cocoa,Monday,Rain,Term,41
+2025-07-08,Latte,Tuesday,Cloudy,Term,102
+2025-07-08,Americano,Tuesday,Cloudy,Term,80
+2025-07-08,Matcha,Tuesday,Cloudy,Term,50
+2025-07-08,Cold Brew,Tuesday,Cloudy,Term,62
+2025-07-08,Cocoa,Tuesday,Cloudy,Term,40
+2025-07-09,Latte,Wednesday,Hot,Term,86
+2025-07-09,Americano,Wednesday,Hot,Term,83
+2025-07-09,Matcha,Wednesday,Hot,Term,45
+2025-07-09,Cold Brew,Wednesday,Hot,Term,63
+2025-07-09,Cocoa,Wednesday,Hot,Term,33
+2025-07-10,Latte,Thursday,Cloudy,Term,108
+2025-07-10,Americano,Thursday,Cloudy,Term,68
+2025-07-10,Matcha,Thursday,Cloudy,Term,54
+2025-07-10,Cold Brew,Thursday,Cloudy,Term,54
+2025-07-10,Cocoa,Thursday,Cloudy,Term,40
+2025-07-11,Latte,Friday,Cloudy,Term,74
+2025-07-11,Americano,Friday,Cloudy,Term,64
+2025-07-11,Matcha,Friday,Cloudy,Term,46
+2025-07-11,Cold Brew,Friday,Cloudy,Term,66
+2025-07-11,Cocoa,Friday,Cloudy,Term,35
+2025-07-12,Latte,Saturday,Sunny,Term,63
+2025-07-12,Americano,Saturday,Sunny,Term,48
+2025-07-12,Matcha,Saturday,Sunny,Term,24
+2025-07-12,Cold Brew,Saturday,Sunny,Term,34
+2025-07-12,Cocoa,Saturday,Sunny,Term,21
+2025-07-13,Latte,Sunday,Sunny,Term,47
+2025-07-13,Americano,Sunday,Sunny,Term,30
+2025-07-13,Matcha,Sunday,Sunny,Term,22
+2025-07-13,Cold Brew,Sunday,Sunny,Term,29
+2025-07-13,Cocoa,Sunday,Sunny,Term,20
+2025-07-14,Latte,Monday,Sunny,Term,133
+2025-07-14,Americano,Monday,Sunny,Term,80
+2025-07-14,Matcha,Monday,Sunny,Term,50
+2025-07-14,Cold Brew,Monday,Sunny,Term,66
+2025-07-14,Cocoa,Monday,Sunny,Term,45
+2025-07-15,Latte,Tuesday,Rain,Term,79
+2025-07-15,Americano,Tuesday,Rain,Term,60
+2025-07-15,Matcha,Tuesday,Rain,Term,46
+2025-07-15,Cold Brew,Tuesday,Rain,Term,49
+2025-07-15,Cocoa,Tuesday,Rain,Term,37
+2025-07-16,Latte,Wednesday,Rain,Term,86
+2025-07-16,Americano,Wednesday,Rain,Term,57
+2025-07-16,Matcha,Wednesday,Rain,Term,36
+2025-07-16,Cold Brew,Wednesday,Rain,Term,49
+2025-07-16,Cocoa,Wednesday,Rain,Term,37
+2025-07-17,Latte,Thursday,Rain,Term,83
+2025-07-17,Americano,Thursday,Rain,Term,62
+2025-07-17,Matcha,Thursday,Rain,Term,41
+2025-07-17,Cold Brew,Thursday,Rain,Term,51
+2025-07-17,Cocoa,Thursday,Rain,Term,34
+2025-07-18,Latte,Friday,Cloudy,Term,96
+2025-07-18,Americano,Friday,Cloudy,Term,68
+2025-07-18,Matcha,Friday,Cloudy,Term,37
+2025-07-18,Cold Brew,Friday,Cloudy,Term,55
+2025-07-18,Cocoa,Friday,Cloudy,Term,41
+2025-07-19,Latte,Saturday,Rain,Vacation,14
+2025-07-19,Americano,Saturday,Rain,Vacation,14
+2025-07-19,Matcha,Saturday,Rain,Vacation,8
+2025-07-19,Cold Brew,Saturday,Rain,Vacation,10
+2025-07-19,Cocoa,Saturday,Rain,Vacation,7
+2025-07-20,Latte,Sunday,Sunny,Term,46
+2025-07-20,Americano,Sunday,Sunny,Term,38
+2025-07-20,Matcha,Sunday,Sunny,Term,21
+2025-07-20,Cold Brew,Sunday,Sunny,Term,32
+2025-07-20,Cocoa,Sunday,Sunny,Term,23
+2025-07-21,Latte,Monday,Cloudy,Exam Week,108
+2025-07-21,Americano,Monday,Cloudy,Exam Week,98
+2025-07-21,Matcha,Monday,Cloudy,Exam Week,51
+2025-07-21,Cold Brew,Monday,Cloudy,Exam Week,73
+2025-07-21,Cocoa,Monday,Cloudy,Exam Week,54
+2025-07-22,Latte,Tuesday,Sunny,Term,115
+2025-07-22,Americano,Tuesday,Sunny,Term,75
+2025-07-22,Matcha,Tuesday,Sunny,Term,52
+2025-07-22,Cold Brew,Tuesday,Sunny,Term,55
+2025-07-22,Cocoa,Tuesday,Sunny,Term,46
+2025-07-23,Latte,Wednesday,Cloudy,Term,95
+2025-07-23,Americano,Wednesday,Cloudy,Term,74
+2025-07-23,Matcha,Wednesday,Cloudy,Term,41
+2025-07-23,Cold Brew,Wednesday,Cloudy,Term,66
+2025-07-23,Cocoa,Wednesday,Cloudy,Term,40
+2025-07-24,Latte,Thursday,Cloudy,Exam Week,132
+2025-07-24,Americano,Thursday,Cloudy,Exam Week,79
+2025-07-24,Matcha,Thursday,Cloudy,Exam Week,50
+2025-07-24,Cold Brew,Thursday,Cloudy,Exam Week,75
+2025-07-24,Cocoa,Thursday,Cloudy,Exam Week,55

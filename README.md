@@ -22,6 +22,7 @@
 ```
 
 **📖 模板字段、接口契约、接入自己模型的完整说明 → [TEMPLATE.md](TEMPLATE.md)**
+**📊 换成你们自己的数据：格式要求 + 校验工具 → [DATA_FORMAT.md](DATA_FORMAT.md)**
 
 ---
 
@@ -96,6 +97,7 @@ Hackathon/
 │   └── js/services/api.js     ★ 与后端通信的唯一出口（含离线 Mock 回退）
 ├── backend/
 │   ├── template_config.py     读取 + 严格校验 template.json；CSV 列 → 下拉项
+│   ├── check_data.py          数据校验 / 生成示例 / 预演 API（退出码 0/1）
 │   ├── model_api.py           ★ 模型插件：本地统计 / 本地 ML / 外接 HTTP
 │   ├── service.py             业务编排：校验字段、选插件、归一化结果
 │   ├── server.py              零依赖入口（含静态托管 + ES Module MIME）
@@ -104,8 +106,10 @@ Hackathon/
 │   ├── ai.py                  规则洞察 + 异常检测 + 可选 LLM 叙事
 │   ├── models.py / database.py  ORM + 引擎 + CSV 自动播种
 ├── data/                      menu_demand.csv / sales.csv + 两个可复现生成器
-├── tests/test_api.py          53 个端到端测试（仅需标准库）
+│   └── samples/               自定义数据示例：coffee_shop_sales.csv + 配套模板
+├── tests/test_api.py          61 个端到端测试（仅需标准库）
 ├── TEMPLATE.md                ★ 模板 / 接口 / 接入模型 完整文档
+├── DATA_FORMAT.md             ★ 自定义数据：格式要求 + 校验工具用法
 └── requirement.txt
 ```
 
@@ -182,13 +186,14 @@ Hackathon/
 ## 测试
 
 ```bash
-python -m unittest discover -s tests -v      # 53 个用例，仅用标准库
+python -m unittest discover -s tests -v      # 61 个用例，仅用标准库
 pytest -q                                    # 装了 pytest 也可以
 ```
 
 覆盖：模板加载的全部报错分支、`/analyze` 与 `/api/predict` 契约、外接模型 API 的成功调用
 （含请求契约断言）与两种失败模式、字段校验、ES Module MIME、静态资源、目录穿越防护、
-confidence 与回测的数值一致性、以及原有的销售分析与 ML 预测。
+confidence 与回测的数值一致性、自定义数据校验工具与 `DATASET_FILE` 覆盖、
+以及一条"HTTP 接口清单未变"的回归断言，最后是原有的销售分析与 ML 预测。
 
 ---
 

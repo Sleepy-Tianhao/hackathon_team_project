@@ -167,8 +167,23 @@ def load_template() -> dict:
 # dataset access
 # --------------------------------------------------------------------------- #
 def dataset_path(template: dict) -> Path:
-    path = Path(template["dataset"]["path"])
+    """Resolve dataset.path, honouring override_file().
+
+    A relative path resolves against the project root, never the current working
+    directory, so the service behaves the same no matter where it is started.
+    """
+    override = os.getenv("DATASET_FILE") if override_file() else None
+    path = Path(override) if override else Path(template["dataset"]["path"])
     return path if path.is_absolute() else BASE_DIR / path
+
+
+def override_file() -> bool:
+    """Whether DATASET_FILE is allowed to replace template.json's dataset.
+
+    On by default so a demo can point the same template at another CSV without
+    editing files. Set DATASET_FILE_LOCK=1 to pin the configured dataset.
+    """
+    return os.getenv("DATASET_FILE_LOCK", "").strip() not in ("1", "true", "yes")
 
 
 def dataset_frame(template: dict) -> pd.DataFrame:

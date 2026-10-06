@@ -433,6 +433,15 @@ prediction = clamp(baseline × Π factor_i, 0.2×baseline, 5×baseline)
 
 ## 9. 换成你自己的数据
 
+> 完整的格式要求、校验工具用法与示例见 **[DATA_FORMAT.md](DATA_FORMAT.md)**。
+> 一句话版本：一个长表 CSV（一行 = 一次观测）+ template.json 里 `dataset` 与 `fields` 两段。
+
+0. 先跑一次校验，它会检查列、样本量、日期，并跑回测告诉你预期准确率：
+
+   ```powershell
+   python -m backend.check_data --csv data/my.csv --target yield --field crop --field soil --check-api
+   ```
+
 1. 把 CSV 放进 `data/`（UTF-8；建议带 BOM 以便 Excel 打开）。
 2. `dataset.path` 指向它，`dataset.target` 写你要预测的数值列名。
 3. `fields[]` 里每个 `source=dataset` 字段的 `column` 写 CSV 的真实列名。

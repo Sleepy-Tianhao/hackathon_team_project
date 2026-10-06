@@ -22,6 +22,8 @@ data/sales.db*
 # Test / dev scratch space
 tests/_tmp/
 .scratch/
+# written and removed by backend.check_data --check-api
+.check_data.template.json
 
 # Editors / OS
 .vscode/

@@ -36,7 +36,7 @@ os.environ["SKIP_DB_SEED"] = "1"        # seed explicitly in setUpModule
 os.environ["FORECAST_FAST"] = "1"       # Ridge only: keeps the suite quick
 os.environ.pop("OPENAI_API_KEY", None)  # never call an LLM from tests
 
-from backend import database, predictor, server, service, template_config  # noqa: E402
+from backend import check_data, database, predictor, server, service, template_config  # noqa: E402
 from backend.database import SessionLocal  # noqa: E402
 
 SEEDED_ROWS = 0
@@ -647,6 +647,93 @@ class TestHttpServer(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual(payload["model"]["plugin"], "group-baseline")
         self.assertIn("mape", payload["model"]["backtest"])
+
+
+class TestCustomData(unittest.TestCase):
+    """Bring-your-own-data: the validator, the DATASET_FILE override, and the
+    promise that none of it changes the HTTP surface."""
+
+    SAMPLE_CSV = "data/samples/coffee_shop_sales.csv"
+    SAMPLE_TEMPLATE = "data/samples/coffee_shop.template.json"
+
+    def tearDown(self) -> None:
+        template_config.clear_cache()
+
+    def test_bundled_sample_validates(self) -> None:
+        exit_code = check_data.main(["--template", self.SAMPLE_TEMPLATE, "--quiet"])
+        self.assertEqual(exit_code, 0)
+
+    def test_bundled_sample_previews_the_unchanged_api(self) -> None:
+        exit_code = check_data.main(["--template", self.SAMPLE_TEMPLATE, "--check-api", "--quiet"])
+        self.assertEqual(exit_code, 0)
+
+    def test_ad_hoc_mode_needs_no_template(self) -> None:
+        exit_code = check_data.main([
+            "--csv", self.SAMPLE_CSV, "--target", "cups",
+            "--field", "drink", "--field", "weekday", "--quiet",
+            "--backtest-days", "30",
+        ])
+        self.assertEqual(exit_code, 0)
+
+    def test_broken_data_is_rejected(self) -> None:
+        path = TMP_DIR / "broken-custom.csv"
+        path.write_text(
+            "date,drink,cups\n"
+            "2025-01-01,Latte,120\n"
+            "2025-01-02,Latte,oops\n"
+            "01/03/2025,Latte,\n",
+            encoding="utf-8",
+        )
+        exit_code = check_data.main([
+            "--csv", str(path), "--target", "cups", "--field", "drink",
+            "--backtest-days", "0", "--quiet",
+        ])
+        self.assertEqual(exit_code, 1)
+
+    def test_sample_writer_produces_data_the_checker_accepts(self) -> None:
+        path = TMP_DIR / "generated-sample.csv"
+        rows = check_data.write_sample(path, days=45)
+        self.assertEqual(rows, 45 * len(check_data.SAMPLE_DRINKS))
+        exit_code = check_data.main([
+            "--csv", str(path), "--target", "cups", "--field", "drink",
+            "--field", "weekday", "--backtest-days", "20", "--quiet",
+        ])
+        self.assertEqual(exit_code, 0)
+
+    def test_dataset_file_overrides_the_configured_path(self) -> None:
+        template = template_config.load_template()
+        self.assertGreater(template_config.dataset_meta(template)["rows"], 1000)
+
+        tiny = TMP_DIR / "tiny-menu.csv"
+        lines = ["date,menu,weekday,weather,event,portions"]
+        for index in range(12):
+            lines.append(f"2025-01-{index % 9 + 1:02d},Chicken Rice,Monday,Sunny,None,{100 + index}")
+        tiny.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+        with temporary_env(DATASET_FILE=str(tiny)):
+            template_config.clear_cache()
+            self.assertEqual(template_config.dataset_meta(template)["rows"], 12)
+
+        template_config.clear_cache()
+        self.assertGreater(template_config.dataset_meta(template)["rows"], 1000)
+
+    def test_dataset_file_can_be_locked(self) -> None:
+        template = template_config.load_template()
+        with temporary_env(DATASET_FILE="data/samples/coffee_shop_sales.csv", DATASET_FILE_LOCK="1"):
+            template_config.clear_cache()
+            # locked -> the override is ignored and the configured dataset is used
+            self.assertEqual(template_config.dataset_meta(template)["rows"], 3655)
+        template_config.clear_cache()
+
+    def test_http_surface_is_unchanged(self) -> None:
+        """Custom data must not add, remove or rename a single endpoint."""
+        self.assertEqual(set(server.ROUTES), {
+            "/api/config", "/api/options", "/api/health", "/api/filters",
+            "/api/summary", "/api/timeseries", "/api/breakdown", "/api/momentum",
+            "/api/sales", "/api/anomalies", "/api/forecast", "/api/predictions",
+            "/api/insights",
+        })
+        self.assertEqual(set(server.POST_ROUTES), {"/api/predict", "/analyze"})
 
 
 class TestTemplateValidation(unittest.TestCase):
