@@ -240,22 +240,30 @@ def _validate_dimension(dimension: str) -> str:
 # --------------------------------------------------------------------------- #
 # public service functions
 # --------------------------------------------------------------------------- #
-def warm_up(db: Session | None = None) -> bool:
-    """Train the forecast engine ahead of the first request.
+def active_plugin_name(template: dict) -> str:
+    """MODEL_BACKEND overrides the template's plugin choice."""
+    return (os.getenv("MODEL_BACKEND") or template["model"]["plugin"]).strip()
 
-    Model fitting is the only slow path in this API (a few seconds, once). Both
-    entry points call this from a background thread at startup so the dashboard
-    never waits on a cold model during a demo.
+
+def warm_up(db: Session | None = None) -> bool:
+    """Precompute whatever the first real request would otherwise have to do.
+
+    Model fitting and the backtest are the only slow paths in this API (seconds,
+    once). Both entry points call this from a background thread at startup so the
+    first click during a demo is already warm.
     """
     owns_session = db is None
     if owns_session:
         db = SessionLocal()
     try:
-        frame = predictor.get_frame(db)
-        if frame.empty:
-            return False
-        predictor.get_engine(frame)
-        return True
+        template = template_config.load_template()
+        if active_plugin_name(template) == "sales-forecast":
+            frame = predictor.get_frame(db)
+            if frame.empty:
+                return False
+            predictor.get_engine(frame)
+            return True
+        return model_api.warm_up(template, template_config.dataset_frame(template))
     except Exception as exc:  # pragma: no cover - warm-up is best effort
         print(f"[service] warm-up skipped: {exc}")
         return False
@@ -416,11 +424,27 @@ def get_predictions(db: Session, limit: int = 10) -> dict:
 # template-driven prediction API (the contract the UI actually uses)
 # --------------------------------------------------------------------------- #
 def get_config() -> dict:
-    """Everything the frontend needs in one call: template + options + dataset meta."""
+    """Everything the frontend needs in one call: template + options + dataset meta.
+
+    Also reports which model plugin is active and, for the local statistical
+    plugin, the measured backtest behind its confidence figure.
+    """
     try:
-        return template_config.get_config()
+        payload = template_config.get_config()
+        template = template_config.load_template()
+        plugin_name = active_plugin_name(template)
+        backtest = None
+        if plugin_name == "group-baseline":
+            backtest = model_api.backtest_group_baseline(template, template_config.dataset_frame(template))
+        payload["model"] = {"plugin": plugin_name, "backtest": backtest or None}
+        return payload
     except template_config.TemplateError as exc:
         raise ServiceError(str(exc), 500) from exc
+    except Exception as exc:  # pragma: no cover - config must still render
+        print(f"[service] model summary unavailable: {exc}")
+        payload = template_config.get_config()
+        payload["model"] = {"plugin": None, "backtest": None}
+        return payload
 
 
 def get_field_options() -> dict:
@@ -484,6 +508,25 @@ def validate_fields(template: dict, raw: Any, options: dict) -> dict:
 
         values[name] = value
     return values
+
+
+def analyze(payload: Any, db: Session | None = None) -> dict:
+    """The frontend contract (POST /analyze).
+
+    frontend/js/app.js reads prediction / average / change_percent / confidence /
+    explanation, so those flat aliases are added on top of the full envelope
+    rather than maintained as a second, divergent response shape.
+    """
+    envelope = run_prediction(payload, db=db)
+    delta = envelope.get("delta")
+    return {
+        **envelope,
+        "prediction": envelope.get("value"),
+        "average": envelope.get("baseline"),
+        "change_percent": None if delta is None else round(float(delta) * 100.0, 1),
+        "confidence": envelope.get("confidence"),
+        "explanation": envelope.get("explanation", ""),
+    }
 
 
 def run_prediction(payload: Any, db: Session | None = None) -> dict:

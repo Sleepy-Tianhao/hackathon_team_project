@@ -18,8 +18,11 @@ Schema
 }
 
 Field types: "select" | "number" | "text".
-Field sources: "dataset" (options are the distinct values of "column") or
-"static" (options come from the field itself).
+Field sources:
+  "dataset" -> options are the distinct values of "column"
+  "static"  -> options come from the field itself
+  "input"   -> free input: no options and no column. The value is passed straight
+               to the model (useful for a text field your own model consumes).
 
 Validation is deliberately loud: a typo in template.json should fail with a
 precise message pointing at the offending field index, not a confusing 500.
@@ -37,7 +40,7 @@ from .database import BASE_DIR
 
 DEFAULT_TEMPLATE_FILE = BASE_DIR / "template.json"
 FIELD_TYPES = ("select", "number", "text")
-FIELD_SOURCES = ("dataset", "static")
+FIELD_SOURCES = ("dataset", "static", "input")
 
 _TEMPLATE_CACHE: dict[tuple, dict] = {}
 _DATASET_CACHE: dict[tuple, pd.DataFrame] = {}
@@ -117,11 +120,15 @@ def _validate(raw: Any, source: Path) -> dict:
         if source == "static":
             _require(isinstance(item.get("options"), list) and item["options"],
                      f"{at}.options must be a non-empty array when source is \"static\"")
+        if source == "input":
+            item.setdefault("options", [])
 
         item.setdefault("required", field_type != "text")
         item.setdefault("default", None)
         item.setdefault("help", "")
-        item.setdefault("suffix", "")
+        # "placeholder" is the frontend-facing name, "suffix" the older alias.
+        item.setdefault("placeholder", item.get("suffix") or "")
+        item.setdefault("suffix", item.get("placeholder") or "")
         _require(isinstance(item["required"], bool), f"{at}.required must be true/false")
 
     output = raw.get("output")
@@ -160,8 +167,23 @@ def load_template() -> dict:
 # dataset access
 # --------------------------------------------------------------------------- #
 def dataset_path(template: dict) -> Path:
-    path = Path(template["dataset"]["path"])
+    """Resolve dataset.path, honouring override_file().
+
+    A relative path resolves against the project root, never the current working
+    directory, so the service behaves the same no matter where it is started.
+    """
+    override = os.getenv("DATASET_FILE") if override_file() else None
+    path = Path(override) if override else Path(template["dataset"]["path"])
     return path if path.is_absolute() else BASE_DIR / path
+
+
+def override_file() -> bool:
+    """Whether DATASET_FILE is allowed to replace template.json's dataset.
+
+    On by default so a demo can point the same template at another CSV without
+    editing files. Set DATASET_FILE_LOCK=1 to pin the configured dataset.
+    """
+    return os.getenv("DATASET_FILE_LOCK", "").strip() not in ("1", "true", "yes")
 
 
 def dataset_frame(template: dict) -> pd.DataFrame:
@@ -204,7 +226,7 @@ def field_options(template: dict) -> dict[str, list]:
     frame = None
     options: dict[str, list] = {}
     for field in template["fields"]:
-        if field["source"] == "static":
+        if field["source"] in ("static", "input"):
             options[field["name"]] = list(field.get("options") or [])
             continue
         if frame is None:

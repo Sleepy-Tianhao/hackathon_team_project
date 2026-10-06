@@ -1,0 +1,94 @@
+{
+  "_readme": [
+    "示例模板：自定义数据接入（咖啡店销量）。配套数据 data/samples/coffee_shop_sales.csv。",
+    "用法：$env:TEMPLATE_FILE='data/samples/coffee_shop.template.json'; python -m backend.server",
+    "先校验：python -m backend.check_data --template data/samples/coffee_shop.template.json --check-api",
+    "数据格式说明见 DATA_FORMAT.md。"
+  ],
+
+  "id": "coffee-shop",
+  "app": {
+    "brand": "CAMPUS CAFE",
+    "title": "COFFEE DEMAND FORECAST",
+    "subtitle": "Bring-your-own-data example",
+    "footer": "group-baseline · 见 DATA_FORMAT.md"
+  },
+
+  "dataset": {
+    "path": "data/samples/coffee_shop_sales.csv",
+    "date_column": "date",
+    "target": "cups",
+    "unit": "cups",
+    "target_label": "杯数"
+  },
+
+  "model": {
+    "plugin": "group-baseline",
+    "options": {
+      "effect_min_rows": 5,
+      "baseline_filter": {
+        "term_phase": ["Term", "Exam Week"]
+      },
+      "baseline_label": "a normal term week",
+      "fallback_plugin": "group-baseline"
+    }
+  },
+
+  "fields": [
+    {
+      "name": "drink",
+      "label": "Drink",
+      "type": "select",
+      "source": "dataset",
+      "column": "drink",
+      "required": true,
+      "default": "Latte"
+    },
+    {
+      "name": "weekday",
+      "label": "Weekday",
+      "type": "select",
+      "source": "dataset",
+      "column": "weekday",
+      "required": true,
+      "default": "Monday"
+    },
+    {
+      "name": "weather",
+      "label": "Weather",
+      "type": "select",
+      "source": "dataset",
+      "column": "weather",
+      "required": true,
+      "default": "Sunny"
+    },
+    {
+      "name": "term_phase",
+      "label": "Term Phase",
+      "type": "select",
+      "source": "dataset",
+      "column": "term_phase",
+      "required": true,
+      "default": "Term"
+    },
+    {
+      "name": "notes",
+      "label": "Additional Information",
+      "type": "text",
+      "source": "input",
+      "required": false,
+      "placeholder": "Enter extra context..."
+    }
+  ],
+
+  "output": {
+    "locale": "en",
+    "headline": "Predicted cups",
+    "subheadline": "自定义数据示例",
+    "unit": "cups",
+    "decimals": 0,
+    "delta_label": "vs. a normal term week",
+    "explanation_title": "AI Explanation",
+    "submit_label": "Predict Cups"
+  }
+}

@@ -90,6 +90,15 @@ def predict(payload: dict = Body(...), db: Session = Depends(get_db)) -> dict:
     return service.run_prediction(payload, db=db)
 
 
+@app.post("/analyze", tags=["template"])
+def analyze(payload: dict = Body(...), db: Session = Depends(get_db)) -> dict:
+    """Frontend contract used by frontend/js/services/api.js.
+
+    Body: flat field map, e.g. {"menu": "Chicken Rice", "day": "Friday", ...}
+    """
+    return service.analyze(payload, db=db)
+
+
 @app.get("/api/summary", tags=["analytics"])
 def summary(
     store: str | None = Query(None, description="Filter by store name"),

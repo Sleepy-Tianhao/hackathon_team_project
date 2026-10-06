@@ -49,12 +49,14 @@ surface it as HTTP 502 instead.
 """
 from __future__ import annotations
 
+import json
 import os
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Any
 
+import numpy as np
 import pandas as pd
 import requests
 
@@ -71,6 +73,7 @@ PHRASES: dict[str, dict[str, str]] = {
         "lower": "低 {pct}",
         "join": "；",
         "factor_end": "。",
+        "factor_flat": "{label} 条件均值 {mean}（与基准基本持平）",
         "clamped": "（因子已做上下限截断）",
         "forecast": "{model} 模型（验证集 MAPE {mape}，优于季节朴素基线 {improvement}）。未来 {horizon} 天日均 {value} {unit}，较历史日均{dir}{pct}；峰值日 {peak_date} 预计 {peak_value} {unit}。",
         "flat": "基本持平",
@@ -84,6 +87,7 @@ PHRASES: dict[str, dict[str, str]] = {
         "lower": "{pct} below",
         "join": "; ",
         "factor_end": ". ",
+        "factor_flat": "{label} averages {mean} (in line with normal)",
         "clamped": " (factors clamped)",
         "forecast": "{model} model (hold-out MAPE {mape}, {improvement} better than the seasonal-naive baseline). Next {horizon} days average {value} {unit} per day, {dir}{pct} versus history; the peak day is {peak_date} at {peak_value} {unit}.",
         "flat": "roughly flat",
@@ -114,6 +118,9 @@ class PredictionResult:
     explanation: str = ""
     explanation_source: str = "local"
     model: str = ""
+    # 0..1. Rendered as a 0-100 percentage for the UI, or null when unknown.
+    confidence: float | None = None
+    confidence_source: str = ""
     evidence: list[dict] = field(default_factory=list)
     meta: dict = field(default_factory=dict)
 
@@ -139,6 +146,10 @@ class PredictionResult:
         if elapsed_ms is not None:
             meta["elapsed_ms"] = round(float(elapsed_ms), 2)
 
+        confidence = None
+        if self.confidence is not None:
+            confidence = int(round(max(0.0, min(1.0, float(self.confidence))) * 100))
+
         return {
             "value": value,
             "formatted": f"{value:,.{decimals}f}",
@@ -153,6 +164,9 @@ class PredictionResult:
             "explanation": self.explanation,
             "explanation_title": output.get("explanation_title", "AI Explanation"),
             "explanation_source": self.explanation_source,
+            # 0-100 integer, or null when the model cannot state one.
+            "confidence": confidence,
+            "confidence_source": self.confidence_source or None,
             "model": self.model or self.__class__.__name__,
             "fields": fields,
             "evidence": self.evidence,
@@ -183,6 +197,16 @@ def _effect_text(effect: float, locale: str) -> str:
     return phrases[key].format(pct=_pct(effect))
 
 
+def _factor_text(item: dict, locale: str) -> str:
+    """One clause of the explanation. A factor that changes nothing says so."""
+    phrases = PHRASES.get(locale, PHRASES["zh"])
+    mean = f"{item['mean']:,.0f}"
+    if abs(float(item["effect"])) < 0.005:
+        return phrases["factor_flat"].format(label=item["value"], mean=mean)
+    return phrases["factor"].format(label=item["value"], mean=mean,
+                                    effect=_effect_text(item["effect"], locale))
+
+
 # --------------------------------------------------------------------------- #
 # plugin base
 # --------------------------------------------------------------------------- #
@@ -199,6 +223,155 @@ class ModelPlugin(ABC):
     @abstractmethod
     def predict(self, fields: dict[str, Any], frame: pd.DataFrame | None, db: Any = None) -> PredictionResult:
         """Return a PredictionResult for one set of form values."""
+
+
+# --------------------------------------------------------------------------- #
+# factor statistics (shared by the model AND its backtest so they cannot drift)
+# --------------------------------------------------------------------------- #
+def _group_tables(frame: pd.DataFrame, target: str, specs) -> dict:
+    """Per-field mean/std/count tables, computed once per population."""
+    return {
+        name: frame.groupby(column)[target].agg(["mean", "std", "count"])
+        for name, column in specs
+    }
+
+
+def _factor_ratio(scope_table, full_table, value, baseline: float, min_rows: int) -> dict | None:
+    """Ratio mean(target | field=value) / baseline, measured on the baseline scope.
+
+    Factors MUST be measured on the same population the baseline came from.
+    Measuring them on the whole dataset while the baseline is a sub-population
+    (e.g. weekdays only) leaks that population difference into every factor and
+    compounds it in the product - that one mistake was worth ~39% MAPE.
+
+    When the scope holds no such row at all - asking for Saturday while the
+    baseline is weekday-only - we fall back to the unscoped population, which is
+    precisely the contrast we want to show.
+    """
+    if baseline <= 0:
+        return None
+    for table in (scope_table, full_table):
+        if table is None or value not in table.index:
+            continue
+        entry = table.loc[value]
+        rows = int(entry["count"])
+        if rows < min_rows:
+            continue
+        mean = float(entry["mean"])
+        if not np.isfinite(mean):
+            continue
+        spread = float(entry["std"]) if np.isfinite(entry["std"]) else 0.0
+        return {"ratio": mean / baseline, "mean": mean, "rows": rows, "std": spread}
+    return None
+
+
+# --------------------------------------------------------------------------- #
+# backtest (the honest number behind the confidence figure)
+# --------------------------------------------------------------------------- #
+_BACKTEST_CACHE: dict[tuple, dict] = {}
+
+
+def backtest_group_baseline(template: dict, frame: pd.DataFrame, days: int = 60) -> dict:
+    """Leave-one-day-out backtest of the factor model on the most recent N days.
+
+    For every test date the statistics are rebuilt WITHOUT that date, then the
+    prediction is compared against what actually happened. That makes the
+    confidence number the UI shows a measured quantity instead of a guess.
+    """
+    dataset = template["dataset"]
+    target = dataset["target"]
+    date_column = dataset.get("date_column")
+    if frame is None or frame.empty or not date_column or date_column not in frame.columns:
+        return {}
+
+    specs = [(spec["name"], spec["column"]) for spec in template["fields"]
+             if spec.get("column") and spec["column"] in frame.columns]
+    if not specs:
+        return {}
+
+    options = template["model"].get("options") or {}
+    min_rows = int(options.get("effect_min_rows", 5))
+    baseline_filter = options.get("baseline_filter") or {}
+
+    stamps = pd.to_datetime(frame[date_column], errors="coerce").dt.normalize()
+    unique = sorted(stamps.dropna().unique())
+    test_dates = unique[-max(1, int(days)):]
+
+    cache_key = (
+        int(len(frame)), str(unique[-1]) if unique else "", target, len(test_dates),
+        json.dumps([name for name, _ in specs]),
+        json.dumps(baseline_filter, sort_keys=True),
+    )
+    cached = _BACKTEST_CACHE.get(cache_key)
+    if cached is not None:
+        return cached
+
+    actuals: list[float] = []
+    predictions: list[float] = []
+    naive_predictions: list[float] = []
+    for day in test_dates:
+        train = frame[stamps != day]
+        test = frame[stamps == day]
+        if train.empty or test.empty:
+            continue
+
+        scope = train
+        for column, allowed in baseline_filter.items():
+            if column in scope.columns:
+                scope = scope[scope[column].isin(allowed)]
+        if scope.empty:
+            scope = train
+        baseline = float(scope[target].mean())
+        if not baseline:
+            continue
+
+        scope_tables = _group_tables(scope, target, specs)
+        full_tables = _group_tables(train, target, specs)
+
+        for _, row in test.iterrows():
+            multiplier = 1.0
+            for name, column in specs:
+                value = row[column]
+                if pd.isna(value):
+                    continue
+                stats = _factor_ratio(scope_tables[name], full_tables[name], value, baseline, min_rows)
+                if stats is None:
+                    continue
+                multiplier *= stats["ratio"]
+            multiplier = min(max(multiplier, 0.2), 5.0)
+            predictions.append(max(0.0, baseline * multiplier))
+            naive_predictions.append(baseline)   # "always cook a normal weekday"
+            actuals.append(float(row[target]))
+
+    if not actuals:
+        return {}
+
+    actual = np.asarray(actuals, dtype=float)
+    predicted = np.asarray(predictions, dtype=float)
+    naive = np.asarray(naive_predictions, dtype=float)
+    denominator = np.where(np.abs(actual) < 1e-6, np.nan, np.abs(actual))
+    mape = float(np.nanmean(np.abs((actual - predicted) / denominator)))
+    naive_mape = float(np.nanmean(np.abs((actual - naive) / denominator)))
+    mae = float(np.mean(np.abs(actual - predicted)))
+    naive_mae = float(np.mean(np.abs(actual - naive)))
+    result = {
+        "days": int(len(test_dates)),
+        "samples": int(len(actuals)),
+        "mae": round(mae, 2),
+        "mape": round(mape, 4),
+        "accuracy": round(max(0.0, 1.0 - mape), 4),
+        "avg_actual": round(float(actual.mean()), 2),
+        # Reference point: what you get by ignoring the inputs and cooking a
+        # normal weekday every day. The gap is the value the model adds.
+        "naive_label": "always prep a typical weekday",
+        "naive_mae": round(naive_mae, 2),
+        "naive_mape": round(naive_mape, 4),
+        "mae_improvement": round(1.0 - mae / naive_mae, 4) if naive_mae else None,
+        "mape_improvement": round(1.0 - mape / naive_mape, 4) if naive_mape else None,
+    }
+    _BACKTEST_CACHE.clear()
+    _BACKTEST_CACHE[cache_key] = result
+    return result
 
 
 # --------------------------------------------------------------------------- #
@@ -231,6 +404,11 @@ class GroupBaselineModel(ModelPlugin):
         baseline = float(scope[target].mean())
         baseline_label = self.options.get("baseline_label") or ("整体均值" if locale == "zh" else "the overall average")
 
+        field_specs = [(spec["name"], spec["column"]) for spec in self.template["fields"]
+                       if spec.get("column") in frame.columns]
+        scope_tables = _group_tables(scope, target, field_specs)
+        full_tables = _group_tables(frame, target, field_specs)
+
         evidence: list[dict] = []
         multiplier = 1.0
         for spec in self.template["fields"]:
@@ -241,19 +419,21 @@ class GroupBaselineModel(ModelPlugin):
             if value is None or value == "":
                 continue
 
-            subset = frame[frame[column] == value]
-            rows = int(len(subset))
-            if rows < min_rows:
+            stats = _factor_ratio(scope_tables[spec["name"]], full_tables[spec["name"]],
+                                  value, baseline, min_rows)
+            if stats is None:
+                rows = int((frame[column] == value).sum())
                 evidence.append({"field": spec["name"], "label": spec["label"], "value": value,
-                                 "rows": rows, "used": False,
+                                 "column": column, "rows": rows, "used": False,
                                  "reason": f"only {rows} historical rows"})
                 continue
-            mean = float(subset[target].mean())
-            ratio = (mean / baseline) if baseline else 1.0
+
             evidence.append({"field": spec["name"], "label": spec["label"], "value": value,
-                             "rows": rows, "used": True, "mean": round(mean, 2),
-                             "effect": round(ratio - 1.0, 4)})
-            multiplier *= ratio
+                             "column": column, "rows": stats["rows"], "used": True,
+                             "mean": round(stats["mean"], 2),
+                             "effect": round(stats["ratio"] - 1.0, 4),
+                             "std": round(stats["std"], 2)})
+            multiplier *= stats["ratio"]
 
         clamped = False
         if multiplier > 5.0:
@@ -266,12 +446,7 @@ class GroupBaselineModel(ModelPlugin):
         used.sort(key=lambda item: abs(item["effect"]), reverse=True)
 
         if used:
-            factors = phrases["join"].join(
-                phrases["factor"].format(label=item["value"],
-                                         mean=f"{item['mean']:,.0f}",
-                                         effect=_effect_text(item["effect"], locale))
-                for item in used
-            )
+            factors = phrases["join"].join(_factor_text(item, locale) for item in used)
             explanation = factors + phrases["factor_end"] + phrases["summary"].format(
                 baseline_label=baseline_label,
                 baseline=f"{baseline:,.0f}",
@@ -285,6 +460,26 @@ class GroupBaselineModel(ModelPlugin):
         if clamped:
             explanation += phrases["clamped"]
 
+        # How precise is THIS prediction? Propagate the standard error of every
+        # factor through the product (independent-factor assumption).
+        relative_variance = 0.0
+        for item in used:
+            n = int(item["rows"])
+            mean = float(item["mean"]) or 0.0
+            spread = float(item.get("std") or 0.0)
+            if n > 1 and mean > 0 and np.isfinite(spread):
+                relative_variance += (spread / (np.sqrt(n) * mean)) ** 2
+        precision = max(0.0, 1.0 - float(np.sqrt(relative_variance)))
+
+        # Headline confidence = measured accuracy on the held-out recent window.
+        backtest = backtest_group_baseline(self.template, frame)
+        if backtest:
+            confidence = max(0.05, min(0.99, 1.0 - float(backtest["mape"])))
+            confidence_source = "backtest-mape"
+        else:
+            confidence = max(0.05, min(0.99, precision))
+            confidence_source = "estimate-precision"
+
         return PredictionResult(
             value=value,
             unit=unit,
@@ -292,6 +487,8 @@ class GroupBaselineModel(ModelPlugin):
             explanation=explanation,
             explanation_source="local-baseline",
             model=self.name,
+            confidence=confidence,
+            confidence_source=confidence_source,
             evidence=evidence,
             meta={
                 "plugin": self.name,
@@ -300,7 +497,9 @@ class GroupBaselineModel(ModelPlugin):
                 "multiplier": round(multiplier, 4),
                 "clamped": clamped,
                 "locale": locale,
-                "note": "条件均值因子模型，非训练模型；每个因子都可在 evidence 中核对",
+                "precision": round(precision, 4),
+                "backtest": backtest or None,
+                "note": "条件均值因子模型，非训练模型；因子与基准取自同一总体，每个因子都可在 evidence 中核对",
             },
         )
 
@@ -346,6 +545,9 @@ class SalesForecastModel(ModelPlugin):
         value = float(totals["avg_daily_revenue"])
         delta = (value / baseline - 1.0) if baseline else None
 
+        validation_mape = float(metrics.get("mape") or 0.0)
+        confidence = max(0.05, min(0.99, 1.0 - validation_mape)) if validation_mape else None
+
         improvement = metrics.get("improvement_vs_baseline")
         explanation = phrases["forecast"].format(
             model=metrics.get("model", "ML"),
@@ -368,6 +570,8 @@ class SalesForecastModel(ModelPlugin):
             explanation=explanation,
             explanation_source="ml-forecast",
             model=metrics.get("model", self.name),
+            confidence=confidence,
+            confidence_source="validation-mape" if confidence else "",
             evidence=[{"model": metrics.get("model"), "mape": metrics.get("mape"),
                        "baseline_mape": metrics.get("baseline_mape"),
                        "train_rows": metrics.get("train_rows")}],
@@ -394,6 +598,16 @@ def _first_number(payload: dict, keys) -> float | None:
             except (TypeError, ValueError):
                 continue
     return None
+
+
+def _first_ratio(payload: dict, keys) -> float | None:
+    """Read a 0..1 confidence. Accepts either 0.87 or 87."""
+    value = _first_number(payload, keys)
+    if value is None:
+        return None
+    if value > 1.0:
+        value /= 100.0
+    return max(0.0, min(1.0, value))
 
 
 class ExternalModelClient(ModelPlugin):
@@ -447,6 +661,7 @@ class ExternalModelClient(ModelPlugin):
 
         baseline = _first_number(body, ("baseline", "normal", "average", "expected"))
         delta = _first_number(body, ("delta", "change", "relative_change"))
+        confidence = _first_ratio(body, ("confidence", "confidence_percent", "score", "probability"))
 
         return PredictionResult(
             value=value,
@@ -456,6 +671,8 @@ class ExternalModelClient(ModelPlugin):
             explanation=str(body.get("explanation") or body.get("reason") or ""),
             explanation_source="external-api",
             model=str(body.get("model") or body.get("model_name") or "external-model"),
+            confidence=confidence,
+            confidence_source="external-api" if confidence is not None else "",
             evidence=body.get("evidence") if isinstance(body.get("evidence"), list) else [],
             meta={"plugin": self.name, "url": self.url,
                   "external_meta": body.get("meta") if isinstance(body.get("meta"), dict) else {}},
@@ -482,6 +699,18 @@ def resolve_model(template: dict) -> ModelPlugin:
             status=500,
         )
     return plugin_class(template, template["model"].get("options") or {})
+
+
+def warm_up(template: dict, frame: pd.DataFrame) -> bool:
+    """Precompute whatever the active plugin needs on its first request."""
+    try:
+        plugin = resolve_model(template)
+    except ModelError:
+        return False
+    if isinstance(plugin, GroupBaselineModel) and frame is not None and not frame.empty:
+        backtest_group_baseline(template, frame)
+        return True
+    return False
 
 
 def fallback_plugin(template: dict) -> ModelPlugin | None:

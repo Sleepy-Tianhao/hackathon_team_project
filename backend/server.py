@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import mimetypes
 import os
 import threading
 import traceback
@@ -32,15 +33,27 @@ except ImportError:  # direct execution: python backend/server.py
     from backend.database import BASE_DIR, SessionLocal, ensure_seeded
 
 FRONTEND_DIR = BASE_DIR / "frontend"
-STATIC_WHITELIST = {
-    "index.html": "text/html; charset=utf-8",
-    "style.css": "text/css; charset=utf-8",
-    "app.js": "application/javascript; charset=utf-8",
-    # Archived analytics dashboard, kept for reference. Safe to delete along
-    # with these three entries.
-    "legacy/index.html": "text/html; charset=utf-8",
-    "legacy/style.css": "text/css; charset=utf-8",
-    "legacy/app.js": "application/javascript; charset=utf-8",
+
+# The frontend uses ES modules (<script type="module">), and browsers refuse to
+# execute a module unless it is served with a JavaScript MIME type. Keep this map
+# explicit instead of relying on the host's registry.
+STATIC_TYPES = {
+    ".html": "text/html; charset=utf-8",
+    ".css": "text/css; charset=utf-8",
+    ".js": "text/javascript; charset=utf-8",
+    ".mjs": "text/javascript; charset=utf-8",
+    ".json": "application/json; charset=utf-8",
+    ".map": "application/json; charset=utf-8",
+    ".txt": "text/plain; charset=utf-8",
+    ".svg": "image/svg+xml",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".webp": "image/webp",
+    ".gif": "image/gif",
+    ".ico": "image/x-icon",
+    ".woff": "font/woff",
+    ".woff2": "font/woff2",
 }
 JSON_HEADERS = {"Cache-Control": "no-store", "Access-Control-Allow-Origin": "*"}
 
@@ -151,6 +164,11 @@ def _predict(params: Params, db, body) -> dict:
     return service.run_prediction(body, db=db)
 
 
+def _analyze(params: Params, db, body) -> dict:
+    """Frontend contract: flat fields in, prediction/average/change/confidence out."""
+    return service.analyze(body, db=db)
+
+
 ROUTES = {
     "/api/config": lambda params, db: service.get_config(),
     "/api/options": lambda params, db: service.get_field_options(),
@@ -170,6 +188,7 @@ ROUTES = {
 # Routes that accept a JSON body (POST).
 POST_ROUTES = {
     "/api/predict": _predict,
+    "/analyze": _analyze,
 }
 
 MAX_BODY_BYTES = 1 << 20
@@ -185,7 +204,11 @@ class ApiHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:  # noqa: N802 - the name is mandated by the base class
         parsed = urlparse(self.path)
         path = unquote(parsed.path)
-        if path == "/api" or path.startswith("/api/"):
+        route = path.rstrip("/") or "/"
+        # Treat anything that is an API route as one: known GET routes, POST-only
+        # routes (so they answer 405 rather than 404), and any other /api/* path so
+        # the caller gets a JSON 404 instead of a static-file one.
+        if route in ROUTES or route in POST_ROUTES or path.startswith("/api/"):
             self._handle_api(path, parsed.query)
         else:
             self._handle_static(path)
@@ -259,21 +282,33 @@ class ApiHandler(BaseHTTPRequestHandler):
         except (UnicodeDecodeError, json.JSONDecodeError) as exc:
             raise service.ServiceError(f"请求体不是合法 JSON: {exc}", 400) from exc
 
+    def _resolve_static(self, path: str) -> Path | None:
+        """Map a URL path onto a file inside frontend/, refusing anything outside."""
+        relative = unquote(path).lstrip("/") or "index.html"
+        root = FRONTEND_DIR.resolve()
+        candidate = (root / relative).resolve()
+        if candidate != root and root not in candidate.parents:
+            return None                      # path traversal, or outside the root
+        if candidate.is_dir():
+            candidate = candidate / "index.html"
+        return candidate if candidate.is_file() else None
+
     def _handle_static(self, path: str) -> None:
-        name = path.strip("/") or "index.html"
-        content_type = STATIC_WHITELIST.get(name)
-        if content_type is None:
+        target = self._resolve_static(path)
+        if target is None:
             self._json(404, {"detail": f"{path} not found"})
             return
-        target = FRONTEND_DIR / name
-        if not target.is_file():
-            self._json(404, {"detail": f"{name} not found"})
-            return
+        content_type = STATIC_TYPES.get(target.suffix.lower()) \
+            or mimetypes.guess_type(target.name)[0] \
+            or "application/octet-stream"
+        if content_type.startswith("text/") and "charset" not in content_type:
+            content_type += "; charset=utf-8"
         body = target.read_bytes()
         self.send_response(200)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", "no-store")
+        self.send_header("X-Content-Type-Options", "nosniff")
         self.end_headers()
         self.wfile.write(body)
 

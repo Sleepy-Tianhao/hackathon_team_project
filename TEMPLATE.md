@@ -120,14 +120,22 @@ python -m backend.server
 | `name` | ✅ | 字段名，会作为 `fields` 的 key 发给模型 |
 | `label` | ✅ | 显示在左侧的标签 |
 | `type` | | `select` / `number` / `text`，默认 `select` |
-| `source` | | `dataset` = 下拉项取 CSV 某列的去重值；`static` = 用本字段的 `options` |
+| `source` | | `dataset` / `static` / `input`，见下表 |
 | `column` | source=dataset 时 ✅ | 对应 CSV 的列名 |
 | `options` | source=static 时 ✅ | 静态候选值数组，如 `[7,14,30,60,90]` |
-| `required` | | 默认 `true`；`false` 时下拉会多一个空选项，空值会被传给模型 |
+| `required` | | 默认 `true`（`type=text` 默认 `false`）；`false` 时下拉会多一个空选项，空值会被传给模型 |
 | `default` | | 页面初始选中值（不填则取第一个候选） |
 | `min` / `max` | | 仅 `type=number`，后端会校验范围 |
-| `suffix` | | 输入框的 placeholder |
+| `placeholder` | | 输入框占位文字（`suffix` 是旧别名，两者等价） |
 | `help` | | 悬停提示（title） |
+
+三种 `source` 的区别：
+
+| source | 候选值来源 | 需要 `column`？ | 模型怎么用它 |
+|---|---|---|---|
+| `dataset` | CSV 某列的去重值 | ✅ | 本地统计插件按该列取值做条件统计 |
+| `static` | 字段自己的 `options` | ✗ | 本地统计插件不参与；外接模型可以用 |
+| `input` | 无（自由文本/数字） | ✗ | **原样发给外接模型**；本地统计插件忽略它 |
 
 **控件映射**：字段有候选值（dataset 或 static）→ 渲染成下拉框；没有候选值且 `type=number` → 数字输入框；否则文本框。
 所以"预测天数"这种写法会渲染成下拉框：
@@ -165,9 +173,17 @@ python -m backend.server
                 "horizon": [7, 14, 30, 60, 90] },
   "dataset":  { "rows": 3655, "target": "portions", "target_label": "需求份数",
                 "unit": "portions", "target_mean": 77.26,
-                "date_min": "2024-01-01", "date_max": "2025-12-31" }
+                "date_min": "2024-01-01", "date_max": "2025-12-31" },
+  "model":    { "plugin": "group-baseline",
+                "backtest": { "days": 60, "samples": 300, "mape": 0.0749, "accuracy": 0.9251,
+                              "mae": 5.58, "naive_mae": 32.02, "mae_improvement": 0.8257 } }
 }
 ```
+
+`model.backtest` 就是 UI 上 confidence 的来源（见 8.1），也是"模型准确率/AI 效果"这类
+KPI 卡片可以直接引用的实测数字。**只有 `group-baseline` 会给出这个块**；
+`sales-forecast` 这类训练模型的指标在每次预测响应的 `model` / `meta` 里（验证集 MAPE、相对基线提升等），
+`backtest` 为 `null`。切换模板时记得同步 `frontend/js/config.js` 里的 Metrics/Impact 文案。
 
 ### `GET /api/options` — 只刷新下拉项
 
@@ -204,6 +220,38 @@ python -m backend.server
   "meta": { "plugin": "group-baseline", "elapsed_ms": 12.4, ... }
 }
 ```
+
+### `POST /analyze` — 前端实际调用的接口
+
+`frontend/js/services/api.js` 调用的就是它。body 是**扁平的字段表**（不是 `{fields:{...}}`），
+响应在完整信封之上多 5 个前端直接读取的 key：
+
+请求（等价于 `Object.fromEntries(new FormData(form))`）：
+
+```json
+{ "menu": "Chicken Rice", "day": "Friday", "weather": "Rain", "event": "None", "notes": "" }
+```
+
+响应：
+
+```json
+{
+  "prediction": 95.0,        // = value
+  "average": 92.0,           // = baseline，"正常水平"
+  "change_percent": 3.7,     // = delta × 100
+  "confidence": 93,          // 0-100，来自回测 MAPE（见 8.1）；无法给出时为 null
+  "explanation": "Chicken Rice averages 117 (28% above); ...",
+
+  // 下面是 /api/predict 的完整字段，前端暂时没全用，但随时可用
+  "value": 95.0, "baseline": 92.0, "delta": 0.0369, "delta_text": "4% higher than normal",
+  "direction": "up", "unit": "portions", "model": "group-baseline",
+  "explanation_source": "local-baseline", "fields": { ... }, "evidence": [ ... ],
+  "meta": { "backtest": { ... }, "precision": 0.98, "elapsed_ms": 78.2 }
+}
+```
+
+> `/api/predict` 与 `/analyze` 走的是同一段代码，`/analyze` 只是多了上面 5 个别名，
+> 所以不会出现"两个接口行为不一致"的问题。前端写 `api.js` 时用哪个都可以。
 
 ### 错误码
 
@@ -348,15 +396,32 @@ PLUGINS[MyModel.name] = MyModel        # 注册
 公式：
 
 ```
-baseline   = mean(target | baseline_filter)            # 默认全量均值
-factor_i   = mean(target | 字段i = 取值) / baseline     # 至少 effect_min_rows 条历史才算
+baseline   = mean(target | baseline_filter)                        # 默认全量均值
+factor_i   = mean(target | 字段i = 取值，且同一 baseline 口径) / baseline
 prediction = clamp(baseline × Π factor_i, 0.2×baseline, 5×baseline)
 ```
 
 - 每个 factor 都会进 `evidence`，**解释文字就是这些 factor 拼出来的**，不是事后编的。
-- `model.options.baseline_filter`：限定"正常水平"的口径。食堂模板把它限定为"周一至周五"，所以周五才会显示"比正常低"。
+- **因子必须在与 baseline 相同的总体里统计**。如果 baseline 是"工作日均值"而因子在全体数据上算，
+  这个总体差异会被每个因子各算一次并在乘积里放大——这个 bug 实测会带来约 39% 的 MAPE，
+  修好后降到 7.5%。
+- `model.options.baseline_filter`：限定"正常水平"的口径。食堂模板限定为"周一至周五"，
+  于是周五会显示"比正常低"；查询周六时该字段在口径内没有样本，会自动回退到全量周六——这正是想要的对比。
 - `model.options.effect_min_rows`：样本太少就不采信该因子（默认 5）。
 - **已知局限**：假设各字段效应相互独立，强相关的字段（例如"周六"和"假日"）会重复计算，因此加了上下限截断（触发时解释末尾会标注）。要更准就换成你自己的模型或 `sales-forecast` 那种训练模型。
+
+**confidence 是怎么来的**：`backtest_group_baseline()` 做留一天法回测——对最近 60 天的每一天，
+用**不含这一天**的统计重新预测当天每一行，再与真实值比较。结果随响应一起返回：
+
+| 指标 | 含义 | 默认模板实测 |
+|---|---|---|
+| `mape` / `accuracy` | 回测 MAPE / 准确率，`confidence = 1 - mape` | 7.5% / 92.5% → 置信度 93% |
+| `mae` | 平均绝对误差（份） | 5.58 |
+| `naive_mae` / `naive_mape` | 参照系："每天都按典型工作日备餐" | 32.02 / 68.7% |
+| `mae_improvement` | 相对参照系减少的误差 | **82.6%** |
+| `meta.precision` | 本次预测的精度（各因子标准误按乘积传播） | 约 0.98 |
+
+所以界面上的 confidence、准确率、"减少备餐误差 83%"都是**可复算的实测数字**，不是编的。
 
 ### 8.2 `sales-forecast`（本地 ML，销售示例）
 
@@ -367,6 +432,15 @@ prediction = clamp(baseline × Π factor_i, 0.2×baseline, 5×baseline)
 ---
 
 ## 9. 换成你自己的数据
+
+> 完整的格式要求、校验工具用法与示例见 **[DATA_FORMAT.md](DATA_FORMAT.md)**。
+> 一句话版本：一个长表 CSV（一行 = 一次观测）+ template.json 里 `dataset` 与 `fields` 两段。
+
+0. 先跑一次校验，它会检查列、样本量、日期，并跑回测告诉你预期准确率：
+
+   ```powershell
+   python -m backend.check_data --csv data/my.csv --target yield --field crop --field soil --check-api
+   ```
 
 1. 把 CSV 放进 `data/`（UTF-8；建议带 BOM 以便 Excel 打开）。
 2. `dataset.path` 指向它，`dataset.target` 写你要预测的数值列名。
@@ -379,24 +453,54 @@ prediction = clamp(baseline × Π factor_i, 0.2×baseline, 5×baseline)
 
 ## 10. 前端如何工作
 
-`frontend/app.js` 只做三件事：
+前端是 ES Module + 原生 JS 的组件式结构，无框架、无构建步骤：
 
-1. `GET /api/config` → 写入标题/副标题/页脚/按钮文案，按 `fields[]` 生成表单；
-2. 点按钮 → `POST /api/predict`，body 为 `{fields:{...}}`；
-3. 把结果渲染进 `#result` 区块。
+```text
+frontend/
+├── index.html              只有 #app / #toast 两个容器，加一行引入 app.js
+├── css/style.css           全部样式（布局、卡片、响应式）
+└── js/
+    ├── app.js              入口：拉模板 -> 组合组件 -> 绑定表单 -> 调 API
+    ├── config.js           ★ 比赛当天最常改：项目名/标题/文案/Metrics/Impact
+    ├── components/         每个文件一个 UI 区域，导出 (config) => html 字符串
+    │   ├── header.js  hero.js  metrics.js  analysis.js  impact.js  footer.js
+    └── services/api.js     ★ 与后端通信的唯一出口
+```
 
-因此**没有任何字段名写死在 HTML/JS 里**。可二次开发的元素 id：
+### 10.1 字段的唯一来源是 template.json
+
+启动顺序：
+
+```text
+1. app.js   ->  GET /api/config
+2. 用 template.fields 覆盖 CONFIG.inputs（字段名 / 标签 / 控件类型 / 下拉项）
+3. 用 template.output.unit 覆盖 CONFIG.analysis.resultUnit
+4. renderApp() 渲染页面
+5. 提交表单 -> POST /analyze -> updateResult() 填 5 个结果元素
+```
+
+所以加一个字段只需要改 `template.json`：前端下拉框自动出现，后端校验同步生效，两边不会各写一份。
+后端没启动时（例如只用 VS Code Live Server 打开页面），`app.js` 会退回 `config.js` 里的 `inputs`，
+`api.js` 会退回 `analyzeMock()`，页面仍然完整可演示。
+
+`config.js` 与 `template.json` 的分工：**外壳文案**（项目名、标题、描述、Hero、Metrics、Impact）
+在 `config.js`；**分析字段与输出单位**在 `template.json`。
+
+### 10.2 结果区元素 id
 
 | id | 内容 |
 |---|---|
-| `#brand` / `#app-title` / `#app-subtitle` / `#footer` | 标题区 |
-| `#fields` | 表单字段容器（动态生成 `.row`） |
-| `#submit` | 主按钮 |
-| `#form-error` | 错误提示条 |
-| `#result` | 结果区（`hidden` 控制显隐） |
-| `#result-headline` / `#result-value` / `#result-unit` / `#result-delta` | 数值区 |
-| `#result-explanation` / `#explain-title` | AI 解释区 |
-| `#result-meta` | 模型名 / 来源 / 耗时 / 回退提示 |
+| `#result-value` | prediction（主数字） |
+| `#result-average` | average（正常水平） |
+| `#result-change` | change_percent |
+| `#result-confidence` | confidence |
+| `#result-explanation` | explanation（🤖 AI Insight） |
+| `#toast` | 右下角提示条 |
+
+### 10.3 换成你们自己的界面
+
+`components/*.js` 都是 `(config) => html字符串`：改版式动这些文件，改文案动 `config.js`，
+改字段动 `template.json`，三者互不干扰。
 
 ---
 

@@ -1,0 +1,71 @@
+{
+  "_readme": [
+    "备用模板：零售销售预测（用本地 ML 插件 sales-forecast，ExtraTrees）。",
+    "用法：copy templates/retail-sales.json template.json",
+    "这个模板演示的是 字段→训练模型 的接法；默认模板演示的是 字段→通用统计基线 的接法。",
+    "字段说明见 TEMPLATE.md。"
+  ],
+
+  "id": "retail-forecast",
+  "app": {
+    "brand": "SDC",
+    "title": "SMART SALES FORECAST",
+    "subtitle": "AI-powered retail demand prediction",
+    "footer": "模板驱动 · 模型插件可替换 · 外接 API 见 TEMPLATE.md"
+  },
+
+  "dataset": {
+    "path": "data/sales.csv",
+    "date_column": "date",
+    "target": "revenue",
+    "unit": "元",
+    "target_label": "营收"
+  },
+
+  "model": {
+    "plugin": "sales-forecast",
+    "options": {}
+  },
+
+  "fields": [
+    {
+      "name": "store",
+      "label": "Store",
+      "type": "select",
+      "source": "dataset",
+      "column": "store",
+      "required": true,
+      "help": "选择门店"
+    },
+    {
+      "name": "category",
+      "label": "Category",
+      "type": "select",
+      "source": "dataset",
+      "column": "category",
+      "required": true,
+      "help": "选择品类"
+    },
+    {
+      "name": "horizon",
+      "label": "Horizon",
+      "type": "number",
+      "source": "static",
+      "options": [7, 14, 30, 60, 90],
+      "default": 30,
+      "suffix": "days",
+      "required": true,
+      "help": "预测时长"
+    }
+  ],
+
+  "output": {
+    "headline": "Predicted daily revenue",
+    "subheadline": "模型预测的日均营收",
+    "unit": "元",
+    "decimals": 0,
+    "delta_label": "vs. 历史日均",
+    "explanation_title": "AI Explanation",
+    "submit_label": "Predict Revenue"
+  }
+}

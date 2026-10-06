@@ -1,70 +1,97 @@
 {
   "_readme": [
-    "唯一配置源 (single source of truth)：页面标题、输入字段、输出文案、模型插件全部在此声明。",
-    "改这个文件即可换题，无需改任何 HTML/JS/Python。字段说明见 TEMPLATE.md。",
-    "把这个文件替换成 templates/food-demand.json 的内容，即可变成校园食堂需求预测。"
+    "默认模板：校园食堂需求预测 / 减少食物浪费（对应 frontend 的 AI FOR SUSTAINABILITY 主题）。",
+    "这是唯一需要改的后端配置文件：字段、下拉项、模型插件、输出文案全在这里。",
+    "用法：换成 templates/retail-sales.json 可切到零售销售场景；或用 TEMPLATE_FILE 环境变量指定。",
+    "详细字段说明见 TEMPLATE.md。"
   ],
 
-  "id": "retail-forecast",
+  "id": "food-demand",
   "app": {
-    "brand": "SDC",
-    "title": "SMART SALES FORECAST",
-    "subtitle": "AI-powered retail demand prediction",
-    "footer": "模板驱动 · 模型插件可替换 · 外接 API 见 TEMPLATE.md"
+    "brand": "CAMPUS",
+    "title": "SMART FOOD FORECAST",
+    "subtitle": "AI-powered Campus Food Forecast",
+    "footer": "FastAPI · 模板驱动 · 外接模型 API 见 TEMPLATE.md"
   },
 
   "dataset": {
-    "path": "data/sales.csv",
+    "path": "data/menu_demand.csv",
     "date_column": "date",
-    "target": "revenue",
-    "unit": "元",
-    "target_label": "营收"
+    "target": "portions",
+    "unit": "portions",
+    "target_label": "需求份数"
   },
 
   "model": {
-    "plugin": "sales-forecast",
-    "options": {}
+    "plugin": "group-baseline",
+    "options": {
+      "effect_min_rows": 5,
+      "baseline_filter": {
+        "weekday": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      },
+      "baseline_label": "a typical weekday",
+      "fallback_plugin": "group-baseline"
+    }
   },
 
   "fields": [
     {
-      "name": "store",
-      "label": "Store",
+      "name": "menu",
+      "label": "Menu",
       "type": "select",
       "source": "dataset",
-      "column": "store",
+      "column": "menu",
       "required": true,
-      "help": "选择门店"
+      "default": "Chicken Rice"
     },
     {
-      "name": "category",
-      "label": "Category",
+      "name": "day",
+      "label": "Day",
       "type": "select",
       "source": "dataset",
-      "column": "category",
+      "column": "weekday",
       "required": true,
-      "help": "选择品类"
+      "default": "Friday",
+      "help": "预测哪一天"
     },
     {
-      "name": "horizon",
-      "label": "Horizon",
-      "type": "number",
-      "source": "static",
-      "options": [7, 14, 30, 60, 90],
-      "default": 30,
-      "suffix": "days",
+      "name": "weather",
+      "label": "Weather",
+      "type": "select",
+      "source": "dataset",
+      "column": "weather",
       "required": true,
-      "help": "预测时长"
+      "default": "Rain"
+    },
+    {
+      "name": "event",
+      "label": "Event",
+      "type": "select",
+      "source": "dataset",
+      "column": "event",
+      "required": true,
+      "default": "None",
+      "help": "无特殊事件时选 None"
+    },
+    {
+      "name": "notes",
+      "label": "Additional Information",
+      "type": "text",
+      "source": "input",
+      "required": false,
+      "placeholder": "Enter extra context...",
+      "help": "自由文本：会被原样发给外接模型 api，本地统计插件忽略它"
     }
   ],
 
   "output": {
-    "headline": "Predicted daily revenue",
-    "subheadline": "模型预测的日均营收",
-    "unit": "元",
+    "locale": "en",
+    "headline": "Tomorrow's predicted demand",
+    "subheadline": "基于历史条件的需求预测",
+    "unit": "portions",
     "decimals": 0,
-    "delta_label": "vs. 历史日均",
+    "delta_label": "vs. normal",
     "explanation_title": "AI Explanation",
-    "submit_label": "Predict Revenue"
+    "submit_label": "Predict Demand"
   }
 }
