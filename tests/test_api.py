@@ -40,7 +40,14 @@ from backend import database, predictor, server, service, template_config  # noq
 from backend.database import SessionLocal  # noqa: E402
 
 SEEDED_ROWS = 0
-FOOD_TEMPLATE = "templates/food-demand.json"
+
+# The default template is the campus food-demand one (what frontend/js/config.js
+# is themed for); retail sales is the alternate example that exercises the
+# bundled scikit-learn plugin.
+RETAIL_TEMPLATE = "templates/retail-sales.json"
+FOOD_FORM = {"menu": "Chicken Rice", "day": "Friday", "weather": "Rain",
+             "event": "None", "notes": ""}
+RETAIL_FORM = {"store": "上海旗舰店", "category": "智能手机", "horizon": "30"}
 
 
 @contextmanager
@@ -386,21 +393,31 @@ class TestHttpServer(unittest.TestCase):
         status, content_type, body = self.request("/")
         self.assertEqual(status, 200)
         self.assertIn("text/html", content_type)
-        # The shell must stay field-agnostic: all labels arrive from /api/config.
-        self.assertIn('id="form"', body.decode("utf-8"))
+        # index.html stays a bare shell: every section is rendered by app.js.
+        self.assertIn('id="app"', body.decode("utf-8"))
 
-        for name, expected in (("style.css", "text/css"), ("app.js", "javascript")):
-            with self.subTest(asset=name):
-                status, content_type, body = self.request("/" + name)
-                self.assertEqual(status, 200)
-                self.assertIn(expected, content_type)
-                self.assertGreater(len(body), 500)
-
-    def test_archived_dashboard_is_still_served(self) -> None:
-        status, content_type, body = self.request("/legacy/index.html")
+        status, content_type, _ = self.request("/index.html")
         self.assertEqual(status, 200)
         self.assertIn("text/html", content_type)
-        self.assertGreater(len(body), 1000)
+
+    def test_es_modules_and_assets_are_served(self) -> None:
+        assets = {
+            "/css/style.css": "text/css",
+            "/js/app.js": "javascript",
+            "/js/config.js": "javascript",
+            "/js/components/header.js": "javascript",
+            "/js/components/hero.js": "javascript",
+            "/js/components/analysis.js": "javascript",
+            "/js/services/api.js": "javascript",
+        }
+        for path, expected in assets.items():
+            with self.subTest(asset=path):
+                status, content_type, body = self.request(path)
+                self.assertEqual(status, 200)
+                # Browsers refuse to execute an ES module unless the MIME type is
+                # a JavaScript one. This is the regression the test guards.
+                self.assertIn(expected, content_type)
+                self.assertGreater(len(body), 80)
 
     # -- helpers ----------------------------------------------------------- #
     def post_json(self, path: str, payload, **params):
@@ -472,8 +489,8 @@ class TestHttpServer(unittest.TestCase):
         self.assertEqual(payload["options"], config["options"])
 
     def test_predict_endpoint_uses_the_configured_model(self) -> None:
-        status, body = self.post_json("/api/predict", {
-            "fields": {"store": "上海旗舰店", "category": "智能手机", "horizon": "30"}})
+        with temporary_env(TEMPLATE_FILE=RETAIL_TEMPLATE):
+            status, body = self.post_json("/api/predict", {"fields": dict(RETAIL_FORM)})
         self.assertEqual(status, 200)
         self.assertGreater(body["value"], 0)
         expected = "up" if body["delta"] > 0.005 else ("down" if body["delta"] < -0.005 else "flat")
@@ -483,16 +500,14 @@ class TestHttpServer(unittest.TestCase):
         self.assertTrue(body["headline"])
         self.assertIn("elapsed_ms", body["meta"])
 
-    def test_predict_endpoint_food_template(self) -> None:
-        with temporary_env(TEMPLATE_FILE=FOOD_TEMPLATE):
-            config = self.get_json("/api/config")[1]
-            self.assertEqual(config["template"]["id"], "food-demand")
-            # Regression guard: pandas used to turn the literal "None" into NaN,
-            # which silently removed the most common event from the dropdown.
-            self.assertIn("None", config["options"]["event"])
+    def test_predict_endpoint_default_template(self) -> None:
+        config = self.get_json("/api/config")[1]
+        self.assertEqual(config["template"]["id"], "food-demand")
+        # Regression guard: pandas used to turn the literal "None" into NaN,
+        # which silently removed the most common event from the dropdown.
+        self.assertIn("None", config["options"]["event"])
 
-            status, body = self.post_json("/api/predict", {
-                "fields": {"menu": "Chicken Rice", "day": "Friday", "weather": "Rain", "event": "None"}})
+        status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
 
         self.assertEqual(status, 200)
         self.assertGreater(body["value"], 0)
@@ -505,11 +520,11 @@ class TestHttpServer(unittest.TestCase):
         self.assertIn("Rain", body["explanation"])
 
     def test_predict_validation_errors(self) -> None:
-        good = {"store": "上海旗舰店", "category": "智能手机", "horizon": "30"}
+        good = dict(FOOD_FORM)
         cases = [
-            ({key: value for key, value in good.items() if key != "horizon"}, "缺少必填字段"),
-            ({**good, "store": "不存在的门店"}, "不在可选范围"),
-            ({**good, "horizon": "999"}, "不在可选范围"),
+            ({key: value for key, value in good.items() if key != "weather"}, "缺少必填字段"),
+            ({**good, "menu": "Pizza"}, "不在可选范围"),
+            ({**good, "day": "Caturday"}, "不在可选范围"),
             ({**good, "surprise": 1}, "未知字段"),
         ]
         for fields, expected in cases:
@@ -536,10 +551,9 @@ class TestHttpServer(unittest.TestCase):
             "explanation": "Friday demand is historically lower, and rain is expected tomorrow.",
             "model": "canteen-xgb-v3", "meta": {"version": "test"},
         })
-        with temporary_env(TEMPLATE_FILE=FOOD_TEMPLATE, MODEL_BACKEND="http", MODEL_API_KEY="secret",
+        with temporary_env(MODEL_BACKEND="http", MODEL_API_KEY="secret",
                            MODEL_API_URL=f"http://127.0.0.1:{port}/predict"):
-            status, body = self.post_json("/api/predict", {
-                "fields": {"menu": "Chicken Rice", "day": "Friday", "weather": "Rain", "event": "None"}})
+            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
 
         self.assertEqual(status, 200)
         self.assertEqual(body["value"], 132)
@@ -556,11 +570,9 @@ class TestHttpServer(unittest.TestCase):
         self.assertIn("requested_at", sent["context"])
 
     def test_dead_model_api_falls_back_to_the_local_plugin(self) -> None:
-        with temporary_env(TEMPLATE_FILE=FOOD_TEMPLATE, MODEL_BACKEND="http",
-                           MODEL_API_URL="http://127.0.0.1:1/model", MODEL_API_TIMEOUT="3",
-                           MODEL_API_FALLBACK=None):
-            status, body = self.post_json("/api/predict", {
-                "fields": {"menu": "Chicken Rice", "day": "Friday", "weather": "Rain", "event": "None"}})
+        with temporary_env(MODEL_BACKEND="http", MODEL_API_URL="http://127.0.0.1:1/model",
+                           MODEL_API_TIMEOUT="3", MODEL_API_FALLBACK=None):
+            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
         self.assertEqual(status, 200)
         self.assertEqual(body["model"], "group-baseline")
         self.assertTrue(body["meta"]["fallback"])
@@ -568,20 +580,73 @@ class TestHttpServer(unittest.TestCase):
         self.assertTrue(body["meta"]["fallback_reason"])
 
     def test_dead_model_api_can_fail_loudly(self) -> None:
-        with temporary_env(TEMPLATE_FILE=FOOD_TEMPLATE, MODEL_BACKEND="http",
-                           MODEL_API_URL="http://127.0.0.1:1/model", MODEL_API_TIMEOUT="3",
-                           MODEL_API_FALLBACK="off"):
-            status, body = self.post_json("/api/predict", {
-                "fields": {"menu": "Chicken Rice", "day": "Friday", "weather": "Rain", "event": "None"}})
+        with temporary_env(MODEL_BACKEND="http", MODEL_API_URL="http://127.0.0.1:1/model",
+                           MODEL_API_TIMEOUT="3", MODEL_API_FALLBACK="off"):
+            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
         self.assertEqual(status, 502)
         self.assertIn("模型调用失败", body["detail"])
 
     def test_unknown_plugin_is_reported(self) -> None:
         with temporary_env(MODEL_BACKEND="does-not-exist"):
-            status, body = self.post_json("/api/predict", {
-                "fields": {"store": "上海旗舰店", "category": "智能手机", "horizon": "30"}})
+            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
         self.assertEqual(status, 500)
         self.assertIn("unknown model plugin", body["detail"])
+
+    def test_encoded_traversal_is_refused(self) -> None:
+        for path in ("/..%2fbackend%2fservice.py", "/js/../../backend/service.py"):
+            with self.subTest(path=path):
+                status, _, _ = self.request(path)
+                self.assertEqual(status, 404)
+
+    # -- /analyze: the contract frontend/js/services/api.js calls ------------ #
+    def test_analyze_matches_the_frontend_contract(self) -> None:
+        status, body = self.post_json("/analyze", dict(FOOD_FORM))
+        self.assertEqual(status, 200)
+        for key in ("prediction", "average", "change_percent", "confidence", "explanation"):
+            self.assertIn(key, body)
+        self.assertEqual(body["prediction"], body["value"])
+        self.assertEqual(body["average"], body["baseline"])
+        self.assertAlmostEqual(body["change_percent"], round(body["delta"] * 100, 1), places=1)
+        self.assertGreater(body["value"], 0)
+        self.assertTrue(body["explanation"])
+        self.assertEqual(body["fields"]["menu"], "Chicken Rice")
+
+    def test_analyze_requires_post(self) -> None:
+        status, _, _ = self.request("/analyze")
+        self.assertEqual(status, 405)
+
+    def test_analyze_rejects_unknown_option_values(self) -> None:
+        status, body = self.post_json("/analyze", {**FOOD_FORM, "menu": "Pizza"})
+        self.assertEqual(status, 422)
+        self.assertIn("不在可选范围", body["detail"])
+
+    def test_free_text_field_is_validated_and_passed_through(self) -> None:
+        status, body = self.post_json("/analyze", {**FOOD_FORM, "notes": "extra context"})
+        self.assertEqual(status, 200)
+        self.assertEqual(body["fields"]["notes"], "extra context")
+
+        without_notes = {key: value for key, value in FOOD_FORM.items() if key != "notes"}
+        status, body = self.post_json("/analyze", without_notes)
+        self.assertEqual(status, 200)
+        self.assertEqual(body["fields"]["notes"], "")
+
+    def test_confidence_is_measured_not_invented(self) -> None:
+        status, body = self.post_json("/analyze", dict(FOOD_FORM))
+        self.assertEqual(status, 200)
+        self.assertIsNotNone(body["confidence"])
+        self.assertTrue(0 <= body["confidence"] <= 100)
+        self.assertEqual(body["confidence_source"], "backtest-mape")
+        backtest = body["meta"]["backtest"]
+        self.assertGreater(backtest["samples"], 50)
+        self.assertAlmostEqual(body["confidence"], round((1 - backtest["mape"]) * 100), delta=1)
+        # the naive reference point ("always prep a typical weekday") is worse
+        self.assertGreater(backtest["naive_mae"], backtest["mae"])
+
+    def test_config_exposes_model_summary(self) -> None:
+        status, payload = self.get_json("/api/config")
+        self.assertEqual(status, 200)
+        self.assertEqual(payload["model"]["plugin"], "group-baseline")
+        self.assertIn("mape", payload["model"]["backtest"])
 
 
 class TestTemplateValidation(unittest.TestCase):

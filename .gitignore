@@ -26,6 +26,9 @@ tests/_tmp/
 # Editors / OS
 .vscode/
 .idea/
+# ...but keep the Live Preview setting the frontend team committed on purpose
+!frontend/.vscode/
+!frontend/.vscode/settings.json
 .DS_Store
 Thumbs.db
 *.log
