@@ -316,6 +316,47 @@ def check_backtest(template: dict, frame: pd.DataFrame, report: Report, days: in
         report.good(f"  MAPE {mape:.1%} 表现良好")
 
 
+def check_model_api(template: dict, report: Report, frame: pd.DataFrame | None) -> None:
+    """Preflight MODEL_API_URL exactly as the http plugin will call it."""
+    from . import model_api
+
+    url = os.getenv("MODEL_API_URL") or (template["model"].get("options") or {}).get("url")
+    if not url:
+        report.warn("MODEL_API_URL 未设置，跳过外接模型检查")
+        return
+
+    try:
+        plugin = model_api.ExternalModelClient(template, template["model"].get("options") or {})
+    except model_api.ModelError as exc:
+        report.error(f"外接模型配置有问题：{exc}")
+        return
+
+    options = template_config.field_options(template)
+    sample: dict[str, Any] = {}
+    for field in template["fields"]:
+        values = options.get(field["name"]) or []
+        default = field.get("default")
+        sample[field["name"]] = default if default is not None else (values[0] if values else "")
+
+    try:
+        result = plugin.predict(sample, frame, db=None)
+    except model_api.ModelError as exc:
+        report.error(f"外接模型 API 调用失败：{exc}")
+        return
+
+    confidence = None if result.confidence is None else round(float(result.confidence) * 100)
+    report.good(f"外接模型 API   OK   {url}")
+    report.info(f"  请求 {json.dumps(sample, ensure_ascii=False)}")
+    report.info(f"  value={result.value}  baseline={result.baseline}  "
+                f"confidence={confidence}  model={result.model}")
+
+    source = (result.meta or {}).get("external_explanation_source") or "external"
+    if result.explanation:
+        report.info(f"  explanation（{source}）: {result.explanation[:90]}")
+    else:
+        report.warn("  返回里没有 explanation，卡片会显示空段落")
+
+
 def check_api(template: dict, report: Report) -> None:
     """Prove the unchanged API contract already serves this data."""
     from . import service
@@ -458,6 +499,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--backtest-days", type=int, default=60, help="backtest window (0 disables)")
     parser.add_argument("--check-api", action="store_true",
                         help="also prove GET /api/config and POST /analyze serve this data")
+    parser.add_argument("--check-model-api", action="store_true",
+                        help="preflight MODEL_API_URL exactly as the http plugin calls it")
     parser.add_argument("--write-template", help="write a ready-to-use template.json here")
     parser.add_argument("--print-wiring", action="store_true", help="print the template snippet")
     parser.add_argument("--sample", help="write a starter CSV here and exit")
@@ -513,6 +556,9 @@ def _run(args: argparse.Namespace) -> int:
         check_backtest(template, frame, report, args.backtest_days)
         if args.check_api:
             check_api(template, report)
+        plugin = (os.getenv("MODEL_BACKEND") or template["model"]["plugin"]).strip()
+        if args.check_model_api or (args.check_api and plugin == "http"):
+            check_model_api(template, report, frame)
 
     if args.print_wiring or args.csv:
         print_wiring(template)

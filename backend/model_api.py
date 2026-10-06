@@ -292,6 +292,7 @@ def backtest_group_baseline(template: dict, frame: pd.DataFrame, days: int = 60)
     options = template["model"].get("options") or {}
     min_rows = int(options.get("effect_min_rows", 5))
     baseline_filter = options.get("baseline_filter") or {}
+    baseline_label = options.get("baseline_label") or "a normal day"
 
     stamps = pd.to_datetime(frame[date_column], errors="coerce").dt.normalize()
     unique = sorted(stamps.dropna().unique())
@@ -363,7 +364,7 @@ def backtest_group_baseline(template: dict, frame: pd.DataFrame, days: int = 60)
         "avg_actual": round(float(actual.mean()), 2),
         # Reference point: what you get by ignoring the inputs and cooking a
         # normal weekday every day. The gap is the value the model adds.
-        "naive_label": "always prep a typical weekday",
+        "naive_label": f"always assume {baseline_label}",
         "naive_mae": round(naive_mae, 2),
         "naive_mape": round(naive_mape, 4),
         "mae_improvement": round(1.0 - mae / naive_mae, 4) if naive_mae else None,
@@ -662,6 +663,7 @@ class ExternalModelClient(ModelPlugin):
         baseline = _first_number(body, ("baseline", "normal", "average", "expected"))
         delta = _first_number(body, ("delta", "change", "relative_change"))
         confidence = _first_ratio(body, ("confidence", "confidence_percent", "score", "probability"))
+        external_meta = body.get("meta") if isinstance(body.get("meta"), dict) else {}
 
         return PredictionResult(
             value=value,
@@ -674,8 +676,15 @@ class ExternalModelClient(ModelPlugin):
             confidence=confidence,
             confidence_source="external-api" if confidence is not None else "",
             evidence=body.get("evidence") if isinstance(body.get("evidence"), list) else [],
-            meta={"plugin": self.name, "url": self.url,
-                  "external_meta": body.get("meta") if isinstance(body.get("meta"), dict) else {}},
+            meta={
+                "plugin": self.name,
+                "url": self.url,
+                "external_meta": external_meta,
+                # Lifted for convenience so the UI can show whether the sentence
+                # came from an LLM or from the model itself (route 1).
+                "external_model": body.get("model") or body.get("model_name"),
+                "external_explanation_source": external_meta.get("explanation_source"),
+            },
         )
 
 

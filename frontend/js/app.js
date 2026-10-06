@@ -120,10 +120,14 @@ function setupEvents() {
 
       updateResult(result);
 
+      // 路线 1（本地模型出数 + 大模型写解释）时，在提示里说明这句话是谁写的
+      const wrote = result.meta && result.meta.external_explanation_source;
       showToast(
         getLastSource() === "mock"
           ? "Analysis completed (offline demo data)"
-          : "Analysis completed"
+          : wrote === "llm"
+            ? "Analysis completed · explanation by " + (result.model || "LLM")
+            : "Analysis completed"
       );
 
     } catch (error) {

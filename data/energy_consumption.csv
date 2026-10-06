@@ -1,0 +1,3656 @@
+﻿date,building,day_type,weather,term_phase,kwh
+2024-01-01,Canteen,Weekday,Hot,Vacation,228.4
+2024-01-01,Dormitory C,Weekday,Hot,Vacation,313.6
+2024-01-01,Laboratory B,Weekday,Hot,Vacation,529.3
+2024-01-01,Library,Weekday,Hot,Vacation,329.8
+2024-01-01,Teaching Block A,Weekday,Hot,Vacation,449.3
+2024-01-02,Canteen,Weekday,Sunny,Vacation,192.9
+2024-01-02,Dormitory C,Weekday,Sunny,Vacation,292.0
+2024-01-02,Laboratory B,Weekday,Sunny,Vacation,525.4
+2024-01-02,Library,Weekday,Sunny,Vacation,245.8
+2024-01-02,Teaching Block A,Weekday,Sunny,Vacation,388.3
+2024-01-03,Canteen,Weekday,Cloudy,Term,390.7
+2024-01-03,Dormitory C,Weekday,Cloudy,Term,714.5
+2024-01-03,Laboratory B,Weekday,Cloudy,Term,1151.4
+2024-01-03,Library,Weekday,Cloudy,Term,585.5
+2024-01-03,Teaching Block A,Weekday,Cloudy,Term,802.1
+2024-01-04,Canteen,Weekday,Cold,Vacation,206.5
+2024-01-04,Dormitory C,Weekday,Cold,Vacation,426.8
+2024-01-04,Laboratory B,Weekday,Cold,Vacation,591.6
+2024-01-04,Library,Weekday,Cold,Vacation,330.8
+2024-01-04,Teaching Block A,Weekday,Cold,Vacation,470.0
+2024-01-05,Canteen,Weekday,Rain,Vacation,220.3
+2024-01-05,Dormitory C,Weekday,Rain,Vacation,378.6
+2024-01-05,Laboratory B,Weekday,Rain,Vacation,493.3
+2024-01-05,Library,Weekday,Rain,Vacation,271.4
+2024-01-05,Teaching Block A,Weekday,Rain,Vacation,367.4
+2024-01-06,Canteen,Weekend,Cloudy,Vacation,104.2
+2024-01-06,Dormitory C,Weekend,Cloudy,Vacation,212.0
+2024-01-06,Laboratory B,Weekend,Cloudy,Vacation,319.4
+2024-01-06,Library,Weekend,Cloudy,Vacation,143.3
+2024-01-06,Teaching Block A,Weekend,Cloudy,Vacation,237.2
+2024-01-07,Canteen,Weekend,Cold,Term,328.7
+2024-01-07,Dormitory C,Weekend,Cold,Term,518.5
+2024-01-07,Laboratory B,Weekend,Cold,Term,997.2
+2024-01-07,Library,Weekend,Cold,Term,413.8
+2024-01-07,Teaching Block A,Weekend,Cold,Term,746.7
+2024-01-08,Canteen,Weekday,Cloudy,Vacation,184.2
+2024-01-08,Dormitory C,Weekday,Cloudy,Vacation,274.9
+2024-01-08,Laboratory B,Weekday,Cloudy,Vacation,474.5
+2024-01-08,Library,Weekday,Cloudy,Vacation,244.6
+2024-01-08,Teaching Block A,Weekday,Cloudy,Vacation,389.5
+2024-01-09,Canteen,Weekday,Cold,Vacation,217.8
+2024-01-09,Dormitory C,Weekday,Cold,Vacation,408.1
+2024-01-09,Laboratory B,Weekday,Cold,Vacation,689.6
+2024-01-09,Library,Weekday,Cold,Vacation,327.2
+2024-01-09,Teaching Block A,Weekday,Cold,Vacation,470.9
+2024-01-10,Canteen,Weekday,Cold,Vacation,195.6
+2024-01-10,Dormitory C,Weekday,Cold,Vacation,366.9
+2024-01-10,Laboratory B,Weekday,Cold,Vacation,789.8
+2024-01-10,Library,Weekday,Cold,Vacation,325.7
+2024-01-10,Teaching Block A,Weekday,Cold,Vacation,504.7
+2024-01-11,Canteen,Weekday,Cold,Vacation,178.4
+2024-01-11,Dormitory C,Weekday,Cold,Vacation,358.0
+2024-01-11,Laboratory B,Weekday,Cold,Vacation,593.3
+2024-01-11,Library,Weekday,Cold,Vacation,342.5
+2024-01-11,Teaching Block A,Weekday,Cold,Vacation,493.5
+2024-01-12,Canteen,Weekday,Cold,Exam Week,475.7
+2024-01-12,Dormitory C,Weekday,Cold,Exam Week,993.5
+2024-01-12,Laboratory B,Weekday,Cold,Exam Week,1584.1
+2024-01-12,Library,Weekday,Cold,Exam Week,811.1
+2024-01-12,Teaching Block A,Weekday,Cold,Exam Week,1128.4
+2024-01-13,Canteen,Weekend,Sunny,Vacation,120.7
+2024-01-13,Dormitory C,Weekend,Sunny,Vacation,194.8
+2024-01-13,Laboratory B,Weekend,Sunny,Vacation,292.8
+2024-01-13,Library,Weekend,Sunny,Vacation,181.3
+2024-01-13,Teaching Block A,Weekend,Sunny,Vacation,246.7
+2024-01-14,Canteen,Weekend,Cold,Vacation,126.0
+2024-01-14,Dormitory C,Weekend,Cold,Vacation,229.8
+2024-01-14,Laboratory B,Weekend,Cold,Vacation,362.3
+2024-01-14,Library,Weekend,Cold,Vacation,200.0
+2024-01-14,Teaching Block A,Weekend,Cold,Vacation,297.9
+2024-01-15,Canteen,Weekday,Cloudy,Vacation,195.7
+2024-01-15,Dormitory C,Weekday,Cloudy,Vacation,278.0
+2024-01-15,Laboratory B,Weekday,Cloudy,Vacation,554.6
+2024-01-15,Library,Weekday,Cloudy,Vacation,253.7
+2024-01-15,Teaching Block A,Weekday,Cloudy,Vacation,368.5
+2024-01-16,Canteen,Weekday,Cloudy,Vacation,180.4
+2024-01-16,Dormitory C,Weekday,Cloudy,Vacation,301.9
+2024-01-16,Laboratory B,Weekday,Cloudy,Vacation,517.2
+2024-01-16,Library,Weekday,Cloudy,Vacation,283.3
+2024-01-16,Teaching Block A,Weekday,Cloudy,Vacation,375.4
+2024-01-17,Canteen,Weekday,Cold,Vacation,227.7
+2024-01-17,Dormitory C,Weekday,Cold,Vacation,448.6
+2024-01-17,Laboratory B,Weekday,Cold,Vacation,767.6
+2024-01-17,Library,Weekday,Cold,Vacation,334.2
+2024-01-17,Teaching Block A,Weekday,Cold,Vacation,452.3
+2024-01-18,Canteen,Weekday,Cold,Vacation,211.5
+2024-01-18,Dormitory C,Weekday,Cold,Vacation,365.5
+2024-01-18,Laboratory B,Weekday,Cold,Vacation,760.3
+2024-01-18,Library,Weekday,Cold,Vacation,362.2
+2024-01-18,Teaching Block A,Weekday,Cold,Vacation,465.8
+2024-01-19,Canteen,Weekday,Cloudy,Term,427.6
+2024-01-19,Dormitory C,Weekday,Cloudy,Term,790.9
+2024-01-19,Laboratory B,Weekday,Cloudy,Term,1115.8
+2024-01-19,Library,Weekday,Cloudy,Term,630.9
+2024-01-19,Teaching Block A,Weekday,Cloudy,Term,914.9
+2024-01-20,Canteen,Weekend,Sunny,Vacation,109.5
+2024-01-20,Dormitory C,Weekend,Sunny,Vacation,203.5
+2024-01-20,Laboratory B,Weekend,Sunny,Vacation,317.5
+2024-01-20,Library,Weekend,Sunny,Vacation,174.8
+2024-01-20,Teaching Block A,Weekend,Sunny,Vacation,223.8
+2024-01-21,Canteen,Weekend,Sunny,Vacation,130.5
+2024-01-21,Dormitory C,Weekend,Sunny,Vacation,195.7
+2024-01-21,Laboratory B,Weekend,Sunny,Vacation,319.4
+2024-01-21,Library,Weekend,Sunny,Vacation,142.7
+2024-01-21,Teaching Block A,Weekend,Sunny,Vacation,230.7
+2024-01-22,Canteen,Weekday,Cloudy,Vacation,188.4
+2024-01-22,Dormitory C,Weekday,Cloudy,Vacation,319.3
+2024-01-22,Laboratory B,Weekday,Cloudy,Vacation,522.3
+2024-01-22,Library,Weekday,Cloudy,Vacation,261.3
+2024-01-22,Teaching Block A,Weekday,Cloudy,Vacation,435.4
+2024-01-23,Canteen,Weekday,Sunny,Vacation,176.4
+2024-01-23,Dormitory C,Weekday,Sunny,Vacation,295.5
+2024-01-23,Laboratory B,Weekday,Sunny,Vacation,540.6
+2024-01-23,Library,Weekday,Sunny,Vacation,264.2
+2024-01-23,Teaching Block A,Weekday,Sunny,Vacation,312.0
+2024-01-24,Canteen,Weekday,Cloudy,Term,392.4
+2024-01-24,Dormitory C,Weekday,Cloudy,Term,639.8
+2024-01-24,Laboratory B,Weekday,Cloudy,Term,1196.0
+2024-01-24,Library,Weekday,Cloudy,Term,537.0
+2024-01-24,Teaching Block A,Weekday,Cloudy,Term,819.2
+2024-01-25,Canteen,Weekday,Cold,Vacation,188.0
+2024-01-25,Dormitory C,Weekday,Cold,Vacation,414.4
+2024-01-25,Laboratory B,Weekday,Cold,Vacation,633.3
+2024-01-25,Library,Weekday,Cold,Vacation,332.5
+2024-01-25,Teaching Block A,Weekday,Cold,Vacation,419.7
+2024-01-26,Canteen,Weekday,Sunny,Vacation,178.9
+2024-01-26,Dormitory C,Weekday,Sunny,Vacation,287.2
+2024-01-26,Laboratory B,Weekday,Sunny,Vacation,574.1
+2024-01-26,Library,Weekday,Sunny,Vacation,228.7
+2024-01-26,Teaching Block A,Weekday,Sunny,Vacation,405.8
+2024-01-27,Canteen,Weekend,Cloudy,Vacation,119.1
+2024-01-27,Dormitory C,Weekend,Cloudy,Vacation,197.8
+2024-01-27,Laboratory B,Weekend,Cloudy,Vacation,341.3
+2024-01-27,Library,Weekend,Cloudy,Vacation,157.4
+2024-01-27,Teaching Block A,Weekend,Cloudy,Vacation,242.2
+2024-01-28,Canteen,Weekend,Cloudy,Term,278.4
+2024-01-28,Dormitory C,Weekend,Cloudy,Term,465.4
+2024-01-28,Laboratory B,Weekend,Cloudy,Term,724.8
+2024-01-28,Library,Weekend,Cloudy,Term,426.2
+2024-01-28,Teaching Block A,Weekend,Cloudy,Term,419.8
+2024-01-29,Canteen,Weekday,Cold,Term,425.5
+2024-01-29,Dormitory C,Weekday,Cold,Term,791.3
+2024-01-29,Laboratory B,Weekday,Cold,Term,1653.6
+2024-01-29,Library,Weekday,Cold,Term,632.0
+2024-01-29,Teaching Block A,Weekday,Cold,Term,995.5
+2024-01-30,Canteen,Weekday,Sunny,Vacation,164.7
+2024-01-30,Dormitory C,Weekday,Sunny,Vacation,315.2
+2024-01-30,Laboratory B,Weekday,Sunny,Vacation,480.3
+2024-01-30,Library,Weekday,Sunny,Vacation,294.2
+2024-01-30,Teaching Block A,Weekday,Sunny,Vacation,380.6
+2024-01-31,Canteen,Weekday,Sunny,Vacation,170.2
+2024-01-31,Dormitory C,Weekday,Sunny,Vacation,275.7
+2024-01-31,Laboratory B,Weekday,Sunny,Vacation,601.2
+2024-01-31,Library,Weekday,Sunny,Vacation,253.2
+2024-01-31,Teaching Block A,Weekday,Sunny,Vacation,367.0
+2024-02-01,Canteen,Weekday,Cold,Vacation,237.7
+2024-02-01,Dormitory C,Weekday,Cold,Vacation,424.1
+2024-02-01,Laboratory B,Weekday,Cold,Vacation,656.0
+2024-02-01,Library,Weekday,Cold,Vacation,371.1
+2024-02-01,Teaching Block A,Weekday,Cold,Vacation,401.1
+2024-02-02,Canteen,Weekday,Cloudy,Vacation,197.2
+2024-02-02,Dormitory C,Weekday,Cloudy,Vacation,305.3
+2024-02-02,Laboratory B,Weekday,Cloudy,Vacation,537.9
+2024-02-02,Library,Weekday,Cloudy,Vacation,276.3
+2024-02-02,Teaching Block A,Weekday,Cloudy,Vacation,414.9
+2024-02-03,Canteen,Weekend,Cold,Term,289.5
+2024-02-03,Dormitory C,Weekend,Cold,Term,510.6
+2024-02-03,Laboratory B,Weekend,Cold,Term,971.2
+2024-02-03,Library,Weekend,Cold,Term,480.8
+2024-02-03,Teaching Block A,Weekend,Cold,Term,689.0
+2024-02-04,Canteen,Weekend,Cold,Vacation,140.3
+2024-02-04,Dormitory C,Weekend,Cold,Vacation,221.1
+2024-02-04,Laboratory B,Weekend,Cold,Vacation,394.5
+2024-02-04,Library,Weekend,Cold,Vacation,194.3
+2024-02-04,Teaching Block A,Weekend,Cold,Vacation,264.6
+2024-02-05,Canteen,Weekday,Cloudy,Vacation,183.9
+2024-02-05,Dormitory C,Weekday,Cloudy,Vacation,342.3
+2024-02-05,Laboratory B,Weekday,Cloudy,Vacation,618.8
+2024-02-05,Library,Weekday,Cloudy,Vacation,270.7
+2024-02-05,Teaching Block A,Weekday,Cloudy,Vacation,430.8
+2024-02-06,Canteen,Weekday,Cold,Vacation,219.4
+2024-02-06,Dormitory C,Weekday,Cold,Vacation,402.1
+2024-02-06,Laboratory B,Weekday,Cold,Vacation,651.5
+2024-02-06,Library,Weekday,Cold,Vacation,323.3
+2024-02-06,Teaching Block A,Weekday,Cold,Vacation,511.1
+2024-02-07,Canteen,Weekday,Sunny,Vacation,170.1
+2024-02-07,Dormitory C,Weekday,Sunny,Vacation,273.1
+2024-02-07,Laboratory B,Weekday,Sunny,Vacation,437.5
+2024-02-07,Library,Weekday,Sunny,Vacation,236.7
+2024-02-07,Teaching Block A,Weekday,Sunny,Vacation,329.2
+2024-02-08,Canteen,Weekday,Sunny,Term,390.2
+2024-02-08,Dormitory C,Weekday,Sunny,Term,621.0
+2024-02-08,Laboratory B,Weekday,Sunny,Term,1284.3
+2024-02-08,Library,Weekday,Sunny,Term,589.0
+2024-02-08,Teaching Block A,Weekday,Sunny,Term,687.1
+2024-02-09,Canteen,Weekday,Sunny,Vacation,152.4
+2024-02-09,Dormitory C,Weekday,Sunny,Vacation,271.8
+2024-02-09,Laboratory B,Weekday,Sunny,Vacation,539.5
+2024-02-09,Library,Weekday,Sunny,Vacation,275.7
+2024-02-09,Teaching Block A,Weekday,Sunny,Vacation,361.1
+2024-02-10,Canteen,Weekend,Cold,Vacation,135.5
+2024-02-10,Dormitory C,Weekend,Cold,Vacation,258.4
+2024-02-10,Laboratory B,Weekend,Cold,Vacation,413.3
+2024-02-10,Library,Weekend,Cold,Vacation,230.7
+2024-02-10,Teaching Block A,Weekend,Cold,Vacation,326.1
+2024-02-11,Canteen,Weekend,Cold,Term,274.4
+2024-02-11,Dormitory C,Weekend,Cold,Term,477.2
+2024-02-11,Laboratory B,Weekend,Cold,Term,1017.3
+2024-02-11,Library,Weekend,Cold,Term,486.1
+2024-02-11,Teaching Block A,Weekend,Cold,Term,647.8
+2024-02-12,Canteen,Weekday,Rain,Vacation,189.0
+2024-02-12,Dormitory C,Weekday,Rain,Vacation,349.7
+2024-02-12,Laboratory B,Weekday,Rain,Vacation,593.7
+2024-02-12,Library,Weekday,Rain,Vacation,313.8
+2024-02-12,Teaching Block A,Weekday,Rain,Vacation,369.0
+2024-02-13,Canteen,Weekday,Rain,Vacation,186.8
+2024-02-13,Dormitory C,Weekday,Rain,Vacation,389.2
+2024-02-13,Laboratory B,Weekday,Rain,Vacation,522.0
+2024-02-13,Library,Weekday,Rain,Vacation,327.5
+2024-02-13,Teaching Block A,Weekday,Rain,Vacation,379.8
+2024-02-14,Canteen,Weekday,Sunny,Term,365.1
+2024-02-14,Dormitory C,Weekday,Sunny,Term,661.2
+2024-02-14,Laboratory B,Weekday,Sunny,Term,1256.8
+2024-02-14,Library,Weekday,Sunny,Term,603.1
+2024-02-14,Teaching Block A,Weekday,Sunny,Term,872.0
+2024-02-15,Canteen,Weekday,Cold,Term,450.0
+2024-02-15,Dormitory C,Weekday,Cold,Term,848.2
+2024-02-15,Laboratory B,Weekday,Cold,Term,1371.4
+2024-02-15,Library,Weekday,Cold,Term,735.0
+2024-02-15,Teaching Block A,Weekday,Cold,Term,1030.7
+2024-02-16,Canteen,Weekday,Cold,Vacation,224.2
+2024-02-16,Dormitory C,Weekday,Cold,Vacation,403.0
+2024-02-16,Laboratory B,Weekday,Cold,Vacation,614.7
+2024-02-16,Library,Weekday,Cold,Vacation,310.5
+2024-02-16,Teaching Block A,Weekday,Cold,Vacation,473.8
+2024-02-17,Canteen,Weekend,Cold,Vacation,128.9
+2024-02-17,Dormitory C,Weekend,Cold,Vacation,229.8
+2024-02-17,Laboratory B,Weekend,Cold,Vacation,412.2
+2024-02-17,Library,Weekend,Cold,Vacation,250.6
+2024-02-17,Teaching Block A,Weekend,Cold,Vacation,307.5
+2024-02-18,Canteen,Weekend,Sunny,Term,236.3
+2024-02-18,Dormitory C,Weekend,Sunny,Term,427.9
+2024-02-18,Laboratory B,Weekend,Sunny,Term,732.9
+2024-02-18,Library,Weekend,Sunny,Term,293.9
+2024-02-18,Teaching Block A,Weekend,Sunny,Term,471.0
+2024-02-19,Canteen,Weekday,Sunny,Vacation,160.1
+2024-02-19,Dormitory C,Weekday,Sunny,Vacation,308.4
+2024-02-19,Laboratory B,Weekday,Sunny,Vacation,526.8
+2024-02-19,Library,Weekday,Sunny,Vacation,256.4
+2024-02-19,Teaching Block A,Weekday,Sunny,Vacation,404.3
+2024-02-20,Canteen,Weekday,Cold,Vacation,208.4
+2024-02-20,Dormitory C,Weekday,Cold,Vacation,408.2
+2024-02-20,Laboratory B,Weekday,Cold,Vacation,675.2
+2024-02-20,Library,Weekday,Cold,Vacation,332.8
+2024-02-20,Teaching Block A,Weekday,Cold,Vacation,427.6
+2024-02-21,Canteen,Weekday,Rain,Vacation,175.7
+2024-02-21,Dormitory C,Weekday,Rain,Vacation,343.1
+2024-02-21,Laboratory B,Weekday,Rain,Vacation,598.2
+2024-02-21,Library,Weekday,Rain,Vacation,306.0
+2024-02-21,Teaching Block A,Weekday,Rain,Vacation,406.3
+2024-02-22,Canteen,Weekday,Cloudy,Vacation,192.2
+2024-02-22,Dormitory C,Weekday,Cloudy,Vacation,334.2
+2024-02-22,Laboratory B,Weekday,Cloudy,Vacation,547.5
+2024-02-22,Library,Weekday,Cloudy,Vacation,271.8
+2024-02-22,Teaching Block A,Weekday,Cloudy,Vacation,328.0
+2024-02-23,Canteen,Weekday,Cloudy,Term,391.7
+2024-02-23,Dormitory C,Weekday,Cloudy,Term,630.0
+2024-02-23,Laboratory B,Weekday,Cloudy,Term,1206.1
+2024-02-23,Library,Weekday,Cloudy,Term,619.5
+2024-02-23,Teaching Block A,Weekday,Cloudy,Term,849.1
+2024-02-24,Canteen,Weekend,Cold,Vacation,151.2
+2024-02-24,Dormitory C,Weekend,Cold,Vacation,212.0
+2024-02-24,Laboratory B,Weekend,Cold,Vacation,464.4
+2024-02-24,Library,Weekend,Cold,Vacation,199.4
+2024-02-24,Teaching Block A,Weekend,Cold,Vacation,261.4
+2024-02-25,Canteen,Weekend,Cold,Term,268.0
+2024-02-25,Dormitory C,Weekend,Cold,Term,498.9
+2024-02-25,Laboratory B,Weekend,Cold,Term,984.5
+2024-02-25,Library,Weekend,Cold,Term,455.5
+2024-02-25,Teaching Block A,Weekend,Cold,Term,679.9
+2024-02-26,Canteen,Weekday,Cold,Vacation,226.3
+2024-02-26,Dormitory C,Weekday,Cold,Vacation,422.7
+2024-02-26,Laboratory B,Weekday,Cold,Vacation,715.4
+2024-02-26,Library,Weekday,Cold,Vacation,345.3
+2024-02-26,Teaching Block A,Weekday,Cold,Vacation,414.5
+2024-02-27,Canteen,Weekday,Sunny,Term,411.2
+2024-02-27,Dormitory C,Weekday,Sunny,Term,611.9
+2024-02-27,Laboratory B,Weekday,Sunny,Term,1201.6
+2024-02-27,Library,Weekday,Sunny,Term,633.8
+2024-02-27,Teaching Block A,Weekday,Sunny,Term,696.7
+2024-02-28,Canteen,Weekday,Cold,Vacation,210.5
+2024-02-28,Dormitory C,Weekday,Cold,Vacation,333.8
+2024-02-28,Laboratory B,Weekday,Cold,Vacation,648.3
+2024-02-28,Library,Weekday,Cold,Vacation,351.8
+2024-02-28,Teaching Block A,Weekday,Cold,Vacation,397.1
+2024-02-29,Canteen,Weekday,Sunny,Term,356.5
+2024-02-29,Dormitory C,Weekday,Sunny,Term,716.7
+2024-02-29,Laboratory B,Weekday,Sunny,Term,1137.5
+2024-02-29,Library,Weekday,Sunny,Term,569.8
+2024-02-29,Teaching Block A,Weekday,Sunny,Term,874.6
+2024-03-01,Canteen,Weekday,Cloudy,Term,371.1
+2024-03-01,Dormitory C,Weekday,Cloudy,Term,646.4
+2024-03-01,Laboratory B,Weekday,Cloudy,Term,1258.1
+2024-03-01,Library,Weekday,Cloudy,Term,616.5
+2024-03-01,Teaching Block A,Weekday,Cloudy,Term,771.7
+2024-03-02,Canteen,Weekend,Cloudy,Term,248.3
+2024-03-02,Dormitory C,Weekend,Cloudy,Term,479.5
+2024-03-02,Laboratory B,Weekend,Cloudy,Term,796.3
+2024-03-02,Library,Weekend,Cloudy,Term,353.9
+2024-03-02,Teaching Block A,Weekend,Cloudy,Term,543.7
+2024-03-03,Canteen,Weekend,Rain,Term,291.6
+2024-03-03,Dormitory C,Weekend,Rain,Term,446.0
+2024-03-03,Laboratory B,Weekend,Rain,Term,791.1
+2024-03-03,Library,Weekend,Rain,Term,471.6
+2024-03-03,Teaching Block A,Weekend,Rain,Term,581.8
+2024-03-04,Canteen,Weekday,Cloudy,Term,435.4
+2024-03-04,Dormitory C,Weekday,Cloudy,Term,632.8
+2024-03-04,Laboratory B,Weekday,Cloudy,Term,1248.4
+2024-03-04,Library,Weekday,Cloudy,Term,503.1
+2024-03-04,Teaching Block A,Weekday,Cloudy,Term,867.1
+2024-03-05,Canteen,Weekday,Sunny,Term,419.4
+2024-03-05,Dormitory C,Weekday,Sunny,Term,662.9
+2024-03-05,Laboratory B,Weekday,Sunny,Term,1215.5
+2024-03-05,Library,Weekday,Sunny,Term,554.8
+2024-03-05,Teaching Block A,Weekday,Sunny,Term,791.9
+2024-03-06,Canteen,Weekday,Hot,Exam Week,523.5
+2024-03-06,Dormitory C,Weekday,Hot,Exam Week,944.1
+2024-03-06,Laboratory B,Weekday,Hot,Exam Week,1533.8
+2024-03-06,Library,Weekday,Hot,Exam Week,797.4
+2024-03-06,Teaching Block A,Weekday,Hot,Exam Week,1226.2
+2024-03-07,Canteen,Weekday,Cloudy,Term,463.5
+2024-03-07,Dormitory C,Weekday,Cloudy,Term,775.8
+2024-03-07,Laboratory B,Weekday,Cloudy,Term,1105.4
+2024-03-07,Library,Weekday,Cloudy,Term,556.3
+2024-03-07,Teaching Block A,Weekday,Cloudy,Term,890.7
+2024-03-08,Canteen,Weekday,Sunny,Term,368.5
+2024-03-08,Dormitory C,Weekday,Sunny,Term,672.2
+2024-03-08,Laboratory B,Weekday,Sunny,Term,1211.2
+2024-03-08,Library,Weekday,Sunny,Term,646.0
+2024-03-08,Teaching Block A,Weekday,Sunny,Term,774.7
+2024-03-09,Canteen,Weekend,Cloudy,Term,253.1
+2024-03-09,Dormitory C,Weekend,Cloudy,Term,424.2
+2024-03-09,Laboratory B,Weekend,Cloudy,Term,662.5
+2024-03-09,Library,Weekend,Cloudy,Term,353.1
+2024-03-09,Teaching Block A,Weekend,Cloudy,Term,605.2
+2024-03-10,Canteen,Weekend,Rain,Term,221.2
+2024-03-10,Dormitory C,Weekend,Rain,Term,438.4
+2024-03-10,Laboratory B,Weekend,Rain,Term,778.7
+2024-03-10,Library,Weekend,Rain,Term,368.4
+2024-03-10,Teaching Block A,Weekend,Rain,Term,574.3
+2024-03-11,Canteen,Weekday,Sunny,Term,399.2
+2024-03-11,Dormitory C,Weekday,Sunny,Term,684.0
+2024-03-11,Laboratory B,Weekday,Sunny,Term,1136.5
+2024-03-11,Library,Weekday,Sunny,Term,592.9
+2024-03-11,Teaching Block A,Weekday,Sunny,Term,724.0
+2024-03-12,Canteen,Weekday,Cloudy,Term,389.1
+2024-03-12,Dormitory C,Weekday,Cloudy,Term,762.6
+2024-03-12,Laboratory B,Weekday,Cloudy,Term,1223.5
+2024-03-12,Library,Weekday,Cloudy,Term,533.6
+2024-03-12,Teaching Block A,Weekday,Cloudy,Term,862.2
+2024-03-13,Canteen,Weekday,Cloudy,Exam Week,354.9
+2024-03-13,Dormitory C,Weekday,Cloudy,Exam Week,793.2
+2024-03-13,Laboratory B,Weekday,Cloudy,Exam Week,1432.2
+2024-03-13,Library,Weekday,Cloudy,Exam Week,724.9
+2024-03-13,Teaching Block A,Weekday,Cloudy,Exam Week,890.5
+2024-03-14,Canteen,Weekday,Sunny,Term,398.3
+2024-03-14,Dormitory C,Weekday,Sunny,Term,644.3
+2024-03-14,Laboratory B,Weekday,Sunny,Term,1085.8
+2024-03-14,Library,Weekday,Sunny,Term,521.7
+2024-03-14,Teaching Block A,Weekday,Sunny,Term,765.3
+2024-03-15,Canteen,Weekday,Rain,Term,450.0
+2024-03-15,Dormitory C,Weekday,Rain,Term,744.4
+2024-03-15,Laboratory B,Weekday,Rain,Term,1219.8
+2024-03-15,Library,Weekday,Rain,Term,604.5
+2024-03-15,Teaching Block A,Weekday,Rain,Term,841.1
+2024-03-16,Canteen,Weekend,Sunny,Term,231.7
+2024-03-16,Dormitory C,Weekend,Sunny,Term,401.7
+2024-03-16,Laboratory B,Weekend,Sunny,Term,628.3
+2024-03-16,Library,Weekend,Sunny,Term,375.4
+2024-03-16,Teaching Block A,Weekend,Sunny,Term,562.5
+2024-03-17,Canteen,Weekend,Cloudy,Exam Week,347.7
+2024-03-17,Dormitory C,Weekend,Cloudy,Exam Week,501.9
+2024-03-17,Laboratory B,Weekend,Cloudy,Exam Week,920.2
+2024-03-17,Library,Weekend,Cloudy,Exam Week,452.4
+2024-03-17,Teaching Block A,Weekend,Cloudy,Exam Week,560.3
+2024-03-18,Canteen,Weekday,Sunny,Term,362.2
+2024-03-18,Dormitory C,Weekday,Sunny,Term,634.3
+2024-03-18,Laboratory B,Weekday,Sunny,Term,1040.8
+2024-03-18,Library,Weekday,Sunny,Term,586.9
+2024-03-18,Teaching Block A,Weekday,Sunny,Term,793.4
+2024-03-19,Canteen,Weekday,Sunny,Term,409.3
+2024-03-19,Dormitory C,Weekday,Sunny,Term,677.6
+2024-03-19,Laboratory B,Weekday,Sunny,Term,1075.6
+2024-03-19,Library,Weekday,Sunny,Term,602.8
+2024-03-19,Teaching Block A,Weekday,Sunny,Term,692.7
+2024-03-20,Canteen,Weekday,Sunny,Term,425.7
+2024-03-20,Dormitory C,Weekday,Sunny,Term,755.9
+2024-03-20,Laboratory B,Weekday,Sunny,Term,1073.7
+2024-03-20,Library,Weekday,Sunny,Term,591.4
+2024-03-20,Teaching Block A,Weekday,Sunny,Term,803.7
+2024-03-21,Canteen,Weekday,Rain,Term,393.5
+2024-03-21,Dormitory C,Weekday,Rain,Term,658.0
+2024-03-21,Laboratory B,Weekday,Rain,Term,1320.5
+2024-03-21,Library,Weekday,Rain,Term,688.2
+2024-03-21,Teaching Block A,Weekday,Rain,Term,926.1
+2024-03-22,Canteen,Weekday,Rain,Term,400.2
+2024-03-22,Dormitory C,Weekday,Rain,Term,795.3
+2024-03-22,Laboratory B,Weekday,Rain,Term,1298.9
+2024-03-22,Library,Weekday,Rain,Term,609.6
+2024-03-22,Teaching Block A,Weekday,Rain,Term,842.1
+2024-03-23,Canteen,Weekend,Cloudy,Term,262.5
+2024-03-23,Dormitory C,Weekend,Cloudy,Term,411.6
+2024-03-23,Laboratory B,Weekend,Cloudy,Term,629.4
+2024-03-23,Library,Weekend,Cloudy,Term,378.1
+2024-03-23,Teaching Block A,Weekend,Cloudy,Term,535.4
+2024-03-24,Canteen,Weekend,Rain,Term,243.1
+2024-03-24,Dormitory C,Weekend,Rain,Term,472.8
+2024-03-24,Laboratory B,Weekend,Rain,Term,690.0
+2024-03-24,Library,Weekend,Rain,Term,394.4
+2024-03-24,Teaching Block A,Weekend,Rain,Term,525.3
+2024-03-25,Canteen,Weekday,Cold,Term,556.0
+2024-03-25,Dormitory C,Weekday,Cold,Term,854.1
+2024-03-25,Laboratory B,Weekday,Cold,Term,1552.1
+2024-03-25,Library,Weekday,Cold,Term,737.3
+2024-03-25,Teaching Block A,Weekday,Cold,Term,1127.9
+2024-03-26,Canteen,Weekday,Sunny,Exam Week,400.7
+2024-03-26,Dormitory C,Weekday,Sunny,Exam Week,709.5
+2024-03-26,Laboratory B,Weekday,Sunny,Exam Week,1342.4
+2024-03-26,Library,Weekday,Sunny,Exam Week,676.9
+2024-03-26,Teaching Block A,Weekday,Sunny,Exam Week,830.2
+2024-03-27,Canteen,Weekday,Cloudy,Term,399.1
+2024-03-27,Dormitory C,Weekday,Cloudy,Term,611.0
+2024-03-27,Laboratory B,Weekday,Cloudy,Term,1099.2
+2024-03-27,Library,Weekday,Cloudy,Term,554.7
+2024-03-27,Teaching Block A,Weekday,Cloudy,Term,908.9
+2024-03-28,Canteen,Weekday,Rain,Term,449.5
+2024-03-28,Dormitory C,Weekday,Rain,Term,814.1
+2024-03-28,Laboratory B,Weekday,Rain,Term,1196.8
+2024-03-28,Library,Weekday,Rain,Term,613.2
+2024-03-28,Teaching Block A,Weekday,Rain,Term,895.3
+2024-03-29,Canteen,Weekday,Cloudy,Term,371.6
+2024-03-29,Dormitory C,Weekday,Cloudy,Term,773.9
+2024-03-29,Laboratory B,Weekday,Cloudy,Term,1139.0
+2024-03-29,Library,Weekday,Cloudy,Term,582.4
+2024-03-29,Teaching Block A,Weekday,Cloudy,Term,773.2
+2024-03-30,Canteen,Weekend,Sunny,Term,274.8
+2024-03-30,Dormitory C,Weekend,Sunny,Term,407.5
+2024-03-30,Laboratory B,Weekend,Sunny,Term,770.6
+2024-03-30,Library,Weekend,Sunny,Term,392.9
+2024-03-30,Teaching Block A,Weekend,Sunny,Term,516.5
+2024-03-31,Canteen,Weekend,Cloudy,Exam Week,260.2
+2024-03-31,Dormitory C,Weekend,Cloudy,Exam Week,517.6
+2024-03-31,Laboratory B,Weekend,Cloudy,Exam Week,805.9
+2024-03-31,Library,Weekend,Cloudy,Exam Week,408.3
+2024-03-31,Teaching Block A,Weekend,Cloudy,Exam Week,546.0
+2024-04-01,Canteen,Weekday,Rain,Exam Week,457.8
+2024-04-01,Dormitory C,Weekday,Rain,Exam Week,765.4
+2024-04-01,Laboratory B,Weekday,Rain,Exam Week,1244.6
+2024-04-01,Library,Weekday,Rain,Exam Week,730.1
+2024-04-01,Teaching Block A,Weekday,Rain,Exam Week,1011.3
+2024-04-02,Canteen,Weekday,Sunny,Exam Week,454.6
+2024-04-02,Dormitory C,Weekday,Sunny,Exam Week,670.7
+2024-04-02,Laboratory B,Weekday,Sunny,Exam Week,1187.2
+2024-04-02,Library,Weekday,Sunny,Exam Week,540.4
+2024-04-02,Teaching Block A,Weekday,Sunny,Exam Week,1129.0
+2024-04-03,Canteen,Weekday,Rain,Term,456.1
+2024-04-03,Dormitory C,Weekday,Rain,Term,790.8
+2024-04-03,Laboratory B,Weekday,Rain,Term,1323.9
+2024-04-03,Library,Weekday,Rain,Term,552.1
+2024-04-03,Teaching Block A,Weekday,Rain,Term,868.5
+2024-04-04,Canteen,Weekday,Cloudy,Term,390.8
+2024-04-04,Dormitory C,Weekday,Cloudy,Term,667.3
+2024-04-04,Laboratory B,Weekday,Cloudy,Term,1199.6
+2024-04-04,Library,Weekday,Cloudy,Term,556.7
+2024-04-04,Teaching Block A,Weekday,Cloudy,Term,1048.6
+2024-04-05,Canteen,Weekday,Rain,Term,431.9
+2024-04-05,Dormitory C,Weekday,Rain,Term,698.2
+2024-04-05,Laboratory B,Weekday,Rain,Term,1225.6
+2024-04-05,Library,Weekday,Rain,Term,558.5
+2024-04-05,Teaching Block A,Weekday,Rain,Term,855.0
+2024-04-06,Canteen,Weekend,Cloudy,Term,242.5
+2024-04-06,Dormitory C,Weekend,Cloudy,Term,382.9
+2024-04-06,Laboratory B,Weekend,Cloudy,Term,819.2
+2024-04-06,Library,Weekend,Cloudy,Term,355.4
+2024-04-06,Teaching Block A,Weekend,Cloudy,Term,566.0
+2024-04-07,Canteen,Weekend,Sunny,Term,252.7
+2024-04-07,Dormitory C,Weekend,Sunny,Term,437.6
+2024-04-07,Laboratory B,Weekend,Sunny,Term,632.3
+2024-04-07,Library,Weekend,Sunny,Term,412.1
+2024-04-07,Teaching Block A,Weekend,Sunny,Term,471.1
+2024-04-08,Canteen,Weekday,Cloudy,Vacation,157.4
+2024-04-08,Dormitory C,Weekday,Cloudy,Vacation,331.1
+2024-04-08,Laboratory B,Weekday,Cloudy,Vacation,577.9
+2024-04-08,Library,Weekday,Cloudy,Vacation,248.9
+2024-04-08,Teaching Block A,Weekday,Cloudy,Vacation,371.2
+2024-04-09,Canteen,Weekday,Sunny,Term,403.0
+2024-04-09,Dormitory C,Weekday,Sunny,Term,644.2
+2024-04-09,Laboratory B,Weekday,Sunny,Term,1142.3
+2024-04-09,Library,Weekday,Sunny,Term,544.6
+2024-04-09,Teaching Block A,Weekday,Sunny,Term,723.9
+2024-04-10,Canteen,Weekday,Cloudy,Term,354.7
+2024-04-10,Dormitory C,Weekday,Cloudy,Term,794.6
+2024-04-10,Laboratory B,Weekday,Cloudy,Term,1299.8
+2024-04-10,Library,Weekday,Cloudy,Term,636.7
+2024-04-10,Teaching Block A,Weekday,Cloudy,Term,941.7
+2024-04-11,Canteen,Weekday,Rain,Vacation,206.1
+2024-04-11,Dormitory C,Weekday,Rain,Vacation,355.4
+2024-04-11,Laboratory B,Weekday,Rain,Vacation,544.4
+2024-04-11,Library,Weekday,Rain,Vacation,277.1
+2024-04-11,Teaching Block A,Weekday,Rain,Vacation,415.1
+2024-04-12,Canteen,Weekday,Cloudy,Vacation,193.3
+2024-04-12,Dormitory C,Weekday,Cloudy,Vacation,298.3
+2024-04-12,Laboratory B,Weekday,Cloudy,Vacation,542.2
+2024-04-12,Library,Weekday,Cloudy,Vacation,284.2
+2024-04-12,Teaching Block A,Weekday,Cloudy,Vacation,340.5
+2024-04-13,Canteen,Weekend,Rain,Term,266.2
+2024-04-13,Dormitory C,Weekend,Rain,Term,503.5
+2024-04-13,Laboratory B,Weekend,Rain,Term,855.3
+2024-04-13,Library,Weekend,Rain,Term,418.4
+2024-04-13,Teaching Block A,Weekend,Rain,Term,516.2
+2024-04-14,Canteen,Weekend,Sunny,Term,248.3
+2024-04-14,Dormitory C,Weekend,Sunny,Term,431.6
+2024-04-14,Laboratory B,Weekend,Sunny,Term,699.9
+2024-04-14,Library,Weekend,Sunny,Term,323.0
+2024-04-14,Teaching Block A,Weekend,Sunny,Term,537.2
+2024-04-15,Canteen,Weekday,Cloudy,Term,372.0
+2024-04-15,Dormitory C,Weekday,Cloudy,Term,804.6
+2024-04-15,Laboratory B,Weekday,Cloudy,Term,1232.7
+2024-04-15,Library,Weekday,Cloudy,Term,609.1
+2024-04-15,Teaching Block A,Weekday,Cloudy,Term,758.0
+2024-04-16,Canteen,Weekday,Sunny,Term,376.7
+2024-04-16,Dormitory C,Weekday,Sunny,Term,637.6
+2024-04-16,Laboratory B,Weekday,Sunny,Term,1033.3
+2024-04-16,Library,Weekday,Sunny,Term,571.3
+2024-04-16,Teaching Block A,Weekday,Sunny,Term,825.3
+2024-04-17,Canteen,Weekday,Sunny,Term,382.6
+2024-04-17,Dormitory C,Weekday,Sunny,Term,721.8
+2024-04-17,Laboratory B,Weekday,Sunny,Term,1138.3
+2024-04-17,Library,Weekday,Sunny,Term,530.9
+2024-04-17,Teaching Block A,Weekday,Sunny,Term,863.2
+2024-04-18,Canteen,Weekday,Hot,Term,554.5
+2024-04-18,Dormitory C,Weekday,Hot,Term,786.3
+2024-04-18,Laboratory B,Weekday,Hot,Term,1500.8
+2024-04-18,Library,Weekday,Hot,Term,618.8
+2024-04-18,Teaching Block A,Weekday,Hot,Term,1026.8
+2024-04-19,Canteen,Weekday,Sunny,Term,376.7
+2024-04-19,Dormitory C,Weekday,Sunny,Term,661.3
+2024-04-19,Laboratory B,Weekday,Sunny,Term,1128.0
+2024-04-19,Library,Weekday,Sunny,Term,587.3
+2024-04-19,Teaching Block A,Weekday,Sunny,Term,763.5
+2024-04-20,Canteen,Weekend,Cloudy,Term,234.0
+2024-04-20,Dormitory C,Weekend,Cloudy,Term,433.4
+2024-04-20,Laboratory B,Weekend,Cloudy,Term,778.2
+2024-04-20,Library,Weekend,Cloudy,Term,387.6
+2024-04-20,Teaching Block A,Weekend,Cloudy,Term,508.4
+2024-04-21,Canteen,Weekend,Cold,Term,344.9
+2024-04-21,Dormitory C,Weekend,Cold,Term,518.3
+2024-04-21,Laboratory B,Weekend,Cold,Term,891.1
+2024-04-21,Library,Weekend,Cold,Term,442.3
+2024-04-21,Teaching Block A,Weekend,Cold,Term,576.8
+2024-04-22,Canteen,Weekday,Hot,Term,536.3
+2024-04-22,Dormitory C,Weekday,Hot,Term,746.5
+2024-04-22,Laboratory B,Weekday,Hot,Term,1473.4
+2024-04-22,Library,Weekday,Hot,Term,707.2
+2024-04-22,Teaching Block A,Weekday,Hot,Term,1137.5
+2024-04-23,Canteen,Weekday,Sunny,Term,344.8
+2024-04-23,Dormitory C,Weekday,Sunny,Term,626.8
+2024-04-23,Laboratory B,Weekday,Sunny,Term,1012.5
+2024-04-23,Library,Weekday,Sunny,Term,517.1
+2024-04-23,Teaching Block A,Weekday,Sunny,Term,877.6
+2024-04-24,Canteen,Weekday,Rain,Term,397.2
+2024-04-24,Dormitory C,Weekday,Rain,Term,702.5
+2024-04-24,Laboratory B,Weekday,Rain,Term,1321.0
+2024-04-24,Library,Weekday,Rain,Term,620.2
+2024-04-24,Teaching Block A,Weekday,Rain,Term,915.7
+2024-04-25,Canteen,Weekday,Cloudy,Term,365.5
+2024-04-25,Dormitory C,Weekday,Cloudy,Term,725.3
+2024-04-25,Laboratory B,Weekday,Cloudy,Term,1224.6
+2024-04-25,Library,Weekday,Cloudy,Term,543.8
+2024-04-25,Teaching Block A,Weekday,Cloudy,Term,817.3
+2024-04-26,Canteen,Weekday,Rain,Term,390.8
+2024-04-26,Dormitory C,Weekday,Rain,Term,680.5
+2024-04-26,Laboratory B,Weekday,Rain,Term,1310.0
+2024-04-26,Library,Weekday,Rain,Term,619.4
+2024-04-26,Teaching Block A,Weekday,Rain,Term,710.6
+2024-04-27,Canteen,Weekend,Rain,Term,229.6
+2024-04-27,Dormitory C,Weekend,Rain,Term,457.5
+2024-04-27,Laboratory B,Weekend,Rain,Term,778.4
+2024-04-27,Library,Weekend,Rain,Term,403.7
+2024-04-27,Teaching Block A,Weekend,Rain,Term,564.8
+2024-04-28,Canteen,Weekend,Sunny,Term,219.8
+2024-04-28,Dormitory C,Weekend,Sunny,Term,387.8
+2024-04-28,Laboratory B,Weekend,Sunny,Term,702.8
+2024-04-28,Library,Weekend,Sunny,Term,316.9
+2024-04-28,Teaching Block A,Weekend,Sunny,Term,513.7
+2024-04-29,Canteen,Weekday,Sunny,Term,363.7
+2024-04-29,Dormitory C,Weekday,Sunny,Term,750.1
+2024-04-29,Laboratory B,Weekday,Sunny,Term,1065.0
+2024-04-29,Library,Weekday,Sunny,Term,581.3
+2024-04-29,Teaching Block A,Weekday,Sunny,Term,721.6
+2024-04-30,Canteen,Weekday,Rain,Term,446.7
+2024-04-30,Dormitory C,Weekday,Rain,Term,697.8
+2024-04-30,Laboratory B,Weekday,Rain,Term,1161.6
+2024-04-30,Library,Weekday,Rain,Term,661.6
+2024-04-30,Teaching Block A,Weekday,Rain,Term,850.5
+2024-05-01,Canteen,Weekday,Cloudy,Term,408.8
+2024-05-01,Dormitory C,Weekday,Cloudy,Term,773.5
+2024-05-01,Laboratory B,Weekday,Cloudy,Term,1201.7
+2024-05-01,Library,Weekday,Cloudy,Term,544.6
+2024-05-01,Teaching Block A,Weekday,Cloudy,Term,862.2
+2024-05-02,Canteen,Weekday,Rain,Term,411.0
+2024-05-02,Dormitory C,Weekday,Rain,Term,682.6
+2024-05-02,Laboratory B,Weekday,Rain,Term,1196.2
+2024-05-02,Library,Weekday,Rain,Term,640.6
+2024-05-02,Teaching Block A,Weekday,Rain,Term,848.8
+2024-05-03,Canteen,Weekday,Cloudy,Term,400.1
+2024-05-03,Dormitory C,Weekday,Cloudy,Term,781.8
+2024-05-03,Laboratory B,Weekday,Cloudy,Term,1288.1
+2024-05-03,Library,Weekday,Cloudy,Term,555.2
+2024-05-03,Teaching Block A,Weekday,Cloudy,Term,830.8
+2024-05-04,Canteen,Weekend,Rain,Term,221.4
+2024-05-04,Dormitory C,Weekend,Rain,Term,477.9
+2024-05-04,Laboratory B,Weekend,Rain,Term,817.3
+2024-05-04,Library,Weekend,Rain,Term,372.9
+2024-05-04,Teaching Block A,Weekend,Rain,Term,518.7
+2024-05-05,Canteen,Weekend,Sunny,Term,235.5
+2024-05-05,Dormitory C,Weekend,Sunny,Term,438.5
+2024-05-05,Laboratory B,Weekend,Sunny,Term,710.2
+2024-05-05,Library,Weekend,Sunny,Term,375.0
+2024-05-05,Teaching Block A,Weekend,Sunny,Term,521.0
+2024-05-06,Canteen,Weekday,Sunny,Term,401.1
+2024-05-06,Dormitory C,Weekday,Sunny,Term,631.3
+2024-05-06,Laboratory B,Weekday,Sunny,Term,930.4
+2024-05-06,Library,Weekday,Sunny,Term,503.0
+2024-05-06,Teaching Block A,Weekday,Sunny,Term,818.2
+2024-05-07,Canteen,Weekday,Sunny,Term,341.2
+2024-05-07,Dormitory C,Weekday,Sunny,Term,710.4
+2024-05-07,Laboratory B,Weekday,Sunny,Term,1189.9
+2024-05-07,Library,Weekday,Sunny,Term,528.7
+2024-05-07,Teaching Block A,Weekday,Sunny,Term,874.2
+2024-05-08,Canteen,Weekday,Sunny,Exam Week,411.5
+2024-05-08,Dormitory C,Weekday,Sunny,Exam Week,732.6
+2024-05-08,Laboratory B,Weekday,Sunny,Exam Week,1454.5
+2024-05-08,Library,Weekday,Sunny,Exam Week,768.1
+2024-05-08,Teaching Block A,Weekday,Sunny,Exam Week,754.0
+2024-05-09,Canteen,Weekday,Cold,Term,476.8
+2024-05-09,Dormitory C,Weekday,Cold,Term,841.0
+2024-05-09,Laboratory B,Weekday,Cold,Term,1323.7
+2024-05-09,Library,Weekday,Cold,Term,652.2
+2024-05-09,Teaching Block A,Weekday,Cold,Term,976.4
+2024-05-10,Canteen,Weekday,Hot,Term,420.9
+2024-05-10,Dormitory C,Weekday,Hot,Term,782.8
+2024-05-10,Laboratory B,Weekday,Hot,Term,1576.0
+2024-05-10,Library,Weekday,Hot,Term,750.1
+2024-05-10,Teaching Block A,Weekday,Hot,Term,868.7
+2024-05-11,Canteen,Weekend,Cold,Term,336.6
+2024-05-11,Dormitory C,Weekend,Cold,Term,503.2
+2024-05-11,Laboratory B,Weekend,Cold,Term,921.7
+2024-05-11,Library,Weekend,Cold,Term,495.5
+2024-05-11,Teaching Block A,Weekend,Cold,Term,664.6
+2024-05-12,Canteen,Weekend,Sunny,Term,205.4
+2024-05-12,Dormitory C,Weekend,Sunny,Term,472.3
+2024-05-12,Laboratory B,Weekend,Sunny,Term,720.2
+2024-05-12,Library,Weekend,Sunny,Term,332.1
+2024-05-12,Teaching Block A,Weekend,Sunny,Term,517.9
+2024-05-13,Canteen,Weekday,Sunny,Term,346.7
+2024-05-13,Dormitory C,Weekday,Sunny,Term,605.0
+2024-05-13,Laboratory B,Weekday,Sunny,Term,1137.8
+2024-05-13,Library,Weekday,Sunny,Term,628.9
+2024-05-13,Teaching Block A,Weekday,Sunny,Term,758.3
+2024-05-14,Canteen,Weekday,Sunny,Exam Week,448.1
+2024-05-14,Dormitory C,Weekday,Sunny,Exam Week,809.6
+2024-05-14,Laboratory B,Weekday,Sunny,Exam Week,1330.3
+2024-05-14,Library,Weekday,Sunny,Exam Week,581.0
+2024-05-14,Teaching Block A,Weekday,Sunny,Exam Week,983.4
+2024-05-15,Canteen,Weekday,Cloudy,Term,363.7
+2024-05-15,Dormitory C,Weekday,Cloudy,Term,694.0
+2024-05-15,Laboratory B,Weekday,Cloudy,Term,1129.8
+2024-05-15,Library,Weekday,Cloudy,Term,574.7
+2024-05-15,Teaching Block A,Weekday,Cloudy,Term,738.6
+2024-05-16,Canteen,Weekday,Rain,Term,421.4
+2024-05-16,Dormitory C,Weekday,Rain,Term,765.7
+2024-05-16,Laboratory B,Weekday,Rain,Term,1126.0
+2024-05-16,Library,Weekday,Rain,Term,619.6
+2024-05-16,Teaching Block A,Weekday,Rain,Term,740.2
+2024-05-17,Canteen,Weekday,Cloudy,Exam Week,433.8
+2024-05-17,Dormitory C,Weekday,Cloudy,Exam Week,699.5
+2024-05-17,Laboratory B,Weekday,Cloudy,Exam Week,1420.8
+2024-05-17,Library,Weekday,Cloudy,Exam Week,668.1
+2024-05-17,Teaching Block A,Weekday,Cloudy,Exam Week,998.0
+2024-05-18,Canteen,Weekend,Cloudy,Term,226.3
+2024-05-18,Dormitory C,Weekend,Cloudy,Term,428.7
+2024-05-18,Laboratory B,Weekend,Cloudy,Term,705.7
+2024-05-18,Library,Weekend,Cloudy,Term,326.9
+2024-05-18,Teaching Block A,Weekend,Cloudy,Term,549.9
+2024-05-19,Canteen,Weekend,Sunny,Term,262.6
+2024-05-19,Dormitory C,Weekend,Sunny,Term,410.0
+2024-05-19,Laboratory B,Weekend,Sunny,Term,698.8
+2024-05-19,Library,Weekend,Sunny,Term,356.2
+2024-05-19,Teaching Block A,Weekend,Sunny,Term,432.2
+2024-05-20,Canteen,Weekday,Sunny,Term,370.8
+2024-05-20,Dormitory C,Weekday,Sunny,Term,726.6
+2024-05-20,Laboratory B,Weekday,Sunny,Term,1097.9
+2024-05-20,Library,Weekday,Sunny,Term,581.2
+2024-05-20,Teaching Block A,Weekday,Sunny,Term,852.3
+2024-05-21,Canteen,Weekday,Cloudy,Term,464.1
+2024-05-21,Dormitory C,Weekday,Cloudy,Term,730.6
+2024-05-21,Laboratory B,Weekday,Cloudy,Term,1247.1
+2024-05-21,Library,Weekday,Cloudy,Term,644.6
+2024-05-21,Teaching Block A,Weekday,Cloudy,Term,867.2
+2024-05-22,Canteen,Weekday,Sunny,Term,340.3
+2024-05-22,Dormitory C,Weekday,Sunny,Term,645.2
+2024-05-22,Laboratory B,Weekday,Sunny,Term,1251.0
+2024-05-22,Library,Weekday,Sunny,Term,569.3
+2024-05-22,Teaching Block A,Weekday,Sunny,Term,782.9
+2024-05-23,Canteen,Weekday,Sunny,Term,379.0
+2024-05-23,Dormitory C,Weekday,Sunny,Term,619.4
+2024-05-23,Laboratory B,Weekday,Sunny,Term,1037.2
+2024-05-23,Library,Weekday,Sunny,Term,526.7
+2024-05-23,Teaching Block A,Weekday,Sunny,Term,653.8
+2024-05-24,Canteen,Weekday,Sunny,Term,371.4
+2024-05-24,Dormitory C,Weekday,Sunny,Term,679.9
+2024-05-24,Laboratory B,Weekday,Sunny,Term,1261.5
+2024-05-24,Library,Weekday,Sunny,Term,555.8
+2024-05-24,Teaching Block A,Weekday,Sunny,Term,821.4
+2024-05-25,Canteen,Weekend,Sunny,Term,234.0
+2024-05-25,Dormitory C,Weekend,Sunny,Term,381.2
+2024-05-25,Laboratory B,Weekend,Sunny,Term,726.0
+2024-05-25,Library,Weekend,Sunny,Term,383.3
+2024-05-25,Teaching Block A,Weekend,Sunny,Term,455.0
+2024-05-26,Canteen,Weekend,Sunny,Term,219.3
+2024-05-26,Dormitory C,Weekend,Sunny,Term,444.2
+2024-05-26,Laboratory B,Weekend,Sunny,Term,790.0
+2024-05-26,Library,Weekend,Sunny,Term,386.3
+2024-05-26,Teaching Block A,Weekend,Sunny,Term,581.0
+2024-05-27,Canteen,Weekday,Rain,Term,440.5
+2024-05-27,Dormitory C,Weekday,Rain,Term,783.6
+2024-05-27,Laboratory B,Weekday,Rain,Term,1216.5
+2024-05-27,Library,Weekday,Rain,Term,600.1
+2024-05-27,Teaching Block A,Weekday,Rain,Term,886.1
+2024-05-28,Canteen,Weekday,Hot,Term,415.9
+2024-05-28,Dormitory C,Weekday,Hot,Term,742.0
+2024-05-28,Laboratory B,Weekday,Hot,Term,1505.1
+2024-05-28,Library,Weekday,Hot,Term,710.7
+2024-05-28,Teaching Block A,Weekday,Hot,Term,1195.2
+2024-05-29,Canteen,Weekday,Rain,Term,442.5
+2024-05-29,Dormitory C,Weekday,Rain,Term,738.9
+2024-05-29,Laboratory B,Weekday,Rain,Term,1225.2
+2024-05-29,Library,Weekday,Rain,Term,621.1
+2024-05-29,Teaching Block A,Weekday,Rain,Term,900.6
+2024-05-30,Canteen,Weekday,Sunny,Term,426.4
+2024-05-30,Dormitory C,Weekday,Sunny,Term,611.7
+2024-05-30,Laboratory B,Weekday,Sunny,Term,1160.5
+2024-05-30,Library,Weekday,Sunny,Term,590.5
+2024-05-30,Teaching Block A,Weekday,Sunny,Term,862.5
+2024-05-31,Canteen,Weekday,Rain,Exam Week,528.0
+2024-05-31,Dormitory C,Weekday,Rain,Exam Week,805.3
+2024-05-31,Laboratory B,Weekday,Rain,Exam Week,1413.9
+2024-05-31,Library,Weekday,Rain,Exam Week,705.7
+2024-05-31,Teaching Block A,Weekday,Rain,Exam Week,919.8
+2024-06-01,Canteen,Weekend,Cloudy,Term,253.7
+2024-06-01,Dormitory C,Weekend,Cloudy,Term,347.6
+2024-06-01,Laboratory B,Weekend,Cloudy,Term,716.9
+2024-06-01,Library,Weekend,Cloudy,Term,381.4
+2024-06-01,Teaching Block A,Weekend,Cloudy,Term,502.1
+2024-06-02,Canteen,Weekend,Sunny,Term,222.9
+2024-06-02,Dormitory C,Weekend,Sunny,Term,392.1
+2024-06-02,Laboratory B,Weekend,Sunny,Term,696.9
+2024-06-02,Library,Weekend,Sunny,Term,354.6
+2024-06-02,Teaching Block A,Weekend,Sunny,Term,517.9
+2024-06-03,Canteen,Weekday,Hot,Term,499.0
+2024-06-03,Dormitory C,Weekday,Hot,Term,779.7
+2024-06-03,Laboratory B,Weekday,Hot,Term,1239.8
+2024-06-03,Library,Weekday,Hot,Term,669.0
+2024-06-03,Teaching Block A,Weekday,Hot,Term,1003.5
+2024-06-04,Canteen,Weekday,Sunny,Term,415.7
+2024-06-04,Dormitory C,Weekday,Sunny,Term,673.7
+2024-06-04,Laboratory B,Weekday,Sunny,Term,1120.0
+2024-06-04,Library,Weekday,Sunny,Term,572.0
+2024-06-04,Teaching Block A,Weekday,Sunny,Term,777.5
+2024-06-05,Canteen,Weekday,Sunny,Term,398.4
+2024-06-05,Dormitory C,Weekday,Sunny,Term,663.0
+2024-06-05,Laboratory B,Weekday,Sunny,Term,1225.9
+2024-06-05,Library,Weekday,Sunny,Term,660.4
+2024-06-05,Teaching Block A,Weekday,Sunny,Term,941.7
+2024-06-06,Canteen,Weekday,Rain,Vacation,215.2
+2024-06-06,Dormitory C,Weekday,Rain,Vacation,338.6
+2024-06-06,Laboratory B,Weekday,Rain,Vacation,574.3
+2024-06-06,Library,Weekday,Rain,Vacation,250.7
+2024-06-06,Teaching Block A,Weekday,Rain,Vacation,366.9
+2024-06-07,Canteen,Weekday,Cloudy,Term,361.6
+2024-06-07,Dormitory C,Weekday,Cloudy,Term,637.7
+2024-06-07,Laboratory B,Weekday,Cloudy,Term,1278.7
+2024-06-07,Library,Weekday,Cloudy,Term,553.9
+2024-06-07,Teaching Block A,Weekday,Cloudy,Term,833.0
+2024-06-08,Canteen,Weekend,Sunny,Term,244.2
+2024-06-08,Dormitory C,Weekend,Sunny,Term,409.8
+2024-06-08,Laboratory B,Weekend,Sunny,Term,768.0
+2024-06-08,Library,Weekend,Sunny,Term,374.0
+2024-06-08,Teaching Block A,Weekend,Sunny,Term,526.0
+2024-06-09,Canteen,Weekend,Cloudy,Term,241.9
+2024-06-09,Dormitory C,Weekend,Cloudy,Term,432.3
+2024-06-09,Laboratory B,Weekend,Cloudy,Term,837.1
+2024-06-09,Library,Weekend,Cloudy,Term,328.7
+2024-06-09,Teaching Block A,Weekend,Cloudy,Term,603.2
+2024-06-10,Canteen,Weekday,Sunny,Term,382.3
+2024-06-10,Dormitory C,Weekday,Sunny,Term,658.3
+2024-06-10,Laboratory B,Weekday,Sunny,Term,1085.0
+2024-06-10,Library,Weekday,Sunny,Term,577.7
+2024-06-10,Teaching Block A,Weekday,Sunny,Term,802.4
+2024-06-11,Canteen,Weekday,Sunny,Term,419.0
+2024-06-11,Dormitory C,Weekday,Sunny,Term,679.5
+2024-06-11,Laboratory B,Weekday,Sunny,Term,1182.8
+2024-06-11,Library,Weekday,Sunny,Term,580.6
+2024-06-11,Teaching Block A,Weekday,Sunny,Term,835.1
+2024-06-12,Canteen,Weekday,Rain,Term,379.6
+2024-06-12,Dormitory C,Weekday,Rain,Term,671.2
+2024-06-12,Laboratory B,Weekday,Rain,Term,1336.3
+2024-06-12,Library,Weekday,Rain,Term,627.5
+2024-06-12,Teaching Block A,Weekday,Rain,Term,935.2
+2024-06-13,Canteen,Weekday,Hot,Term,457.7
+2024-06-13,Dormitory C,Weekday,Hot,Term,833.0
+2024-06-13,Laboratory B,Weekday,Hot,Term,1180.5
+2024-06-13,Library,Weekday,Hot,Term,696.1
+2024-06-13,Teaching Block A,Weekday,Hot,Term,1048.7
+2024-06-14,Canteen,Weekday,Rain,Term,391.3
+2024-06-14,Dormitory C,Weekday,Rain,Term,757.5
+2024-06-14,Laboratory B,Weekday,Rain,Term,1374.9
+2024-06-14,Library,Weekday,Rain,Term,568.0
+2024-06-14,Teaching Block A,Weekday,Rain,Term,873.8
+2024-06-15,Canteen,Weekend,Rain,Vacation,127.8
+2024-06-15,Dormitory C,Weekend,Rain,Vacation,201.9
+2024-06-15,Laboratory B,Weekend,Rain,Vacation,357.3
+2024-06-15,Library,Weekend,Rain,Vacation,182.6
+2024-06-15,Teaching Block A,Weekend,Rain,Vacation,246.8
+2024-06-16,Canteen,Weekend,Cloudy,Exam Week,268.1
+2024-06-16,Dormitory C,Weekend,Cloudy,Exam Week,440.2
+2024-06-16,Laboratory B,Weekend,Cloudy,Exam Week,736.2
+2024-06-16,Library,Weekend,Cloudy,Exam Week,415.0
+2024-06-16,Teaching Block A,Weekend,Cloudy,Exam Week,505.7
+2024-06-17,Canteen,Weekday,Rain,Term,414.3
+2024-06-17,Dormitory C,Weekday,Rain,Term,596.7
+2024-06-17,Laboratory B,Weekday,Rain,Term,1234.5
+2024-06-17,Library,Weekday,Rain,Term,625.8
+2024-06-17,Teaching Block A,Weekday,Rain,Term,1187.8
+2024-06-18,Canteen,Weekday,Hot,Term,445.1
+2024-06-18,Dormitory C,Weekday,Hot,Term,875.6
+2024-06-18,Laboratory B,Weekday,Hot,Term,1341.9
+2024-06-18,Library,Weekday,Hot,Term,604.5
+2024-06-18,Teaching Block A,Weekday,Hot,Term,1003.7
+2024-06-19,Canteen,Weekday,Sunny,Term,330.2
+2024-06-19,Dormitory C,Weekday,Sunny,Term,646.4
+2024-06-19,Laboratory B,Weekday,Sunny,Term,1080.7
+2024-06-19,Library,Weekday,Sunny,Term,481.1
+2024-06-19,Teaching Block A,Weekday,Sunny,Term,686.0
+2024-06-20,Canteen,Weekday,Hot,Term,479.5
+2024-06-20,Dormitory C,Weekday,Hot,Term,878.5
+2024-06-20,Laboratory B,Weekday,Hot,Term,1446.9
+2024-06-20,Library,Weekday,Hot,Term,741.5
+2024-06-20,Teaching Block A,Weekday,Hot,Term,1035.2
+2024-06-21,Canteen,Weekday,Sunny,Exam Week,438.0
+2024-06-21,Dormitory C,Weekday,Sunny,Exam Week,678.2
+2024-06-21,Laboratory B,Weekday,Sunny,Exam Week,1232.3
+2024-06-21,Library,Weekday,Sunny,Exam Week,655.2
+2024-06-21,Teaching Block A,Weekday,Sunny,Exam Week,792.8
+2024-06-22,Canteen,Weekend,Hot,Term,298.5
+2024-06-22,Dormitory C,Weekend,Hot,Term,514.8
+2024-06-22,Laboratory B,Weekend,Hot,Term,907.9
+2024-06-22,Library,Weekend,Hot,Term,458.4
+2024-06-22,Teaching Block A,Weekend,Hot,Term,599.5
+2024-06-23,Canteen,Weekend,Hot,Term,326.7
+2024-06-23,Dormitory C,Weekend,Hot,Term,509.7
+2024-06-23,Laboratory B,Weekend,Hot,Term,933.6
+2024-06-23,Library,Weekend,Hot,Term,483.9
+2024-06-23,Teaching Block A,Weekend,Hot,Term,627.5
+2024-06-24,Canteen,Weekday,Rain,Exam Week,474.0
+2024-06-24,Dormitory C,Weekday,Rain,Exam Week,819.1
+2024-06-24,Laboratory B,Weekday,Rain,Exam Week,1323.7
+2024-06-24,Library,Weekday,Rain,Exam Week,685.8
+2024-06-24,Teaching Block A,Weekday,Rain,Exam Week,954.6
+2024-06-25,Canteen,Weekday,Sunny,Term,419.7
+2024-06-25,Dormitory C,Weekday,Sunny,Term,707.5
+2024-06-25,Laboratory B,Weekday,Sunny,Term,1191.4
+2024-06-25,Library,Weekday,Sunny,Term,566.9
+2024-06-25,Teaching Block A,Weekday,Sunny,Term,780.3
+2024-06-26,Canteen,Weekday,Sunny,Term,353.9
+2024-06-26,Dormitory C,Weekday,Sunny,Term,659.5
+2024-06-26,Laboratory B,Weekday,Sunny,Term,1175.1
+2024-06-26,Library,Weekday,Sunny,Term,522.6
+2024-06-26,Teaching Block A,Weekday,Sunny,Term,901.9
+2024-06-27,Canteen,Weekday,Hot,Term,408.7
+2024-06-27,Dormitory C,Weekday,Hot,Term,835.7
+2024-06-27,Laboratory B,Weekday,Hot,Term,1632.9
+2024-06-27,Library,Weekday,Hot,Term,752.1
+2024-06-27,Teaching Block A,Weekday,Hot,Term,1029.6
+2024-06-28,Canteen,Weekday,Rain,Term,404.2
+2024-06-28,Dormitory C,Weekday,Rain,Term,804.5
+2024-06-28,Laboratory B,Weekday,Rain,Term,1130.0
+2024-06-28,Library,Weekday,Rain,Term,655.9
+2024-06-28,Teaching Block A,Weekday,Rain,Term,870.7
+2024-06-29,Canteen,Weekend,Hot,Term,261.8
+2024-06-29,Dormitory C,Weekend,Hot,Term,482.4
+2024-06-29,Laboratory B,Weekend,Hot,Term,950.3
+2024-06-29,Library,Weekend,Hot,Term,436.7
+2024-06-29,Teaching Block A,Weekend,Hot,Term,610.0
+2024-06-30,Canteen,Weekend,Cloudy,Exam Week,272.3
+2024-06-30,Dormitory C,Weekend,Cloudy,Exam Week,484.0
+2024-06-30,Laboratory B,Weekend,Cloudy,Exam Week,882.0
+2024-06-30,Library,Weekend,Cloudy,Exam Week,411.2
+2024-06-30,Teaching Block A,Weekend,Cloudy,Exam Week,540.1
+2024-07-01,Canteen,Weekday,Rain,Vacation,201.4
+2024-07-01,Dormitory C,Weekday,Rain,Vacation,329.4
+2024-07-01,Laboratory B,Weekday,Rain,Vacation,584.9
+2024-07-01,Library,Weekday,Rain,Vacation,258.2
+2024-07-01,Teaching Block A,Weekday,Rain,Vacation,412.4
+2024-07-02,Canteen,Weekday,Sunny,Term,400.7
+2024-07-02,Dormitory C,Weekday,Sunny,Term,673.0
+2024-07-02,Laboratory B,Weekday,Sunny,Term,999.6
+2024-07-02,Library,Weekday,Sunny,Term,569.1
+2024-07-02,Teaching Block A,Weekday,Sunny,Term,807.7
+2024-07-03,Canteen,Weekday,Rain,Vacation,207.7
+2024-07-03,Dormitory C,Weekday,Rain,Vacation,321.5
+2024-07-03,Laboratory B,Weekday,Rain,Vacation,570.3
+2024-07-03,Library,Weekday,Rain,Vacation,269.3
+2024-07-03,Teaching Block A,Weekday,Rain,Vacation,417.3
+2024-07-04,Canteen,Weekday,Hot,Vacation,213.4
+2024-07-04,Dormitory C,Weekday,Hot,Vacation,379.0
+2024-07-04,Laboratory B,Weekday,Hot,Vacation,647.5
+2024-07-04,Library,Weekday,Hot,Vacation,313.7
+2024-07-04,Teaching Block A,Weekday,Hot,Vacation,534.0
+2024-07-05,Canteen,Weekday,Hot,Vacation,209.8
+2024-07-05,Dormitory C,Weekday,Hot,Vacation,391.8
+2024-07-05,Laboratory B,Weekday,Hot,Vacation,645.0
+2024-07-05,Library,Weekday,Hot,Vacation,322.9
+2024-07-05,Teaching Block A,Weekday,Hot,Vacation,413.7
+2024-07-06,Canteen,Weekend,Rain,Term,217.0
+2024-07-06,Dormitory C,Weekend,Rain,Term,547.5
+2024-07-06,Laboratory B,Weekend,Rain,Term,752.2
+2024-07-06,Library,Weekend,Rain,Term,364.0
+2024-07-06,Teaching Block A,Weekend,Rain,Term,505.1
+2024-07-07,Canteen,Weekend,Sunny,Vacation,106.3
+2024-07-07,Dormitory C,Weekend,Sunny,Vacation,219.4
+2024-07-07,Laboratory B,Weekend,Sunny,Vacation,285.0
+2024-07-07,Library,Weekend,Sunny,Vacation,167.1
+2024-07-07,Teaching Block A,Weekend,Sunny,Vacation,221.6
+2024-07-08,Canteen,Weekday,Rain,Term,397.1
+2024-07-08,Dormitory C,Weekday,Rain,Term,689.9
+2024-07-08,Laboratory B,Weekday,Rain,Term,1268.3
+2024-07-08,Library,Weekday,Rain,Term,633.0
+2024-07-08,Teaching Block A,Weekday,Rain,Term,843.9
+2024-07-09,Canteen,Weekday,Sunny,Vacation,177.8
+2024-07-09,Dormitory C,Weekday,Sunny,Vacation,267.2
+2024-07-09,Laboratory B,Weekday,Sunny,Vacation,490.2
+2024-07-09,Library,Weekday,Sunny,Vacation,265.8
+2024-07-09,Teaching Block A,Weekday,Sunny,Vacation,347.8
+2024-07-10,Canteen,Weekday,Sunny,Term,387.6
+2024-07-10,Dormitory C,Weekday,Sunny,Term,603.8
+2024-07-10,Laboratory B,Weekday,Sunny,Term,1058.1
+2024-07-10,Library,Weekday,Sunny,Term,546.9
+2024-07-10,Teaching Block A,Weekday,Sunny,Term,777.8
+2024-07-11,Canteen,Weekday,Hot,Vacation,265.1
+2024-07-11,Dormitory C,Weekday,Hot,Vacation,402.0
+2024-07-11,Laboratory B,Weekday,Hot,Vacation,679.4
+2024-07-11,Library,Weekday,Hot,Vacation,359.6
+2024-07-11,Teaching Block A,Weekday,Hot,Vacation,461.2
+2024-07-12,Canteen,Weekday,Sunny,Term,400.2
+2024-07-12,Dormitory C,Weekday,Sunny,Term,709.4
+2024-07-12,Laboratory B,Weekday,Sunny,Term,1217.0
+2024-07-12,Library,Weekday,Sunny,Term,578.0
+2024-07-12,Teaching Block A,Weekday,Sunny,Term,851.3
+2024-07-13,Canteen,Weekend,Hot,Vacation,121.7
+2024-07-13,Dormitory C,Weekend,Hot,Vacation,187.4
+2024-07-13,Laboratory B,Weekend,Hot,Vacation,384.1
+2024-07-13,Library,Weekend,Hot,Vacation,170.4
+2024-07-13,Teaching Block A,Weekend,Hot,Vacation,261.4
+2024-07-14,Canteen,Weekend,Sunny,Term,208.8
+2024-07-14,Dormitory C,Weekend,Sunny,Term,484.1
+2024-07-14,Laboratory B,Weekend,Sunny,Term,649.3
+2024-07-14,Library,Weekend,Sunny,Term,321.4
+2024-07-14,Teaching Block A,Weekend,Sunny,Term,551.8
+2024-07-15,Canteen,Weekday,Cloudy,Vacation,183.7
+2024-07-15,Dormitory C,Weekday,Cloudy,Vacation,325.5
+2024-07-15,Laboratory B,Weekday,Cloudy,Vacation,585.5
+2024-07-15,Library,Weekday,Cloudy,Vacation,263.6
+2024-07-15,Teaching Block A,Weekday,Cloudy,Vacation,312.5
+2024-07-16,Canteen,Weekday,Hot,Exam Week,550.5
+2024-07-16,Dormitory C,Weekday,Hot,Exam Week,997.6
+2024-07-16,Laboratory B,Weekday,Hot,Exam Week,1625.3
+2024-07-16,Library,Weekday,Hot,Exam Week,783.4
+2024-07-16,Teaching Block A,Weekday,Hot,Exam Week,1340.9
+2024-07-17,Canteen,Weekday,Sunny,Vacation,178.4
+2024-07-17,Dormitory C,Weekday,Sunny,Vacation,349.4
+2024-07-17,Laboratory B,Weekday,Sunny,Vacation,504.7
+2024-07-17,Library,Weekday,Sunny,Vacation,229.1
+2024-07-17,Teaching Block A,Weekday,Sunny,Vacation,353.2
+2024-07-18,Canteen,Weekday,Sunny,Term,365.6
+2024-07-18,Dormitory C,Weekday,Sunny,Term,687.4
+2024-07-18,Laboratory B,Weekday,Sunny,Term,1132.7
+2024-07-18,Library,Weekday,Sunny,Term,608.4
+2024-07-18,Teaching Block A,Weekday,Sunny,Term,797.3
+2024-07-19,Canteen,Weekday,Rain,Vacation,210.6
+2024-07-19,Dormitory C,Weekday,Rain,Vacation,328.4
+2024-07-19,Laboratory B,Weekday,Rain,Vacation,544.5
+2024-07-19,Library,Weekday,Rain,Vacation,303.8
+2024-07-19,Teaching Block A,Weekday,Rain,Vacation,368.6
+2024-07-20,Canteen,Weekend,Sunny,Term,238.6
+2024-07-20,Dormitory C,Weekend,Sunny,Term,450.7
+2024-07-20,Laboratory B,Weekend,Sunny,Term,661.9
+2024-07-20,Library,Weekend,Sunny,Term,376.9
+2024-07-20,Teaching Block A,Weekend,Sunny,Term,470.9
+2024-07-21,Canteen,Weekend,Hot,Vacation,117.1
+2024-07-21,Dormitory C,Weekend,Hot,Vacation,197.2
+2024-07-21,Laboratory B,Weekend,Hot,Vacation,337.0
+2024-07-21,Library,Weekend,Hot,Vacation,197.5
+2024-07-21,Teaching Block A,Weekend,Hot,Vacation,320.2
+2024-07-22,Canteen,Weekday,Sunny,Vacation,197.7
+2024-07-22,Dormitory C,Weekday,Sunny,Vacation,299.1
+2024-07-22,Laboratory B,Weekday,Sunny,Vacation,499.1
+2024-07-22,Library,Weekday,Sunny,Vacation,253.3
+2024-07-22,Teaching Block A,Weekday,Sunny,Vacation,383.5
+2024-07-23,Canteen,Weekday,Sunny,Vacation,190.7
+2024-07-23,Dormitory C,Weekday,Sunny,Vacation,299.7
+2024-07-23,Laboratory B,Weekday,Sunny,Vacation,568.9
+2024-07-23,Library,Weekday,Sunny,Vacation,259.2
+2024-07-23,Teaching Block A,Weekday,Sunny,Vacation,381.4
+2024-07-24,Canteen,Weekday,Cloudy,Vacation,204.2
+2024-07-24,Dormitory C,Weekday,Cloudy,Vacation,298.0
+2024-07-24,Laboratory B,Weekday,Cloudy,Vacation,524.8
+2024-07-24,Library,Weekday,Cloudy,Vacation,282.7
+2024-07-24,Teaching Block A,Weekday,Cloudy,Vacation,348.0
+2024-07-25,Canteen,Weekday,Cloudy,Term,447.1
+2024-07-25,Dormitory C,Weekday,Cloudy,Term,641.9
+2024-07-25,Laboratory B,Weekday,Cloudy,Term,1277.2
+2024-07-25,Library,Weekday,Cloudy,Term,634.2
+2024-07-25,Teaching Block A,Weekday,Cloudy,Term,775.9
+2024-07-26,Canteen,Weekday,Hot,Vacation,206.4
+2024-07-26,Dormitory C,Weekday,Hot,Vacation,386.2
+2024-07-26,Laboratory B,Weekday,Hot,Vacation,690.1
+2024-07-26,Library,Weekday,Hot,Vacation,271.9
+2024-07-26,Teaching Block A,Weekday,Hot,Vacation,452.7
+2024-07-27,Canteen,Weekend,Rain,Vacation,106.4
+2024-07-27,Dormitory C,Weekend,Rain,Vacation,191.2
+2024-07-27,Laboratory B,Weekend,Rain,Vacation,344.3
+2024-07-27,Library,Weekend,Rain,Vacation,161.4
+2024-07-27,Teaching Block A,Weekend,Rain,Vacation,234.1
+2024-07-28,Canteen,Weekend,Sunny,Term,240.8
+2024-07-28,Dormitory C,Weekend,Sunny,Term,426.3
+2024-07-28,Laboratory B,Weekend,Sunny,Term,623.7
+2024-07-28,Library,Weekend,Sunny,Term,348.0
+2024-07-28,Teaching Block A,Weekend,Sunny,Term,464.6
+2024-07-29,Canteen,Weekday,Sunny,Term,394.2
+2024-07-29,Dormitory C,Weekday,Sunny,Term,642.8
+2024-07-29,Laboratory B,Weekday,Sunny,Term,1103.2
+2024-07-29,Library,Weekday,Sunny,Term,564.4
+2024-07-29,Teaching Block A,Weekday,Sunny,Term,755.6
+2024-07-30,Canteen,Weekday,Cloudy,Vacation,183.9
+2024-07-30,Dormitory C,Weekday,Cloudy,Vacation,337.3
+2024-07-30,Laboratory B,Weekday,Cloudy,Vacation,493.8
+2024-07-30,Library,Weekday,Cloudy,Vacation,292.0
+2024-07-30,Teaching Block A,Weekday,Cloudy,Vacation,386.2
+2024-07-31,Canteen,Weekday,Sunny,Vacation,178.0
+2024-07-31,Dormitory C,Weekday,Sunny,Vacation,286.1
+2024-07-31,Laboratory B,Weekday,Sunny,Vacation,508.1
+2024-07-31,Library,Weekday,Sunny,Vacation,274.0
+2024-07-31,Teaching Block A,Weekday,Sunny,Vacation,389.1
+2024-08-01,Canteen,Weekday,Hot,Vacation,210.9
+2024-08-01,Dormitory C,Weekday,Hot,Vacation,320.9
+2024-08-01,Laboratory B,Weekday,Hot,Vacation,610.8
+2024-08-01,Library,Weekday,Hot,Vacation,328.1
+2024-08-01,Teaching Block A,Weekday,Hot,Vacation,472.5
+2024-08-02,Canteen,Weekday,Rain,Vacation,200.9
+2024-08-02,Dormitory C,Weekday,Rain,Vacation,330.5
+2024-08-02,Laboratory B,Weekday,Rain,Vacation,609.1
+2024-08-02,Library,Weekday,Rain,Vacation,326.7
+2024-08-02,Teaching Block A,Weekday,Rain,Vacation,396.8
+2024-08-03,Canteen,Weekend,Cloudy,Vacation,119.9
+2024-08-03,Dormitory C,Weekend,Cloudy,Vacation,180.9
+2024-08-03,Laboratory B,Weekend,Cloudy,Vacation,330.0
+2024-08-03,Library,Weekend,Cloudy,Vacation,173.1
+2024-08-03,Teaching Block A,Weekend,Cloudy,Vacation,259.0
+2024-08-04,Canteen,Weekend,Sunny,Term,245.6
+2024-08-04,Dormitory C,Weekend,Sunny,Term,462.5
+2024-08-04,Laboratory B,Weekend,Sunny,Term,769.5
+2024-08-04,Library,Weekend,Sunny,Term,400.5
+2024-08-04,Teaching Block A,Weekend,Sunny,Term,434.2
+2024-08-05,Canteen,Weekday,Cloudy,Term,332.0
+2024-08-05,Dormitory C,Weekday,Cloudy,Term,808.8
+2024-08-05,Laboratory B,Weekday,Cloudy,Term,1203.5
+2024-08-05,Library,Weekday,Cloudy,Term,570.9
+2024-08-05,Teaching Block A,Weekday,Cloudy,Term,813.1
+2024-08-06,Canteen,Weekday,Sunny,Term,377.7
+2024-08-06,Dormitory C,Weekday,Sunny,Term,728.5
+2024-08-06,Laboratory B,Weekday,Sunny,Term,1212.6
+2024-08-06,Library,Weekday,Sunny,Term,570.0
+2024-08-06,Teaching Block A,Weekday,Sunny,Term,778.0
+2024-08-07,Canteen,Weekday,Hot,Vacation,205.5
+2024-08-07,Dormitory C,Weekday,Hot,Vacation,357.1
+2024-08-07,Laboratory B,Weekday,Hot,Vacation,606.4
+2024-08-07,Library,Weekday,Hot,Vacation,312.0
+2024-08-07,Teaching Block A,Weekday,Hot,Vacation,499.7
+2024-08-08,Canteen,Weekday,Sunny,Vacation,191.7
+2024-08-08,Dormitory C,Weekday,Sunny,Vacation,286.4
+2024-08-08,Laboratory B,Weekday,Sunny,Vacation,573.9
+2024-08-08,Library,Weekday,Sunny,Vacation,266.5
+2024-08-08,Teaching Block A,Weekday,Sunny,Vacation,376.9
+2024-08-09,Canteen,Weekday,Hot,Term,452.5
+2024-08-09,Dormitory C,Weekday,Hot,Term,734.1
+2024-08-09,Laboratory B,Weekday,Hot,Term,1403.2
+2024-08-09,Library,Weekday,Hot,Term,638.3
+2024-08-09,Teaching Block A,Weekday,Hot,Term,913.8
+2024-08-10,Canteen,Weekend,Sunny,Vacation,101.4
+2024-08-10,Dormitory C,Weekend,Sunny,Vacation,175.0
+2024-08-10,Laboratory B,Weekend,Sunny,Vacation,310.2
+2024-08-10,Library,Weekend,Sunny,Vacation,159.5
+2024-08-10,Teaching Block A,Weekend,Sunny,Vacation,241.9
+2024-08-11,Canteen,Weekend,Sunny,Term,246.0
+2024-08-11,Dormitory C,Weekend,Sunny,Term,385.9
+2024-08-11,Laboratory B,Weekend,Sunny,Term,668.4
+2024-08-11,Library,Weekend,Sunny,Term,349.2
+2024-08-11,Teaching Block A,Weekend,Sunny,Term,514.3
+2024-08-12,Canteen,Weekday,Rain,Term,442.0
+2024-08-12,Dormitory C,Weekday,Rain,Term,688.9
+2024-08-12,Laboratory B,Weekday,Rain,Term,1306.9
+2024-08-12,Library,Weekday,Rain,Term,700.9
+2024-08-12,Teaching Block A,Weekday,Rain,Term,935.9
+2024-08-13,Canteen,Weekday,Rain,Vacation,172.7
+2024-08-13,Dormitory C,Weekday,Rain,Vacation,313.1
+2024-08-13,Laboratory B,Weekday,Rain,Vacation,495.8
+2024-08-13,Library,Weekday,Rain,Vacation,272.8
+2024-08-13,Teaching Block A,Weekday,Rain,Vacation,383.9
+2024-08-14,Canteen,Weekday,Cloudy,Vacation,187.4
+2024-08-14,Dormitory C,Weekday,Cloudy,Vacation,342.6
+2024-08-14,Laboratory B,Weekday,Cloudy,Vacation,571.6
+2024-08-14,Library,Weekday,Cloudy,Vacation,301.6
+2024-08-14,Teaching Block A,Weekday,Cloudy,Vacation,374.1
+2024-08-15,Canteen,Weekday,Sunny,Vacation,167.7
+2024-08-15,Dormitory C,Weekday,Sunny,Vacation,333.9
+2024-08-15,Laboratory B,Weekday,Sunny,Vacation,458.1
+2024-08-15,Library,Weekday,Sunny,Vacation,276.8
+2024-08-15,Teaching Block A,Weekday,Sunny,Vacation,329.8
+2024-08-16,Canteen,Weekday,Sunny,Vacation,179.8
+2024-08-16,Dormitory C,Weekday,Sunny,Vacation,312.1
+2024-08-16,Laboratory B,Weekday,Sunny,Vacation,510.6
+2024-08-16,Library,Weekday,Sunny,Vacation,222.8
+2024-08-16,Teaching Block A,Weekday,Sunny,Vacation,385.8
+2024-08-17,Canteen,Weekend,Rain,Term,285.7
+2024-08-17,Dormitory C,Weekend,Rain,Term,441.6
+2024-08-17,Laboratory B,Weekend,Rain,Term,725.9
+2024-08-17,Library,Weekend,Rain,Term,433.2
+2024-08-17,Teaching Block A,Weekend,Rain,Term,561.2
+2024-08-18,Canteen,Weekend,Hot,Term,291.5
+2024-08-18,Dormitory C,Weekend,Hot,Term,520.9
+2024-08-18,Laboratory B,Weekend,Hot,Term,838.7
+2024-08-18,Library,Weekend,Hot,Term,454.3
+2024-08-18,Teaching Block A,Weekend,Hot,Term,692.1
+2024-08-19,Canteen,Weekday,Sunny,Exam Week,396.5
+2024-08-19,Dormitory C,Weekday,Sunny,Exam Week,718.0
+2024-08-19,Laboratory B,Weekday,Sunny,Exam Week,1236.3
+2024-08-19,Library,Weekday,Sunny,Exam Week,632.6
+2024-08-19,Teaching Block A,Weekday,Sunny,Exam Week,883.9
+2024-08-20,Canteen,Weekday,Rain,Term,424.7
+2024-08-20,Dormitory C,Weekday,Rain,Term,755.8
+2024-08-20,Laboratory B,Weekday,Rain,Term,1206.6
+2024-08-20,Library,Weekday,Rain,Term,633.0
+2024-08-20,Teaching Block A,Weekday,Rain,Term,881.3
+2024-08-21,Canteen,Weekday,Hot,Term,543.6
+2024-08-21,Dormitory C,Weekday,Hot,Term,872.9
+2024-08-21,Laboratory B,Weekday,Hot,Term,1291.4
+2024-08-21,Library,Weekday,Hot,Term,695.6
+2024-08-21,Teaching Block A,Weekday,Hot,Term,963.9
+2024-08-22,Canteen,Weekday,Cloudy,Term,416.0
+2024-08-22,Dormitory C,Weekday,Cloudy,Term,789.4
+2024-08-22,Laboratory B,Weekday,Cloudy,Term,1365.8
+2024-08-22,Library,Weekday,Cloudy,Term,580.3
+2024-08-22,Teaching Block A,Weekday,Cloudy,Term,932.9
+2024-08-23,Canteen,Weekday,Sunny,Term,361.4
+2024-08-23,Dormitory C,Weekday,Sunny,Term,679.4
+2024-08-23,Laboratory B,Weekday,Sunny,Term,980.5
+2024-08-23,Library,Weekday,Sunny,Term,576.3
+2024-08-23,Teaching Block A,Weekday,Sunny,Term,854.0
+2024-08-24,Canteen,Weekend,Sunny,Vacation,110.8
+2024-08-24,Dormitory C,Weekend,Sunny,Vacation,192.2
+2024-08-24,Laboratory B,Weekend,Sunny,Vacation,316.1
+2024-08-24,Library,Weekend,Sunny,Vacation,136.7
+2024-08-24,Teaching Block A,Weekend,Sunny,Vacation,212.4
+2024-08-25,Canteen,Weekend,Sunny,Vacation,100.1
+2024-08-25,Dormitory C,Weekend,Sunny,Vacation,162.4
+2024-08-25,Laboratory B,Weekend,Sunny,Vacation,304.9
+2024-08-25,Library,Weekend,Sunny,Vacation,138.9
+2024-08-25,Teaching Block A,Weekend,Sunny,Vacation,218.3
+2024-08-26,Canteen,Weekday,Hot,Vacation,195.2
+2024-08-26,Dormitory C,Weekday,Hot,Vacation,355.2
+2024-08-26,Laboratory B,Weekday,Hot,Vacation,677.0
+2024-08-26,Library,Weekday,Hot,Vacation,294.6
+2024-08-26,Teaching Block A,Weekday,Hot,Vacation,501.2
+2024-08-27,Canteen,Weekday,Cloudy,Vacation,172.4
+2024-08-27,Dormitory C,Weekday,Cloudy,Vacation,337.6
+2024-08-27,Laboratory B,Weekday,Cloudy,Vacation,503.6
+2024-08-27,Library,Weekday,Cloudy,Vacation,293.3
+2024-08-27,Teaching Block A,Weekday,Cloudy,Vacation,403.1
+2024-08-28,Canteen,Weekday,Sunny,Vacation,150.1
+2024-08-28,Dormitory C,Weekday,Sunny,Vacation,336.1
+2024-08-28,Laboratory B,Weekday,Sunny,Vacation,535.3
+2024-08-28,Library,Weekday,Sunny,Vacation,222.4
+2024-08-28,Teaching Block A,Weekday,Sunny,Vacation,364.4
+2024-08-29,Canteen,Weekday,Hot,Vacation,243.4
+2024-08-29,Dormitory C,Weekday,Hot,Vacation,475.7
+2024-08-29,Laboratory B,Weekday,Hot,Vacation,596.7
+2024-08-29,Library,Weekday,Hot,Vacation,307.6
+2024-08-29,Teaching Block A,Weekday,Hot,Vacation,484.6
+2024-08-30,Canteen,Weekday,Hot,Term,503.8
+2024-08-30,Dormitory C,Weekday,Hot,Term,857.4
+2024-08-30,Laboratory B,Weekday,Hot,Term,1248.9
+2024-08-30,Library,Weekday,Hot,Term,667.9
+2024-08-30,Teaching Block A,Weekday,Hot,Term,1034.7
+2024-08-31,Canteen,Weekend,Hot,Exam Week,367.8
+2024-08-31,Dormitory C,Weekend,Hot,Exam Week,573.0
+2024-08-31,Laboratory B,Weekend,Hot,Exam Week,913.2
+2024-08-31,Library,Weekend,Hot,Exam Week,502.8
+2024-08-31,Teaching Block A,Weekend,Hot,Exam Week,746.1
+2024-09-01,Canteen,Weekend,Sunny,Term,232.6
+2024-09-01,Dormitory C,Weekend,Sunny,Term,472.5
+2024-09-01,Laboratory B,Weekend,Sunny,Term,831.4
+2024-09-01,Library,Weekend,Sunny,Term,295.9
+2024-09-01,Teaching Block A,Weekend,Sunny,Term,495.7
+2024-09-02,Canteen,Weekday,Rain,Term,395.3
+2024-09-02,Dormitory C,Weekday,Rain,Term,601.1
+2024-09-02,Laboratory B,Weekday,Rain,Term,1225.3
+2024-09-02,Library,Weekday,Rain,Term,628.6
+2024-09-02,Teaching Block A,Weekday,Rain,Term,798.8
+2024-09-03,Canteen,Weekday,Rain,Term,366.3
+2024-09-03,Dormitory C,Weekday,Rain,Term,661.0
+2024-09-03,Laboratory B,Weekday,Rain,Term,1279.5
+2024-09-03,Library,Weekday,Rain,Term,611.4
+2024-09-03,Teaching Block A,Weekday,Rain,Term,932.9
+2024-09-04,Canteen,Weekday,Rain,Term,409.6
+2024-09-04,Dormitory C,Weekday,Rain,Term,783.5
+2024-09-04,Laboratory B,Weekday,Rain,Term,1343.1
+2024-09-04,Library,Weekday,Rain,Term,570.7
+2024-09-04,Teaching Block A,Weekday,Rain,Term,885.0
+2024-09-05,Canteen,Weekday,Rain,Term,393.8
+2024-09-05,Dormitory C,Weekday,Rain,Term,748.1
+2024-09-05,Laboratory B,Weekday,Rain,Term,1275.8
+2024-09-05,Library,Weekday,Rain,Term,644.2
+2024-09-05,Teaching Block A,Weekday,Rain,Term,939.8
+2024-09-06,Canteen,Weekday,Sunny,Term,401.7
+2024-09-06,Dormitory C,Weekday,Sunny,Term,720.4
+2024-09-06,Laboratory B,Weekday,Sunny,Term,1039.6
+2024-09-06,Library,Weekday,Sunny,Term,575.2
+2024-09-06,Teaching Block A,Weekday,Sunny,Term,919.9
+2024-09-07,Canteen,Weekend,Cold,Term,305.8
+2024-09-07,Dormitory C,Weekend,Cold,Term,521.4
+2024-09-07,Laboratory B,Weekend,Cold,Term,930.5
+2024-09-07,Library,Weekend,Cold,Term,484.4
+2024-09-07,Teaching Block A,Weekend,Cold,Term,617.0
+2024-09-08,Canteen,Weekend,Cloudy,Term,261.4
+2024-09-08,Dormitory C,Weekend,Cloudy,Term,407.4
+2024-09-08,Laboratory B,Weekend,Cloudy,Term,855.0
+2024-09-08,Library,Weekend,Cloudy,Term,368.1
+2024-09-08,Teaching Block A,Weekend,Cloudy,Term,580.6
+2024-09-09,Canteen,Weekday,Hot,Term,533.7
+2024-09-09,Dormitory C,Weekday,Hot,Term,830.9
+2024-09-09,Laboratory B,Weekday,Hot,Term,1636.1
+2024-09-09,Library,Weekday,Hot,Term,687.7
+2024-09-09,Teaching Block A,Weekday,Hot,Term,1015.8
+2024-09-10,Canteen,Weekday,Cold,Term,525.0
+2024-09-10,Dormitory C,Weekday,Cold,Term,890.8
+2024-09-10,Laboratory B,Weekday,Cold,Term,1587.6
+2024-09-10,Library,Weekday,Cold,Term,710.5
+2024-09-10,Teaching Block A,Weekday,Cold,Term,1231.4
+2024-09-11,Canteen,Weekday,Sunny,Term,388.6
+2024-09-11,Dormitory C,Weekday,Sunny,Term,675.9
+2024-09-11,Laboratory B,Weekday,Sunny,Term,1296.6
+2024-09-11,Library,Weekday,Sunny,Term,588.8
+2024-09-11,Teaching Block A,Weekday,Sunny,Term,710.5
+2024-09-12,Canteen,Weekday,Sunny,Term,352.5
+2024-09-12,Dormitory C,Weekday,Sunny,Term,599.5
+2024-09-12,Laboratory B,Weekday,Sunny,Term,1018.9
+2024-09-12,Library,Weekday,Sunny,Term,598.3
+2024-09-12,Teaching Block A,Weekday,Sunny,Term,777.7
+2024-09-13,Canteen,Weekday,Sunny,Term,363.6
+2024-09-13,Dormitory C,Weekday,Sunny,Term,752.9
+2024-09-13,Laboratory B,Weekday,Sunny,Term,1266.8
+2024-09-13,Library,Weekday,Sunny,Term,580.3
+2024-09-13,Teaching Block A,Weekday,Sunny,Term,912.7
+2024-09-14,Canteen,Weekend,Cold,Term,295.9
+2024-09-14,Dormitory C,Weekend,Cold,Term,495.3
+2024-09-14,Laboratory B,Weekend,Cold,Term,944.1
+2024-09-14,Library,Weekend,Cold,Term,530.1
+2024-09-14,Teaching Block A,Weekend,Cold,Term,625.0
+2024-09-15,Canteen,Weekend,Cloudy,Exam Week,317.3
+2024-09-15,Dormitory C,Weekend,Cloudy,Exam Week,451.0
+2024-09-15,Laboratory B,Weekend,Cloudy,Exam Week,928.4
+2024-09-15,Library,Weekend,Cloudy,Exam Week,403.6
+2024-09-15,Teaching Block A,Weekend,Cloudy,Exam Week,574.9
+2024-09-16,Canteen,Weekday,Sunny,Term,433.7
+2024-09-16,Dormitory C,Weekday,Sunny,Term,753.5
+2024-09-16,Laboratory B,Weekday,Sunny,Term,1154.8
+2024-09-16,Library,Weekday,Sunny,Term,603.8
+2024-09-16,Teaching Block A,Weekday,Sunny,Term,752.4
+2024-09-17,Canteen,Weekday,Rain,Term,411.7
+2024-09-17,Dormitory C,Weekday,Rain,Term,708.8
+2024-09-17,Laboratory B,Weekday,Rain,Term,1256.5
+2024-09-17,Library,Weekday,Rain,Term,603.2
+2024-09-17,Teaching Block A,Weekday,Rain,Term,872.2
+2024-09-18,Canteen,Weekday,Cloudy,Term,425.5
+2024-09-18,Dormitory C,Weekday,Cloudy,Term,741.6
+2024-09-18,Laboratory B,Weekday,Cloudy,Term,1275.3
+2024-09-18,Library,Weekday,Cloudy,Term,623.3
+2024-09-18,Teaching Block A,Weekday,Cloudy,Term,825.2
+2024-09-19,Canteen,Weekday,Rain,Term,364.0
+2024-09-19,Dormitory C,Weekday,Rain,Term,750.7
+2024-09-19,Laboratory B,Weekday,Rain,Term,1135.9
+2024-09-19,Library,Weekday,Rain,Term,691.0
+2024-09-19,Teaching Block A,Weekday,Rain,Term,888.3
+2024-09-20,Canteen,Weekday,Sunny,Term,363.9
+2024-09-20,Dormitory C,Weekday,Sunny,Term,686.1
+2024-09-20,Laboratory B,Weekday,Sunny,Term,1182.5
+2024-09-20,Library,Weekday,Sunny,Term,569.3
+2024-09-20,Teaching Block A,Weekday,Sunny,Term,729.8
+2024-09-21,Canteen,Weekend,Cold,Term,340.5
+2024-09-21,Dormitory C,Weekend,Cold,Term,506.3
+2024-09-21,Laboratory B,Weekend,Cold,Term,878.0
+2024-09-21,Library,Weekend,Cold,Term,452.5
+2024-09-21,Teaching Block A,Weekend,Cold,Term,592.4
+2024-09-22,Canteen,Weekend,Rain,Term,253.9
+2024-09-22,Dormitory C,Weekend,Rain,Term,543.3
+2024-09-22,Laboratory B,Weekend,Rain,Term,802.2
+2024-09-22,Library,Weekend,Rain,Term,444.6
+2024-09-22,Teaching Block A,Weekend,Rain,Term,489.6
+2024-09-23,Canteen,Weekday,Cold,Term,454.5
+2024-09-23,Dormitory C,Weekday,Cold,Term,922.9
+2024-09-23,Laboratory B,Weekday,Cold,Term,1547.1
+2024-09-23,Library,Weekday,Cold,Term,680.0
+2024-09-23,Teaching Block A,Weekday,Cold,Term,997.3
+2024-09-24,Canteen,Weekday,Cold,Term,512.1
+2024-09-24,Dormitory C,Weekday,Cold,Term,838.5
+2024-09-24,Laboratory B,Weekday,Cold,Term,1615.3
+2024-09-24,Library,Weekday,Cold,Term,747.4
+2024-09-24,Teaching Block A,Weekday,Cold,Term,1105.7
+2024-09-25,Canteen,Weekday,Rain,Term,406.1
+2024-09-25,Dormitory C,Weekday,Rain,Term,745.0
+2024-09-25,Laboratory B,Weekday,Rain,Term,1483.9
+2024-09-25,Library,Weekday,Rain,Term,658.6
+2024-09-25,Teaching Block A,Weekday,Rain,Term,835.4
+2024-09-26,Canteen,Weekday,Rain,Term,464.6
+2024-09-26,Dormitory C,Weekday,Rain,Term,687.3
+2024-09-26,Laboratory B,Weekday,Rain,Term,1439.5
+2024-09-26,Library,Weekday,Rain,Term,647.3
+2024-09-26,Teaching Block A,Weekday,Rain,Term,688.1
+2024-09-27,Canteen,Weekday,Rain,Term,370.8
+2024-09-27,Dormitory C,Weekday,Rain,Term,783.6
+2024-09-27,Laboratory B,Weekday,Rain,Term,1339.2
+2024-09-27,Library,Weekday,Rain,Term,549.5
+2024-09-27,Teaching Block A,Weekday,Rain,Term,845.5
+2024-09-28,Canteen,Weekend,Sunny,Term,256.0
+2024-09-28,Dormitory C,Weekend,Sunny,Term,418.2
+2024-09-28,Laboratory B,Weekend,Sunny,Term,717.7
+2024-09-28,Library,Weekend,Sunny,Term,342.5
+2024-09-28,Teaching Block A,Weekend,Sunny,Term,442.0
+2024-09-29,Canteen,Weekend,Sunny,Term,243.6
+2024-09-29,Dormitory C,Weekend,Sunny,Term,381.2
+2024-09-29,Laboratory B,Weekend,Sunny,Term,658.1
+2024-09-29,Library,Weekend,Sunny,Term,383.1
+2024-09-29,Teaching Block A,Weekend,Sunny,Term,471.2
+2024-09-30,Canteen,Weekday,Sunny,Term,406.7
+2024-09-30,Dormitory C,Weekday,Sunny,Term,594.6
+2024-09-30,Laboratory B,Weekday,Sunny,Term,1078.6
+2024-09-30,Library,Weekday,Sunny,Term,541.4
+2024-09-30,Teaching Block A,Weekday,Sunny,Term,837.2
+2024-10-01,Canteen,Weekday,Rain,Term,419.0
+2024-10-01,Dormitory C,Weekday,Rain,Term,747.2
+2024-10-01,Laboratory B,Weekday,Rain,Term,1214.1
+2024-10-01,Library,Weekday,Rain,Term,584.9
+2024-10-01,Teaching Block A,Weekday,Rain,Term,880.1
+2024-10-02,Canteen,Weekday,Rain,Term,433.2
+2024-10-02,Dormitory C,Weekday,Rain,Term,720.4
+2024-10-02,Laboratory B,Weekday,Rain,Term,1255.8
+2024-10-02,Library,Weekday,Rain,Term,597.2
+2024-10-02,Teaching Block A,Weekday,Rain,Term,975.8
+2024-10-03,Canteen,Weekday,Cloudy,Exam Week,421.9
+2024-10-03,Dormitory C,Weekday,Cloudy,Exam Week,748.7
+2024-10-03,Laboratory B,Weekday,Cloudy,Exam Week,1283.2
+2024-10-03,Library,Weekday,Cloudy,Exam Week,687.0
+2024-10-03,Teaching Block A,Weekday,Cloudy,Exam Week,982.7
+2024-10-04,Canteen,Weekday,Rain,Term,400.7
+2024-10-04,Dormitory C,Weekday,Rain,Term,681.5
+2024-10-04,Laboratory B,Weekday,Rain,Term,1449.3
+2024-10-04,Library,Weekday,Rain,Term,575.2
+2024-10-04,Teaching Block A,Weekday,Rain,Term,902.4
+2024-10-05,Canteen,Weekend,Cloudy,Term,249.5
+2024-10-05,Dormitory C,Weekend,Cloudy,Term,395.2
+2024-10-05,Laboratory B,Weekend,Cloudy,Term,776.7
+2024-10-05,Library,Weekend,Cloudy,Term,372.1
+2024-10-05,Teaching Block A,Weekend,Cloudy,Term,589.6
+2024-10-06,Canteen,Weekend,Sunny,Term,253.3
+2024-10-06,Dormitory C,Weekend,Sunny,Term,408.3
+2024-10-06,Laboratory B,Weekend,Sunny,Term,643.6
+2024-10-06,Library,Weekend,Sunny,Term,365.2
+2024-10-06,Teaching Block A,Weekend,Sunny,Term,476.1
+2024-10-07,Canteen,Weekday,Sunny,Term,350.3
+2024-10-07,Dormitory C,Weekday,Sunny,Term,627.0
+2024-10-07,Laboratory B,Weekday,Sunny,Term,1147.6
+2024-10-07,Library,Weekday,Sunny,Term,503.8
+2024-10-07,Teaching Block A,Weekday,Sunny,Term,886.3
+2024-10-08,Canteen,Weekday,Sunny,Term,376.9
+2024-10-08,Dormitory C,Weekday,Sunny,Term,659.6
+2024-10-08,Laboratory B,Weekday,Sunny,Term,1200.5
+2024-10-08,Library,Weekday,Sunny,Term,564.9
+2024-10-08,Teaching Block A,Weekday,Sunny,Term,850.7
+2024-10-09,Canteen,Weekday,Sunny,Term,351.8
+2024-10-09,Dormitory C,Weekday,Sunny,Term,679.7
+2024-10-09,Laboratory B,Weekday,Sunny,Term,1375.6
+2024-10-09,Library,Weekday,Sunny,Term,523.2
+2024-10-09,Teaching Block A,Weekday,Sunny,Term,745.2
+2024-10-10,Canteen,Weekday,Rain,Term,441.6
+2024-10-10,Dormitory C,Weekday,Rain,Term,760.7
+2024-10-10,Laboratory B,Weekday,Rain,Term,1302.2
+2024-10-10,Library,Weekday,Rain,Term,633.3
+2024-10-10,Teaching Block A,Weekday,Rain,Term,784.2
+2024-10-11,Canteen,Weekday,Rain,Term,427.9
+2024-10-11,Dormitory C,Weekday,Rain,Term,680.7
+2024-10-11,Laboratory B,Weekday,Rain,Term,1364.7
+2024-10-11,Library,Weekday,Rain,Term,618.4
+2024-10-11,Teaching Block A,Weekday,Rain,Term,868.3
+2024-10-12,Canteen,Weekend,Cloudy,Vacation,104.2
+2024-10-12,Dormitory C,Weekend,Cloudy,Vacation,209.8
+2024-10-12,Laboratory B,Weekend,Cloudy,Vacation,362.4
+2024-10-12,Library,Weekend,Cloudy,Vacation,157.6
+2024-10-12,Teaching Block A,Weekend,Cloudy,Vacation,264.5
+2024-10-13,Canteen,Weekend,Cloudy,Term,271.7
+2024-10-13,Dormitory C,Weekend,Cloudy,Term,441.4
+2024-10-13,Laboratory B,Weekend,Cloudy,Term,862.9
+2024-10-13,Library,Weekend,Cloudy,Term,397.9
+2024-10-13,Teaching Block A,Weekend,Cloudy,Term,537.2
+2024-10-14,Canteen,Weekday,Sunny,Exam Week,406.8
+2024-10-14,Dormitory C,Weekday,Sunny,Exam Week,736.5
+2024-10-14,Laboratory B,Weekday,Sunny,Exam Week,1268.3
+2024-10-14,Library,Weekday,Sunny,Exam Week,593.5
+2024-10-14,Teaching Block A,Weekday,Sunny,Exam Week,759.6
+2024-10-15,Canteen,Weekday,Cold,Term,413.8
+2024-10-15,Dormitory C,Weekday,Cold,Term,950.8
+2024-10-15,Laboratory B,Weekday,Cold,Term,1569.5
+2024-10-15,Library,Weekday,Cold,Term,600.8
+2024-10-15,Teaching Block A,Weekday,Cold,Term,1028.2
+2024-10-16,Canteen,Weekday,Cloudy,Term,344.4
+2024-10-16,Dormitory C,Weekday,Cloudy,Term,585.0
+2024-10-16,Laboratory B,Weekday,Cloudy,Term,1094.0
+2024-10-16,Library,Weekday,Cloudy,Term,557.8
+2024-10-16,Teaching Block A,Weekday,Cloudy,Term,991.4
+2024-10-17,Canteen,Weekday,Sunny,Term,367.5
+2024-10-17,Dormitory C,Weekday,Sunny,Term,618.3
+2024-10-17,Laboratory B,Weekday,Sunny,Term,1171.1
+2024-10-17,Library,Weekday,Sunny,Term,548.6
+2024-10-17,Teaching Block A,Weekday,Sunny,Term,776.9
+2024-10-18,Canteen,Weekday,Cloudy,Term,390.2
+2024-10-18,Dormitory C,Weekday,Cloudy,Term,735.5
+2024-10-18,Laboratory B,Weekday,Cloudy,Term,1238.3
+2024-10-18,Library,Weekday,Cloudy,Term,658.6
+2024-10-18,Teaching Block A,Weekday,Cloudy,Term,831.6
+2024-10-19,Canteen,Weekend,Hot,Exam Week,272.8
+2024-10-19,Dormitory C,Weekend,Hot,Exam Week,591.1
+2024-10-19,Laboratory B,Weekend,Hot,Exam Week,978.2
+2024-10-19,Library,Weekend,Hot,Exam Week,472.0
+2024-10-19,Teaching Block A,Weekend,Hot,Exam Week,714.5
+2024-10-20,Canteen,Weekend,Sunny,Term,248.8
+2024-10-20,Dormitory C,Weekend,Sunny,Term,388.3
+2024-10-20,Laboratory B,Weekend,Sunny,Term,742.1
+2024-10-20,Library,Weekend,Sunny,Term,342.5
+2024-10-20,Teaching Block A,Weekend,Sunny,Term,453.0
+2024-10-21,Canteen,Weekday,Rain,Term,420.9
+2024-10-21,Dormitory C,Weekday,Rain,Term,824.5
+2024-10-21,Laboratory B,Weekday,Rain,Term,1303.9
+2024-10-21,Library,Weekday,Rain,Term,540.7
+2024-10-21,Teaching Block A,Weekday,Rain,Term,1018.0
+2024-10-22,Canteen,Weekday,Cloudy,Term,377.7
+2024-10-22,Dormitory C,Weekday,Cloudy,Term,743.6
+2024-10-22,Laboratory B,Weekday,Cloudy,Term,1159.6
+2024-10-22,Library,Weekday,Cloudy,Term,617.6
+2024-10-22,Teaching Block A,Weekday,Cloudy,Term,792.2
+2024-10-23,Canteen,Weekday,Cloudy,Term,452.6
+2024-10-23,Dormitory C,Weekday,Cloudy,Term,815.5
+2024-10-23,Laboratory B,Weekday,Cloudy,Term,1163.3
+2024-10-23,Library,Weekday,Cloudy,Term,706.8
+2024-10-23,Teaching Block A,Weekday,Cloudy,Term,790.2
+2024-10-24,Canteen,Weekday,Cold,Term,496.3
+2024-10-24,Dormitory C,Weekday,Cold,Term,857.9
+2024-10-24,Laboratory B,Weekday,Cold,Term,1324.8
+2024-10-24,Library,Weekday,Cold,Term,699.2
+2024-10-24,Teaching Block A,Weekday,Cold,Term,1243.8
+2024-10-25,Canteen,Weekday,Sunny,Term,346.5
+2024-10-25,Dormitory C,Weekday,Sunny,Term,678.0
+2024-10-25,Laboratory B,Weekday,Sunny,Term,1184.0
+2024-10-25,Library,Weekday,Sunny,Term,556.8
+2024-10-25,Teaching Block A,Weekday,Sunny,Term,828.2
+2024-10-26,Canteen,Weekend,Sunny,Term,254.2
+2024-10-26,Dormitory C,Weekend,Sunny,Term,421.3
+2024-10-26,Laboratory B,Weekend,Sunny,Term,742.2
+2024-10-26,Library,Weekend,Sunny,Term,354.5
+2024-10-26,Teaching Block A,Weekend,Sunny,Term,486.7
+2024-10-27,Canteen,Weekend,Sunny,Term,255.3
+2024-10-27,Dormitory C,Weekend,Sunny,Term,475.7
+2024-10-27,Laboratory B,Weekend,Sunny,Term,815.8
+2024-10-27,Library,Weekend,Sunny,Term,341.5
+2024-10-27,Teaching Block A,Weekend,Sunny,Term,487.8
+2024-10-28,Canteen,Weekday,Rain,Exam Week,466.2
+2024-10-28,Dormitory C,Weekday,Rain,Exam Week,845.9
+2024-10-28,Laboratory B,Weekday,Rain,Exam Week,1351.5
+2024-10-28,Library,Weekday,Rain,Exam Week,786.1
+2024-10-28,Teaching Block A,Weekday,Rain,Exam Week,1037.6
+2024-10-29,Canteen,Weekday,Sunny,Term,362.4
+2024-10-29,Dormitory C,Weekday,Sunny,Term,700.7
+2024-10-29,Laboratory B,Weekday,Sunny,Term,1221.2
+2024-10-29,Library,Weekday,Sunny,Term,684.6
+2024-10-29,Teaching Block A,Weekday,Sunny,Term,845.7
+2024-10-30,Canteen,Weekday,Rain,Term,467.0
+2024-10-30,Dormitory C,Weekday,Rain,Term,611.7
+2024-10-30,Laboratory B,Weekday,Rain,Term,1128.5
+2024-10-30,Library,Weekday,Rain,Term,674.8
+2024-10-30,Teaching Block A,Weekday,Rain,Term,820.0
+2024-10-31,Canteen,Weekday,Rain,Term,452.5
+2024-10-31,Dormitory C,Weekday,Rain,Term,700.2
+2024-10-31,Laboratory B,Weekday,Rain,Term,1243.9
+2024-10-31,Library,Weekday,Rain,Term,627.3
+2024-10-31,Teaching Block A,Weekday,Rain,Term,828.9
+2024-11-01,Canteen,Weekday,Rain,Term,437.0
+2024-11-01,Dormitory C,Weekday,Rain,Term,760.3
+2024-11-01,Laboratory B,Weekday,Rain,Term,1126.4
+2024-11-01,Library,Weekday,Rain,Term,586.9
+2024-11-01,Teaching Block A,Weekday,Rain,Term,936.4
+2024-11-02,Canteen,Weekend,Sunny,Exam Week,284.8
+2024-11-02,Dormitory C,Weekend,Sunny,Exam Week,460.6
+2024-11-02,Laboratory B,Weekend,Sunny,Exam Week,805.8
+2024-11-02,Library,Weekend,Sunny,Exam Week,401.1
+2024-11-02,Teaching Block A,Weekend,Sunny,Exam Week,560.8
+2024-11-03,Canteen,Weekend,Sunny,Term,220.5
+2024-11-03,Dormitory C,Weekend,Sunny,Term,485.4
+2024-11-03,Laboratory B,Weekend,Sunny,Term,762.1
+2024-11-03,Library,Weekend,Sunny,Term,294.5
+2024-11-03,Teaching Block A,Weekend,Sunny,Term,502.4
+2024-11-04,Canteen,Weekday,Cloudy,Term,484.4
+2024-11-04,Dormitory C,Weekday,Cloudy,Term,687.8
+2024-11-04,Laboratory B,Weekday,Cloudy,Term,1074.0
+2024-11-04,Library,Weekday,Cloudy,Term,586.3
+2024-11-04,Teaching Block A,Weekday,Cloudy,Term,991.6
+2024-11-05,Canteen,Weekday,Sunny,Term,391.0
+2024-11-05,Dormitory C,Weekday,Sunny,Term,747.8
+2024-11-05,Laboratory B,Weekday,Sunny,Term,1156.1
+2024-11-05,Library,Weekday,Sunny,Term,537.0
+2024-11-05,Teaching Block A,Weekday,Sunny,Term,792.7
+2024-11-06,Canteen,Weekday,Cold,Term,479.4
+2024-11-06,Dormitory C,Weekday,Cold,Term,905.9
+2024-11-06,Laboratory B,Weekday,Cold,Term,1412.8
+2024-11-06,Library,Weekday,Cold,Term,749.0
+2024-11-06,Teaching Block A,Weekday,Cold,Term,1035.3
+2024-11-07,Canteen,Weekday,Rain,Term,410.9
+2024-11-07,Dormitory C,Weekday,Rain,Term,738.1
+2024-11-07,Laboratory B,Weekday,Rain,Term,1353.9
+2024-11-07,Library,Weekday,Rain,Term,562.5
+2024-11-07,Teaching Block A,Weekday,Rain,Term,771.9
+2024-11-08,Canteen,Weekday,Rain,Term,449.5
+2024-11-08,Dormitory C,Weekday,Rain,Term,762.7
+2024-11-08,Laboratory B,Weekday,Rain,Term,1096.7
+2024-11-08,Library,Weekday,Rain,Term,698.3
+2024-11-08,Teaching Block A,Weekday,Rain,Term,914.7
+2024-11-09,Canteen,Weekend,Sunny,Term,191.5
+2024-11-09,Dormitory C,Weekend,Sunny,Term,410.5
+2024-11-09,Laboratory B,Weekend,Sunny,Term,706.7
+2024-11-09,Library,Weekend,Sunny,Term,324.6
+2024-11-09,Teaching Block A,Weekend,Sunny,Term,485.2
+2024-11-10,Canteen,Weekend,Sunny,Term,242.2
+2024-11-10,Dormitory C,Weekend,Sunny,Term,377.0
+2024-11-10,Laboratory B,Weekend,Sunny,Term,790.3
+2024-11-10,Library,Weekend,Sunny,Term,374.2
+2024-11-10,Teaching Block A,Weekend,Sunny,Term,537.7
+2024-11-11,Canteen,Weekday,Cold,Term,495.8
+2024-11-11,Dormitory C,Weekday,Cold,Term,838.1
+2024-11-11,Laboratory B,Weekday,Cold,Term,1476.7
+2024-11-11,Library,Weekday,Cold,Term,715.5
+2024-11-11,Teaching Block A,Weekday,Cold,Term,1074.9
+2024-11-12,Canteen,Weekday,Sunny,Exam Week,428.6
+2024-11-12,Dormitory C,Weekday,Sunny,Exam Week,803.9
+2024-11-12,Laboratory B,Weekday,Sunny,Exam Week,1285.0
+2024-11-12,Library,Weekday,Sunny,Exam Week,610.8
+2024-11-12,Teaching Block A,Weekday,Sunny,Exam Week,880.8
+2024-11-13,Canteen,Weekday,Rain,Exam Week,505.1
+2024-11-13,Dormitory C,Weekday,Rain,Exam Week,817.0
+2024-11-13,Laboratory B,Weekday,Rain,Exam Week,1341.6
+2024-11-13,Library,Weekday,Rain,Exam Week,694.0
+2024-11-13,Teaching Block A,Weekday,Rain,Exam Week,924.4
+2024-11-14,Canteen,Weekday,Hot,Term,525.4
+2024-11-14,Dormitory C,Weekday,Hot,Term,830.7
+2024-11-14,Laboratory B,Weekday,Hot,Term,1317.2
+2024-11-14,Library,Weekday,Hot,Term,698.9
+2024-11-14,Teaching Block A,Weekday,Hot,Term,882.2
+2024-11-15,Canteen,Weekday,Cloudy,Term,419.4
+2024-11-15,Dormitory C,Weekday,Cloudy,Term,677.5
+2024-11-15,Laboratory B,Weekday,Cloudy,Term,1184.6
+2024-11-15,Library,Weekday,Cloudy,Term,647.6
+2024-11-15,Teaching Block A,Weekday,Cloudy,Term,895.6
+2024-11-16,Canteen,Weekend,Cloudy,Term,286.9
+2024-11-16,Dormitory C,Weekend,Cloudy,Term,414.2
+2024-11-16,Laboratory B,Weekend,Cloudy,Term,708.0
+2024-11-16,Library,Weekend,Cloudy,Term,364.9
+2024-11-16,Teaching Block A,Weekend,Cloudy,Term,526.4
+2024-11-17,Canteen,Weekend,Hot,Term,333.0
+2024-11-17,Dormitory C,Weekend,Hot,Term,501.8
+2024-11-17,Laboratory B,Weekend,Hot,Term,1032.0
+2024-11-17,Library,Weekend,Hot,Term,433.4
+2024-11-17,Teaching Block A,Weekend,Hot,Term,647.9
+2024-11-18,Canteen,Weekday,Cloudy,Term,387.7
+2024-11-18,Dormitory C,Weekday,Cloudy,Term,684.0
+2024-11-18,Laboratory B,Weekday,Cloudy,Term,1206.6
+2024-11-18,Library,Weekday,Cloudy,Term,592.4
+2024-11-18,Teaching Block A,Weekday,Cloudy,Term,899.2
+2024-11-19,Canteen,Weekday,Rain,Vacation,203.8
+2024-11-19,Dormitory C,Weekday,Rain,Vacation,323.3
+2024-11-19,Laboratory B,Weekday,Rain,Vacation,586.2
+2024-11-19,Library,Weekday,Rain,Vacation,251.0
+2024-11-19,Teaching Block A,Weekday,Rain,Vacation,371.9
+2024-11-20,Canteen,Weekday,Hot,Exam Week,481.2
+2024-11-20,Dormitory C,Weekday,Hot,Exam Week,977.4
+2024-11-20,Laboratory B,Weekday,Hot,Exam Week,1672.3
+2024-11-20,Library,Weekday,Hot,Exam Week,819.5
+2024-11-20,Teaching Block A,Weekday,Hot,Exam Week,1274.6
+2024-11-21,Canteen,Weekday,Rain,Term,449.0
+2024-11-21,Dormitory C,Weekday,Rain,Term,712.7
+2024-11-21,Laboratory B,Weekday,Rain,Term,1437.5
+2024-11-21,Library,Weekday,Rain,Term,586.6
+2024-11-21,Teaching Block A,Weekday,Rain,Term,947.5
+2024-11-22,Canteen,Weekday,Cloudy,Term,374.5
+2024-11-22,Dormitory C,Weekday,Cloudy,Term,727.3
+2024-11-22,Laboratory B,Weekday,Cloudy,Term,1186.6
+2024-11-22,Library,Weekday,Cloudy,Term,575.8
+2024-11-22,Teaching Block A,Weekday,Cloudy,Term,862.2
+2024-11-23,Canteen,Weekend,Cloudy,Term,245.2
+2024-11-23,Dormitory C,Weekend,Cloudy,Term,447.0
+2024-11-23,Laboratory B,Weekend,Cloudy,Term,741.5
+2024-11-23,Library,Weekend,Cloudy,Term,306.1
+2024-11-23,Teaching Block A,Weekend,Cloudy,Term,501.9
+2024-11-24,Canteen,Weekend,Cloudy,Vacation,107.7
+2024-11-24,Dormitory C,Weekend,Cloudy,Vacation,176.3
+2024-11-24,Laboratory B,Weekend,Cloudy,Vacation,391.3
+2024-11-24,Library,Weekend,Cloudy,Vacation,167.7
+2024-11-24,Teaching Block A,Weekend,Cloudy,Vacation,232.0
+2024-11-25,Canteen,Weekday,Cloudy,Term,462.1
+2024-11-25,Dormitory C,Weekday,Cloudy,Term,674.7
+2024-11-25,Laboratory B,Weekday,Cloudy,Term,1194.3
+2024-11-25,Library,Weekday,Cloudy,Term,650.3
+2024-11-25,Teaching Block A,Weekday,Cloudy,Term,785.9
+2024-11-26,Canteen,Weekday,Cloudy,Term,445.9
+2024-11-26,Dormitory C,Weekday,Cloudy,Term,667.7
+2024-11-26,Laboratory B,Weekday,Cloudy,Term,1092.0
+2024-11-26,Library,Weekday,Cloudy,Term,562.1
+2024-11-26,Teaching Block A,Weekday,Cloudy,Term,828.4
+2024-11-27,Canteen,Weekday,Rain,Term,418.8
+2024-11-27,Dormitory C,Weekday,Rain,Term,745.5
+2024-11-27,Laboratory B,Weekday,Rain,Term,1267.4
+2024-11-27,Library,Weekday,Rain,Term,566.7
+2024-11-27,Teaching Block A,Weekday,Rain,Term,896.3
+2024-11-28,Canteen,Weekday,Cloudy,Exam Week,361.8
+2024-11-28,Dormitory C,Weekday,Cloudy,Exam Week,686.4
+2024-11-28,Laboratory B,Weekday,Cloudy,Exam Week,1244.9
+2024-11-28,Library,Weekday,Cloudy,Exam Week,701.4
+2024-11-28,Teaching Block A,Weekday,Cloudy,Exam Week,844.7
+2024-11-29,Canteen,Weekday,Cloudy,Term,427.3
+2024-11-29,Dormitory C,Weekday,Cloudy,Term,757.8
+2024-11-29,Laboratory B,Weekday,Cloudy,Term,1148.3
+2024-11-29,Library,Weekday,Cloudy,Term,534.9
+2024-11-29,Teaching Block A,Weekday,Cloudy,Term,843.7
+2024-11-30,Canteen,Weekend,Sunny,Term,251.8
+2024-11-30,Dormitory C,Weekend,Sunny,Term,437.3
+2024-11-30,Laboratory B,Weekend,Sunny,Term,741.1
+2024-11-30,Library,Weekend,Sunny,Term,391.2
+2024-11-30,Teaching Block A,Weekend,Sunny,Term,430.7
+2024-12-01,Canteen,Weekend,Sunny,Term,208.3
+2024-12-01,Dormitory C,Weekend,Sunny,Term,380.9
+2024-12-01,Laboratory B,Weekend,Sunny,Term,674.8
+2024-12-01,Library,Weekend,Sunny,Term,358.1
+2024-12-01,Teaching Block A,Weekend,Sunny,Term,418.8
+2024-12-02,Canteen,Weekday,Cold,Term,447.2
+2024-12-02,Dormitory C,Weekday,Cold,Term,947.1
+2024-12-02,Laboratory B,Weekday,Cold,Term,1415.7
+2024-12-02,Library,Weekday,Cold,Term,721.8
+2024-12-02,Teaching Block A,Weekday,Cold,Term,1138.0
+2024-12-03,Canteen,Weekday,Cold,Exam Week,522.0
+2024-12-03,Dormitory C,Weekday,Cold,Exam Week,1026.2
+2024-12-03,Laboratory B,Weekday,Cold,Exam Week,1585.2
+2024-12-03,Library,Weekday,Cold,Exam Week,885.6
+2024-12-03,Teaching Block A,Weekday,Cold,Exam Week,1082.4
+2024-12-04,Canteen,Weekday,Sunny,Term,358.3
+2024-12-04,Dormitory C,Weekday,Sunny,Term,627.4
+2024-12-04,Laboratory B,Weekday,Sunny,Term,1205.1
+2024-12-04,Library,Weekday,Sunny,Term,556.3
+2024-12-04,Teaching Block A,Weekday,Sunny,Term,757.5
+2024-12-05,Canteen,Weekday,Cloudy,Term,416.5
+2024-12-05,Dormitory C,Weekday,Cloudy,Term,648.0
+2024-12-05,Laboratory B,Weekday,Cloudy,Term,1223.3
+2024-12-05,Library,Weekday,Cloudy,Term,568.4
+2024-12-05,Teaching Block A,Weekday,Cloudy,Term,822.5
+2024-12-06,Canteen,Weekday,Cloudy,Exam Week,485.4
+2024-12-06,Dormitory C,Weekday,Cloudy,Exam Week,863.7
+2024-12-06,Laboratory B,Weekday,Cloudy,Exam Week,1389.9
+2024-12-06,Library,Weekday,Cloudy,Exam Week,619.9
+2024-12-06,Teaching Block A,Weekday,Cloudy,Exam Week,905.3
+2024-12-07,Canteen,Weekend,Rain,Term,270.1
+2024-12-07,Dormitory C,Weekend,Rain,Term,486.5
+2024-12-07,Laboratory B,Weekend,Rain,Term,803.6
+2024-12-07,Library,Weekend,Rain,Term,387.7
+2024-12-07,Teaching Block A,Weekend,Rain,Term,580.9
+2024-12-08,Canteen,Weekend,Rain,Vacation,117.0
+2024-12-08,Dormitory C,Weekend,Rain,Vacation,229.6
+2024-12-08,Laboratory B,Weekend,Rain,Vacation,347.8
+2024-12-08,Library,Weekend,Rain,Vacation,177.2
+2024-12-08,Teaching Block A,Weekend,Rain,Vacation,223.7
+2024-12-09,Canteen,Weekday,Sunny,Vacation,179.4
+2024-12-09,Dormitory C,Weekday,Sunny,Vacation,305.0
+2024-12-09,Laboratory B,Weekday,Sunny,Vacation,525.6
+2024-12-09,Library,Weekday,Sunny,Vacation,261.4
+2024-12-09,Teaching Block A,Weekday,Sunny,Vacation,388.5
+2024-12-10,Canteen,Weekday,Cloudy,Term,412.9
+2024-12-10,Dormitory C,Weekday,Cloudy,Term,754.6
+2024-12-10,Laboratory B,Weekday,Cloudy,Term,1282.9
+2024-12-10,Library,Weekday,Cloudy,Term,624.4
+2024-12-10,Teaching Block A,Weekday,Cloudy,Term,836.2
+2024-12-11,Canteen,Weekday,Cold,Exam Week,549.6
+2024-12-11,Dormitory C,Weekday,Cold,Exam Week,1012.3
+2024-12-11,Laboratory B,Weekday,Cold,Exam Week,1618.8
+2024-12-11,Library,Weekday,Cold,Exam Week,806.6
+2024-12-11,Teaching Block A,Weekday,Cold,Exam Week,1119.3
+2024-12-12,Canteen,Weekday,Sunny,Term,392.0
+2024-12-12,Dormitory C,Weekday,Sunny,Term,640.7
+2024-12-12,Laboratory B,Weekday,Sunny,Term,1104.6
+2024-12-12,Library,Weekday,Sunny,Term,601.8
+2024-12-12,Teaching Block A,Weekday,Sunny,Term,906.3
+2024-12-13,Canteen,Weekday,Sunny,Term,377.2
+2024-12-13,Dormitory C,Weekday,Sunny,Term,655.1
+2024-12-13,Laboratory B,Weekday,Sunny,Term,1175.2
+2024-12-13,Library,Weekday,Sunny,Term,581.5
+2024-12-13,Teaching Block A,Weekday,Sunny,Term,749.3
+2024-12-14,Canteen,Weekend,Sunny,Exam Week,230.5
+2024-12-14,Dormitory C,Weekend,Sunny,Exam Week,489.4
+2024-12-14,Laboratory B,Weekend,Sunny,Exam Week,704.7
+2024-12-14,Library,Weekend,Sunny,Exam Week,350.0
+2024-12-14,Teaching Block A,Weekend,Sunny,Exam Week,543.9
+2024-12-15,Canteen,Weekend,Hot,Term,282.2
+2024-12-15,Dormitory C,Weekend,Hot,Term,549.5
+2024-12-15,Laboratory B,Weekend,Hot,Term,893.9
+2024-12-15,Library,Weekend,Hot,Term,439.8
+2024-12-15,Teaching Block A,Weekend,Hot,Term,628.7
+2024-12-16,Canteen,Weekday,Cloudy,Term,430.8
+2024-12-16,Dormitory C,Weekday,Cloudy,Term,728.8
+2024-12-16,Laboratory B,Weekday,Cloudy,Term,1322.3
+2024-12-16,Library,Weekday,Cloudy,Term,537.6
+2024-12-16,Teaching Block A,Weekday,Cloudy,Term,719.2
+2024-12-17,Canteen,Weekday,Rain,Vacation,169.3
+2024-12-17,Dormitory C,Weekday,Rain,Vacation,361.1
+2024-12-17,Laboratory B,Weekday,Rain,Vacation,511.9
+2024-12-17,Library,Weekday,Rain,Vacation,303.5
+2024-12-17,Teaching Block A,Weekday,Rain,Vacation,452.3
+2024-12-18,Canteen,Weekday,Rain,Term,422.1
+2024-12-18,Dormitory C,Weekday,Rain,Term,776.3
+2024-12-18,Laboratory B,Weekday,Rain,Term,1074.1
+2024-12-18,Library,Weekday,Rain,Term,723.8
+2024-12-18,Teaching Block A,Weekday,Rain,Term,924.8
+2024-12-19,Canteen,Weekday,Rain,Term,418.2
+2024-12-19,Dormitory C,Weekday,Rain,Term,719.6
+2024-12-19,Laboratory B,Weekday,Rain,Term,1304.4
+2024-12-19,Library,Weekday,Rain,Term,612.5
+2024-12-19,Teaching Block A,Weekday,Rain,Term,930.0
+2024-12-20,Canteen,Weekday,Cold,Term,597.9
+2024-12-20,Dormitory C,Weekday,Cold,Term,902.7
+2024-12-20,Laboratory B,Weekday,Cold,Term,1552.0
+2024-12-20,Library,Weekday,Cold,Term,794.8
+2024-12-20,Teaching Block A,Weekday,Cold,Term,1212.3
+2024-12-21,Canteen,Weekend,Cloudy,Term,225.5
+2024-12-21,Dormitory C,Weekend,Cloudy,Term,481.9
+2024-12-21,Laboratory B,Weekend,Cloudy,Term,729.4
+2024-12-21,Library,Weekend,Cloudy,Term,388.3
+2024-12-21,Teaching Block A,Weekend,Cloudy,Term,424.5
+2024-12-22,Canteen,Weekend,Cold,Term,307.2
+2024-12-22,Dormitory C,Weekend,Cold,Term,496.3
+2024-12-22,Laboratory B,Weekend,Cold,Term,859.2
+2024-12-22,Library,Weekend,Cold,Term,450.8
+2024-12-22,Teaching Block A,Weekend,Cold,Term,578.0
+2024-12-23,Canteen,Weekday,Sunny,Term,352.7
+2024-12-23,Dormitory C,Weekday,Sunny,Term,704.4
+2024-12-23,Laboratory B,Weekday,Sunny,Term,1249.1
+2024-12-23,Library,Weekday,Sunny,Term,601.0
+2024-12-23,Teaching Block A,Weekday,Sunny,Term,779.6
+2024-12-24,Canteen,Weekday,Cold,Term,549.9
+2024-12-24,Dormitory C,Weekday,Cold,Term,814.6
+2024-12-24,Laboratory B,Weekday,Cold,Term,1299.2
+2024-12-24,Library,Weekday,Cold,Term,672.1
+2024-12-24,Teaching Block A,Weekday,Cold,Term,1160.9
+2024-12-25,Canteen,Weekday,Rain,Term,387.6
+2024-12-25,Dormitory C,Weekday,Rain,Term,835.2
+2024-12-25,Laboratory B,Weekday,Rain,Term,1348.0
+2024-12-25,Library,Weekday,Rain,Term,619.5
+2024-12-25,Teaching Block A,Weekday,Rain,Term,855.1
+2024-12-26,Canteen,Weekday,Sunny,Term,425.7
+2024-12-26,Dormitory C,Weekday,Sunny,Term,622.8
+2024-12-26,Laboratory B,Weekday,Sunny,Term,1216.1
+2024-12-26,Library,Weekday,Sunny,Term,569.5
+2024-12-26,Teaching Block A,Weekday,Sunny,Term,736.4
+2024-12-27,Canteen,Weekday,Cloudy,Term,457.1
+2024-12-27,Dormitory C,Weekday,Cloudy,Term,625.0
+2024-12-27,Laboratory B,Weekday,Cloudy,Term,1284.0
+2024-12-27,Library,Weekday,Cloudy,Term,638.9
+2024-12-27,Teaching Block A,Weekday,Cloudy,Term,876.8
+2024-12-28,Canteen,Weekend,Cold,Term,362.4
+2024-12-28,Dormitory C,Weekend,Cold,Term,532.0
+2024-12-28,Laboratory B,Weekend,Cold,Term,852.3
+2024-12-28,Library,Weekend,Cold,Term,435.3
+2024-12-28,Teaching Block A,Weekend,Cold,Term,590.7
+2024-12-29,Canteen,Weekend,Rain,Term,227.1
+2024-12-29,Dormitory C,Weekend,Rain,Term,438.3
+2024-12-29,Laboratory B,Weekend,Rain,Term,883.2
+2024-12-29,Library,Weekend,Rain,Term,418.3
+2024-12-29,Teaching Block A,Weekend,Rain,Term,615.5
+2024-12-30,Canteen,Weekday,Cloudy,Term,394.7
+2024-12-30,Dormitory C,Weekday,Cloudy,Term,678.0
+2024-12-30,Laboratory B,Weekday,Cloudy,Term,1288.4
+2024-12-30,Library,Weekday,Cloudy,Term,706.0
+2024-12-30,Teaching Block A,Weekday,Cloudy,Term,805.9
+2024-12-31,Canteen,Weekday,Cold,Term,531.3
+2024-12-31,Dormitory C,Weekday,Cold,Term,772.5
+2024-12-31,Laboratory B,Weekday,Cold,Term,1594.6
+2024-12-31,Library,Weekday,Cold,Term,925.4
+2024-12-31,Teaching Block A,Weekday,Cold,Term,1047.9
+2025-01-01,Canteen,Weekday,Rain,Exam Week,486.9
+2025-01-01,Dormitory C,Weekday,Rain,Exam Week,810.1
+2025-01-01,Laboratory B,Weekday,Rain,Exam Week,1595.3
+2025-01-01,Library,Weekday,Rain,Exam Week,676.4
+2025-01-01,Teaching Block A,Weekday,Rain,Exam Week,990.9
+2025-01-02,Canteen,Weekday,Cold,Term,446.8
+2025-01-02,Dormitory C,Weekday,Cold,Term,807.3
+2025-01-02,Laboratory B,Weekday,Cold,Term,1440.6
+2025-01-02,Library,Weekday,Cold,Term,790.5
+2025-01-02,Teaching Block A,Weekday,Cold,Term,1098.2
+2025-01-03,Canteen,Weekday,Sunny,Term,334.0
+2025-01-03,Dormitory C,Weekday,Sunny,Term,580.0
+2025-01-03,Laboratory B,Weekday,Sunny,Term,1182.2
+2025-01-03,Library,Weekday,Sunny,Term,556.6
+2025-01-03,Teaching Block A,Weekday,Sunny,Term,832.7
+2025-01-04,Canteen,Weekend,Cloudy,Vacation,120.1
+2025-01-04,Dormitory C,Weekend,Cloudy,Vacation,178.7
+2025-01-04,Laboratory B,Weekend,Cloudy,Vacation,324.7
+2025-01-04,Library,Weekend,Cloudy,Vacation,179.0
+2025-01-04,Teaching Block A,Weekend,Cloudy,Vacation,223.5
+2025-01-05,Canteen,Weekend,Rain,Term,244.1
+2025-01-05,Dormitory C,Weekend,Rain,Term,419.2
+2025-01-05,Laboratory B,Weekend,Rain,Term,746.0
+2025-01-05,Library,Weekend,Rain,Term,425.3
+2025-01-05,Teaching Block A,Weekend,Rain,Term,585.4
+2025-01-06,Canteen,Weekday,Rain,Term,402.2
+2025-01-06,Dormitory C,Weekday,Rain,Term,807.7
+2025-01-06,Laboratory B,Weekday,Rain,Term,1293.9
+2025-01-06,Library,Weekday,Rain,Term,653.8
+2025-01-06,Teaching Block A,Weekday,Rain,Term,828.1
+2025-01-07,Canteen,Weekday,Rain,Term,321.2
+2025-01-07,Dormitory C,Weekday,Rain,Term,747.6
+2025-01-07,Laboratory B,Weekday,Rain,Term,1263.2
+2025-01-07,Library,Weekday,Rain,Term,655.5
+2025-01-07,Teaching Block A,Weekday,Rain,Term,1051.1
+2025-01-08,Canteen,Weekday,Sunny,Term,379.5
+2025-01-08,Dormitory C,Weekday,Sunny,Term,673.2
+2025-01-08,Laboratory B,Weekday,Sunny,Term,1067.7
+2025-01-08,Library,Weekday,Sunny,Term,564.0
+2025-01-08,Teaching Block A,Weekday,Sunny,Term,739.3
+2025-01-09,Canteen,Weekday,Hot,Vacation,233.0
+2025-01-09,Dormitory C,Weekday,Hot,Vacation,424.6
+2025-01-09,Laboratory B,Weekday,Hot,Vacation,633.0
+2025-01-09,Library,Weekday,Hot,Vacation,355.1
+2025-01-09,Teaching Block A,Weekday,Hot,Vacation,488.1
+2025-01-10,Canteen,Weekday,Sunny,Vacation,140.9
+2025-01-10,Dormitory C,Weekday,Sunny,Vacation,278.5
+2025-01-10,Laboratory B,Weekday,Sunny,Vacation,504.5
+2025-01-10,Library,Weekday,Sunny,Vacation,248.9
+2025-01-10,Teaching Block A,Weekday,Sunny,Vacation,294.4
+2025-01-11,Canteen,Weekend,Sunny,Vacation,104.8
+2025-01-11,Dormitory C,Weekend,Sunny,Vacation,156.6
+2025-01-11,Laboratory B,Weekend,Sunny,Vacation,339.8
+2025-01-11,Library,Weekend,Sunny,Vacation,153.8
+2025-01-11,Teaching Block A,Weekend,Sunny,Vacation,220.4
+2025-01-12,Canteen,Weekend,Cold,Vacation,136.7
+2025-01-12,Dormitory C,Weekend,Cold,Vacation,257.8
+2025-01-12,Laboratory B,Weekend,Cold,Vacation,370.7
+2025-01-12,Library,Weekend,Cold,Vacation,177.6
+2025-01-12,Teaching Block A,Weekend,Cold,Vacation,284.9
+2025-01-13,Canteen,Weekday,Rain,Vacation,157.3
+2025-01-13,Dormitory C,Weekday,Rain,Vacation,339.9
+2025-01-13,Laboratory B,Weekday,Rain,Vacation,493.2
+2025-01-13,Library,Weekday,Rain,Vacation,309.2
+2025-01-13,Teaching Block A,Weekday,Rain,Vacation,318.3
+2025-01-14,Canteen,Weekday,Cold,Term,480.9
+2025-01-14,Dormitory C,Weekday,Cold,Term,881.4
+2025-01-14,Laboratory B,Weekday,Cold,Term,1689.5
+2025-01-14,Library,Weekday,Cold,Term,694.3
+2025-01-14,Teaching Block A,Weekday,Cold,Term,1035.4
+2025-01-15,Canteen,Weekday,Sunny,Term,357.2
+2025-01-15,Dormitory C,Weekday,Sunny,Term,706.6
+2025-01-15,Laboratory B,Weekday,Sunny,Term,1195.3
+2025-01-15,Library,Weekday,Sunny,Term,591.8
+2025-01-15,Teaching Block A,Weekday,Sunny,Term,764.4
+2025-01-16,Canteen,Weekday,Sunny,Vacation,169.1
+2025-01-16,Dormitory C,Weekday,Sunny,Vacation,342.1
+2025-01-16,Laboratory B,Weekday,Sunny,Vacation,477.7
+2025-01-16,Library,Weekday,Sunny,Vacation,246.5
+2025-01-16,Teaching Block A,Weekday,Sunny,Vacation,359.1
+2025-01-17,Canteen,Weekday,Sunny,Term,369.8
+2025-01-17,Dormitory C,Weekday,Sunny,Term,714.7
+2025-01-17,Laboratory B,Weekday,Sunny,Term,1325.4
+2025-01-17,Library,Weekday,Sunny,Term,587.0
+2025-01-17,Teaching Block A,Weekday,Sunny,Term,801.7
+2025-01-18,Canteen,Weekend,Sunny,Term,252.1
+2025-01-18,Dormitory C,Weekend,Sunny,Term,412.1
+2025-01-18,Laboratory B,Weekend,Sunny,Term,677.6
+2025-01-18,Library,Weekend,Sunny,Term,339.3
+2025-01-18,Teaching Block A,Weekend,Sunny,Term,530.9
+2025-01-19,Canteen,Weekend,Cold,Term,325.1
+2025-01-19,Dormitory C,Weekend,Cold,Term,472.3
+2025-01-19,Laboratory B,Weekend,Cold,Term,1000.1
+2025-01-19,Library,Weekend,Cold,Term,379.8
+2025-01-19,Teaching Block A,Weekend,Cold,Term,643.9
+2025-01-20,Canteen,Weekday,Cold,Vacation,199.7
+2025-01-20,Dormitory C,Weekday,Cold,Vacation,417.4
+2025-01-20,Laboratory B,Weekday,Cold,Vacation,682.9
+2025-01-20,Library,Weekday,Cold,Vacation,345.0
+2025-01-20,Teaching Block A,Weekday,Cold,Vacation,472.1
+2025-01-21,Canteen,Weekday,Cloudy,Term,434.4
+2025-01-21,Dormitory C,Weekday,Cloudy,Term,738.6
+2025-01-21,Laboratory B,Weekday,Cloudy,Term,1120.0
+2025-01-21,Library,Weekday,Cloudy,Term,696.1
+2025-01-21,Teaching Block A,Weekday,Cloudy,Term,937.5
+2025-01-22,Canteen,Weekday,Sunny,Vacation,172.7
+2025-01-22,Dormitory C,Weekday,Sunny,Vacation,303.7
+2025-01-22,Laboratory B,Weekday,Sunny,Vacation,514.1
+2025-01-22,Library,Weekday,Sunny,Vacation,236.0
+2025-01-22,Teaching Block A,Weekday,Sunny,Vacation,367.0
+2025-01-23,Canteen,Weekday,Cold,Vacation,202.6
+2025-01-23,Dormitory C,Weekday,Cold,Vacation,425.1
+2025-01-23,Laboratory B,Weekday,Cold,Vacation,621.2
+2025-01-23,Library,Weekday,Cold,Vacation,349.6
+2025-01-23,Teaching Block A,Weekday,Cold,Vacation,464.2
+2025-01-24,Canteen,Weekday,Cold,Term,537.1
+2025-01-24,Dormitory C,Weekday,Cold,Term,882.9
+2025-01-24,Laboratory B,Weekday,Cold,Term,1297.5
+2025-01-24,Library,Weekday,Cold,Term,677.4
+2025-01-24,Teaching Block A,Weekday,Cold,Term,1117.6
+2025-01-25,Canteen,Weekend,Cold,Vacation,147.1
+2025-01-25,Dormitory C,Weekend,Cold,Vacation,241.6
+2025-01-25,Laboratory B,Weekend,Cold,Vacation,386.1
+2025-01-25,Library,Weekend,Cold,Vacation,182.1
+2025-01-25,Teaching Block A,Weekend,Cold,Vacation,301.6
+2025-01-26,Canteen,Weekend,Sunny,Vacation,108.6
+2025-01-26,Dormitory C,Weekend,Sunny,Vacation,171.9
+2025-01-26,Laboratory B,Weekend,Sunny,Vacation,290.0
+2025-01-26,Library,Weekend,Sunny,Vacation,168.3
+2025-01-26,Teaching Block A,Weekend,Sunny,Vacation,213.0
+2025-01-27,Canteen,Weekday,Sunny,Term,377.3
+2025-01-27,Dormitory C,Weekday,Sunny,Term,632.5
+2025-01-27,Laboratory B,Weekday,Sunny,Term,1136.5
+2025-01-27,Library,Weekday,Sunny,Term,605.2
+2025-01-27,Teaching Block A,Weekday,Sunny,Term,797.2
+2025-01-28,Canteen,Weekday,Rain,Vacation,186.8
+2025-01-28,Dormitory C,Weekday,Rain,Vacation,299.9
+2025-01-28,Laboratory B,Weekday,Rain,Vacation,540.5
+2025-01-28,Library,Weekday,Rain,Vacation,285.3
+2025-01-28,Teaching Block A,Weekday,Rain,Vacation,383.7
+2025-01-29,Canteen,Weekday,Rain,Vacation,177.5
+2025-01-29,Dormitory C,Weekday,Rain,Vacation,347.4
+2025-01-29,Laboratory B,Weekday,Rain,Vacation,637.4
+2025-01-29,Library,Weekday,Rain,Vacation,291.9
+2025-01-29,Teaching Block A,Weekday,Rain,Vacation,400.4
+2025-01-30,Canteen,Weekday,Rain,Vacation,179.6
+2025-01-30,Dormitory C,Weekday,Rain,Vacation,406.4
+2025-01-30,Laboratory B,Weekday,Rain,Vacation,640.6
+2025-01-30,Library,Weekday,Rain,Vacation,285.7
+2025-01-30,Teaching Block A,Weekday,Rain,Vacation,379.9
+2025-01-31,Canteen,Weekday,Cloudy,Term,437.0
+2025-01-31,Dormitory C,Weekday,Cloudy,Term,707.1
+2025-01-31,Laboratory B,Weekday,Cloudy,Term,1244.0
+2025-01-31,Library,Weekday,Cloudy,Term,509.4
+2025-01-31,Teaching Block A,Weekday,Cloudy,Term,865.4
+2025-02-01,Canteen,Weekend,Cloudy,Term,271.9
+2025-02-01,Dormitory C,Weekend,Cloudy,Term,412.9
+2025-02-01,Laboratory B,Weekend,Cloudy,Term,748.7
+2025-02-01,Library,Weekend,Cloudy,Term,400.4
+2025-02-01,Teaching Block A,Weekend,Cloudy,Term,512.4
+2025-02-02,Canteen,Weekend,Cold,Vacation,132.9
+2025-02-02,Dormitory C,Weekend,Cold,Vacation,263.3
+2025-02-02,Laboratory B,Weekend,Cold,Vacation,491.8
+2025-02-02,Library,Weekend,Cold,Vacation,215.7
+2025-02-02,Teaching Block A,Weekend,Cold,Vacation,295.8
+2025-02-03,Canteen,Weekday,Cold,Vacation,214.7
+2025-02-03,Dormitory C,Weekday,Cold,Vacation,331.2
+2025-02-03,Laboratory B,Weekday,Cold,Vacation,623.1
+2025-02-03,Library,Weekday,Cold,Vacation,328.7
+2025-02-03,Teaching Block A,Weekday,Cold,Vacation,470.1
+2025-02-04,Canteen,Weekday,Cold,Vacation,202.1
+2025-02-04,Dormitory C,Weekday,Cold,Vacation,328.4
+2025-02-04,Laboratory B,Weekday,Cold,Vacation,660.7
+2025-02-04,Library,Weekday,Cold,Vacation,328.8
+2025-02-04,Teaching Block A,Weekday,Cold,Vacation,467.3
+2025-02-05,Canteen,Weekday,Sunny,Vacation,171.2
+2025-02-05,Dormitory C,Weekday,Sunny,Vacation,307.9
+2025-02-05,Laboratory B,Weekday,Sunny,Vacation,520.1
+2025-02-05,Library,Weekday,Sunny,Vacation,246.6
+2025-02-05,Teaching Block A,Weekday,Sunny,Vacation,324.0
+2025-02-06,Canteen,Weekday,Cold,Vacation,224.4
+2025-02-06,Dormitory C,Weekday,Cold,Vacation,409.3
+2025-02-06,Laboratory B,Weekday,Cold,Vacation,610.7
+2025-02-06,Library,Weekday,Cold,Vacation,319.5
+2025-02-06,Teaching Block A,Weekday,Cold,Vacation,450.9
+2025-02-07,Canteen,Weekday,Hot,Term,393.0
+2025-02-07,Dormitory C,Weekday,Hot,Term,902.1
+2025-02-07,Laboratory B,Weekday,Hot,Term,1374.8
+2025-02-07,Library,Weekday,Hot,Term,760.6
+2025-02-07,Teaching Block A,Weekday,Hot,Term,907.0
+2025-02-08,Canteen,Weekend,Cold,Vacation,144.5
+2025-02-08,Dormitory C,Weekend,Cold,Vacation,239.9
+2025-02-08,Laboratory B,Weekend,Cold,Vacation,382.7
+2025-02-08,Library,Weekend,Cold,Vacation,199.7
+2025-02-08,Teaching Block A,Weekend,Cold,Vacation,365.7
+2025-02-09,Canteen,Weekend,Rain,Vacation,127.0
+2025-02-09,Dormitory C,Weekend,Rain,Vacation,209.3
+2025-02-09,Laboratory B,Weekend,Rain,Vacation,326.3
+2025-02-09,Library,Weekend,Rain,Vacation,164.8
+2025-02-09,Teaching Block A,Weekend,Rain,Vacation,234.9
+2025-02-10,Canteen,Weekday,Cloudy,Vacation,195.1
+2025-02-10,Dormitory C,Weekday,Cloudy,Vacation,283.3
+2025-02-10,Laboratory B,Weekday,Cloudy,Vacation,506.6
+2025-02-10,Library,Weekday,Cloudy,Vacation,242.1
+2025-02-10,Teaching Block A,Weekday,Cloudy,Vacation,377.4
+2025-02-11,Canteen,Weekday,Cold,Exam Week,504.0
+2025-02-11,Dormitory C,Weekday,Cold,Exam Week,918.1
+2025-02-11,Laboratory B,Weekday,Cold,Exam Week,1632.9
+2025-02-11,Library,Weekday,Cold,Exam Week,844.8
+2025-02-11,Teaching Block A,Weekday,Cold,Exam Week,1181.0
+2025-02-12,Canteen,Weekday,Cloudy,Term,423.0
+2025-02-12,Dormitory C,Weekday,Cloudy,Term,649.6
+2025-02-12,Laboratory B,Weekday,Cloudy,Term,1024.9
+2025-02-12,Library,Weekday,Cloudy,Term,575.9
+2025-02-12,Teaching Block A,Weekday,Cloudy,Term,781.0
+2025-02-13,Canteen,Weekday,Cold,Term,488.0
+2025-02-13,Dormitory C,Weekday,Cold,Term,772.0
+2025-02-13,Laboratory B,Weekday,Cold,Term,1705.9
+2025-02-13,Library,Weekday,Cold,Term,659.0
+2025-02-13,Teaching Block A,Weekday,Cold,Term,1107.6
+2025-02-14,Canteen,Weekday,Sunny,Vacation,157.1
+2025-02-14,Dormitory C,Weekday,Sunny,Vacation,374.6
+2025-02-14,Laboratory B,Weekday,Sunny,Vacation,511.5
+2025-02-14,Library,Weekday,Sunny,Vacation,222.8
+2025-02-14,Teaching Block A,Weekday,Sunny,Vacation,397.9
+2025-02-15,Canteen,Weekend,Cloudy,Vacation,112.9
+2025-02-15,Dormitory C,Weekend,Cloudy,Vacation,182.9
+2025-02-15,Laboratory B,Weekend,Cloudy,Vacation,304.5
+2025-02-15,Library,Weekend,Cloudy,Vacation,167.6
+2025-02-15,Teaching Block A,Weekend,Cloudy,Vacation,206.9
+2025-02-16,Canteen,Weekend,Cloudy,Vacation,103.3
+2025-02-16,Dormitory C,Weekend,Cloudy,Vacation,246.5
+2025-02-16,Laboratory B,Weekend,Cloudy,Vacation,349.8
+2025-02-16,Library,Weekend,Cloudy,Vacation,171.7
+2025-02-16,Teaching Block A,Weekend,Cloudy,Vacation,229.7
+2025-02-17,Canteen,Weekday,Cloudy,Term,347.6
+2025-02-17,Dormitory C,Weekday,Cloudy,Term,632.6
+2025-02-17,Laboratory B,Weekday,Cloudy,Term,1020.2
+2025-02-17,Library,Weekday,Cloudy,Term,548.8
+2025-02-17,Teaching Block A,Weekday,Cloudy,Term,879.6
+2025-02-18,Canteen,Weekday,Cold,Vacation,194.7
+2025-02-18,Dormitory C,Weekday,Cold,Vacation,382.3
+2025-02-18,Laboratory B,Weekday,Cold,Vacation,734.1
+2025-02-18,Library,Weekday,Cold,Vacation,323.7
+2025-02-18,Teaching Block A,Weekday,Cold,Vacation,406.8
+2025-02-19,Canteen,Weekday,Sunny,Term,348.0
+2025-02-19,Dormitory C,Weekday,Sunny,Term,638.4
+2025-02-19,Laboratory B,Weekday,Sunny,Term,1139.6
+2025-02-19,Library,Weekday,Sunny,Term,565.4
+2025-02-19,Teaching Block A,Weekday,Sunny,Term,764.9
+2025-02-20,Canteen,Weekday,Cloudy,Term,348.9
+2025-02-20,Dormitory C,Weekday,Cloudy,Term,699.8
+2025-02-20,Laboratory B,Weekday,Cloudy,Term,1313.2
+2025-02-20,Library,Weekday,Cloudy,Term,555.5
+2025-02-20,Teaching Block A,Weekday,Cloudy,Term,798.5
+2025-02-21,Canteen,Weekday,Cold,Term,500.2
+2025-02-21,Dormitory C,Weekday,Cold,Term,979.8
+2025-02-21,Laboratory B,Weekday,Cold,Term,1470.6
+2025-02-21,Library,Weekday,Cold,Term,796.1
+2025-02-21,Teaching Block A,Weekday,Cold,Term,1186.3
+2025-02-22,Canteen,Weekend,Cold,Vacation,148.7
+2025-02-22,Dormitory C,Weekend,Cold,Vacation,265.8
+2025-02-22,Laboratory B,Weekend,Cold,Vacation,425.2
+2025-02-22,Library,Weekend,Cold,Vacation,194.6
+2025-02-22,Teaching Block A,Weekend,Cold,Vacation,276.9
+2025-02-23,Canteen,Weekend,Rain,Term,244.2
+2025-02-23,Dormitory C,Weekend,Rain,Term,488.0
+2025-02-23,Laboratory B,Weekend,Rain,Term,770.4
+2025-02-23,Library,Weekend,Rain,Term,392.8
+2025-02-23,Teaching Block A,Weekend,Rain,Term,569.5
+2025-02-24,Canteen,Weekday,Cold,Term,414.7
+2025-02-24,Dormitory C,Weekday,Cold,Term,963.8
+2025-02-24,Laboratory B,Weekday,Cold,Term,1630.9
+2025-02-24,Library,Weekday,Cold,Term,713.9
+2025-02-24,Teaching Block A,Weekday,Cold,Term,865.9
+2025-02-25,Canteen,Weekday,Cloudy,Vacation,181.3
+2025-02-25,Dormitory C,Weekday,Cloudy,Vacation,351.8
+2025-02-25,Laboratory B,Weekday,Cloudy,Vacation,584.5
+2025-02-25,Library,Weekday,Cloudy,Vacation,288.4
+2025-02-25,Teaching Block A,Weekday,Cloudy,Vacation,384.6
+2025-02-26,Canteen,Weekday,Rain,Term,393.3
+2025-02-26,Dormitory C,Weekday,Rain,Term,721.4
+2025-02-26,Laboratory B,Weekday,Rain,Term,1169.1
+2025-02-26,Library,Weekday,Rain,Term,583.8
+2025-02-26,Teaching Block A,Weekday,Rain,Term,767.3
+2025-02-27,Canteen,Weekday,Cloudy,Term,466.2
+2025-02-27,Dormitory C,Weekday,Cloudy,Term,808.4
+2025-02-27,Laboratory B,Weekday,Cloudy,Term,1139.6
+2025-02-27,Library,Weekday,Cloudy,Term,694.1
+2025-02-27,Teaching Block A,Weekday,Cloudy,Term,750.8
+2025-02-28,Canteen,Weekday,Rain,Vacation,188.8
+2025-02-28,Dormitory C,Weekday,Rain,Vacation,347.3
+2025-02-28,Laboratory B,Weekday,Rain,Vacation,491.2
+2025-02-28,Library,Weekday,Rain,Vacation,266.2
+2025-02-28,Teaching Block A,Weekday,Rain,Vacation,412.4
+2025-03-01,Canteen,Weekend,Cloudy,Term,238.2
+2025-03-01,Dormitory C,Weekend,Cloudy,Term,492.2
+2025-03-01,Laboratory B,Weekend,Cloudy,Term,758.6
+2025-03-01,Library,Weekend,Cloudy,Term,355.3
+2025-03-01,Teaching Block A,Weekend,Cloudy,Term,545.2
+2025-03-02,Canteen,Weekend,Cloudy,Term,260.5
+2025-03-02,Dormitory C,Weekend,Cloudy,Term,528.0
+2025-03-02,Laboratory B,Weekend,Cloudy,Term,735.6
+2025-03-02,Library,Weekend,Cloudy,Term,315.5
+2025-03-02,Teaching Block A,Weekend,Cloudy,Term,523.3
+2025-03-03,Canteen,Weekday,Sunny,Term,401.1
+2025-03-03,Dormitory C,Weekday,Sunny,Term,710.8
+2025-03-03,Laboratory B,Weekday,Sunny,Term,1183.4
+2025-03-03,Library,Weekday,Sunny,Term,540.8
+2025-03-03,Teaching Block A,Weekday,Sunny,Term,798.4
+2025-03-04,Canteen,Weekday,Cold,Term,483.4
+2025-03-04,Dormitory C,Weekday,Cold,Term,926.5
+2025-03-04,Laboratory B,Weekday,Cold,Term,1769.4
+2025-03-04,Library,Weekday,Cold,Term,747.2
+2025-03-04,Teaching Block A,Weekday,Cold,Term,1102.5
+2025-03-05,Canteen,Weekday,Cloudy,Term,410.5
+2025-03-05,Dormitory C,Weekday,Cloudy,Term,618.8
+2025-03-05,Laboratory B,Weekday,Cloudy,Term,1435.7
+2025-03-05,Library,Weekday,Cloudy,Term,570.0
+2025-03-05,Teaching Block A,Weekday,Cloudy,Term,830.2
+2025-03-06,Canteen,Weekday,Cold,Term,586.7
+2025-03-06,Dormitory C,Weekday,Cold,Term,787.2
+2025-03-06,Laboratory B,Weekday,Cold,Term,1326.7
+2025-03-06,Library,Weekday,Cold,Term,802.7
+2025-03-06,Teaching Block A,Weekday,Cold,Term,1046.4
+2025-03-07,Canteen,Weekday,Sunny,Exam Week,443.6
+2025-03-07,Dormitory C,Weekday,Sunny,Exam Week,774.9
+2025-03-07,Laboratory B,Weekday,Sunny,Exam Week,1432.7
+2025-03-07,Library,Weekday,Sunny,Exam Week,749.2
+2025-03-07,Teaching Block A,Weekday,Sunny,Exam Week,885.0
+2025-03-08,Canteen,Weekend,Cloudy,Term,265.2
+2025-03-08,Dormitory C,Weekend,Cloudy,Term,405.4
+2025-03-08,Laboratory B,Weekend,Cloudy,Term,816.6
+2025-03-08,Library,Weekend,Cloudy,Term,386.2
+2025-03-08,Teaching Block A,Weekend,Cloudy,Term,436.2
+2025-03-09,Canteen,Weekend,Cloudy,Vacation,119.4
+2025-03-09,Dormitory C,Weekend,Cloudy,Vacation,176.5
+2025-03-09,Laboratory B,Weekend,Cloudy,Vacation,340.1
+2025-03-09,Library,Weekend,Cloudy,Vacation,174.0
+2025-03-09,Teaching Block A,Weekend,Cloudy,Vacation,272.1
+2025-03-10,Canteen,Weekday,Hot,Term,474.4
+2025-03-10,Dormitory C,Weekday,Hot,Term,771.5
+2025-03-10,Laboratory B,Weekday,Hot,Term,1354.8
+2025-03-10,Library,Weekday,Hot,Term,738.7
+2025-03-10,Teaching Block A,Weekday,Hot,Term,893.7
+2025-03-11,Canteen,Weekday,Cloudy,Term,422.9
+2025-03-11,Dormitory C,Weekday,Cloudy,Term,649.5
+2025-03-11,Laboratory B,Weekday,Cloudy,Term,1208.7
+2025-03-11,Library,Weekday,Cloudy,Term,597.9
+2025-03-11,Teaching Block A,Weekday,Cloudy,Term,916.1
+2025-03-12,Canteen,Weekday,Rain,Term,366.0
+2025-03-12,Dormitory C,Weekday,Rain,Term,721.5
+2025-03-12,Laboratory B,Weekday,Rain,Term,1201.2
+2025-03-12,Library,Weekday,Rain,Term,562.7
+2025-03-12,Teaching Block A,Weekday,Rain,Term,882.4
+2025-03-13,Canteen,Weekday,Sunny,Term,343.9
+2025-03-13,Dormitory C,Weekday,Sunny,Term,670.6
+2025-03-13,Laboratory B,Weekday,Sunny,Term,1172.2
+2025-03-13,Library,Weekday,Sunny,Term,564.8
+2025-03-13,Teaching Block A,Weekday,Sunny,Term,870.3
+2025-03-14,Canteen,Weekday,Sunny,Term,409.5
+2025-03-14,Dormitory C,Weekday,Sunny,Term,762.4
+2025-03-14,Laboratory B,Weekday,Sunny,Term,1318.8
+2025-03-14,Library,Weekday,Sunny,Term,585.7
+2025-03-14,Teaching Block A,Weekday,Sunny,Term,852.3
+2025-03-15,Canteen,Weekend,Cloudy,Term,248.4
+2025-03-15,Dormitory C,Weekend,Cloudy,Term,453.6
+2025-03-15,Laboratory B,Weekend,Cloudy,Term,786.9
+2025-03-15,Library,Weekend,Cloudy,Term,393.9
+2025-03-15,Teaching Block A,Weekend,Cloudy,Term,535.1
+2025-03-16,Canteen,Weekend,Sunny,Term,256.3
+2025-03-16,Dormitory C,Weekend,Sunny,Term,439.9
+2025-03-16,Laboratory B,Weekend,Sunny,Term,718.9
+2025-03-16,Library,Weekend,Sunny,Term,318.2
+2025-03-16,Teaching Block A,Weekend,Sunny,Term,481.1
+2025-03-17,Canteen,Weekday,Cloudy,Term,392.5
+2025-03-17,Dormitory C,Weekday,Cloudy,Term,765.8
+2025-03-17,Laboratory B,Weekday,Cloudy,Term,1243.5
+2025-03-17,Library,Weekday,Cloudy,Term,641.2
+2025-03-17,Teaching Block A,Weekday,Cloudy,Term,927.8
+2025-03-18,Canteen,Weekday,Cloudy,Term,393.8
+2025-03-18,Dormitory C,Weekday,Cloudy,Term,599.2
+2025-03-18,Laboratory B,Weekday,Cloudy,Term,1181.5
+2025-03-18,Library,Weekday,Cloudy,Term,675.2
+2025-03-18,Teaching Block A,Weekday,Cloudy,Term,901.7
+2025-03-19,Canteen,Weekday,Sunny,Term,359.2
+2025-03-19,Dormitory C,Weekday,Sunny,Term,656.9
+2025-03-19,Laboratory B,Weekday,Sunny,Term,1052.5
+2025-03-19,Library,Weekday,Sunny,Term,525.0
+2025-03-19,Teaching Block A,Weekday,Sunny,Term,724.2
+2025-03-20,Canteen,Weekday,Sunny,Term,376.6
+2025-03-20,Dormitory C,Weekday,Sunny,Term,651.0
+2025-03-20,Laboratory B,Weekday,Sunny,Term,1139.1
+2025-03-20,Library,Weekday,Sunny,Term,540.8
+2025-03-20,Teaching Block A,Weekday,Sunny,Term,845.3
+2025-03-21,Canteen,Weekday,Cloudy,Term,359.1
+2025-03-21,Dormitory C,Weekday,Cloudy,Term,744.7
+2025-03-21,Laboratory B,Weekday,Cloudy,Term,1155.0
+2025-03-21,Library,Weekday,Cloudy,Term,593.3
+2025-03-21,Teaching Block A,Weekday,Cloudy,Term,818.5
+2025-03-22,Canteen,Weekend,Rain,Exam Week,276.1
+2025-03-22,Dormitory C,Weekend,Rain,Exam Week,448.7
+2025-03-22,Laboratory B,Weekend,Rain,Exam Week,982.0
+2025-03-22,Library,Weekend,Rain,Exam Week,410.8
+2025-03-22,Teaching Block A,Weekend,Rain,Exam Week,628.7
+2025-03-23,Canteen,Weekend,Rain,Term,252.0
+2025-03-23,Dormitory C,Weekend,Rain,Term,457.7
+2025-03-23,Laboratory B,Weekend,Rain,Term,781.4
+2025-03-23,Library,Weekend,Rain,Term,412.3
+2025-03-23,Teaching Block A,Weekend,Rain,Term,514.5
+2025-03-24,Canteen,Weekday,Cloudy,Term,355.3
+2025-03-24,Dormitory C,Weekday,Cloudy,Term,795.5
+2025-03-24,Laboratory B,Weekday,Cloudy,Term,1109.8
+2025-03-24,Library,Weekday,Cloudy,Term,538.8
+2025-03-24,Teaching Block A,Weekday,Cloudy,Term,901.0
+2025-03-25,Canteen,Weekday,Cloudy,Term,379.9
+2025-03-25,Dormitory C,Weekday,Cloudy,Term,779.3
+2025-03-25,Laboratory B,Weekday,Cloudy,Term,1227.5
+2025-03-25,Library,Weekday,Cloudy,Term,670.2
+2025-03-25,Teaching Block A,Weekday,Cloudy,Term,944.6
+2025-03-26,Canteen,Weekday,Rain,Term,419.7
+2025-03-26,Dormitory C,Weekday,Rain,Term,755.0
+2025-03-26,Laboratory B,Weekday,Rain,Term,1331.4
+2025-03-26,Library,Weekday,Rain,Term,649.7
+2025-03-26,Teaching Block A,Weekday,Rain,Term,850.3
+2025-03-27,Canteen,Weekday,Rain,Term,486.4
+2025-03-27,Dormitory C,Weekday,Rain,Term,708.2
+2025-03-27,Laboratory B,Weekday,Rain,Term,1253.8
+2025-03-27,Library,Weekday,Rain,Term,681.5
+2025-03-27,Teaching Block A,Weekday,Rain,Term,901.2
+2025-03-28,Canteen,Weekday,Cloudy,Vacation,188.8
+2025-03-28,Dormitory C,Weekday,Cloudy,Vacation,335.9
+2025-03-28,Laboratory B,Weekday,Cloudy,Vacation,523.3
+2025-03-28,Library,Weekday,Cloudy,Vacation,267.5
+2025-03-28,Teaching Block A,Weekday,Cloudy,Vacation,390.9
+2025-03-29,Canteen,Weekend,Cloudy,Term,213.8
+2025-03-29,Dormitory C,Weekend,Cloudy,Term,427.7
+2025-03-29,Laboratory B,Weekend,Cloudy,Term,713.7
+2025-03-29,Library,Weekend,Cloudy,Term,353.3
+2025-03-29,Teaching Block A,Weekend,Cloudy,Term,521.2
+2025-03-30,Canteen,Weekend,Hot,Term,293.2
+2025-03-30,Dormitory C,Weekend,Hot,Term,479.8
+2025-03-30,Laboratory B,Weekend,Hot,Term,886.4
+2025-03-30,Library,Weekend,Hot,Term,436.7
+2025-03-30,Teaching Block A,Weekend,Hot,Term,559.3
+2025-03-31,Canteen,Weekday,Sunny,Term,402.7
+2025-03-31,Dormitory C,Weekday,Sunny,Term,607.3
+2025-03-31,Laboratory B,Weekday,Sunny,Term,1114.0
+2025-03-31,Library,Weekday,Sunny,Term,581.7
+2025-03-31,Teaching Block A,Weekday,Sunny,Term,746.2
+2025-04-01,Canteen,Weekday,Sunny,Term,373.8
+2025-04-01,Dormitory C,Weekday,Sunny,Term,596.1
+2025-04-01,Laboratory B,Weekday,Sunny,Term,1046.9
+2025-04-01,Library,Weekday,Sunny,Term,543.6
+2025-04-01,Teaching Block A,Weekday,Sunny,Term,722.9
+2025-04-02,Canteen,Weekday,Cloudy,Exam Week,465.2
+2025-04-02,Dormitory C,Weekday,Cloudy,Exam Week,862.6
+2025-04-02,Laboratory B,Weekday,Cloudy,Exam Week,1445.7
+2025-04-02,Library,Weekday,Cloudy,Exam Week,679.0
+2025-04-02,Teaching Block A,Weekday,Cloudy,Exam Week,954.1
+2025-04-03,Canteen,Weekday,Hot,Term,414.8
+2025-04-03,Dormitory C,Weekday,Hot,Term,767.0
+2025-04-03,Laboratory B,Weekday,Hot,Term,1470.1
+2025-04-03,Library,Weekday,Hot,Term,601.3
+2025-04-03,Teaching Block A,Weekday,Hot,Term,1038.1
+2025-04-04,Canteen,Weekday,Cloudy,Term,439.4
+2025-04-04,Dormitory C,Weekday,Cloudy,Term,758.5
+2025-04-04,Laboratory B,Weekday,Cloudy,Term,996.9
+2025-04-04,Library,Weekday,Cloudy,Term,541.6
+2025-04-04,Teaching Block A,Weekday,Cloudy,Term,855.9
+2025-04-05,Canteen,Weekend,Rain,Term,244.4
+2025-04-05,Dormitory C,Weekend,Rain,Term,435.9
+2025-04-05,Laboratory B,Weekend,Rain,Term,843.1
+2025-04-05,Library,Weekend,Rain,Term,384.4
+2025-04-05,Teaching Block A,Weekend,Rain,Term,554.4
+2025-04-06,Canteen,Weekend,Sunny,Exam Week,288.8
+2025-04-06,Dormitory C,Weekend,Sunny,Exam Week,408.3
+2025-04-06,Laboratory B,Weekend,Sunny,Exam Week,784.4
+2025-04-06,Library,Weekend,Sunny,Exam Week,398.1
+2025-04-06,Teaching Block A,Weekend,Sunny,Exam Week,646.5
+2025-04-07,Canteen,Weekday,Sunny,Term,314.3
+2025-04-07,Dormitory C,Weekday,Sunny,Term,677.7
+2025-04-07,Laboratory B,Weekday,Sunny,Term,1130.7
+2025-04-07,Library,Weekday,Sunny,Term,600.1
+2025-04-07,Teaching Block A,Weekday,Sunny,Term,759.1
+2025-04-08,Canteen,Weekday,Rain,Term,471.7
+2025-04-08,Dormitory C,Weekday,Rain,Term,771.4
+2025-04-08,Laboratory B,Weekday,Rain,Term,1393.4
+2025-04-08,Library,Weekday,Rain,Term,710.2
+2025-04-08,Teaching Block A,Weekday,Rain,Term,1076.9
+2025-04-09,Canteen,Weekday,Rain,Term,411.1
+2025-04-09,Dormitory C,Weekday,Rain,Term,725.8
+2025-04-09,Laboratory B,Weekday,Rain,Term,1297.5
+2025-04-09,Library,Weekday,Rain,Term,597.2
+2025-04-09,Teaching Block A,Weekday,Rain,Term,838.0
+2025-04-10,Canteen,Weekday,Sunny,Term,410.6
+2025-04-10,Dormitory C,Weekday,Sunny,Term,785.3
+2025-04-10,Laboratory B,Weekday,Sunny,Term,1154.8
+2025-04-10,Library,Weekday,Sunny,Term,558.5
+2025-04-10,Teaching Block A,Weekday,Sunny,Term,727.8
+2025-04-11,Canteen,Weekday,Sunny,Term,398.2
+2025-04-11,Dormitory C,Weekday,Sunny,Term,619.7
+2025-04-11,Laboratory B,Weekday,Sunny,Term,1128.7
+2025-04-11,Library,Weekday,Sunny,Term,505.1
+2025-04-11,Teaching Block A,Weekday,Sunny,Term,817.8
+2025-04-12,Canteen,Weekend,Sunny,Term,259.9
+2025-04-12,Dormitory C,Weekend,Sunny,Term,441.0
+2025-04-12,Laboratory B,Weekend,Sunny,Term,656.9
+2025-04-12,Library,Weekend,Sunny,Term,344.4
+2025-04-12,Teaching Block A,Weekend,Sunny,Term,575.6
+2025-04-13,Canteen,Weekend,Sunny,Term,254.8
+2025-04-13,Dormitory C,Weekend,Sunny,Term,390.5
+2025-04-13,Laboratory B,Weekend,Sunny,Term,655.3
+2025-04-13,Library,Weekend,Sunny,Term,356.6
+2025-04-13,Teaching Block A,Weekend,Sunny,Term,489.3
+2025-04-14,Canteen,Weekday,Sunny,Term,359.9
+2025-04-14,Dormitory C,Weekday,Sunny,Term,585.3
+2025-04-14,Laboratory B,Weekday,Sunny,Term,1283.3
+2025-04-14,Library,Weekday,Sunny,Term,542.5
+2025-04-14,Teaching Block A,Weekday,Sunny,Term,891.7
+2025-04-15,Canteen,Weekday,Cloudy,Term,401.8
+2025-04-15,Dormitory C,Weekday,Cloudy,Term,729.8
+2025-04-15,Laboratory B,Weekday,Cloudy,Term,1319.3
+2025-04-15,Library,Weekday,Cloudy,Term,599.8
+2025-04-15,Teaching Block A,Weekday,Cloudy,Term,717.8
+2025-04-16,Canteen,Weekday,Cold,Term,479.2
+2025-04-16,Dormitory C,Weekday,Cold,Term,872.9
+2025-04-16,Laboratory B,Weekday,Cold,Term,1593.7
+2025-04-16,Library,Weekday,Cold,Term,730.1
+2025-04-16,Teaching Block A,Weekday,Cold,Term,1018.4
+2025-04-17,Canteen,Weekday,Rain,Term,403.9
+2025-04-17,Dormitory C,Weekday,Rain,Term,696.4
+2025-04-17,Laboratory B,Weekday,Rain,Term,1158.6
+2025-04-17,Library,Weekday,Rain,Term,624.6
+2025-04-17,Teaching Block A,Weekday,Rain,Term,931.5
+2025-04-18,Canteen,Weekday,Rain,Vacation,164.9
+2025-04-18,Dormitory C,Weekday,Rain,Vacation,340.8
+2025-04-18,Laboratory B,Weekday,Rain,Vacation,520.4
+2025-04-18,Library,Weekday,Rain,Vacation,309.2
+2025-04-18,Teaching Block A,Weekday,Rain,Vacation,366.9
+2025-04-19,Canteen,Weekend,Sunny,Term,242.0
+2025-04-19,Dormitory C,Weekend,Sunny,Term,381.3
+2025-04-19,Laboratory B,Weekend,Sunny,Term,667.9
+2025-04-19,Library,Weekend,Sunny,Term,378.0
+2025-04-19,Teaching Block A,Weekend,Sunny,Term,483.8
+2025-04-20,Canteen,Weekend,Sunny,Term,208.3
+2025-04-20,Dormitory C,Weekend,Sunny,Term,426.5
+2025-04-20,Laboratory B,Weekend,Sunny,Term,652.2
+2025-04-20,Library,Weekend,Sunny,Term,390.7
+2025-04-20,Teaching Block A,Weekend,Sunny,Term,430.5
+2025-04-21,Canteen,Weekday,Rain,Term,441.5
+2025-04-21,Dormitory C,Weekday,Rain,Term,803.7
+2025-04-21,Laboratory B,Weekday,Rain,Term,1175.2
+2025-04-21,Library,Weekday,Rain,Term,710.3
+2025-04-21,Teaching Block A,Weekday,Rain,Term,938.8
+2025-04-22,Canteen,Weekday,Cold,Term,510.6
+2025-04-22,Dormitory C,Weekday,Cold,Term,839.4
+2025-04-22,Laboratory B,Weekday,Cold,Term,1399.9
+2025-04-22,Library,Weekday,Cold,Term,683.6
+2025-04-22,Teaching Block A,Weekday,Cold,Term,955.7
+2025-04-23,Canteen,Weekday,Cloudy,Term,417.8
+2025-04-23,Dormitory C,Weekday,Cloudy,Term,642.2
+2025-04-23,Laboratory B,Weekday,Cloudy,Term,1086.4
+2025-04-23,Library,Weekday,Cloudy,Term,648.2
+2025-04-23,Teaching Block A,Weekday,Cloudy,Term,781.0
+2025-04-24,Canteen,Weekday,Rain,Term,411.3
+2025-04-24,Dormitory C,Weekday,Rain,Term,794.4
+2025-04-24,Laboratory B,Weekday,Rain,Term,1195.5
+2025-04-24,Library,Weekday,Rain,Term,666.3
+2025-04-24,Teaching Block A,Weekday,Rain,Term,860.4
+2025-04-25,Canteen,Weekday,Hot,Exam Week,475.5
+2025-04-25,Dormitory C,Weekday,Hot,Exam Week,1022.5
+2025-04-25,Laboratory B,Weekday,Hot,Exam Week,1710.4
+2025-04-25,Library,Weekday,Hot,Exam Week,744.0
+2025-04-25,Teaching Block A,Weekday,Hot,Exam Week,1100.8
+2025-04-26,Canteen,Weekend,Sunny,Term,211.8
+2025-04-26,Dormitory C,Weekend,Sunny,Term,454.0
+2025-04-26,Laboratory B,Weekend,Sunny,Term,856.0
+2025-04-26,Library,Weekend,Sunny,Term,333.8
+2025-04-26,Teaching Block A,Weekend,Sunny,Term,514.5
+2025-04-27,Canteen,Weekend,Rain,Term,237.1
+2025-04-27,Dormitory C,Weekend,Rain,Term,457.7
+2025-04-27,Laboratory B,Weekend,Rain,Term,680.7
+2025-04-27,Library,Weekend,Rain,Term,372.0
+2025-04-27,Teaching Block A,Weekend,Rain,Term,564.3
+2025-04-28,Canteen,Weekday,Cold,Term,560.1
+2025-04-28,Dormitory C,Weekday,Cold,Term,746.9
+2025-04-28,Laboratory B,Weekday,Cold,Term,1555.9
+2025-04-28,Library,Weekday,Cold,Term,752.3
+2025-04-28,Teaching Block A,Weekday,Cold,Term,978.0
+2025-04-29,Canteen,Weekday,Cloudy,Term,362.0
+2025-04-29,Dormitory C,Weekday,Cloudy,Term,695.9
+2025-04-29,Laboratory B,Weekday,Cloudy,Term,1196.2
+2025-04-29,Library,Weekday,Cloudy,Term,638.4
+2025-04-29,Teaching Block A,Weekday,Cloudy,Term,943.7
+2025-04-30,Canteen,Weekday,Cloudy,Term,357.5
+2025-04-30,Dormitory C,Weekday,Cloudy,Term,731.8
+2025-04-30,Laboratory B,Weekday,Cloudy,Term,1189.6
+2025-04-30,Library,Weekday,Cloudy,Term,565.7
+2025-04-30,Teaching Block A,Weekday,Cloudy,Term,729.9
+2025-05-01,Canteen,Weekday,Cloudy,Term,411.6
+2025-05-01,Dormitory C,Weekday,Cloudy,Term,694.5
+2025-05-01,Laboratory B,Weekday,Cloudy,Term,1193.4
+2025-05-01,Library,Weekday,Cloudy,Term,551.3
+2025-05-01,Teaching Block A,Weekday,Cloudy,Term,891.3
+2025-05-02,Canteen,Weekday,Cloudy,Term,386.0
+2025-05-02,Dormitory C,Weekday,Cloudy,Term,796.9
+2025-05-02,Laboratory B,Weekday,Cloudy,Term,1236.9
+2025-05-02,Library,Weekday,Cloudy,Term,645.8
+2025-05-02,Teaching Block A,Weekday,Cloudy,Term,829.5
+2025-05-03,Canteen,Weekend,Cloudy,Exam Week,306.1
+2025-05-03,Dormitory C,Weekend,Cloudy,Exam Week,510.0
+2025-05-03,Laboratory B,Weekend,Cloudy,Exam Week,760.1
+2025-05-03,Library,Weekend,Cloudy,Exam Week,448.9
+2025-05-03,Teaching Block A,Weekend,Cloudy,Exam Week,549.1
+2025-05-04,Canteen,Weekend,Rain,Term,232.6
+2025-05-04,Dormitory C,Weekend,Rain,Term,506.2
+2025-05-04,Laboratory B,Weekend,Rain,Term,731.8
+2025-05-04,Library,Weekend,Rain,Term,381.7
+2025-05-04,Teaching Block A,Weekend,Rain,Term,541.3
+2025-05-05,Canteen,Weekday,Cold,Term,494.8
+2025-05-05,Dormitory C,Weekday,Cold,Term,770.7
+2025-05-05,Laboratory B,Weekday,Cold,Term,1736.2
+2025-05-05,Library,Weekday,Cold,Term,810.7
+2025-05-05,Teaching Block A,Weekday,Cold,Term,1088.2
+2025-05-06,Canteen,Weekday,Cloudy,Term,396.6
+2025-05-06,Dormitory C,Weekday,Cloudy,Term,631.2
+2025-05-06,Laboratory B,Weekday,Cloudy,Term,1214.3
+2025-05-06,Library,Weekday,Cloudy,Term,541.3
+2025-05-06,Teaching Block A,Weekday,Cloudy,Term,766.6
+2025-05-07,Canteen,Weekday,Cloudy,Term,384.7
+2025-05-07,Dormitory C,Weekday,Cloudy,Term,750.7
+2025-05-07,Laboratory B,Weekday,Cloudy,Term,1236.9
+2025-05-07,Library,Weekday,Cloudy,Term,616.5
+2025-05-07,Teaching Block A,Weekday,Cloudy,Term,930.8
+2025-05-08,Canteen,Weekday,Sunny,Term,369.5
+2025-05-08,Dormitory C,Weekday,Sunny,Term,648.4
+2025-05-08,Laboratory B,Weekday,Sunny,Term,1112.0
+2025-05-08,Library,Weekday,Sunny,Term,526.0
+2025-05-08,Teaching Block A,Weekday,Sunny,Term,795.7
+2025-05-09,Canteen,Weekday,Cloudy,Term,313.0
+2025-05-09,Dormitory C,Weekday,Cloudy,Term,646.7
+2025-05-09,Laboratory B,Weekday,Cloudy,Term,1147.0
+2025-05-09,Library,Weekday,Cloudy,Term,693.3
+2025-05-09,Teaching Block A,Weekday,Cloudy,Term,908.1
+2025-05-10,Canteen,Weekend,Rain,Term,240.7
+2025-05-10,Dormitory C,Weekend,Rain,Term,434.1
+2025-05-10,Laboratory B,Weekend,Rain,Term,875.0
+2025-05-10,Library,Weekend,Rain,Term,424.7
+2025-05-10,Teaching Block A,Weekend,Rain,Term,568.2
+2025-05-11,Canteen,Weekend,Hot,Term,296.2
+2025-05-11,Dormitory C,Weekend,Hot,Term,561.0
+2025-05-11,Laboratory B,Weekend,Hot,Term,844.0
+2025-05-11,Library,Weekend,Hot,Term,476.7
+2025-05-11,Teaching Block A,Weekend,Hot,Term,596.4
+2025-05-12,Canteen,Weekday,Sunny,Term,376.4
+2025-05-12,Dormitory C,Weekday,Sunny,Term,747.2
+2025-05-12,Laboratory B,Weekday,Sunny,Term,1215.0
+2025-05-12,Library,Weekday,Sunny,Term,542.7
+2025-05-12,Teaching Block A,Weekday,Sunny,Term,802.6
+2025-05-13,Canteen,Weekday,Cloudy,Term,390.7
+2025-05-13,Dormitory C,Weekday,Cloudy,Term,611.3
+2025-05-13,Laboratory B,Weekday,Cloudy,Term,1247.0
+2025-05-13,Library,Weekday,Cloudy,Term,583.2
+2025-05-13,Teaching Block A,Weekday,Cloudy,Term,759.0
+2025-05-14,Canteen,Weekday,Rain,Term,471.7
+2025-05-14,Dormitory C,Weekday,Rain,Term,714.9
+2025-05-14,Laboratory B,Weekday,Rain,Term,1054.9
+2025-05-14,Library,Weekday,Rain,Term,589.4
+2025-05-14,Teaching Block A,Weekday,Rain,Term,908.9
+2025-05-15,Canteen,Weekday,Cloudy,Term,413.4
+2025-05-15,Dormitory C,Weekday,Cloudy,Term,711.3
+2025-05-15,Laboratory B,Weekday,Cloudy,Term,1281.5
+2025-05-15,Library,Weekday,Cloudy,Term,599.7
+2025-05-15,Teaching Block A,Weekday,Cloudy,Term,892.3
+2025-05-16,Canteen,Weekday,Cloudy,Term,389.4
+2025-05-16,Dormitory C,Weekday,Cloudy,Term,660.7
+2025-05-16,Laboratory B,Weekday,Cloudy,Term,1288.0
+2025-05-16,Library,Weekday,Cloudy,Term,649.8
+2025-05-16,Teaching Block A,Weekday,Cloudy,Term,884.7
+2025-05-17,Canteen,Weekend,Rain,Term,218.1
+2025-05-17,Dormitory C,Weekend,Rain,Term,483.6
+2025-05-17,Laboratory B,Weekend,Rain,Term,758.3
+2025-05-17,Library,Weekend,Rain,Term,382.2
+2025-05-17,Teaching Block A,Weekend,Rain,Term,535.5
+2025-05-18,Canteen,Weekend,Rain,Term,261.5
+2025-05-18,Dormitory C,Weekend,Rain,Term,475.0
+2025-05-18,Laboratory B,Weekend,Rain,Term,797.7
+2025-05-18,Library,Weekend,Rain,Term,417.8
+2025-05-18,Teaching Block A,Weekend,Rain,Term,625.7
+2025-05-19,Canteen,Weekday,Rain,Term,422.8
+2025-05-19,Dormitory C,Weekday,Rain,Term,704.7
+2025-05-19,Laboratory B,Weekday,Rain,Term,1197.7
+2025-05-19,Library,Weekday,Rain,Term,608.0
+2025-05-19,Teaching Block A,Weekday,Rain,Term,970.3
+2025-05-20,Canteen,Weekday,Sunny,Term,399.9
+2025-05-20,Dormitory C,Weekday,Sunny,Term,719.0
+2025-05-20,Laboratory B,Weekday,Sunny,Term,1051.1
+2025-05-20,Library,Weekday,Sunny,Term,604.2
+2025-05-20,Teaching Block A,Weekday,Sunny,Term,737.6
+2025-05-21,Canteen,Weekday,Cloudy,Term,411.0
+2025-05-21,Dormitory C,Weekday,Cloudy,Term,675.6
+2025-05-21,Laboratory B,Weekday,Cloudy,Term,1105.2
+2025-05-21,Library,Weekday,Cloudy,Term,583.3
+2025-05-21,Teaching Block A,Weekday,Cloudy,Term,804.9
+2025-05-22,Canteen,Weekday,Sunny,Term,419.8
+2025-05-22,Dormitory C,Weekday,Sunny,Term,684.5
+2025-05-22,Laboratory B,Weekday,Sunny,Term,1159.7
+2025-05-22,Library,Weekday,Sunny,Term,600.9
+2025-05-22,Teaching Block A,Weekday,Sunny,Term,793.9
+2025-05-23,Canteen,Weekday,Rain,Term,380.4
+2025-05-23,Dormitory C,Weekday,Rain,Term,681.9
+2025-05-23,Laboratory B,Weekday,Rain,Term,1501.5
+2025-05-23,Library,Weekday,Rain,Term,625.2
+2025-05-23,Teaching Block A,Weekday,Rain,Term,981.4
+2025-05-24,Canteen,Weekend,Cloudy,Term,265.7
+2025-05-24,Dormitory C,Weekend,Cloudy,Term,445.5
+2025-05-24,Laboratory B,Weekend,Cloudy,Term,827.6
+2025-05-24,Library,Weekend,Cloudy,Term,318.4
+2025-05-24,Teaching Block A,Weekend,Cloudy,Term,540.8
+2025-05-25,Canteen,Weekend,Rain,Exam Week,293.6
+2025-05-25,Dormitory C,Weekend,Rain,Exam Week,480.4
+2025-05-25,Laboratory B,Weekend,Rain,Exam Week,873.4
+2025-05-25,Library,Weekend,Rain,Exam Week,388.3
+2025-05-25,Teaching Block A,Weekend,Rain,Exam Week,527.7
+2025-05-26,Canteen,Weekday,Rain,Term,402.5
+2025-05-26,Dormitory C,Weekday,Rain,Term,737.2
+2025-05-26,Laboratory B,Weekday,Rain,Term,1158.2
+2025-05-26,Library,Weekday,Rain,Term,664.5
+2025-05-26,Teaching Block A,Weekday,Rain,Term,983.7
+2025-05-27,Canteen,Weekday,Rain,Term,423.2
+2025-05-27,Dormitory C,Weekday,Rain,Term,688.4
+2025-05-27,Laboratory B,Weekday,Rain,Term,1135.1
+2025-05-27,Library,Weekday,Rain,Term,714.4
+2025-05-27,Teaching Block A,Weekday,Rain,Term,978.3
+2025-05-28,Canteen,Weekday,Sunny,Term,402.9
+2025-05-28,Dormitory C,Weekday,Sunny,Term,655.3
+2025-05-28,Laboratory B,Weekday,Sunny,Term,1117.3
+2025-05-28,Library,Weekday,Sunny,Term,602.2
+2025-05-28,Teaching Block A,Weekday,Sunny,Term,694.2
+2025-05-29,Canteen,Weekday,Sunny,Term,380.4
+2025-05-29,Dormitory C,Weekday,Sunny,Term,751.9
+2025-05-29,Laboratory B,Weekday,Sunny,Term,1384.4
+2025-05-29,Library,Weekday,Sunny,Term,609.3
+2025-05-29,Teaching Block A,Weekday,Sunny,Term,874.7
+2025-05-30,Canteen,Weekday,Rain,Term,436.1
+2025-05-30,Dormitory C,Weekday,Rain,Term,783.3
+2025-05-30,Laboratory B,Weekday,Rain,Term,1370.1
+2025-05-30,Library,Weekday,Rain,Term,581.0
+2025-05-30,Teaching Block A,Weekday,Rain,Term,957.1
+2025-05-31,Canteen,Weekend,Cloudy,Term,230.9
+2025-05-31,Dormitory C,Weekend,Cloudy,Term,454.2
+2025-05-31,Laboratory B,Weekend,Cloudy,Term,696.8
+2025-05-31,Library,Weekend,Cloudy,Term,375.1
+2025-05-31,Teaching Block A,Weekend,Cloudy,Term,529.0
+2025-06-01,Canteen,Weekend,Rain,Term,263.9
+2025-06-01,Dormitory C,Weekend,Rain,Term,394.5
+2025-06-01,Laboratory B,Weekend,Rain,Term,818.1
+2025-06-01,Library,Weekend,Rain,Term,420.0
+2025-06-01,Teaching Block A,Weekend,Rain,Term,548.7
+2025-06-02,Canteen,Weekday,Sunny,Exam Week,423.4
+2025-06-02,Dormitory C,Weekday,Sunny,Exam Week,701.0
+2025-06-02,Laboratory B,Weekday,Sunny,Exam Week,1149.8
+2025-06-02,Library,Weekday,Sunny,Exam Week,700.2
+2025-06-02,Teaching Block A,Weekday,Sunny,Exam Week,837.6
+2025-06-03,Canteen,Weekday,Cloudy,Term,361.0
+2025-06-03,Dormitory C,Weekday,Cloudy,Term,702.3
+2025-06-03,Laboratory B,Weekday,Cloudy,Term,1123.7
+2025-06-03,Library,Weekday,Cloudy,Term,558.5
+2025-06-03,Teaching Block A,Weekday,Cloudy,Term,762.5
+2025-06-04,Canteen,Weekday,Rain,Term,407.7
+2025-06-04,Dormitory C,Weekday,Rain,Term,751.9
+2025-06-04,Laboratory B,Weekday,Rain,Term,1465.9
+2025-06-04,Library,Weekday,Rain,Term,600.9
+2025-06-04,Teaching Block A,Weekday,Rain,Term,1068.3
+2025-06-05,Canteen,Weekday,Cloudy,Exam Week,475.9
+2025-06-05,Dormitory C,Weekday,Cloudy,Exam Week,851.7
+2025-06-05,Laboratory B,Weekday,Cloudy,Exam Week,1303.6
+2025-06-05,Library,Weekday,Cloudy,Exam Week,669.7
+2025-06-05,Teaching Block A,Weekday,Cloudy,Exam Week,942.7
+2025-06-06,Canteen,Weekday,Rain,Term,433.4
+2025-06-06,Dormitory C,Weekday,Rain,Term,647.9
+2025-06-06,Laboratory B,Weekday,Rain,Term,1361.6
+2025-06-06,Library,Weekday,Rain,Term,655.1
+2025-06-06,Teaching Block A,Weekday,Rain,Term,878.9
+2025-06-07,Canteen,Weekend,Hot,Term,276.8
+2025-06-07,Dormitory C,Weekend,Hot,Term,525.8
+2025-06-07,Laboratory B,Weekend,Hot,Term,878.0
+2025-06-07,Library,Weekend,Hot,Term,422.0
+2025-06-07,Teaching Block A,Weekend,Hot,Term,670.4
+2025-06-08,Canteen,Weekend,Rain,Exam Week,311.3
+2025-06-08,Dormitory C,Weekend,Rain,Exam Week,462.3
+2025-06-08,Laboratory B,Weekend,Rain,Exam Week,776.9
+2025-06-08,Library,Weekend,Rain,Exam Week,441.5
+2025-06-08,Teaching Block A,Weekend,Rain,Exam Week,656.4
+2025-06-09,Canteen,Weekday,Hot,Term,494.9
+2025-06-09,Dormitory C,Weekday,Hot,Term,796.9
+2025-06-09,Laboratory B,Weekday,Hot,Term,1511.5
+2025-06-09,Library,Weekday,Hot,Term,659.9
+2025-06-09,Teaching Block A,Weekday,Hot,Term,1020.1
+2025-06-10,Canteen,Weekday,Hot,Term,491.3
+2025-06-10,Dormitory C,Weekday,Hot,Term,771.0
+2025-06-10,Laboratory B,Weekday,Hot,Term,1362.7
+2025-06-10,Library,Weekday,Hot,Term,612.7
+2025-06-10,Teaching Block A,Weekday,Hot,Term,1012.8
+2025-06-11,Canteen,Weekday,Hot,Term,506.0
+2025-06-11,Dormitory C,Weekday,Hot,Term,886.9
+2025-06-11,Laboratory B,Weekday,Hot,Term,1456.3
+2025-06-11,Library,Weekday,Hot,Term,688.0
+2025-06-11,Teaching Block A,Weekday,Hot,Term,1090.2
+2025-06-12,Canteen,Weekday,Sunny,Term,360.2
+2025-06-12,Dormitory C,Weekday,Sunny,Term,602.3
+2025-06-12,Laboratory B,Weekday,Sunny,Term,1272.4
+2025-06-12,Library,Weekday,Sunny,Term,584.0
+2025-06-12,Teaching Block A,Weekday,Sunny,Term,873.2
+2025-06-13,Canteen,Weekday,Cold,Term,513.2
+2025-06-13,Dormitory C,Weekday,Cold,Term,900.8
+2025-06-13,Laboratory B,Weekday,Cold,Term,1476.0
+2025-06-13,Library,Weekday,Cold,Term,699.0
+2025-06-13,Teaching Block A,Weekday,Cold,Term,1019.0
+2025-06-14,Canteen,Weekend,Sunny,Term,232.6
+2025-06-14,Dormitory C,Weekend,Sunny,Term,379.5
+2025-06-14,Laboratory B,Weekend,Sunny,Term,815.7
+2025-06-14,Library,Weekend,Sunny,Term,419.4
+2025-06-14,Teaching Block A,Weekend,Sunny,Term,525.6
+2025-06-15,Canteen,Weekend,Sunny,Term,228.0
+2025-06-15,Dormitory C,Weekend,Sunny,Term,394.3
+2025-06-15,Laboratory B,Weekend,Sunny,Term,619.9
+2025-06-15,Library,Weekend,Sunny,Term,383.9
+2025-06-15,Teaching Block A,Weekend,Sunny,Term,471.5
+2025-06-16,Canteen,Weekday,Sunny,Term,387.0
+2025-06-16,Dormitory C,Weekday,Sunny,Term,732.1
+2025-06-16,Laboratory B,Weekday,Sunny,Term,971.5
+2025-06-16,Library,Weekday,Sunny,Term,623.2
+2025-06-16,Teaching Block A,Weekday,Sunny,Term,885.2
+2025-06-17,Canteen,Weekday,Hot,Term,467.7
+2025-06-17,Dormitory C,Weekday,Hot,Term,810.4
+2025-06-17,Laboratory B,Weekday,Hot,Term,1416.0
+2025-06-17,Library,Weekday,Hot,Term,650.2
+2025-06-17,Teaching Block A,Weekday,Hot,Term,1034.0
+2025-06-18,Canteen,Weekday,Sunny,Term,394.7
+2025-06-18,Dormitory C,Weekday,Sunny,Term,704.3
+2025-06-18,Laboratory B,Weekday,Sunny,Term,1120.6
+2025-06-18,Library,Weekday,Sunny,Term,527.2
+2025-06-18,Teaching Block A,Weekday,Sunny,Term,749.9
+2025-06-19,Canteen,Weekday,Sunny,Exam Week,614.3
+2025-06-19,Dormitory C,Weekday,Sunny,Exam Week,757.1
+2025-06-19,Laboratory B,Weekday,Sunny,Exam Week,1284.6
+2025-06-19,Library,Weekday,Sunny,Exam Week,602.3
+2025-06-19,Teaching Block A,Weekday,Sunny,Exam Week,994.2
+2025-06-20,Canteen,Weekday,Rain,Term,424.7
+2025-06-20,Dormitory C,Weekday,Rain,Term,796.7
+2025-06-20,Laboratory B,Weekday,Rain,Term,1358.2
+2025-06-20,Library,Weekday,Rain,Term,643.6
+2025-06-20,Teaching Block A,Weekday,Rain,Term,861.6
+2025-06-21,Canteen,Weekend,Hot,Vacation,122.9
+2025-06-21,Dormitory C,Weekend,Hot,Vacation,219.4
+2025-06-21,Laboratory B,Weekend,Hot,Vacation,410.6
+2025-06-21,Library,Weekend,Hot,Vacation,202.3
+2025-06-21,Teaching Block A,Weekend,Hot,Vacation,292.6
+2025-06-22,Canteen,Weekend,Hot,Exam Week,331.0
+2025-06-22,Dormitory C,Weekend,Hot,Exam Week,464.6
+2025-06-22,Laboratory B,Weekend,Hot,Exam Week,913.0
+2025-06-22,Library,Weekend,Hot,Exam Week,484.4
+2025-06-22,Teaching Block A,Weekend,Hot,Exam Week,640.7
+2025-06-23,Canteen,Weekday,Sunny,Vacation,157.0
+2025-06-23,Dormitory C,Weekday,Sunny,Vacation,301.7
+2025-06-23,Laboratory B,Weekday,Sunny,Vacation,447.6
+2025-06-23,Library,Weekday,Sunny,Vacation,300.8
+2025-06-23,Teaching Block A,Weekday,Sunny,Vacation,378.2
+2025-06-24,Canteen,Weekday,Sunny,Term,390.9
+2025-06-24,Dormitory C,Weekday,Sunny,Term,644.2
+2025-06-24,Laboratory B,Weekday,Sunny,Term,988.0
+2025-06-24,Library,Weekday,Sunny,Term,518.8
+2025-06-24,Teaching Block A,Weekday,Sunny,Term,900.6
+2025-06-25,Canteen,Weekday,Hot,Term,395.2
+2025-06-25,Dormitory C,Weekday,Hot,Term,882.6
+2025-06-25,Laboratory B,Weekday,Hot,Term,1296.2
+2025-06-25,Library,Weekday,Hot,Term,727.1
+2025-06-25,Teaching Block A,Weekday,Hot,Term,906.1
+2025-06-26,Canteen,Weekday,Rain,Exam Week,468.8
+2025-06-26,Dormitory C,Weekday,Rain,Exam Week,877.5
+2025-06-26,Laboratory B,Weekday,Rain,Exam Week,1340.4
+2025-06-26,Library,Weekday,Rain,Exam Week,727.6
+2025-06-26,Teaching Block A,Weekday,Rain,Exam Week,987.2
+2025-06-27,Canteen,Weekday,Cloudy,Term,380.4
+2025-06-27,Dormitory C,Weekday,Cloudy,Term,636.4
+2025-06-27,Laboratory B,Weekday,Cloudy,Term,1297.1
+2025-06-27,Library,Weekday,Cloudy,Term,636.5
+2025-06-27,Teaching Block A,Weekday,Cloudy,Term,1031.8
+2025-06-28,Canteen,Weekend,Hot,Exam Week,409.7
+2025-06-28,Dormitory C,Weekend,Hot,Exam Week,600.5
+2025-06-28,Laboratory B,Weekend,Hot,Exam Week,823.7
+2025-06-28,Library,Weekend,Hot,Exam Week,473.3
+2025-06-28,Teaching Block A,Weekend,Hot,Exam Week,685.6
+2025-06-29,Canteen,Weekend,Rain,Term,270.6
+2025-06-29,Dormitory C,Weekend,Rain,Term,472.2
+2025-06-29,Laboratory B,Weekend,Rain,Term,758.0
+2025-06-29,Library,Weekend,Rain,Term,383.0
+2025-06-29,Teaching Block A,Weekend,Rain,Term,611.3
+2025-06-30,Canteen,Weekday,Sunny,Term,369.6
+2025-06-30,Dormitory C,Weekday,Sunny,Term,700.2
+2025-06-30,Laboratory B,Weekday,Sunny,Term,1102.7
+2025-06-30,Library,Weekday,Sunny,Term,563.5
+2025-06-30,Teaching Block A,Weekday,Sunny,Term,836.8
+2025-07-01,Canteen,Weekday,Sunny,Term,363.8
+2025-07-01,Dormitory C,Weekday,Sunny,Term,633.8
+2025-07-01,Laboratory B,Weekday,Sunny,Term,1224.6
+2025-07-01,Library,Weekday,Sunny,Term,575.7
+2025-07-01,Teaching Block A,Weekday,Sunny,Term,656.3
+2025-07-02,Canteen,Weekday,Rain,Vacation,197.0
+2025-07-02,Dormitory C,Weekday,Rain,Vacation,326.5
+2025-07-02,Laboratory B,Weekday,Rain,Vacation,592.7
+2025-07-02,Library,Weekday,Rain,Vacation,284.8
+2025-07-02,Teaching Block A,Weekday,Rain,Vacation,375.4
+2025-07-03,Canteen,Weekday,Hot,Term,446.2
+2025-07-03,Dormitory C,Weekday,Hot,Term,800.6
+2025-07-03,Laboratory B,Weekday,Hot,Term,1389.3
+2025-07-03,Library,Weekday,Hot,Term,626.2
+2025-07-03,Teaching Block A,Weekday,Hot,Term,1047.9
+2025-07-04,Canteen,Weekday,Cloudy,Vacation,165.0
+2025-07-04,Dormitory C,Weekday,Cloudy,Vacation,321.1
+2025-07-04,Laboratory B,Weekday,Cloudy,Vacation,574.0
+2025-07-04,Library,Weekday,Cloudy,Vacation,295.6
+2025-07-04,Teaching Block A,Weekday,Cloudy,Vacation,445.7
+2025-07-05,Canteen,Weekend,Sunny,Term,257.2
+2025-07-05,Dormitory C,Weekend,Sunny,Term,378.1
+2025-07-05,Laboratory B,Weekend,Sunny,Term,727.5
+2025-07-05,Library,Weekend,Sunny,Term,412.6
+2025-07-05,Teaching Block A,Weekend,Sunny,Term,510.5
+2025-07-06,Canteen,Weekend,Sunny,Term,276.7
+2025-07-06,Dormitory C,Weekend,Sunny,Term,442.2
+2025-07-06,Laboratory B,Weekend,Sunny,Term,830.8
+2025-07-06,Library,Weekend,Sunny,Term,364.0
+2025-07-06,Teaching Block A,Weekend,Sunny,Term,468.6
+2025-07-07,Canteen,Weekday,Hot,Term,488.2
+2025-07-07,Dormitory C,Weekday,Hot,Term,884.0
+2025-07-07,Laboratory B,Weekday,Hot,Term,1372.2
+2025-07-07,Library,Weekday,Hot,Term,649.3
+2025-07-07,Teaching Block A,Weekday,Hot,Term,1046.0
+2025-07-08,Canteen,Weekday,Rain,Vacation,182.9
+2025-07-08,Dormitory C,Weekday,Rain,Vacation,332.2
+2025-07-08,Laboratory B,Weekday,Rain,Vacation,507.9
+2025-07-08,Library,Weekday,Rain,Vacation,276.1
+2025-07-08,Teaching Block A,Weekday,Rain,Vacation,374.2
+2025-07-09,Canteen,Weekday,Hot,Term,385.0
+2025-07-09,Dormitory C,Weekday,Hot,Term,797.1
+2025-07-09,Laboratory B,Weekday,Hot,Term,1434.4
+2025-07-09,Library,Weekday,Hot,Term,609.2
+2025-07-09,Teaching Block A,Weekday,Hot,Term,1091.2
+2025-07-10,Canteen,Weekday,Rain,Vacation,211.1
+2025-07-10,Dormitory C,Weekday,Rain,Vacation,368.0
+2025-07-10,Laboratory B,Weekday,Rain,Vacation,621.3
+2025-07-10,Library,Weekday,Rain,Vacation,289.7
+2025-07-10,Teaching Block A,Weekday,Rain,Vacation,416.9
+2025-07-11,Canteen,Weekday,Sunny,Term,352.2
+2025-07-11,Dormitory C,Weekday,Sunny,Term,631.1
+2025-07-11,Laboratory B,Weekday,Sunny,Term,1046.9
+2025-07-11,Library,Weekday,Sunny,Term,573.3
+2025-07-11,Teaching Block A,Weekday,Sunny,Term,821.0
+2025-07-12,Canteen,Weekend,Sunny,Vacation,105.3
+2025-07-12,Dormitory C,Weekend,Sunny,Vacation,195.6
+2025-07-12,Laboratory B,Weekend,Sunny,Vacation,303.4
+2025-07-12,Library,Weekend,Sunny,Vacation,155.9
+2025-07-12,Teaching Block A,Weekend,Sunny,Vacation,199.9
+2025-07-13,Canteen,Weekend,Rain,Term,216.2
+2025-07-13,Dormitory C,Weekend,Rain,Term,469.1
+2025-07-13,Laboratory B,Weekend,Rain,Term,819.5
+2025-07-13,Library,Weekend,Rain,Term,416.4
+2025-07-13,Teaching Block A,Weekend,Rain,Term,571.8
+2025-07-14,Canteen,Weekday,Sunny,Vacation,174.8
+2025-07-14,Dormitory C,Weekday,Sunny,Vacation,280.0
+2025-07-14,Laboratory B,Weekday,Sunny,Vacation,532.8
+2025-07-14,Library,Weekday,Sunny,Vacation,270.0
+2025-07-14,Teaching Block A,Weekday,Sunny,Vacation,369.8
+2025-07-15,Canteen,Weekday,Rain,Term,412.2
+2025-07-15,Dormitory C,Weekday,Rain,Term,701.4
+2025-07-15,Laboratory B,Weekday,Rain,Term,1178.1
+2025-07-15,Library,Weekday,Rain,Term,662.0
+2025-07-15,Teaching Block A,Weekday,Rain,Term,1019.7
+2025-07-16,Canteen,Weekday,Rain,Term,486.3
+2025-07-16,Dormitory C,Weekday,Rain,Term,813.0
+2025-07-16,Laboratory B,Weekday,Rain,Term,1065.6
+2025-07-16,Library,Weekday,Rain,Term,720.7
+2025-07-16,Teaching Block A,Weekday,Rain,Term,920.8
+2025-07-17,Canteen,Weekday,Rain,Vacation,186.8
+2025-07-17,Dormitory C,Weekday,Rain,Vacation,373.7
+2025-07-17,Laboratory B,Weekday,Rain,Vacation,589.6
+2025-07-17,Library,Weekday,Rain,Vacation,268.2
+2025-07-17,Teaching Block A,Weekday,Rain,Vacation,387.5
+2025-07-18,Canteen,Weekday,Cloudy,Vacation,174.1
+2025-07-18,Dormitory C,Weekday,Cloudy,Vacation,270.7
+2025-07-18,Laboratory B,Weekday,Cloudy,Vacation,568.7
+2025-07-18,Library,Weekday,Cloudy,Vacation,244.7
+2025-07-18,Teaching Block A,Weekday,Cloudy,Vacation,423.4
+2025-07-19,Canteen,Weekend,Cloudy,Term,255.6
+2025-07-19,Dormitory C,Weekend,Cloudy,Term,458.4
+2025-07-19,Laboratory B,Weekend,Cloudy,Term,807.2
+2025-07-19,Library,Weekend,Cloudy,Term,394.3
+2025-07-19,Teaching Block A,Weekend,Cloudy,Term,565.7
+2025-07-20,Canteen,Weekend,Cloudy,Term,290.4
+2025-07-20,Dormitory C,Weekend,Cloudy,Term,376.1
+2025-07-20,Laboratory B,Weekend,Cloudy,Term,756.1
+2025-07-20,Library,Weekend,Cloudy,Term,398.8
+2025-07-20,Teaching Block A,Weekend,Cloudy,Term,458.1
+2025-07-21,Canteen,Weekday,Cloudy,Vacation,179.3
+2025-07-21,Dormitory C,Weekday,Cloudy,Vacation,315.5
+2025-07-21,Laboratory B,Weekday,Cloudy,Vacation,544.4
+2025-07-21,Library,Weekday,Cloudy,Vacation,255.4
+2025-07-21,Teaching Block A,Weekday,Cloudy,Vacation,373.4
+2025-07-22,Canteen,Weekday,Cloudy,Term,444.9
+2025-07-22,Dormitory C,Weekday,Cloudy,Term,734.3
+2025-07-22,Laboratory B,Weekday,Cloudy,Term,1232.1
+2025-07-22,Library,Weekday,Cloudy,Term,549.7
+2025-07-22,Teaching Block A,Weekday,Cloudy,Term,894.7
+2025-07-23,Canteen,Weekday,Hot,Vacation,207.6
+2025-07-23,Dormitory C,Weekday,Hot,Vacation,393.7
+2025-07-23,Laboratory B,Weekday,Hot,Vacation,671.0
+2025-07-23,Library,Weekday,Hot,Vacation,296.5
+2025-07-23,Teaching Block A,Weekday,Hot,Vacation,471.0
+2025-07-24,Canteen,Weekday,Sunny,Term,422.8
+2025-07-24,Dormitory C,Weekday,Sunny,Term,680.0
+2025-07-24,Laboratory B,Weekday,Sunny,Term,1192.8
+2025-07-24,Library,Weekday,Sunny,Term,532.5
+2025-07-24,Teaching Block A,Weekday,Sunny,Term,829.6
+2025-07-25,Canteen,Weekday,Sunny,Vacation,157.4
+2025-07-25,Dormitory C,Weekday,Sunny,Vacation,257.0
+2025-07-25,Laboratory B,Weekday,Sunny,Vacation,498.0
+2025-07-25,Library,Weekday,Sunny,Vacation,270.3
+2025-07-25,Teaching Block A,Weekday,Sunny,Vacation,375.9
+2025-07-26,Canteen,Weekend,Hot,Vacation,125.4
+2025-07-26,Dormitory C,Weekend,Hot,Vacation,230.2
+2025-07-26,Laboratory B,Weekend,Hot,Vacation,382.9
+2025-07-26,Library,Weekend,Hot,Vacation,197.1
+2025-07-26,Teaching Block A,Weekend,Hot,Vacation,293.6
+2025-07-27,Canteen,Weekend,Sunny,Term,268.1
+2025-07-27,Dormitory C,Weekend,Sunny,Term,424.8
+2025-07-27,Laboratory B,Weekend,Sunny,Term,690.2
+2025-07-27,Library,Weekend,Sunny,Term,326.0
+2025-07-27,Teaching Block A,Weekend,Sunny,Term,511.9
+2025-07-28,Canteen,Weekday,Cold,Vacation,227.6
+2025-07-28,Dormitory C,Weekday,Cold,Vacation,393.0
+2025-07-28,Laboratory B,Weekday,Cold,Vacation,749.7
+2025-07-28,Library,Weekday,Cold,Vacation,284.5
+2025-07-28,Teaching Block A,Weekday,Cold,Vacation,442.3
+2025-07-29,Canteen,Weekday,Hot,Term,412.9
+2025-07-29,Dormitory C,Weekday,Hot,Term,806.5
+2025-07-29,Laboratory B,Weekday,Hot,Term,1363.5
+2025-07-29,Library,Weekday,Hot,Term,729.0
+2025-07-29,Teaching Block A,Weekday,Hot,Term,987.5
+2025-07-30,Canteen,Weekday,Sunny,Term,372.3
+2025-07-30,Dormitory C,Weekday,Sunny,Term,660.6
+2025-07-30,Laboratory B,Weekday,Sunny,Term,1144.8
+2025-07-30,Library,Weekday,Sunny,Term,548.2
+2025-07-30,Teaching Block A,Weekday,Sunny,Term,891.6
+2025-07-31,Canteen,Weekday,Cloudy,Vacation,160.0
+2025-07-31,Dormitory C,Weekday,Cloudy,Vacation,321.0
+2025-07-31,Laboratory B,Weekday,Cloudy,Vacation,553.6
+2025-07-31,Library,Weekday,Cloudy,Vacation,273.4
+2025-07-31,Teaching Block A,Weekday,Cloudy,Vacation,360.4
+2025-08-01,Canteen,Weekday,Hot,Term,520.9
+2025-08-01,Dormitory C,Weekday,Hot,Term,822.4
+2025-08-01,Laboratory B,Weekday,Hot,Term,1430.7
+2025-08-01,Library,Weekday,Hot,Term,786.0
+2025-08-01,Teaching Block A,Weekday,Hot,Term,916.3
+2025-08-02,Canteen,Weekend,Cloudy,Vacation,111.6
+2025-08-02,Dormitory C,Weekend,Cloudy,Vacation,194.1
+2025-08-02,Laboratory B,Weekend,Cloudy,Vacation,359.3
+2025-08-02,Library,Weekend,Cloudy,Vacation,149.4
+2025-08-02,Teaching Block A,Weekend,Cloudy,Vacation,281.8
+2025-08-03,Canteen,Weekend,Hot,Vacation,144.1
+2025-08-03,Dormitory C,Weekend,Hot,Vacation,199.0
+2025-08-03,Laboratory B,Weekend,Hot,Vacation,405.0
+2025-08-03,Library,Weekend,Hot,Vacation,176.1
+2025-08-03,Teaching Block A,Weekend,Hot,Vacation,285.7
+2025-08-04,Canteen,Weekday,Sunny,Term,457.5
+2025-08-04,Dormitory C,Weekday,Sunny,Term,666.5
+2025-08-04,Laboratory B,Weekday,Sunny,Term,1139.4
+2025-08-04,Library,Weekday,Sunny,Term,513.5
+2025-08-04,Teaching Block A,Weekday,Sunny,Term,864.7
+2025-08-05,Canteen,Weekday,Cold,Vacation,241.3
+2025-08-05,Dormitory C,Weekday,Cold,Vacation,412.8
+2025-08-05,Laboratory B,Weekday,Cold,Vacation,685.3
+2025-08-05,Library,Weekday,Cold,Vacation,340.1
+2025-08-05,Teaching Block A,Weekday,Cold,Vacation,460.7
+2025-08-06,Canteen,Weekday,Hot,Vacation,200.6
+2025-08-06,Dormitory C,Weekday,Hot,Vacation,382.0
+2025-08-06,Laboratory B,Weekday,Hot,Vacation,579.8
+2025-08-06,Library,Weekday,Hot,Vacation,402.7
+2025-08-06,Teaching Block A,Weekday,Hot,Vacation,466.3
+2025-08-07,Canteen,Weekday,Sunny,Term,409.8
+2025-08-07,Dormitory C,Weekday,Sunny,Term,697.5
+2025-08-07,Laboratory B,Weekday,Sunny,Term,1295.8
+2025-08-07,Library,Weekday,Sunny,Term,602.7
+2025-08-07,Teaching Block A,Weekday,Sunny,Term,927.6
+2025-08-08,Canteen,Weekday,Cloudy,Vacation,196.7
+2025-08-08,Dormitory C,Weekday,Cloudy,Vacation,348.2
+2025-08-08,Laboratory B,Weekday,Cloudy,Vacation,514.6
+2025-08-08,Library,Weekday,Cloudy,Vacation,295.9
+2025-08-08,Teaching Block A,Weekday,Cloudy,Vacation,410.1
+2025-08-09,Canteen,Weekend,Sunny,Vacation,105.8
+2025-08-09,Dormitory C,Weekend,Sunny,Vacation,193.8
+2025-08-09,Laboratory B,Weekend,Sunny,Vacation,266.5
+2025-08-09,Library,Weekend,Sunny,Vacation,161.0
+2025-08-09,Teaching Block A,Weekend,Sunny,Vacation,184.1
+2025-08-10,Canteen,Weekend,Rain,Term,279.3
+2025-08-10,Dormitory C,Weekend,Rain,Term,430.5
+2025-08-10,Laboratory B,Weekend,Rain,Term,821.3
+2025-08-10,Library,Weekend,Rain,Term,418.6
+2025-08-10,Teaching Block A,Weekend,Rain,Term,517.6
+2025-08-11,Canteen,Weekday,Rain,Vacation,168.7
+2025-08-11,Dormitory C,Weekday,Rain,Vacation,375.9
+2025-08-11,Laboratory B,Weekday,Rain,Vacation,561.0
+2025-08-11,Library,Weekday,Rain,Vacation,235.7
+2025-08-11,Teaching Block A,Weekday,Rain,Vacation,400.9
+2025-08-12,Canteen,Weekday,Hot,Term,498.6
+2025-08-12,Dormitory C,Weekday,Hot,Term,836.0
+2025-08-12,Laboratory B,Weekday,Hot,Term,1321.8
+2025-08-12,Library,Weekday,Hot,Term,700.8
+2025-08-12,Teaching Block A,Weekday,Hot,Term,1007.7
+2025-08-13,Canteen,Weekday,Hot,Vacation,200.9
+2025-08-13,Dormitory C,Weekday,Hot,Vacation,398.3
+2025-08-13,Laboratory B,Weekday,Hot,Vacation,663.6
+2025-08-13,Library,Weekday,Hot,Vacation,329.7
+2025-08-13,Teaching Block A,Weekday,Hot,Vacation,434.8
+2025-08-14,Canteen,Weekday,Cloudy,Vacation,195.6
+2025-08-14,Dormitory C,Weekday,Cloudy,Vacation,322.3
+2025-08-14,Laboratory B,Weekday,Cloudy,Vacation,538.1
+2025-08-14,Library,Weekday,Cloudy,Vacation,297.1
+2025-08-14,Teaching Block A,Weekday,Cloudy,Vacation,411.2
+2025-08-15,Canteen,Weekday,Cloudy,Vacation,171.4
+2025-08-15,Dormitory C,Weekday,Cloudy,Vacation,293.7
+2025-08-15,Laboratory B,Weekday,Cloudy,Vacation,579.1
+2025-08-15,Library,Weekday,Cloudy,Vacation,280.5
+2025-08-15,Teaching Block A,Weekday,Cloudy,Vacation,343.9
+2025-08-16,Canteen,Weekend,Rain,Term,268.6
+2025-08-16,Dormitory C,Weekend,Rain,Term,420.4
+2025-08-16,Laboratory B,Weekend,Rain,Term,691.0
+2025-08-16,Library,Weekend,Rain,Term,372.5
+2025-08-16,Teaching Block A,Weekend,Rain,Term,499.3
+2025-08-17,Canteen,Weekend,Sunny,Vacation,94.6
+2025-08-17,Dormitory C,Weekend,Sunny,Vacation,173.8
+2025-08-17,Laboratory B,Weekend,Sunny,Vacation,336.6
+2025-08-17,Library,Weekend,Sunny,Vacation,155.7
+2025-08-17,Teaching Block A,Weekend,Sunny,Vacation,236.4
+2025-08-18,Canteen,Weekday,Sunny,Vacation,182.1
+2025-08-18,Dormitory C,Weekday,Sunny,Vacation,271.8
+2025-08-18,Laboratory B,Weekday,Sunny,Vacation,529.0
+2025-08-18,Library,Weekday,Sunny,Vacation,320.3
+2025-08-18,Teaching Block A,Weekday,Sunny,Vacation,395.8
+2025-08-19,Canteen,Weekday,Sunny,Term,362.9
+2025-08-19,Dormitory C,Weekday,Sunny,Term,598.2
+2025-08-19,Laboratory B,Weekday,Sunny,Term,1111.2
+2025-08-19,Library,Weekday,Sunny,Term,603.1
+2025-08-19,Teaching Block A,Weekday,Sunny,Term,766.8
+2025-08-20,Canteen,Weekday,Cloudy,Term,408.0
+2025-08-20,Dormitory C,Weekday,Cloudy,Term,622.1
+2025-08-20,Laboratory B,Weekday,Cloudy,Term,1263.3
+2025-08-20,Library,Weekday,Cloudy,Term,528.7
+2025-08-20,Teaching Block A,Weekday,Cloudy,Term,882.3
+2025-08-21,Canteen,Weekday,Rain,Vacation,174.8
+2025-08-21,Dormitory C,Weekday,Rain,Vacation,413.6
+2025-08-21,Laboratory B,Weekday,Rain,Vacation,573.4
+2025-08-21,Library,Weekday,Rain,Vacation,270.4
+2025-08-21,Teaching Block A,Weekday,Rain,Vacation,402.7
+2025-08-22,Canteen,Weekday,Hot,Term,454.4
+2025-08-22,Dormitory C,Weekday,Hot,Term,807.9
+2025-08-22,Laboratory B,Weekday,Hot,Term,1314.4
+2025-08-22,Library,Weekday,Hot,Term,685.1
+2025-08-22,Teaching Block A,Weekday,Hot,Term,1010.4
+2025-08-23,Canteen,Weekend,Cloudy,Term,234.1
+2025-08-23,Dormitory C,Weekend,Cloudy,Term,408.2
+2025-08-23,Laboratory B,Weekend,Cloudy,Term,786.5
+2025-08-23,Library,Weekend,Cloudy,Term,364.8
+2025-08-23,Teaching Block A,Weekend,Cloudy,Term,532.2
+2025-08-24,Canteen,Weekend,Sunny,Vacation,113.1
+2025-08-24,Dormitory C,Weekend,Sunny,Vacation,202.2
+2025-08-24,Laboratory B,Weekend,Sunny,Vacation,327.0
+2025-08-24,Library,Weekend,Sunny,Vacation,154.1
+2025-08-24,Teaching Block A,Weekend,Sunny,Vacation,218.4
+2025-08-25,Canteen,Weekday,Sunny,Vacation,178.1
+2025-08-25,Dormitory C,Weekday,Sunny,Vacation,317.5
+2025-08-25,Laboratory B,Weekday,Sunny,Vacation,521.5
+2025-08-25,Library,Weekday,Sunny,Vacation,270.9
+2025-08-25,Teaching Block A,Weekday,Sunny,Vacation,363.9
+2025-08-26,Canteen,Weekday,Rain,Vacation,198.0
+2025-08-26,Dormitory C,Weekday,Rain,Vacation,379.6
+2025-08-26,Laboratory B,Weekday,Rain,Vacation,567.2
+2025-08-26,Library,Weekday,Rain,Vacation,273.0
+2025-08-26,Teaching Block A,Weekday,Rain,Vacation,459.3
+2025-08-27,Canteen,Weekday,Rain,Term,383.7
+2025-08-27,Dormitory C,Weekday,Rain,Term,696.3
+2025-08-27,Laboratory B,Weekday,Rain,Term,1396.3
+2025-08-27,Library,Weekday,Rain,Term,583.4
+2025-08-27,Teaching Block A,Weekday,Rain,Term,851.3
+2025-08-28,Canteen,Weekday,Cold,Term,481.6
+2025-08-28,Dormitory C,Weekday,Cold,Term,935.7
+2025-08-28,Laboratory B,Weekday,Cold,Term,1533.8
+2025-08-28,Library,Weekday,Cold,Term,708.6
+2025-08-28,Teaching Block A,Weekday,Cold,Term,864.9
+2025-08-29,Canteen,Weekday,Cold,Vacation,186.4
+2025-08-29,Dormitory C,Weekday,Cold,Vacation,409.0
+2025-08-29,Laboratory B,Weekday,Cold,Vacation,695.8
+2025-08-29,Library,Weekday,Cold,Vacation,347.3
+2025-08-29,Teaching Block A,Weekday,Cold,Vacation,532.0
+2025-08-30,Canteen,Weekend,Rain,Vacation,109.1
+2025-08-30,Dormitory C,Weekend,Rain,Vacation,204.3
+2025-08-30,Laboratory B,Weekend,Rain,Vacation,358.3
+2025-08-30,Library,Weekend,Rain,Vacation,183.3
+2025-08-30,Teaching Block A,Weekend,Rain,Vacation,243.5
+2025-08-31,Canteen,Weekend,Sunny,Vacation,102.0
+2025-08-31,Dormitory C,Weekend,Sunny,Vacation,171.2
+2025-08-31,Laboratory B,Weekend,Sunny,Vacation,309.4
+2025-08-31,Library,Weekend,Sunny,Vacation,149.1
+2025-08-31,Teaching Block A,Weekend,Sunny,Vacation,228.4
+2025-09-01,Canteen,Weekday,Hot,Term,497.1
+2025-09-01,Dormitory C,Weekday,Hot,Term,821.3
+2025-09-01,Laboratory B,Weekday,Hot,Term,1312.1
+2025-09-01,Library,Weekday,Hot,Term,605.2
+2025-09-01,Teaching Block A,Weekday,Hot,Term,892.0
+2025-09-02,Canteen,Weekday,Sunny,Term,367.5
+2025-09-02,Dormitory C,Weekday,Sunny,Term,677.0
+2025-09-02,Laboratory B,Weekday,Sunny,Term,1312.7
+2025-09-02,Library,Weekday,Sunny,Term,519.7
+2025-09-02,Teaching Block A,Weekday,Sunny,Term,778.5
+2025-09-03,Canteen,Weekday,Sunny,Term,353.5
+2025-09-03,Dormitory C,Weekday,Sunny,Term,634.2
+2025-09-03,Laboratory B,Weekday,Sunny,Term,971.8
+2025-09-03,Library,Weekday,Sunny,Term,527.6
+2025-09-03,Teaching Block A,Weekday,Sunny,Term,759.3
+2025-09-04,Canteen,Weekday,Sunny,Term,363.4
+2025-09-04,Dormitory C,Weekday,Sunny,Term,643.3
+2025-09-04,Laboratory B,Weekday,Sunny,Term,1204.1
+2025-09-04,Library,Weekday,Sunny,Term,582.6
+2025-09-04,Teaching Block A,Weekday,Sunny,Term,756.5
+2025-09-05,Canteen,Weekday,Sunny,Exam Week,370.0
+2025-09-05,Dormitory C,Weekday,Sunny,Exam Week,792.7
+2025-09-05,Laboratory B,Weekday,Sunny,Exam Week,1325.8
+2025-09-05,Library,Weekday,Sunny,Exam Week,580.9
+2025-09-05,Teaching Block A,Weekday,Sunny,Exam Week,955.3
+2025-09-06,Canteen,Weekend,Cold,Term,294.0
+2025-09-06,Dormitory C,Weekend,Cold,Term,528.6
+2025-09-06,Laboratory B,Weekend,Cold,Term,1056.7
+2025-09-06,Library,Weekend,Cold,Term,449.1
+2025-09-06,Teaching Block A,Weekend,Cold,Term,616.6
+2025-09-07,Canteen,Weekend,Sunny,Vacation,103.5
+2025-09-07,Dormitory C,Weekend,Sunny,Vacation,185.5
+2025-09-07,Laboratory B,Weekend,Sunny,Vacation,333.8
+2025-09-07,Library,Weekend,Sunny,Vacation,179.2
+2025-09-07,Teaching Block A,Weekend,Sunny,Vacation,230.6
+2025-09-08,Canteen,Weekday,Sunny,Term,338.7
+2025-09-08,Dormitory C,Weekday,Sunny,Term,705.9
+2025-09-08,Laboratory B,Weekday,Sunny,Term,1142.2
+2025-09-08,Library,Weekday,Sunny,Term,590.3
+2025-09-08,Teaching Block A,Weekday,Sunny,Term,786.7
+2025-09-09,Canteen,Weekday,Cloudy,Term,372.9
+2025-09-09,Dormitory C,Weekday,Cloudy,Term,688.2
+2025-09-09,Laboratory B,Weekday,Cloudy,Term,1391.5
+2025-09-09,Library,Weekday,Cloudy,Term,530.8
+2025-09-09,Teaching Block A,Weekday,Cloudy,Term,762.1
+2025-09-10,Canteen,Weekday,Rain,Term,455.8
+2025-09-10,Dormitory C,Weekday,Rain,Term,739.8
+2025-09-10,Laboratory B,Weekday,Rain,Term,1217.9
+2025-09-10,Library,Weekday,Rain,Term,599.4
+2025-09-10,Teaching Block A,Weekday,Rain,Term,897.8
+2025-09-11,Canteen,Weekday,Sunny,Term,411.7
+2025-09-11,Dormitory C,Weekday,Sunny,Term,579.9
+2025-09-11,Laboratory B,Weekday,Sunny,Term,1022.0
+2025-09-11,Library,Weekday,Sunny,Term,533.9
+2025-09-11,Teaching Block A,Weekday,Sunny,Term,703.3
+2025-09-12,Canteen,Weekday,Cloudy,Term,403.4
+2025-09-12,Dormitory C,Weekday,Cloudy,Term,654.5
+2025-09-12,Laboratory B,Weekday,Cloudy,Term,1412.8
+2025-09-12,Library,Weekday,Cloudy,Term,652.9
+2025-09-12,Teaching Block A,Weekday,Cloudy,Term,935.1
+2025-09-13,Canteen,Weekend,Rain,Vacation,120.2
+2025-09-13,Dormitory C,Weekend,Rain,Vacation,212.7
+2025-09-13,Laboratory B,Weekend,Rain,Vacation,380.1
+2025-09-13,Library,Weekend,Rain,Vacation,169.2
+2025-09-13,Teaching Block A,Weekend,Rain,Vacation,209.2
+2025-09-14,Canteen,Weekend,Sunny,Term,246.5
+2025-09-14,Dormitory C,Weekend,Sunny,Term,418.8
+2025-09-14,Laboratory B,Weekend,Sunny,Term,783.2
+2025-09-14,Library,Weekend,Sunny,Term,389.9
+2025-09-14,Teaching Block A,Weekend,Sunny,Term,548.1
+2025-09-15,Canteen,Weekday,Rain,Term,426.2
+2025-09-15,Dormitory C,Weekday,Rain,Term,661.5
+2025-09-15,Laboratory B,Weekday,Rain,Term,1134.8
+2025-09-15,Library,Weekday,Rain,Term,601.8
+2025-09-15,Teaching Block A,Weekday,Rain,Term,963.5
+2025-09-16,Canteen,Weekday,Cold,Term,451.1
+2025-09-16,Dormitory C,Weekday,Cold,Term,839.6
+2025-09-16,Laboratory B,Weekday,Cold,Term,1622.0
+2025-09-16,Library,Weekday,Cold,Term,643.7
+2025-09-16,Teaching Block A,Weekday,Cold,Term,1006.7
+2025-09-17,Canteen,Weekday,Sunny,Term,381.4
+2025-09-17,Dormitory C,Weekday,Sunny,Term,705.1
+2025-09-17,Laboratory B,Weekday,Sunny,Term,1271.5
+2025-09-17,Library,Weekday,Sunny,Term,622.0
+2025-09-17,Teaching Block A,Weekday,Sunny,Term,708.0
+2025-09-18,Canteen,Weekday,Cloudy,Exam Week,383.7
+2025-09-18,Dormitory C,Weekday,Cloudy,Exam Week,781.7
+2025-09-18,Laboratory B,Weekday,Cloudy,Exam Week,1172.5
+2025-09-18,Library,Weekday,Cloudy,Exam Week,645.8
+2025-09-18,Teaching Block A,Weekday,Cloudy,Exam Week,932.8
+2025-09-19,Canteen,Weekday,Rain,Term,429.7
+2025-09-19,Dormitory C,Weekday,Rain,Term,673.8
+2025-09-19,Laboratory B,Weekday,Rain,Term,1375.3
+2025-09-19,Library,Weekday,Rain,Term,591.3
+2025-09-19,Teaching Block A,Weekday,Rain,Term,856.7
+2025-09-20,Canteen,Weekend,Cloudy,Term,230.3
+2025-09-20,Dormitory C,Weekend,Cloudy,Term,417.8
+2025-09-20,Laboratory B,Weekend,Cloudy,Term,722.7
+2025-09-20,Library,Weekend,Cloudy,Term,395.6
+2025-09-20,Teaching Block A,Weekend,Cloudy,Term,498.3
+2025-09-21,Canteen,Weekend,Sunny,Term,221.9
+2025-09-21,Dormitory C,Weekend,Sunny,Term,441.1
+2025-09-21,Laboratory B,Weekend,Sunny,Term,746.4
+2025-09-21,Library,Weekend,Sunny,Term,349.7
+2025-09-21,Teaching Block A,Weekend,Sunny,Term,463.9
+2025-09-22,Canteen,Weekday,Sunny,Term,390.2
+2025-09-22,Dormitory C,Weekday,Sunny,Term,715.3
+2025-09-22,Laboratory B,Weekday,Sunny,Term,1246.7
+2025-09-22,Library,Weekday,Sunny,Term,639.2
+2025-09-22,Teaching Block A,Weekday,Sunny,Term,908.5
+2025-09-23,Canteen,Weekday,Rain,Term,433.5
+2025-09-23,Dormitory C,Weekday,Rain,Term,633.5
+2025-09-23,Laboratory B,Weekday,Rain,Term,1179.8
+2025-09-23,Library,Weekday,Rain,Term,618.3
+2025-09-23,Teaching Block A,Weekday,Rain,Term,910.8
+2025-09-24,Canteen,Weekday,Cloudy,Exam Week,499.6
+2025-09-24,Dormitory C,Weekday,Cloudy,Exam Week,738.6
+2025-09-24,Laboratory B,Weekday,Cloudy,Exam Week,1355.5
+2025-09-24,Library,Weekday,Cloudy,Exam Week,629.5
+2025-09-24,Teaching Block A,Weekday,Cloudy,Exam Week,924.0
+2025-09-25,Canteen,Weekday,Cloudy,Term,458.7
+2025-09-25,Dormitory C,Weekday,Cloudy,Term,674.2
+2025-09-25,Laboratory B,Weekday,Cloudy,Term,1233.9
+2025-09-25,Library,Weekday,Cloudy,Term,543.2
+2025-09-25,Teaching Block A,Weekday,Cloudy,Term,783.7
+2025-09-26,Canteen,Weekday,Rain,Vacation,157.9
+2025-09-26,Dormitory C,Weekday,Rain,Vacation,309.1
+2025-09-26,Laboratory B,Weekday,Rain,Vacation,574.9
+2025-09-26,Library,Weekday,Rain,Vacation,275.8
+2025-09-26,Teaching Block A,Weekday,Rain,Vacation,404.9
+2025-09-27,Canteen,Weekend,Sunny,Term,252.0
+2025-09-27,Dormitory C,Weekend,Sunny,Term,415.7
+2025-09-27,Laboratory B,Weekend,Sunny,Term,717.5
+2025-09-27,Library,Weekend,Sunny,Term,305.6
+2025-09-27,Teaching Block A,Weekend,Sunny,Term,521.3
+2025-09-28,Canteen,Weekend,Cloudy,Term,245.3
+2025-09-28,Dormitory C,Weekend,Cloudy,Term,496.8
+2025-09-28,Laboratory B,Weekend,Cloudy,Term,656.2
+2025-09-28,Library,Weekend,Cloudy,Term,323.9
+2025-09-28,Teaching Block A,Weekend,Cloudy,Term,608.5
+2025-09-29,Canteen,Weekday,Cloudy,Term,394.2
+2025-09-29,Dormitory C,Weekday,Cloudy,Term,780.7
+2025-09-29,Laboratory B,Weekday,Cloudy,Term,1451.7
+2025-09-29,Library,Weekday,Cloudy,Term,687.4
+2025-09-29,Teaching Block A,Weekday,Cloudy,Term,838.0
+2025-09-30,Canteen,Weekday,Cloudy,Term,414.2
+2025-09-30,Dormitory C,Weekday,Cloudy,Term,689.4
+2025-09-30,Laboratory B,Weekday,Cloudy,Term,1194.1
+2025-09-30,Library,Weekday,Cloudy,Term,606.9
+2025-09-30,Teaching Block A,Weekday,Cloudy,Term,760.1
+2025-10-01,Canteen,Weekday,Sunny,Term,390.1
+2025-10-01,Dormitory C,Weekday,Sunny,Term,715.3
+2025-10-01,Laboratory B,Weekday,Sunny,Term,1178.2
+2025-10-01,Library,Weekday,Sunny,Term,568.2
+2025-10-01,Teaching Block A,Weekday,Sunny,Term,749.8
+2025-10-02,Canteen,Weekday,Cold,Term,495.6
+2025-10-02,Dormitory C,Weekday,Cold,Term,820.7
+2025-10-02,Laboratory B,Weekday,Cold,Term,1780.2
+2025-10-02,Library,Weekday,Cold,Term,829.7
+2025-10-02,Teaching Block A,Weekday,Cold,Term,1194.3
+2025-10-03,Canteen,Weekday,Cloudy,Term,386.5
+2025-10-03,Dormitory C,Weekday,Cloudy,Term,699.3
+2025-10-03,Laboratory B,Weekday,Cloudy,Term,1124.0
+2025-10-03,Library,Weekday,Cloudy,Term,504.4
+2025-10-03,Teaching Block A,Weekday,Cloudy,Term,863.4
+2025-10-04,Canteen,Weekend,Cloudy,Term,274.1
+2025-10-04,Dormitory C,Weekend,Cloudy,Term,536.2
+2025-10-04,Laboratory B,Weekend,Cloudy,Term,702.5
+2025-10-04,Library,Weekend,Cloudy,Term,352.2
+2025-10-04,Teaching Block A,Weekend,Cloudy,Term,504.9
+2025-10-05,Canteen,Weekend,Cloudy,Term,251.9
+2025-10-05,Dormitory C,Weekend,Cloudy,Term,452.2
+2025-10-05,Laboratory B,Weekend,Cloudy,Term,716.6
+2025-10-05,Library,Weekend,Cloudy,Term,333.1
+2025-10-05,Teaching Block A,Weekend,Cloudy,Term,587.1
+2025-10-06,Canteen,Weekday,Cloudy,Term,361.2
+2025-10-06,Dormitory C,Weekday,Cloudy,Term,769.5
+2025-10-06,Laboratory B,Weekday,Cloudy,Term,1219.1
+2025-10-06,Library,Weekday,Cloudy,Term,575.6
+2025-10-06,Teaching Block A,Weekday,Cloudy,Term,844.1
+2025-10-07,Canteen,Weekday,Rain,Term,506.6
+2025-10-07,Dormitory C,Weekday,Rain,Term,791.5
+2025-10-07,Laboratory B,Weekday,Rain,Term,1346.2
+2025-10-07,Library,Weekday,Rain,Term,626.3
+2025-10-07,Teaching Block A,Weekday,Rain,Term,796.0
+2025-10-08,Canteen,Weekday,Cloudy,Term,438.2
+2025-10-08,Dormitory C,Weekday,Cloudy,Term,756.8
+2025-10-08,Laboratory B,Weekday,Cloudy,Term,1066.9
+2025-10-08,Library,Weekday,Cloudy,Term,556.0
+2025-10-08,Teaching Block A,Weekday,Cloudy,Term,769.3
+2025-10-09,Canteen,Weekday,Rain,Term,383.9
+2025-10-09,Dormitory C,Weekday,Rain,Term,716.0
+2025-10-09,Laboratory B,Weekday,Rain,Term,1187.9
+2025-10-09,Library,Weekday,Rain,Term,589.3
+2025-10-09,Teaching Block A,Weekday,Rain,Term,968.6
+2025-10-10,Canteen,Weekday,Rain,Term,501.5
+2025-10-10,Dormitory C,Weekday,Rain,Term,704.3
+2025-10-10,Laboratory B,Weekday,Rain,Term,1039.9
+2025-10-10,Library,Weekday,Rain,Term,570.0
+2025-10-10,Teaching Block A,Weekday,Rain,Term,855.5
+2025-10-11,Canteen,Weekend,Rain,Term,309.2
+2025-10-11,Dormitory C,Weekend,Rain,Term,420.1
+2025-10-11,Laboratory B,Weekend,Rain,Term,807.2
+2025-10-11,Library,Weekend,Rain,Term,374.2
+2025-10-11,Teaching Block A,Weekend,Rain,Term,538.2
+2025-10-12,Canteen,Weekend,Cold,Exam Week,391.1
+2025-10-12,Dormitory C,Weekend,Cold,Exam Week,500.7
+2025-10-12,Laboratory B,Weekend,Cold,Exam Week,1109.8
+2025-10-12,Library,Weekend,Cold,Exam Week,579.9
+2025-10-12,Teaching Block A,Weekend,Cold,Exam Week,873.0
+2025-10-13,Canteen,Weekday,Sunny,Term,393.1
+2025-10-13,Dormitory C,Weekday,Sunny,Term,659.3
+2025-10-13,Laboratory B,Weekday,Sunny,Term,1324.4
+2025-10-13,Library,Weekday,Sunny,Term,534.6
+2025-10-13,Teaching Block A,Weekday,Sunny,Term,987.4
+2025-10-14,Canteen,Weekday,Cold,Exam Week,559.6
+2025-10-14,Dormitory C,Weekday,Cold,Exam Week,969.4
+2025-10-14,Laboratory B,Weekday,Cold,Exam Week,1639.7
+2025-10-14,Library,Weekday,Cold,Exam Week,813.6
+2025-10-14,Teaching Block A,Weekday,Cold,Exam Week,1256.7
+2025-10-15,Canteen,Weekday,Rain,Term,385.0
+2025-10-15,Dormitory C,Weekday,Rain,Term,695.3
+2025-10-15,Laboratory B,Weekday,Rain,Term,1315.8
+2025-10-15,Library,Weekday,Rain,Term,643.8
+2025-10-15,Teaching Block A,Weekday,Rain,Term,1065.4
+2025-10-16,Canteen,Weekday,Rain,Exam Week,494.7
+2025-10-16,Dormitory C,Weekday,Rain,Exam Week,804.0
+2025-10-16,Laboratory B,Weekday,Rain,Exam Week,1347.6
+2025-10-16,Library,Weekday,Rain,Exam Week,784.3
+2025-10-16,Teaching Block A,Weekday,Rain,Exam Week,900.3
+2025-10-17,Canteen,Weekday,Sunny,Term,340.3
+2025-10-17,Dormitory C,Weekday,Sunny,Term,646.4
+2025-10-17,Laboratory B,Weekday,Sunny,Term,1152.4
+2025-10-17,Library,Weekday,Sunny,Term,506.9
+2025-10-17,Teaching Block A,Weekday,Sunny,Term,752.3
+2025-10-18,Canteen,Weekend,Hot,Term,309.6
+2025-10-18,Dormitory C,Weekend,Hot,Term,463.4
+2025-10-18,Laboratory B,Weekend,Hot,Term,807.6
+2025-10-18,Library,Weekend,Hot,Term,400.3
+2025-10-18,Teaching Block A,Weekend,Hot,Term,645.7
+2025-10-19,Canteen,Weekend,Rain,Term,256.7
+2025-10-19,Dormitory C,Weekend,Rain,Term,456.0
+2025-10-19,Laboratory B,Weekend,Rain,Term,833.9
+2025-10-19,Library,Weekend,Rain,Term,456.3
+2025-10-19,Teaching Block A,Weekend,Rain,Term,555.1
+2025-10-20,Canteen,Weekday,Rain,Term,426.5
+2025-10-20,Dormitory C,Weekday,Rain,Term,708.8
+2025-10-20,Laboratory B,Weekday,Rain,Term,1455.3
+2025-10-20,Library,Weekday,Rain,Term,608.8
+2025-10-20,Teaching Block A,Weekday,Rain,Term,828.8
+2025-10-21,Canteen,Weekday,Sunny,Term,375.6
+2025-10-21,Dormitory C,Weekday,Sunny,Term,628.6
+2025-10-21,Laboratory B,Weekday,Sunny,Term,1024.5
+2025-10-21,Library,Weekday,Sunny,Term,595.9
+2025-10-21,Teaching Block A,Weekday,Sunny,Term,828.6
+2025-10-22,Canteen,Weekday,Cloudy,Term,304.6
+2025-10-22,Dormitory C,Weekday,Cloudy,Term,625.4
+2025-10-22,Laboratory B,Weekday,Cloudy,Term,1158.8
+2025-10-22,Library,Weekday,Cloudy,Term,660.1
+2025-10-22,Teaching Block A,Weekday,Cloudy,Term,880.2
+2025-10-23,Canteen,Weekday,Sunny,Vacation,170.0
+2025-10-23,Dormitory C,Weekday,Sunny,Vacation,292.3
+2025-10-23,Laboratory B,Weekday,Sunny,Vacation,491.1
+2025-10-23,Library,Weekday,Sunny,Vacation,253.9
+2025-10-23,Teaching Block A,Weekday,Sunny,Vacation,306.6
+2025-10-24,Canteen,Weekday,Cloudy,Term,358.1
+2025-10-24,Dormitory C,Weekday,Cloudy,Term,648.8
+2025-10-24,Laboratory B,Weekday,Cloudy,Term,1249.9
+2025-10-24,Library,Weekday,Cloudy,Term,564.0
+2025-10-24,Teaching Block A,Weekday,Cloudy,Term,826.5
+2025-10-25,Canteen,Weekend,Rain,Term,269.9
+2025-10-25,Dormitory C,Weekend,Rain,Term,421.0
+2025-10-25,Laboratory B,Weekend,Rain,Term,766.9
+2025-10-25,Library,Weekend,Rain,Term,405.5
+2025-10-25,Teaching Block A,Weekend,Rain,Term,540.9
+2025-10-26,Canteen,Weekend,Cloudy,Exam Week,267.8
+2025-10-26,Dormitory C,Weekend,Cloudy,Exam Week,519.7
+2025-10-26,Laboratory B,Weekend,Cloudy,Exam Week,849.2
+2025-10-26,Library,Weekend,Cloudy,Exam Week,394.0
+2025-10-26,Teaching Block A,Weekend,Cloudy,Exam Week,602.1
+2025-10-27,Canteen,Weekday,Cold,Term,504.1
+2025-10-27,Dormitory C,Weekday,Cold,Term,963.3
+2025-10-27,Laboratory B,Weekday,Cold,Term,1460.6
+2025-10-27,Library,Weekday,Cold,Term,754.4
+2025-10-27,Teaching Block A,Weekday,Cold,Term,966.0
+2025-10-28,Canteen,Weekday,Rain,Term,372.9
+2025-10-28,Dormitory C,Weekday,Rain,Term,746.3
+2025-10-28,Laboratory B,Weekday,Rain,Term,1144.6
+2025-10-28,Library,Weekday,Rain,Term,568.8
+2025-10-28,Teaching Block A,Weekday,Rain,Term,826.5
+2025-10-29,Canteen,Weekday,Cold,Exam Week,512.4
+2025-10-29,Dormitory C,Weekday,Cold,Exam Week,905.3
+2025-10-29,Laboratory B,Weekday,Cold,Exam Week,1686.2
+2025-10-29,Library,Weekday,Cold,Exam Week,771.6
+2025-10-29,Teaching Block A,Weekday,Cold,Exam Week,1236.4
+2025-10-30,Canteen,Weekday,Rain,Term,420.7
+2025-10-30,Dormitory C,Weekday,Rain,Term,768.5
+2025-10-30,Laboratory B,Weekday,Rain,Term,1270.4
+2025-10-30,Library,Weekday,Rain,Term,684.5
+2025-10-30,Teaching Block A,Weekday,Rain,Term,704.8
+2025-10-31,Canteen,Weekday,Cloudy,Term,354.1
+2025-10-31,Dormitory C,Weekday,Cloudy,Term,710.4
+2025-10-31,Laboratory B,Weekday,Cloudy,Term,1212.6
+2025-10-31,Library,Weekday,Cloudy,Term,620.9
+2025-10-31,Teaching Block A,Weekday,Cloudy,Term,910.5
+2025-11-01,Canteen,Weekend,Cloudy,Term,262.0
+2025-11-01,Dormitory C,Weekend,Cloudy,Term,387.8
+2025-11-01,Laboratory B,Weekend,Cloudy,Term,797.5
+2025-11-01,Library,Weekend,Cloudy,Term,399.8
+2025-11-01,Teaching Block A,Weekend,Cloudy,Term,531.8
+2025-11-02,Canteen,Weekend,Cold,Term,401.9
+2025-11-02,Dormitory C,Weekend,Cold,Term,571.3
+2025-11-02,Laboratory B,Weekend,Cold,Term,815.1
+2025-11-02,Library,Weekend,Cold,Term,470.3
+2025-11-02,Teaching Block A,Weekend,Cold,Term,661.5
+2025-11-03,Canteen,Weekday,Cold,Vacation,230.8
+2025-11-03,Dormitory C,Weekday,Cold,Vacation,365.7
+2025-11-03,Laboratory B,Weekday,Cold,Vacation,643.6
+2025-11-03,Library,Weekday,Cold,Vacation,338.8
+2025-11-03,Teaching Block A,Weekday,Cold,Vacation,463.4
+2025-11-04,Canteen,Weekday,Rain,Term,390.8
+2025-11-04,Dormitory C,Weekday,Rain,Term,700.6
+2025-11-04,Laboratory B,Weekday,Rain,Term,1245.7
+2025-11-04,Library,Weekday,Rain,Term,656.3
+2025-11-04,Teaching Block A,Weekday,Rain,Term,1010.8
+2025-11-05,Canteen,Weekday,Rain,Term,444.0
+2025-11-05,Dormitory C,Weekday,Rain,Term,724.6
+2025-11-05,Laboratory B,Weekday,Rain,Term,1299.1
+2025-11-05,Library,Weekday,Rain,Term,571.2
+2025-11-05,Teaching Block A,Weekday,Rain,Term,928.6
+2025-11-06,Canteen,Weekday,Sunny,Term,397.0
+2025-11-06,Dormitory C,Weekday,Sunny,Term,686.1
+2025-11-06,Laboratory B,Weekday,Sunny,Term,1088.5
+2025-11-06,Library,Weekday,Sunny,Term,518.5
+2025-11-06,Teaching Block A,Weekday,Sunny,Term,815.8
+2025-11-07,Canteen,Weekday,Cloudy,Term,374.7
+2025-11-07,Dormitory C,Weekday,Cloudy,Term,777.2
+2025-11-07,Laboratory B,Weekday,Cloudy,Term,1192.9
+2025-11-07,Library,Weekday,Cloudy,Term,617.7
+2025-11-07,Teaching Block A,Weekday,Cloudy,Term,937.3
+2025-11-08,Canteen,Weekend,Sunny,Term,232.2
+2025-11-08,Dormitory C,Weekend,Sunny,Term,435.2
+2025-11-08,Laboratory B,Weekend,Sunny,Term,616.2
+2025-11-08,Library,Weekend,Sunny,Term,315.1
+2025-11-08,Teaching Block A,Weekend,Sunny,Term,450.2
+2025-11-09,Canteen,Weekend,Sunny,Term,229.9
+2025-11-09,Dormitory C,Weekend,Sunny,Term,422.5
+2025-11-09,Laboratory B,Weekend,Sunny,Term,787.0
+2025-11-09,Library,Weekend,Sunny,Term,411.2
+2025-11-09,Teaching Block A,Weekend,Sunny,Term,489.4
+2025-11-10,Canteen,Weekday,Hot,Term,458.0
+2025-11-10,Dormitory C,Weekday,Hot,Term,838.3
+2025-11-10,Laboratory B,Weekday,Hot,Term,1273.3
+2025-11-10,Library,Weekday,Hot,Term,647.0
+2025-11-10,Teaching Block A,Weekday,Hot,Term,952.4
+2025-11-11,Canteen,Weekday,Cloudy,Term,461.4
+2025-11-11,Dormitory C,Weekday,Cloudy,Term,633.4
+2025-11-11,Laboratory B,Weekday,Cloudy,Term,1262.0
+2025-11-11,Library,Weekday,Cloudy,Term,564.5
+2025-11-11,Teaching Block A,Weekday,Cloudy,Term,779.6
+2025-11-12,Canteen,Weekday,Cloudy,Term,357.0
+2025-11-12,Dormitory C,Weekday,Cloudy,Term,764.8
+2025-11-12,Laboratory B,Weekday,Cloudy,Term,1292.3
+2025-11-12,Library,Weekday,Cloudy,Term,595.5
+2025-11-12,Teaching Block A,Weekday,Cloudy,Term,842.0
+2025-11-13,Canteen,Weekday,Sunny,Vacation,170.3
+2025-11-13,Dormitory C,Weekday,Sunny,Vacation,313.8
+2025-11-13,Laboratory B,Weekday,Sunny,Vacation,514.3
+2025-11-13,Library,Weekday,Sunny,Vacation,237.9
+2025-11-13,Teaching Block A,Weekday,Sunny,Vacation,367.8
+2025-11-14,Canteen,Weekday,Hot,Term,477.2
+2025-11-14,Dormitory C,Weekday,Hot,Term,696.2
+2025-11-14,Laboratory B,Weekday,Hot,Term,1298.9
+2025-11-14,Library,Weekday,Hot,Term,642.0
+2025-11-14,Teaching Block A,Weekday,Hot,Term,960.3
+2025-11-15,Canteen,Weekend,Hot,Exam Week,343.0
+2025-11-15,Dormitory C,Weekend,Hot,Exam Week,601.4
+2025-11-15,Laboratory B,Weekend,Hot,Exam Week,981.9
+2025-11-15,Library,Weekend,Hot,Exam Week,452.5
+2025-11-15,Teaching Block A,Weekend,Hot,Exam Week,715.7
+2025-11-16,Canteen,Weekend,Sunny,Term,255.7
+2025-11-16,Dormitory C,Weekend,Sunny,Term,464.9
+2025-11-16,Laboratory B,Weekend,Sunny,Term,714.7
+2025-11-16,Library,Weekend,Sunny,Term,397.9
+2025-11-16,Teaching Block A,Weekend,Sunny,Term,557.3
+2025-11-17,Canteen,Weekday,Cloudy,Term,396.6
+2025-11-17,Dormitory C,Weekday,Cloudy,Term,737.7
+2025-11-17,Laboratory B,Weekday,Cloudy,Term,1196.8
+2025-11-17,Library,Weekday,Cloudy,Term,701.9
+2025-11-17,Teaching Block A,Weekday,Cloudy,Term,903.3
+2025-11-18,Canteen,Weekday,Cold,Term,465.6
+2025-11-18,Dormitory C,Weekday,Cold,Term,900.8
+2025-11-18,Laboratory B,Weekday,Cold,Term,1428.7
+2025-11-18,Library,Weekday,Cold,Term,771.4
+2025-11-18,Teaching Block A,Weekday,Cold,Term,985.0
+2025-11-19,Canteen,Weekday,Cloudy,Term,411.5
+2025-11-19,Dormitory C,Weekday,Cloudy,Term,689.9
+2025-11-19,Laboratory B,Weekday,Cloudy,Term,1249.7
+2025-11-19,Library,Weekday,Cloudy,Term,643.6
+2025-11-19,Teaching Block A,Weekday,Cloudy,Term,908.1
+2025-11-20,Canteen,Weekday,Cloudy,Term,447.6
+2025-11-20,Dormitory C,Weekday,Cloudy,Term,675.3
+2025-11-20,Laboratory B,Weekday,Cloudy,Term,1210.7
+2025-11-20,Library,Weekday,Cloudy,Term,757.3
+2025-11-20,Teaching Block A,Weekday,Cloudy,Term,803.5
+2025-11-21,Canteen,Weekday,Hot,Term,468.3
+2025-11-21,Dormitory C,Weekday,Hot,Term,858.0
+2025-11-21,Laboratory B,Weekday,Hot,Term,1462.9
+2025-11-21,Library,Weekday,Hot,Term,745.1
+2025-11-21,Teaching Block A,Weekday,Hot,Term,919.3
+2025-11-22,Canteen,Weekend,Rain,Term,235.6
+2025-11-22,Dormitory C,Weekend,Rain,Term,523.9
+2025-11-22,Laboratory B,Weekend,Rain,Term,913.6
+2025-11-22,Library,Weekend,Rain,Term,461.5
+2025-11-22,Teaching Block A,Weekend,Rain,Term,477.6
+2025-11-23,Canteen,Weekend,Sunny,Term,251.9
+2025-11-23,Dormitory C,Weekend,Sunny,Term,375.1
+2025-11-23,Laboratory B,Weekend,Sunny,Term,830.5
+2025-11-23,Library,Weekend,Sunny,Term,321.9
+2025-11-23,Teaching Block A,Weekend,Sunny,Term,475.7
+2025-11-24,Canteen,Weekday,Cloudy,Term,381.1
+2025-11-24,Dormitory C,Weekday,Cloudy,Term,699.8
+2025-11-24,Laboratory B,Weekday,Cloudy,Term,1164.8
+2025-11-24,Library,Weekday,Cloudy,Term,498.8
+2025-11-24,Teaching Block A,Weekday,Cloudy,Term,840.3
+2025-11-25,Canteen,Weekday,Cold,Term,505.8
+2025-11-25,Dormitory C,Weekday,Cold,Term,903.2
+2025-11-25,Laboratory B,Weekday,Cold,Term,1425.9
+2025-11-25,Library,Weekday,Cold,Term,698.3
+2025-11-25,Teaching Block A,Weekday,Cold,Term,894.3
+2025-11-26,Canteen,Weekday,Sunny,Term,341.8
+2025-11-26,Dormitory C,Weekday,Sunny,Term,642.5
+2025-11-26,Laboratory B,Weekday,Sunny,Term,1179.9
+2025-11-26,Library,Weekday,Sunny,Term,537.1
+2025-11-26,Teaching Block A,Weekday,Sunny,Term,824.2
+2025-11-27,Canteen,Weekday,Sunny,Vacation,163.8
+2025-11-27,Dormitory C,Weekday,Sunny,Vacation,251.2
+2025-11-27,Laboratory B,Weekday,Sunny,Vacation,527.8
+2025-11-27,Library,Weekday,Sunny,Vacation,257.2
+2025-11-27,Teaching Block A,Weekday,Sunny,Vacation,371.5
+2025-11-28,Canteen,Weekday,Rain,Term,405.5
+2025-11-28,Dormitory C,Weekday,Rain,Term,811.2
+2025-11-28,Laboratory B,Weekday,Rain,Term,1334.0
+2025-11-28,Library,Weekday,Rain,Term,596.0
+2025-11-28,Teaching Block A,Weekday,Rain,Term,848.4
+2025-11-29,Canteen,Weekend,Rain,Term,246.0
+2025-11-29,Dormitory C,Weekend,Rain,Term,368.2
+2025-11-29,Laboratory B,Weekend,Rain,Term,769.1
+2025-11-29,Library,Weekend,Rain,Term,393.6
+2025-11-29,Teaching Block A,Weekend,Rain,Term,495.6
+2025-11-30,Canteen,Weekend,Cloudy,Term,234.8
+2025-11-30,Dormitory C,Weekend,Cloudy,Term,437.6
+2025-11-30,Laboratory B,Weekend,Cloudy,Term,685.0
+2025-11-30,Library,Weekend,Cloudy,Term,353.4
+2025-11-30,Teaching Block A,Weekend,Cloudy,Term,512.2
+2025-12-01,Canteen,Weekday,Cold,Term,579.8
+2025-12-01,Dormitory C,Weekday,Cold,Term,760.4
+2025-12-01,Laboratory B,Weekday,Cold,Term,1349.0
+2025-12-01,Library,Weekday,Cold,Term,753.7
+2025-12-01,Teaching Block A,Weekday,Cold,Term,938.4
+2025-12-02,Canteen,Weekday,Rain,Exam Week,527.4
+2025-12-02,Dormitory C,Weekday,Rain,Exam Week,797.7
+2025-12-02,Laboratory B,Weekday,Rain,Exam Week,1412.1
+2025-12-02,Library,Weekday,Rain,Exam Week,660.5
+2025-12-02,Teaching Block A,Weekday,Rain,Exam Week,924.8
+2025-12-03,Canteen,Weekday,Cloudy,Term,488.1
+2025-12-03,Dormitory C,Weekday,Cloudy,Term,796.6
+2025-12-03,Laboratory B,Weekday,Cloudy,Term,1336.9
+2025-12-03,Library,Weekday,Cloudy,Term,576.7
+2025-12-03,Teaching Block A,Weekday,Cloudy,Term,885.1
+2025-12-04,Canteen,Weekday,Cloudy,Exam Week,447.9
+2025-12-04,Dormitory C,Weekday,Cloudy,Exam Week,751.6
+2025-12-04,Laboratory B,Weekday,Cloudy,Exam Week,1379.7
+2025-12-04,Library,Weekday,Cloudy,Exam Week,650.0
+2025-12-04,Teaching Block A,Weekday,Cloudy,Exam Week,937.1
+2025-12-05,Canteen,Weekday,Cold,Term,465.0
+2025-12-05,Dormitory C,Weekday,Cold,Term,850.2
+2025-12-05,Laboratory B,Weekday,Cold,Term,1249.0
+2025-12-05,Library,Weekday,Cold,Term,831.3
+2025-12-05,Teaching Block A,Weekday,Cold,Term,971.9
+2025-12-06,Canteen,Weekend,Cold,Term,294.8
+2025-12-06,Dormitory C,Weekend,Cold,Term,625.2
+2025-12-06,Laboratory B,Weekend,Cold,Term,975.3
+2025-12-06,Library,Weekend,Cold,Term,443.7
+2025-12-06,Teaching Block A,Weekend,Cold,Term,601.5
+2025-12-07,Canteen,Weekend,Cold,Exam Week,304.5
+2025-12-07,Dormitory C,Weekend,Cold,Exam Week,608.5
+2025-12-07,Laboratory B,Weekend,Cold,Exam Week,1222.9
+2025-12-07,Library,Weekend,Cold,Exam Week,497.3
+2025-12-07,Teaching Block A,Weekend,Cold,Exam Week,721.6
+2025-12-08,Canteen,Weekday,Cloudy,Term,433.4
+2025-12-08,Dormitory C,Weekday,Cloudy,Term,694.1
+2025-12-08,Laboratory B,Weekday,Cloudy,Term,1250.1
+2025-12-08,Library,Weekday,Cloudy,Term,578.0
+2025-12-08,Teaching Block A,Weekday,Cloudy,Term,899.3
+2025-12-09,Canteen,Weekday,Sunny,Exam Week,448.9
+2025-12-09,Dormitory C,Weekday,Sunny,Exam Week,765.2
+2025-12-09,Laboratory B,Weekday,Sunny,Exam Week,1208.5
+2025-12-09,Library,Weekday,Sunny,Exam Week,596.0
+2025-12-09,Teaching Block A,Weekday,Sunny,Exam Week,914.7
+2025-12-10,Canteen,Weekday,Sunny,Term,366.9
+2025-12-10,Dormitory C,Weekday,Sunny,Term,602.6
+2025-12-10,Laboratory B,Weekday,Sunny,Term,1274.0
+2025-12-10,Library,Weekday,Sunny,Term,632.8
+2025-12-10,Teaching Block A,Weekday,Sunny,Term,831.7
+2025-12-11,Canteen,Weekday,Cold,Term,450.7
+2025-12-11,Dormitory C,Weekday,Cold,Term,767.3
+2025-12-11,Laboratory B,Weekday,Cold,Term,1606.6
+2025-12-11,Library,Weekday,Cold,Term,762.7
+2025-12-11,Teaching Block A,Weekday,Cold,Term,979.8
+2025-12-12,Canteen,Weekday,Cold,Exam Week,561.1
+2025-12-12,Dormitory C,Weekday,Cold,Exam Week,945.8
+2025-12-12,Laboratory B,Weekday,Cold,Exam Week,1552.4
+2025-12-12,Library,Weekday,Cold,Exam Week,799.1
+2025-12-12,Teaching Block A,Weekday,Cold,Exam Week,1175.0
+2025-12-13,Canteen,Weekend,Cloudy,Term,240.1
+2025-12-13,Dormitory C,Weekend,Cloudy,Term,480.4
+2025-12-13,Laboratory B,Weekend,Cloudy,Term,768.8
+2025-12-13,Library,Weekend,Cloudy,Term,347.5
+2025-12-13,Teaching Block A,Weekend,Cloudy,Term,582.3
+2025-12-14,Canteen,Weekend,Cloudy,Term,255.0
+2025-12-14,Dormitory C,Weekend,Cloudy,Term,376.8
+2025-12-14,Laboratory B,Weekend,Cloudy,Term,771.8
+2025-12-14,Library,Weekend,Cloudy,Term,394.9
+2025-12-14,Teaching Block A,Weekend,Cloudy,Term,564.8
+2025-12-15,Canteen,Weekday,Rain,Exam Week,442.1
+2025-12-15,Dormitory C,Weekday,Rain,Exam Week,771.3
+2025-12-15,Laboratory B,Weekday,Rain,Exam Week,1641.3
+2025-12-15,Library,Weekday,Rain,Exam Week,826.2
+2025-12-15,Teaching Block A,Weekday,Rain,Exam Week,909.8
+2025-12-16,Canteen,Weekday,Cold,Vacation,213.0
+2025-12-16,Dormitory C,Weekday,Cold,Vacation,382.4
+2025-12-16,Laboratory B,Weekday,Cold,Vacation,609.3
+2025-12-16,Library,Weekday,Cold,Vacation,294.8
+2025-12-16,Teaching Block A,Weekday,Cold,Vacation,441.9
+2025-12-17,Canteen,Weekday,Cold,Term,513.3
+2025-12-17,Dormitory C,Weekday,Cold,Term,892.4
+2025-12-17,Laboratory B,Weekday,Cold,Term,1344.8
+2025-12-17,Library,Weekday,Cold,Term,719.0
+2025-12-17,Teaching Block A,Weekday,Cold,Term,1069.7
+2025-12-18,Canteen,Weekday,Cloudy,Term,408.6
+2025-12-18,Dormitory C,Weekday,Cloudy,Term,737.2
+2025-12-18,Laboratory B,Weekday,Cloudy,Term,1153.4
+2025-12-18,Library,Weekday,Cloudy,Term,597.5
+2025-12-18,Teaching Block A,Weekday,Cloudy,Term,892.5
+2025-12-19,Canteen,Weekday,Rain,Term,422.7
+2025-12-19,Dormitory C,Weekday,Rain,Term,691.1
+2025-12-19,Laboratory B,Weekday,Rain,Term,1084.6
+2025-12-19,Library,Weekday,Rain,Term,684.3
+2025-12-19,Teaching Block A,Weekday,Rain,Term,836.6
+2025-12-20,Canteen,Weekend,Cloudy,Term,238.3
+2025-12-20,Dormitory C,Weekend,Cloudy,Term,444.4
+2025-12-20,Laboratory B,Weekend,Cloudy,Term,722.2
+2025-12-20,Library,Weekend,Cloudy,Term,396.9
+2025-12-20,Teaching Block A,Weekend,Cloudy,Term,535.1
+2025-12-21,Canteen,Weekend,Sunny,Term,229.8
+2025-12-21,Dormitory C,Weekend,Sunny,Term,462.6
+2025-12-21,Laboratory B,Weekend,Sunny,Term,668.3
+2025-12-21,Library,Weekend,Sunny,Term,389.3
+2025-12-21,Teaching Block A,Weekend,Sunny,Term,561.8
+2025-12-22,Canteen,Weekday,Sunny,Exam Week,431.6
+2025-12-22,Dormitory C,Weekday,Sunny,Exam Week,790.8
+2025-12-22,Laboratory B,Weekday,Sunny,Exam Week,1248.5
+2025-12-22,Library,Weekday,Sunny,Exam Week,613.5
+2025-12-22,Teaching Block A,Weekday,Sunny,Exam Week,888.9
+2025-12-23,Canteen,Weekday,Cloudy,Term,426.8
+2025-12-23,Dormitory C,Weekday,Cloudy,Term,688.2
+2025-12-23,Laboratory B,Weekday,Cloudy,Term,1163.0
+2025-12-23,Library,Weekday,Cloudy,Term,529.3
+2025-12-23,Teaching Block A,Weekday,Cloudy,Term,799.4
+2025-12-24,Canteen,Weekday,Cold,Term,483.1
+2025-12-24,Dormitory C,Weekday,Cold,Term,1079.1
+2025-12-24,Laboratory B,Weekday,Cold,Term,1442.9
+2025-12-24,Library,Weekday,Cold,Term,771.5
+2025-12-24,Teaching Block A,Weekday,Cold,Term,924.6
+2025-12-25,Canteen,Weekday,Cold,Exam Week,526.5
+2025-12-25,Dormitory C,Weekday,Cold,Exam Week,1050.2
+2025-12-25,Laboratory B,Weekday,Cold,Exam Week,1513.0
+2025-12-25,Library,Weekday,Cold,Exam Week,818.6
+2025-12-25,Teaching Block A,Weekday,Cold,Exam Week,1164.0
+2025-12-26,Canteen,Weekday,Sunny,Term,357.6
+2025-12-26,Dormitory C,Weekday,Sunny,Term,722.4
+2025-12-26,Laboratory B,Weekday,Sunny,Term,1282.6
+2025-12-26,Library,Weekday,Sunny,Term,547.7
+2025-12-26,Teaching Block A,Weekday,Sunny,Term,838.6
+2025-12-27,Canteen,Weekend,Rain,Term,267.0
+2025-12-27,Dormitory C,Weekend,Rain,Term,494.0
+2025-12-27,Laboratory B,Weekend,Rain,Term,836.4
+2025-12-27,Library,Weekend,Rain,Term,384.1
+2025-12-27,Teaching Block A,Weekend,Rain,Term,517.6
+2025-12-28,Canteen,Weekend,Cold,Term,319.3
+2025-12-28,Dormitory C,Weekend,Cold,Term,480.4
+2025-12-28,Laboratory B,Weekend,Cold,Term,823.1
+2025-12-28,Library,Weekend,Cold,Term,476.8
+2025-12-28,Teaching Block A,Weekend,Cold,Term,620.5
+2025-12-29,Canteen,Weekday,Cold,Term,451.3
+2025-12-29,Dormitory C,Weekday,Cold,Term,868.7
+2025-12-29,Laboratory B,Weekday,Cold,Term,1385.7
+2025-12-29,Library,Weekday,Cold,Term,662.1
+2025-12-29,Teaching Block A,Weekday,Cold,Term,985.7
+2025-12-30,Canteen,Weekday,Cold,Term,571.3
+2025-12-30,Dormitory C,Weekday,Cold,Term,885.1
+2025-12-30,Laboratory B,Weekday,Cold,Term,1381.1
+2025-12-30,Library,Weekday,Cold,Term,699.4
+2025-12-30,Teaching Block A,Weekday,Cold,Term,1185.7
+2025-12-31,Canteen,Weekday,Cloudy,Exam Week,461.7
+2025-12-31,Dormitory C,Weekday,Cloudy,Exam Week,710.4
+2025-12-31,Laboratory B,Weekday,Cloudy,Exam Week,1267.5
+2025-12-31,Library,Weekday,Cloudy,Exam Week,599.9
+2025-12-31,Teaching Block A,Weekday,Cloudy,Exam Week,908.3

@@ -41,10 +41,14 @@ from backend.database import SessionLocal  # noqa: E402
 
 SEEDED_ROWS = 0
 
-# The default template is the campus food-demand one (what frontend/js/config.js
-# is themed for); retail sales is the alternate example that exercises the
-# bundled scikit-learn plugin.
+# The default template is the campus energy-consumption one, which is what
+# frontend/js/config.js is themed for. Food demand and retail sales are the
+# alternates; food demand doubles as the regression case for the literal "None"
+# value, and retail sales exercises the bundled scikit-learn plugin.
+FOOD_TEMPLATE = "templates/food-demand.json"
 RETAIL_TEMPLATE = "templates/retail-sales.json"
+ENERGY_FORM = {"building": "Teaching Block A", "day_type": "Weekday",
+               "weather": "Sunny", "term_phase": "Term", "notes": ""}
 FOOD_FORM = {"menu": "Chicken Rice", "day": "Friday", "weather": "Rain",
              "event": "None", "notes": ""}
 RETAIL_FORM = {"store": "上海旗舰店", "category": "智能手机", "horizon": "30"}
@@ -502,29 +506,39 @@ class TestHttpServer(unittest.TestCase):
 
     def test_predict_endpoint_default_template(self) -> None:
         config = self.get_json("/api/config")[1]
-        self.assertEqual(config["template"]["id"], "food-demand")
-        # Regression guard: pandas used to turn the literal "None" into NaN,
-        # which silently removed the most common event from the dropdown.
-        self.assertIn("None", config["options"]["event"])
+        self.assertEqual(config["template"]["id"], "energy-forecast")
+        self.assertIn("Teaching Block A", config["options"]["building"])
 
-        status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
+        status, body = self.post_json("/api/predict", {"fields": dict(ENERGY_FORM)})
 
         self.assertEqual(status, 200)
         self.assertGreater(body["value"], 0)
-        self.assertEqual(body["unit"], "portions")
+        self.assertEqual(body["unit"], "kWh")
         self.assertEqual(body["model"], "group-baseline")
         self.assertEqual(body["explanation_source"], "local-baseline")
         self.assertTrue(body["evidence"])
         # The explanation must name the very conditions the model used.
-        self.assertIn("Friday", body["explanation"])
-        self.assertIn("Rain", body["explanation"])
+        self.assertIn("Teaching Block A", body["explanation"])
+        self.assertIn("Sunny", body["explanation"])
+
+    def test_literal_none_stays_a_value(self) -> None:
+        """pandas would otherwise read the literal "None" as NaN and silently
+        delete the most common value of a column (it broke the food template)."""
+        with temporary_env(TEMPLATE_FILE=FOOD_TEMPLATE):
+            config = self.get_json("/api/config")[1]
+            self.assertEqual(config["template"]["id"], "food-demand")
+            self.assertIn("None", config["options"]["event"])
+
+            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
+        self.assertEqual(status, 200)
+        self.assertIn("None", body["explanation"])
 
     def test_predict_validation_errors(self) -> None:
-        good = dict(FOOD_FORM)
+        good = dict(ENERGY_FORM)
         cases = [
             ({key: value for key, value in good.items() if key != "weather"}, "缺少必填字段"),
-            ({**good, "menu": "Pizza"}, "不在可选范围"),
-            ({**good, "day": "Caturday"}, "不在可选范围"),
+            ({**good, "building": "Penthouse"}, "不在可选范围"),
+            ({**good, "day_type": "Caturday"}, "不在可选范围"),
             ({**good, "surprise": 1}, "未知字段"),
         ]
         for fields, expected in cases:
@@ -547,32 +561,34 @@ class TestHttpServer(unittest.TestCase):
 
     def test_external_model_api_is_called_with_the_documented_contract(self) -> None:
         port, handler = self.start_stub_model({
-            "value": 132, "unit": "portions", "baseline": 143,
-            "explanation": "Friday demand is historically lower, and rain is expected tomorrow.",
-            "model": "canteen-xgb-v3", "meta": {"version": "test"},
+            "value": 640, "unit": "kWh", "baseline": 693,
+            "explanation": "Cold weather and a term week keep the lab load above a normal weekday.",
+            "model": "load-xgb-v3", "meta": {"version": "test"},
         })
         with temporary_env(MODEL_BACKEND="http", MODEL_API_KEY="secret",
                            MODEL_API_URL=f"http://127.0.0.1:{port}/predict"):
-            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
+            status, body = self.post_json("/api/predict", {"fields": dict(ENERGY_FORM)})
 
         self.assertEqual(status, 200)
-        self.assertEqual(body["value"], 132)
-        self.assertEqual(body["model"], "canteen-xgb-v3")
-        self.assertEqual(body["explanation"], "Friday demand is historically lower, and rain is expected tomorrow.")
+        self.assertEqual(body["value"], 640)
+        self.assertEqual(body["model"], "load-xgb-v3")
+        self.assertEqual(body["explanation"], "Cold weather and a term week keep the lab load above a normal weekday.")
         self.assertEqual(body["explanation_source"], "external-api")
         self.assertEqual(body["direction"], "down")
         self.assertIn("lower than normal", body["delta_text"])
+        # the external service can say who wrote the words (route 1)
+        self.assertEqual(body["meta"]["external_model"], "load-xgb-v3")
 
         sent = handler.last_request
-        self.assertEqual(sent["template_id"], "food-demand")
-        self.assertEqual(sent["unit"], "portions")
-        self.assertEqual(sent["fields"]["menu"], "Chicken Rice")
+        self.assertEqual(sent["template_id"], "energy-forecast")
+        self.assertEqual(sent["unit"], "kWh")
+        self.assertEqual(sent["fields"]["building"], "Teaching Block A")
         self.assertIn("requested_at", sent["context"])
 
     def test_dead_model_api_falls_back_to_the_local_plugin(self) -> None:
         with temporary_env(MODEL_BACKEND="http", MODEL_API_URL="http://127.0.0.1:1/model",
                            MODEL_API_TIMEOUT="3", MODEL_API_FALLBACK=None):
-            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
+            status, body = self.post_json("/api/predict", {"fields": dict(ENERGY_FORM)})
         self.assertEqual(status, 200)
         self.assertEqual(body["model"], "group-baseline")
         self.assertTrue(body["meta"]["fallback"])
@@ -582,13 +598,13 @@ class TestHttpServer(unittest.TestCase):
     def test_dead_model_api_can_fail_loudly(self) -> None:
         with temporary_env(MODEL_BACKEND="http", MODEL_API_URL="http://127.0.0.1:1/model",
                            MODEL_API_TIMEOUT="3", MODEL_API_FALLBACK="off"):
-            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
+            status, body = self.post_json("/api/predict", {"fields": dict(ENERGY_FORM)})
         self.assertEqual(status, 502)
         self.assertIn("模型调用失败", body["detail"])
 
     def test_unknown_plugin_is_reported(self) -> None:
         with temporary_env(MODEL_BACKEND="does-not-exist"):
-            status, body = self.post_json("/api/predict", {"fields": dict(FOOD_FORM)})
+            status, body = self.post_json("/api/predict", {"fields": dict(ENERGY_FORM)})
         self.assertEqual(status, 500)
         self.assertIn("unknown model plugin", body["detail"])
 
@@ -600,7 +616,7 @@ class TestHttpServer(unittest.TestCase):
 
     # -- /analyze: the contract frontend/js/services/api.js calls ------------ #
     def test_analyze_matches_the_frontend_contract(self) -> None:
-        status, body = self.post_json("/analyze", dict(FOOD_FORM))
+        status, body = self.post_json("/analyze", dict(ENERGY_FORM))
         self.assertEqual(status, 200)
         for key in ("prediction", "average", "change_percent", "confidence", "explanation"):
             self.assertIn(key, body)
@@ -609,29 +625,29 @@ class TestHttpServer(unittest.TestCase):
         self.assertAlmostEqual(body["change_percent"], round(body["delta"] * 100, 1), places=1)
         self.assertGreater(body["value"], 0)
         self.assertTrue(body["explanation"])
-        self.assertEqual(body["fields"]["menu"], "Chicken Rice")
+        self.assertEqual(body["fields"]["building"], "Teaching Block A")
 
     def test_analyze_requires_post(self) -> None:
         status, _, _ = self.request("/analyze")
         self.assertEqual(status, 405)
 
     def test_analyze_rejects_unknown_option_values(self) -> None:
-        status, body = self.post_json("/analyze", {**FOOD_FORM, "menu": "Pizza"})
+        status, body = self.post_json("/analyze", {**ENERGY_FORM, "building": "Penthouse"})
         self.assertEqual(status, 422)
         self.assertIn("不在可选范围", body["detail"])
 
     def test_free_text_field_is_validated_and_passed_through(self) -> None:
-        status, body = self.post_json("/analyze", {**FOOD_FORM, "notes": "extra context"})
+        status, body = self.post_json("/analyze", {**ENERGY_FORM, "notes": "extra context"})
         self.assertEqual(status, 200)
         self.assertEqual(body["fields"]["notes"], "extra context")
 
-        without_notes = {key: value for key, value in FOOD_FORM.items() if key != "notes"}
+        without_notes = {key: value for key, value in ENERGY_FORM.items() if key != "notes"}
         status, body = self.post_json("/analyze", without_notes)
         self.assertEqual(status, 200)
         self.assertEqual(body["fields"]["notes"], "")
 
     def test_confidence_is_measured_not_invented(self) -> None:
-        status, body = self.post_json("/analyze", dict(FOOD_FORM))
+        status, body = self.post_json("/analyze", dict(ENERGY_FORM))
         self.assertEqual(status, 200)
         self.assertIsNotNone(body["confidence"])
         self.assertTrue(0 <= body["confidence"] <= 100)
@@ -639,7 +655,7 @@ class TestHttpServer(unittest.TestCase):
         backtest = body["meta"]["backtest"]
         self.assertGreater(backtest["samples"], 50)
         self.assertAlmostEqual(body["confidence"], round((1 - backtest["mape"]) * 100), delta=1)
-        # the naive reference point ("always prep a typical weekday") is worse
+        # the naive reference point ("always assume a normal weekday") is worse
         self.assertGreater(backtest["naive_mae"], backtest["mae"])
 
     def test_config_exposes_model_summary(self) -> None:
@@ -704,10 +720,10 @@ class TestCustomData(unittest.TestCase):
         template = template_config.load_template()
         self.assertGreater(template_config.dataset_meta(template)["rows"], 1000)
 
-        tiny = TMP_DIR / "tiny-menu.csv"
-        lines = ["date,menu,weekday,weather,event,portions"]
+        tiny = TMP_DIR / "tiny-load.csv"
+        lines = ["date,building,day_type,weather,term_phase,kwh"]
         for index in range(12):
-            lines.append(f"2025-01-{index % 9 + 1:02d},Chicken Rice,Monday,Sunny,None,{100 + index}")
+            lines.append(f"2025-01-{index % 9 + 1:02d},Teaching Block A,Weekday,Sunny,Term,{700 + index}")
         tiny.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
         with temporary_env(DATASET_FILE=str(tiny)):
@@ -734,6 +750,137 @@ class TestCustomData(unittest.TestCase):
             "/api/insights",
         })
         self.assertEqual(set(server.POST_ROUTES), {"/api/predict", "/analyze"})
+
+
+# --------------------------------------------------------------------------- #
+# route 1: local model decides the number, an LLM writes the words
+# --------------------------------------------------------------------------- #
+COFFEE_TEMPLATE = "data/samples/coffee_shop.template.json"
+COFFEE_FIELDS = {"drink": "Latte", "weekday": "Monday", "weather": "Sunny",
+                 "term_phase": "Term", "notes": ""}
+
+
+def post_json_url(url: str, payload, timeout: int = 180):
+    data = payload if isinstance(payload, bytes) else json.dumps(payload).encode("utf-8")
+    request = urllib.request.Request(url, data=data, method="POST",
+                                     headers={"Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return response.status, json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        raw = error.read()
+        try:
+            return error.code, json.loads(raw.decode("utf-8"))
+        except Exception:
+            return error.code, {}
+
+
+def start_stub_server(test, payload: dict, status: int = 200):
+    """Start a throwaway HTTP endpoint (stands in for an LLM gateway)."""
+    handler = type("Stub", (StubModelHandler,),
+                   {"payload": payload, "status": status, "last_request": {}})
+    httpd = ThreadingHTTPServer(("127.0.0.1", 0), handler)
+    thread = threading.Thread(target=httpd.serve_forever, daemon=True)
+    thread.start()
+
+    def stop():
+        httpd.shutdown()
+        httpd.server_close()
+        thread.join(timeout=5)
+
+    test.addCleanup(stop)
+    return httpd.server_address[1], handler
+
+
+class TestLLMExplainerService(unittest.TestCase):
+    """examples/llm_explainer_service.py - the reference service for route 1."""
+
+    def start_explainer(self, use_llm: bool):
+        from examples import llm_explainer_service
+
+        httpd, context = llm_explainer_service.build_server("127.0.0.1", 0, use_llm=use_llm)
+        port = httpd.server_address[1]
+        thread = threading.Thread(target=httpd.serve_forever, daemon=True)
+        thread.start()
+
+        def stop():
+            httpd.shutdown()
+            httpd.server_close()
+            thread.join(timeout=5)
+
+        self.addCleanup(stop)
+        return port, context
+
+    def test_contract_without_an_llm(self) -> None:
+        with temporary_env(TEMPLATE_FILE=COFFEE_TEMPLATE, LLM_API_KEY=None, OPENAI_API_KEY=None):
+            port, _ = self.start_explainer(use_llm=True)
+            status, body = post_json_url(f"http://127.0.0.1:{port}/predict", {"fields": COFFEE_FIELDS})
+
+        self.assertEqual(status, 200)
+        for key in ("value", "baseline", "confidence", "explanation", "model", "meta"):
+            self.assertIn(key, body)
+        self.assertGreater(body["value"], 0)
+        self.assertTrue(0 <= body["confidence"] <= 100)
+        self.assertTrue(body["explanation"])
+        # without a key it must fall back to the model's own wording, never 500
+        self.assertEqual(body["meta"]["explanation_source"], "local-model")
+
+    def test_health_endpoint(self) -> None:
+        with temporary_env(TEMPLATE_FILE=COFFEE_TEMPLATE, LLM_API_KEY=None):
+            port, _ = self.start_explainer(use_llm=True)
+            with urllib.request.urlopen(f"http://127.0.0.1:{port}/health", timeout=30) as response:
+                health = json.loads(response.read().decode("utf-8"))
+        self.assertEqual(health["status"], "ok")
+        self.assertEqual(health["template"], "coffee-shop")
+        self.assertFalse(health["llm_enabled"])
+
+    def test_explainer_uses_the_llm_when_reachable(self) -> None:
+        stub_port, handler = start_stub_server(
+            self, {"choices": [{"message": {"content": "周一晴天建议备足 112 杯。"}}]})
+
+        with temporary_env(TEMPLATE_FILE=COFFEE_TEMPLATE, LLM_API_KEY="test-key",
+                           LLM_BASE_URL=f"http://127.0.0.1:{stub_port}/v1", LLM_MODEL="fake-chat"):
+            port, _ = self.start_explainer(use_llm=True)
+            status, body = post_json_url(f"http://127.0.0.1:{port}/predict", {"fields": COFFEE_FIELDS})
+
+        self.assertEqual(status, 200)
+        self.assertEqual(body["meta"]["explanation_source"], "llm")
+        self.assertEqual(body["explanation"], "周一晴天建议备足 112 杯。")
+        self.assertIn("fake-chat", body["model"])
+
+        # the prompt we sent must carry the conditions and the numbers
+        sent = handler.last_request
+        prompt = sent["messages"][1]["content"]
+        self.assertIn("drink=Latte", prompt)
+        self.assertIn("预测值", prompt)
+        self.assertEqual(sent["model"], "fake-chat")
+
+    def test_main_app_calls_the_explainer_end_to_end(self) -> None:
+        """browser -> /analyze -> http plugin -> our service -> local model."""
+        with temporary_env(TEMPLATE_FILE=COFFEE_TEMPLATE, LLM_API_KEY=None, OPENAI_API_KEY=None):
+            port, _ = self.start_explainer(use_llm=True)
+            with temporary_env(MODEL_BACKEND="http",
+                               MODEL_API_URL=f"http://127.0.0.1:{port}/predict"):
+                result = service.analyze(COFFEE_FIELDS)
+
+        self.assertEqual(result["explanation_source"], "external-api")
+        self.assertEqual(result["meta"]["external_explanation_source"], "local-model")
+        self.assertGreater(result["prediction"], 0)
+        self.assertTrue(result["explanation"])
+        # and the five keys the frontend reads are still present
+        for key in ("prediction", "average", "change_percent", "confidence", "explanation"):
+            self.assertIn(key, result)
+
+    def test_check_model_api_preflight_succeeds_and_fails(self) -> None:
+        with temporary_env(TEMPLATE_FILE=COFFEE_TEMPLATE, LLM_API_KEY=None):
+            port, _ = self.start_explainer(use_llm=False)
+            with temporary_env(MODEL_BACKEND="http",
+                               MODEL_API_URL=f"http://127.0.0.1:{port}/predict"):
+                self.assertEqual(check_data.main(["--check-model-api", "--quiet"]), 0)
+
+            with temporary_env(MODEL_BACKEND="http", MODEL_API_URL="http://127.0.0.1:1/predict",
+                               MODEL_API_TIMEOUT="3"):
+                self.assertEqual(check_data.main(["--check-model-api", "--quiet"]), 1)
 
 
 class TestTemplateValidation(unittest.TestCase):

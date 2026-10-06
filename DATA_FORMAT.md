@@ -71,7 +71,8 @@ date,drink,weekday,weather,term_phase,cups
 - **空单元格** → 视为缺失，该行不参与统计（会在报告里告诉你去掉了几行）
 - **字面量 `None` / `NA` / `nan`** → 会被当作**正常字符串**，不是缺失
 
-这是刻意的：pandas 默认会把 `None` 当成缺失值，导致食堂模板里最常见的 `event=None` 从下拉框里凭空消失。
+这是刻意的：pandas 默认会把 `None` 当成缺失值，曾经导致 `templates/food-demand.json` 里最常见的
+`event=None` 从下拉框里凭空消失。
 
 **所以"无特殊事件"不要留空，直接写一个明确取值**（`None`、`NoEvent`、`Normal` 都行）。
 
@@ -257,4 +258,5 @@ python -m backend.server --port 8000
 | [data/samples/coffee_shop_sales.csv](data/samples/coffee_shop_sales.csv) | 示例数据（自定义数据的标准形状） |
 | [data/samples/coffee_shop.template.json](data/samples/coffee_shop.template.json) | 与它配套的模板，可直接当模版抄 |
 | [backend/check_data.py](backend/check_data.py) | 校验 / 生成示例 / 预演 API 的工具 |
-| [template.json](template.json) | 默认模板（食堂需求），字段与输出的写法参考 |
+| [template.json](template.json) | 默认模板（校园用电量预测），字段与输出的写法参考 |
+| [templates/food-demand.json](templates/food-demand.json) | 备用模板：食堂需求（含 `event=None` 的经典案例） |

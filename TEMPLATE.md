@@ -5,23 +5,24 @@
 
 ```
 ┌─────────────────────────────────────────┐
-│            SMART FOOD FORECAST          │  ← app.title / app.subtitle
+│     ENERGY CONSUMPTION FORECAST         │  ← app.title / app.subtitle
 ├─────────────────────────────────────────┤
-│  Menu:     [ Chicken Rice         ▼ ]   │  ← fields[]，下拉项来自 CSV
-│  Day:      [ Friday               ▼ ]   │
-│  Weather:  [ Rain                 ▼ ]   │
-│  Event:    [ None                 ▼ ]   │
+│  Building:   [ Teaching Blk A     ▼ ]   │  ← fields[]，下拉项来自 CSV
+│  Day Type:   [ Weekday           ▼ ]    │
+│  Weather:    [ Sunny             ▼ ]    │
+│  Term Phase: [ Term              ▼ ]    │
+│  Notes:      [ .................   ]    │
 │                                         │
-│           [ Predict Demand ]            │  ← output.submit_label
+│        [ Predict Consumption ]          │  ← output.submit_label
 ├─────────────────────────────────────────┤
-│      Tomorrow's predicted demand        │  ← output.headline
-│                132                      │  ← result.value
-│              portions                   │  ← output.unit
-│      📉 8% lower than normal            │  ← result.delta_text
+│      Predicted daily consumption        │  ← output.headline
+│                816                      │  ← result.value
+│                kWh                      │  ← output.unit
+│      📈 18% higher than normal          │  ← result.delta_text
 │                                         │
 │      🤖 AI Explanation                  │  ← output.explanation_title
-│      Friday demand is historically      │  ← result.explanation
-│      lower, and rain is expected.       │
+│      Teaching Block A averages 783,     │  ← result.explanation
+│      and term weeks run above normal.   │
 └─────────────────────────────────────────┘
 ```
 
@@ -34,10 +35,11 @@ python -m backend.server --port 8000
 # 浏览器打开 http://127.0.0.1:8000/
 ```
 
-换成"校园食堂需求预测"示例（不动任何代码，只换配置文件）：
+默认模板是**校园用电量预测**。换成别的题目（不动任何代码，只换配置文件）：
 
 ```powershell
-copy templates\food-demand.json template.json
+copy templates\food-demand.json template.json      # 食堂需求预测
+copy templates\retail-sales.json template.json     # 零售销售 + 本地 ML
 # 或者不覆盖文件，用环境变量临时指定：
 $env:TEMPLATE_FILE = "templates/food-demand.json"; python -m backend.server
 ```
@@ -88,27 +90,31 @@ python -m backend.server
 
 ## 3. `template.json` 完整参考
 
+> 下面的示例就是**当前默认模板**（校园用电量预测）。换成 `templates/food-demand.json` 时，
+> 字段名变成 `menu / day / weather / event`、target 变成 `portions`，其余写法完全一样。
+
 ```json
 {
-  "id": "food-demand",                                  // 模板标识，会原样发给外接模型
-  "app":     { "brand": "CAMPUS",                       // 标题上方小标签（可空）
-               "title": "SMART FOOD FORECAST",          // 大标题（必填）
-               "subtitle": "AI-powered Campus Food Forecast",  // 副标题（必填）
+  "id": "energy-forecast",                              // 模板标识，会原样发给外接模型
+  "app":     { "brand": "CAMPUS ENERGY",                 // 标题上方小标签（可空）
+               "title": "ENERGY CONSUMPTION FORECAST",   // 大标题（必填）
+               "subtitle": "AI-powered campus load prediction",  // 副标题（必填）
                "footer": "页脚小字（可空）" },
-  "dataset": { "path": "data/menu_demand.csv",           // 相对项目根目录
+  "dataset": { "path": "data/energy_consumption.csv",     // 相对项目根目录
                "date_column": "date",                    // 可选，用于页面的日期范围提示
-               "target": "portions",                     // 预测目标列（必填）
-               "unit": "portions",                       // 单位，显示在数字下方
-               "target_label": "需求份数" },              // 中文名，用于本地插件的解释
+               "target": "kwh",                          // 预测目标列（必填）
+               "unit": "kWh",                            // 单位，显示在数字下方
+               "target_label": "用电量" },               // 中文名，用于本地插件的解释
   "model":   { "plugin": "group-baseline",               // 用哪个插件（必填）
-               "options": { } },                         // 插件自己的参数
+               "options": { "baseline_filter": { "day_type": ["Weekday"] },
+                            "baseline_label": "a normal weekday" } },
   "fields":  [ ... ],                                    // 表单字段，见下
-  "output":  { "headline": "Tomorrow's predicted demand",
+  "output":  { "headline": "Predicted daily consumption",
                "subheadline": "可选说明",
-               "unit": "portions", "decimals": 0,
-               "delta_label": "vs. normal",
+               "unit": "kWh", "decimals": 0,
+               "delta_label": "vs. a normal weekday",
                "explanation_title": "AI Explanation",
-               "submit_label": "Predict Demand",
+               "submit_label": "Predict Consumption",
                "locale": "en" }                          // zh | en，决定内置文案语言
 }
 ```
@@ -149,7 +155,7 @@ python -m backend.server
 
 ## 4. 加一个字段：改 3 处（都不用动代码）
 
-以食堂模板加"温度"为例。先在 CSV 里加一列 `temperature`，然后在 `template.json` 的 `fields` 追加：
+以默认模板加"温度"为例。先在 CSV 里加一列 `temperature`，然后在 `template.json` 的 `fields` 追加：
 
 ```json
 { "name": "temperature", "label": "Temp", "type": "select",
@@ -168,15 +174,17 @@ python -m backend.server
 ```json
 {
   "template": { ...上面 template.json 的完整内容... },
-  "options":  { "menu": ["Chicken Rice", "..."], "day": ["Friday", "..."],
-                "weather": ["Rain", "..."], "event": ["None", "..."],
-                "horizon": [7, 14, 30, 60, 90] },
-  "dataset":  { "rows": 3655, "target": "portions", "target_label": "需求份数",
-                "unit": "portions", "target_mean": 77.26,
+  "options":  { "building": ["Canteen", "Dormitory C", "Laboratory B", "Library",
+                             "Teaching Block A"],
+                "day_type": ["Weekday", "Weekend"],
+                "weather": ["Cloudy", "Cold", "Hot", "Rain", "Sunny"],
+                "term_phase": ["Exam Week", "Term", "Vacation"] },
+  "dataset":  { "rows": 3655, "target": "kwh", "target_label": "用电量",
+                "unit": "kWh", "target_mean": 619.0,
                 "date_min": "2024-01-01", "date_max": "2025-12-31" },
   "model":    { "plugin": "group-baseline",
-                "backtest": { "days": 60, "samples": 300, "mape": 0.0749, "accuracy": 0.9251,
-                              "mae": 5.58, "naive_mae": 32.02, "mae_improvement": 0.8257 } }
+                "backtest": { "days": 60, "samples": 300, "mape": 0.066, "accuracy": 0.934,
+                              "mae": 45.26, "naive_mae": 256.14, "mae_improvement": 0.8233 } }
 }
 ```
 
@@ -194,29 +202,30 @@ KPI 卡片可以直接引用的实测数字。**只有 `group-baseline` 会给�
 请求：
 
 ```json
-{ "fields": { "menu": "Chicken Rice", "day": "Friday", "weather": "Rain", "event": "None" } }
+{ "fields": { "building": "Teaching Block A", "day_type": "Weekday",
+              "weather": "Sunny", "term_phase": "Term" } }
 ```
 
 响应：
 
 ```json
 {
-  "value": 58.2,                       // 数值（已按 output.decimals 取整）
-  "formatted": "58",                   // 带千分位的字符串，直接显示
-  "unit": "portions",
-  "baseline": 92.0,                    // "正常水平"，用于对比
-  "delta": -0.3683,                    // 相对幅度，-0.3683 = 低 37%
-  "delta_text": "37% lower than normal",  // 已本地化的文案
-  "delta_label": "vs. normal",
-  "direction": "down",                 // up | down | flat，前端用来上色/箭头
-  "headline": "Tomorrow's predicted demand",
-  "subheadline": "基于历史条件的需求预测",
-  "explanation": "Rain averages 72 (22% below); ... Against a typical weekday of 92, the combined forecast is 58 portions.",
+  "value": 816.0,                      // 数值（已按 output.decimals 取整）
+  "formatted": "816",                  // 带千分位的字符串，直接显示
+  "unit": "kWh",
+  "baseline": 693.0,                   // "正常水平"，用于对比
+  "delta": 0.1775,                     // 相对幅度，+0.1775 = 高 18%
+  "delta_text": "18% higher than normal",  // 已本地化的文案
+  "delta_label": "vs. a normal weekday",
+  "direction": "up",                   // up | down | flat，前端用来上色/箭头
+  "headline": "Predicted daily consumption",
+  "subheadline": "基于历史条件的用电量预测",
+  "explanation": "Teaching Block A averages 783 (13% above); Term averages 780 (12% above); ... combined forecast is 816 kWh.",
   "explanation_title": "AI Explanation",
   "explanation_source": "local-baseline",  // local-baseline | ml-forecast | external-api
   "model": "group-baseline",           // 实际产出这个结果的模型
   "fields": { ...回显提交的字段... },
-  "evidence": [ { "field": "day", "value": "Friday", "mean": 81.99, "effect": -0.1063, "rows": 520 } ],
+  "evidence": [ { "field": "building", "value": "Teaching Block A", "mean": 783.0, "effect": 0.13, "rows": 731 } ],
   "meta": { "plugin": "group-baseline", "elapsed_ms": 12.4, ... }
 }
 ```
@@ -229,22 +238,23 @@ KPI 卡片可以直接引用的实测数字。**只有 `group-baseline` 会给�
 请求（等价于 `Object.fromEntries(new FormData(form))`）：
 
 ```json
-{ "menu": "Chicken Rice", "day": "Friday", "weather": "Rain", "event": "None", "notes": "" }
+{ "building": "Teaching Block A", "day_type": "Weekday", "weather": "Sunny",
+  "term_phase": "Term", "notes": "" }
 ```
 
 响应：
 
 ```json
 {
-  "prediction": 95.0,        // = value
-  "average": 92.0,           // = baseline，"正常水平"
-  "change_percent": 3.7,     // = delta × 100
+  "prediction": 816.0,       // = value
+  "average": 693.0,          // = baseline，"正常水平"
+  "change_percent": 17.7,    // = delta × 100
   "confidence": 93,          // 0-100，来自回测 MAPE（见 8.1）；无法给出时为 null
-  "explanation": "Chicken Rice averages 117 (28% above); ...",
+  "explanation": "Teaching Block A averages 783 (13% above); ...",
 
   // 下面是 /api/predict 的完整字段，前端暂时没全用，但随时可用
-  "value": 95.0, "baseline": 92.0, "delta": 0.0369, "delta_text": "4% higher than normal",
-  "direction": "up", "unit": "portions", "model": "group-baseline",
+  "value": 816.0, "baseline": 693.0, "delta": 0.177, "delta_text": "18% higher than normal",
+  "direction": "up", "unit": "kWh", "model": "group-baseline",
   "explanation_source": "local-baseline", "fields": { ... }, "evidence": [ ... ],
   "meta": { "backtest": { ... }, "precision": 0.98, "elapsed_ms": 78.2 }
 }
@@ -292,10 +302,11 @@ Content-Type: application/json
 Authorization: Bearer $MODEL_API_KEY        # 仅当设置了 key
 
 {
-  "template_id": "food-demand",
-  "fields": { "menu": "Chicken Rice", "day": "Friday", "weather": "Rain", "event": "None" },
-  "unit": "portions",
-  "context": { "target": "portions", "target_label": "需求份数",
+  "template_id": "energy-forecast",
+  "fields": { "building": "Teaching Block A", "day_type": "Weekday",
+              "weather": "Sunny", "term_phase": "Term" },
+  "unit": "kWh",
+  "context": { "target": "kwh", "target_label": "用电量",
                "requested_at": "2026-03-01T08:00:00+00:00" }
 }
 ```
@@ -306,13 +317,13 @@ Authorization: Bearer $MODEL_API_KEY        # 仅当设置了 key
 
 ```json
 {
-  "value": 132,                                  // 必填，数字。也接受 prediction/predicted/demand/result
-  "unit": "portions",                            // 可选，缺省用模板里的 unit
-  "baseline": 143,                               // 可选，"正常水平"，有了就能显示"低 x%"
+  "value": 640,                                  // 必填，数字。也接受 prediction/predicted/demand/result
+  "unit": "kWh",                                 // 可选，缺省用模板里的 unit
+  "baseline": 693,                               // 可选，"正常水平"，有了就能显示"低 x%"
   "delta": -0.077,                               // 可选，不给则用 value/baseline 计算
-  "explanation": "Friday demand is historically lower, and rain is expected tomorrow.",
-  "model": "canteen-xgb-v3",                     // 会显示在结果下方
-  "evidence": [ { "label": "Friday", "effect": -0.11 } ],
+  "explanation": "Cold weather and a term week keep the lab load above a normal weekday.",
+  "model": "load-xgb-v3",                        // 会显示在结果下方
+  "evidence": [ { "label": "Laboratory B", "effect": 0.31 } ],
   "meta": { "version": "2026-03-01" }            // 原样透传给前端
 }
 ```
@@ -347,6 +358,49 @@ def predict(body: dict):
 | 连不上 / 超时 / 非 2xx / 返回非 JSON / 没有数字 value | 静默回退到本地插件，响应里 `meta.fallback=true` + `fallback_reason` | 返回 502，`detail` 说明原因 |
 
 页面在这种回退情况下会在结果下方显示红色提示"外部模型不可用，已本地回退"。
+
+---
+
+### 6.7 路线 1：本地模型出数 + 大模型写解释（推荐，含参考实现）
+
+数字由**可回测的本地模型**给（经得起"为什么是这个数"的追问），文字由**大模型**写（读起来自然）。
+参考实现已经写好：[examples/llm_explainer_service.py](examples/llm_explainer_service.py)，只用标准库 + requests，不用装任何东西。
+
+```powershell
+# 终端 1：解释服务（内部调大模型）
+$env:LLM_API_KEY  = "sk-..."
+$env:LLM_BASE_URL = "https://api.deepseek.com/v1"
+$env:LLM_MODEL    = "deepseek-chat"
+python examples/llm_explainer_service.py --port 9000
+
+# 终端 2：让本项目走它
+$env:MODEL_BACKEND = "http"
+$env:MODEL_API_URL = "http://127.0.0.1:9000/predict"
+python -m backend.server
+```
+
+它做的三件事：
+
+| 步骤 | 谁来做 | 产出 |
+|---|---|---|
+| ① 算数 | 本仓库的本地统计模型 | `value` / `baseline` / `confidence`（可回测） |
+| ② 写话 | 任意 OpenAI 兼容大模型 | 收到"条件 + 数字 + 因子"，回一句 40-70 字建议 |
+| ③ 返回 | 该服务 | `{value, baseline, confidence, explanation, model}` |
+
+几个关键行为：
+
+- 没有 key / 超时 / 返回异常 → **自动退回模型自己那句解释**，演示不会中断（`LLM_DISABLE=1` 可强制关闭大模型）。
+- 服务内部**固定使用本地统计插件**，不理会 `MODEL_BACKEND`，否则会自己调自己形成死循环。
+- 想换成你们自己的模型：只改这个文件里 `plugin.predict()` 那一步，其余照旧。
+- 前端会在右下角提示里显示这句话是谁写的（`explanation by <模型名>`）；完整信息在响应 `meta.external_explanation_source`（`llm` / `local-model`）。
+
+现场预检（真的发一次请求过去）：
+
+```powershell
+python -m backend.check_data --check-model-api
+```
+
+用 `--check-api` 时，如果当前插件是 `http`，会自动带上这项检查。
 
 ---
 
@@ -404,9 +458,9 @@ prediction = clamp(baseline × Π factor_i, 0.2×baseline, 5×baseline)
 - 每个 factor 都会进 `evidence`，**解释文字就是这些 factor 拼出来的**，不是事后编的。
 - **因子必须在与 baseline 相同的总体里统计**。如果 baseline 是"工作日均值"而因子在全体数据上算，
   这个总体差异会被每个因子各算一次并在乘积里放大——这个 bug 实测会带来约 39% 的 MAPE，
-  修好后降到 7.5%。
-- `model.options.baseline_filter`：限定"正常水平"的口径。食堂模板限定为"周一至周五"，
-  于是周五会显示"比正常低"；查询周六时该字段在口径内没有样本，会自动回退到全量周六——这正是想要的对比。
+  修好后降到 6.6%。
+- `model.options.baseline_filter`：限定"正常水平"的口径。默认模板限定为"工作日"，
+  于是周末会显示"比正常低"；查询周末时该字段在口径内没有样本，会自动回退到全量周末——这正是想要的对比。
 - `model.options.effect_min_rows`：样本太少就不采信该因子（默认 5）。
 - **已知局限**：假设各字段效应相互独立，强相关的字段（例如"周六"和"假日"）会重复计算，因此加了上下限截断（触发时解释末尾会标注）。要更准就换成你自己的模型或 `sales-forecast` 那种训练模型。
 
@@ -415,13 +469,14 @@ prediction = clamp(baseline × Π factor_i, 0.2×baseline, 5×baseline)
 
 | 指标 | 含义 | 默认模板实测 |
 |---|---|---|
-| `mape` / `accuracy` | 回测 MAPE / 准确率，`confidence = 1 - mape` | 7.5% / 92.5% → 置信度 93% |
-| `mae` | 平均绝对误差（份） | 5.58 |
-| `naive_mae` / `naive_mape` | 参照系："每天都按典型工作日备餐" | 32.02 / 68.7% |
-| `mae_improvement` | 相对参照系减少的误差 | **82.6%** |
+| `mape` / `accuracy` | 回测 MAPE / 准确率，`confidence = 1 - mape` | 6.6% / 93.4% → 置信度 93% |
+| `mae` | 平均绝对误差（kWh） | 45.26 |
+| `naive_mae` / `naive_mape` | 参照系："每天都按典型工作日估算" | 256.14 / 46.8% |
+| `mae_improvement` | 相对参照系减少的误差 | MAE **82.3%** / MAPE **85.9%** |
 | `meta.precision` | 本次预测的精度（各因子标准误按乘积传播） | 约 0.98 |
 
-所以界面上的 confidence、准确率、"减少备餐误差 83%"都是**可复算的实测数字**，不是编的。
+所以界面上的 confidence、准确率，以及 `config.js` 里那几张 KPI 卡（86% Less Error、45 kWh 等）
+都是**可复算的实测数字**，不是编的。
 
 ### 8.2 `sales-forecast`（本地 ML，销售示例）
 
@@ -447,7 +502,7 @@ prediction = clamp(baseline × Π factor_i, 0.2×baseline, 5×baseline)
 3. `fields[]` 里每个 `source=dataset` 字段的 `column` 写 CSV 的真实列名。
 4. 重启服务。下拉项 = 该列的去重值，自动按字母/大小排序。
 
-> 注意：CSV 里的字面量 `None` / `NA` 会被当作正常字符串（不是缺失值），这是刻意的——否则食堂模板里最常见的 `event=None` 会凭空消失。
+> 注意：CSV 里的字面量 `None` / `NA` 会被当作正常字符串（不是缺失值），这是刻意的——否则 `templates/food-demand.json` 里最常见的 `event=None` 会凭空消失。
 
 ---
 
@@ -522,10 +577,11 @@ frontend/
 ## 12. 测试
 
 ```bash
-python -m unittest discover -s tests -v      # 46 个用例，仅用标准库
+python -m unittest discover -s tests -v      # 67 个用例，仅用标准库
 pytest -q                                    # 装了 pytest 也可以
 ```
 
 覆盖：模板加载与全部报错分支、`/api/config` / `/api/options` / `POST /api/predict`、
 外接模型 API 成功调用（含请求契约断言）与两种失败模式、字段校验、方法/错误码、
-两个模板各自的预测、以及原有销售分析接口与 ML 预测。
+三个模板各自的预测、自定义数据校验与 `DATASET_FILE` 覆盖、LLM 解释服务（路线 1），
+以及原有销售分析接口与 ML 预测。

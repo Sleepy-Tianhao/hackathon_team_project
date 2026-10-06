@@ -13,69 +13,75 @@ SDC FRONTEND CONFIGURATION
 */
 
 export const CONFIG = {
-  projectName: "CAMPUS FOOD FORECAST",
-  logo: "C",
+  projectName: "ENERGY CONSUMPTION FORECAST",
+  logo: "E",
 
   category: "AI FOR SUSTAINABILITY",
 
-  title: "Predict demand.<br>Cut food waste.",
+  title: "Predict demand.<br>Cut energy waste.",
 
   description:
-    "Pick a menu, a day and the weather; the model predicts how many portions the canteen should prepare. Same shell, any problem statement - swap this file and template.json.",
+    "Pick a building, a day type, the weather and the term phase; the model predicts how much electricity that building will draw. Same shell, any problem statement - swap this file and template.json.",
 
   hero: {
     primaryButton: "Try It Now →",
     secondaryButton: "About Project",
-    chartTitle: "Demand by weekday"
+    chartTitle: "Load by day type"
   },
 
   analysis: {
     title: "Core Analysis",
     subtitle: "Input → AI / Algorithm → Result",
-    button: "Predict Demand",
-    resultUnit: "portions"
+    button: "Predict Consumption",
+    resultUnit: "kWh"
   },
 
   // 离线兜底字段。后端在线时会被 template.json 的 fields 覆盖。
   inputs: [
     {
-      id: "menu",
-      label: "Menu",
+      id: "building",
+      label: "Building",
       type: "select",
-      options: ["Chicken Rice", "Curry Rice", "Fried Rice", "Noodle Soup", "Vegetarian Bowl"]
+      options: ["Canteen", "Dormitory C", "Laboratory B", "Library", "Teaching Block A"]
     },
     {
-      id: "day",
-      label: "Day",
+      id: "day_type",
+      label: "Day Type",
       type: "select",
-      options: ["Friday", "Monday", "Saturday", "Sunday", "Thursday", "Tuesday", "Wednesday"]
+      options: ["Weekday", "Weekend"]
     },
     {
       id: "weather",
       label: "Weather",
       type: "select",
-      options: ["Cloudy", "Hot", "Rain", "Sunny"]
+      options: ["Cloudy", "Cold", "Hot", "Rain", "Sunny"]
+    },
+    {
+      id: "term_phase",
+      label: "Term Phase",
+      type: "select",
+      options: ["Exam Week", "Term", "Vacation"]
     },
     {
       id: "notes",
       label: "Additional Information",
       type: "text",
-      placeholder: "Enter extra context..."
+      placeholder: "Extra context for your model..."
     }
   ],
 
   // 实测值：后端 60 天留一法回测，可从 GET /api/config 的 model.backtest 复核
   metrics: [
     { value: "93%", label: "Backtest Accuracy" },
-    { value: "7.5%", label: "Backtest MAPE" },
+    { value: "6.6%", label: "Backtest MAPE" },
     { value: "60 days", label: "Backtest Window" }
   ],
 
-  // 同样是回测实测值：naive 基线 = "每天都按典型工作日备餐"
+  // 同样是回测实测值：naive 基线 = "每天都按典型工作日用电量估算"
   impact: [
-    { icon: "🌱", value: "5.6", label: "Portions Avg. Prep Error" },
-    { icon: "🌍", value: "83%", label: "Less Over/Under Prep" },
-    { icon: "⚡", value: "3,655", label: "Meals Analysed" },
-    { icon: "📈", value: "160", label: "Conditions Tested" }
+    { icon: "🌱", value: "45 kWh", label: "Avg. Daily Error" },
+    { icon: "🌍", value: "86%", label: "Less Error vs Baseline" },
+    { icon: "⚡", value: "2.26 GWh", label: "Load Analysed" },
+    { icon: "📈", value: "5", label: "Buildings Modelled" }
   ]
 };
