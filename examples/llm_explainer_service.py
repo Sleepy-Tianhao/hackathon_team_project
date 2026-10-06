@@ -207,10 +207,29 @@ class ExplainerHandler(BaseHTTPRequestHandler):
     protocol_version = "HTTP/1.1"
     context: Explainer = None  # type: ignore[assignment]
 
+    # Paths that exist only as POST. Opening one in a browser sends GET, and a
+    # bare "unknown endpoint" makes a healthy service look broken - so answer
+    # 405 with the exact shape to send instead.
+    POST_ONLY = ("/predict",)
+
     def do_GET(self) -> None:  # noqa: N802
         path = urllib.parse.urlparse(self.path).path.rstrip("/") or "/"
         if path in ("/", "/health"):
             self._json(200, self.context.health())
+        elif path in self.POST_ONLY:
+            template_fields = self.context.template.get("fields") or []
+            self._json(405, {
+                "detail": f"{path} only accepts POST (a browser address bar sends GET)",
+                "hint": 'send {"fields": {...}}, or open GET /health in the browser',
+                "example": {
+                    "method": "POST",
+                    "url": f"http://127.0.0.1:{self.server.server_address[1]}{path}",
+                    "body": {"fields": {
+                        field["name"]: (field.get("default") if field.get("default") is not None else "")
+                        for field in template_fields
+                    }},
+                },
+            })
         else:
             self._json(404, {"detail": f"unknown endpoint {path}"})
 
