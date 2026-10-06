@@ -537,13 +537,18 @@ def run_prediction(payload: Any, db: Session | None = None) -> dict:
         raise ServiceError(str(exc), 500) from exc
 
     raw = payload.get("fields") if isinstance(payload, dict) and "fields" in payload else payload
-    options = template_config.field_options(template)
-    values = validate_fields(template, raw if raw is not None else {}, options)
 
+    # Both reads can fail on a misconfigured template (missing CSV, missing
+    # column). Map them to a precise 500 instead of letting TemplateError escape
+    # as a bare "internal server error" - /api/config already did this, /analyze
+    # did not.
     try:
+        options = template_config.field_options(template)
         frame = template_config.dataset_frame(template)
     except template_config.TemplateError as exc:
         raise ServiceError(str(exc), 500) from exc
+
+    values = validate_fields(template, raw if raw is not None else {}, options)
 
     started = time.perf_counter()
     try:
