@@ -953,6 +953,19 @@ class TestTemplateValidation(unittest.TestCase):
                 template_config.get_config()
         self.assertIn("dataset not found", str(ctx.exception))
 
+    def test_missing_dataset_is_reported_on_analyze_too(self) -> None:
+        """run_prediction must map TemplateError to a precise 500, never let it
+        escape as a bare internal error (this was a real gap: field_options()
+        raised before the dataset_frame() guard was reached)."""
+        payload = self.base_template()
+        payload["dataset"] = {"path": "data/nope.csv", "target": "portions"}
+        path = self.write_template("bad-dataset-analyze.json", payload)
+        with temporary_env(TEMPLATE_FILE=path):
+            with self.assertRaises(service.ServiceError) as ctx:
+                service.run_prediction({"fields": {"menu": "Chicken Rice"}})
+        self.assertEqual(ctx.exception.status, 500)
+        self.assertIn("dataset not found", ctx.exception.detail)
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
