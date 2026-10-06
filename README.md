@@ -5,19 +5,19 @@
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│  CAMPUS FOOD FORECAST                    Dashboard  │
+│  ENERGY CONSUMPTION FORECAST             Dashboard  │
 ├──────────────────────────────────────────────────────┤
 │  AI FOR SUSTAINABILITY                               │
-│  Predict demand. Cut food waste.                     │
+│  Predict demand. Cut energy waste.                   │
 │                                                      │
-│  ┌─ Core Analysis ─────────┐  ┌─ AI RESULT ───────┐  │
-│  │ Menu:    [Chicken Rice] │  │        95          │  │
-│  │ Day:     [Friday     ]  │  │      portions      │  │
-│  │ Weather: [Rain       ]  │  │ Average 92         │  │
-│  │ Notes:   [...........]  │  │ Change +3.7%       │  │
-│  │      [ Predict Demand ] │  │ Confidence 93%     │  │
-│  └─────────────────────────┘  │ 🤖 AI Insight ...  │  │
-│                               └────────────────────┘  │
+│  ┌─ Core Analysis ──────────────┐  ┌─ AI RESULT ──┐  │
+│  │ Building:   [Teaching Blk A] │  │      816     │  │
+│  │ Day Type:   [Weekday      ]  │  │      kWh     │  │
+│  │ Weather:    [Sunny        ]  │  │ Average 693  │  │
+│  │ Term Phase: [Term         ]  │  │ Change +17.7%│  │
+│  │ Notes:      [.............]  │  │ Confidence 93%│ │
+│  │     [ Predict Consumption ]  │  │ 🤖 AI Insight│  │
+│  └──────────────────────────────┘  └──────────────┘  │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -44,6 +44,18 @@ copy templates\retail-sales.json template.json     # 零售销售 + ExtraTrees
 接你们自己的模型：
 
 ```powershell
+$env:MODEL_BACKEND = "http"
+$env:MODEL_API_URL = "http://127.0.0.1:9000/predict"
+python -m backend.server
+```
+
+接第三方大模型写解释（路线 1，参考服务已写好，本地模型出数 + 大模型写话）：
+
+```powershell
+# 终端 1
+$env:LLM_API_KEY = "sk-..."      # 任意 OpenAI 兼容网关
+python examples/llm_explainer_service.py --port 9000
+# 终端 2
 $env:MODEL_BACKEND = "http"
 $env:MODEL_API_URL = "http://127.0.0.1:9000/predict"
 python -m backend.server
@@ -85,8 +97,9 @@ python -m backend.server
 
 ```text
 Hackathon/
-├── template.json              ★ 后端唯一配置源：字段 / 下拉项 / 模型插件 / 输出文案
+├── template.json              ★ 后端唯一配置源（默认：校园用电量预测）
 ├── templates/
+│   ├── food-demand.json       备用模板：食堂需求预测
 │   └── retail-sales.json      备用模板：零售销售 + 本地 ML 插件
 ├── frontend/                  组件式前端（ES Module，无框架、无构建）
 │   ├── index.html             只有 #app / #toast 容器
@@ -105,9 +118,12 @@ Hackathon/
 │   ├── predictor.py           本地 ML 引擎（ExtraTrees + 递归多步预测）
 │   ├── ai.py                  规则洞察 + 异常检测 + 可选 LLM 叙事
 │   ├── models.py / database.py  ORM + 引擎 + CSV 自动播种
-├── data/                      menu_demand.csv / sales.csv + 两个可复现生成器
+├── data/                      energy_consumption.csv / menu_demand.csv / sales.csv
+│                              + 三个可复现生成器
 │   └── samples/               自定义数据示例：coffee_shop_sales.csv + 配套模板
-├── tests/test_api.py          61 个端到端测试（仅需标准库）
+├── examples/
+│   └── llm_explainer_service.py  路线 1 参考服务：本地模型出数 + 大模型写解释
+├── tests/test_api.py          66 个端到端测试（仅需标准库）
 ├── TEMPLATE.md                ★ 模板 / 接口 / 接入模型 完整文档
 ├── DATA_FORMAT.md             ★ 自定义数据：格式要求 + 校验工具用法
 └── requirement.txt
@@ -123,22 +139,22 @@ Hackathon/
 |---|---|---|
 | `group-baseline` | 本地统计 | 通用条件均值因子模型，任何 CSV + 任何字段都能用。**解释文字就是它乘过的那些因子** |
 | `sales-forecast` | 本地 ML | 把 `store/category/horizon` 映射到 ExtraTrees 递归预测（验证集 MAPE 13.05%，优于季节朴素基线 33.5%） |
-| `http` | 外接 | **你们的模型 API**。只有 `value` 必填；失败可自动回退本地插件 |
+| `http` | 外接 | **你们的模型 API**（也可以是包了大模型的解释服务）。只有 `value` 必填；失败自动回退本地插件 |
 
 外接契约（详见 [TEMPLATE.md 第 6 节](TEMPLATE.md#6-接入你自己的模型-api重点)）：
 
 ```json
 // → 发给你们的
-{ "template_id": "food-demand",
-  "fields": { "menu": "Chicken Rice", "day": "Friday", "weather": "Rain",
-              "event": "None", "notes": "" },
-  "unit": "portions",
-  "context": { "target": "portions", "requested_at": "2026-03-01T08:00:00+00:00" } }
+{ "template_id": "energy-forecast",
+  "fields": { "building": "Teaching Block A", "day_type": "Weekday",
+              "weather": "Sunny", "term_phase": "Term", "notes": "" },
+  "unit": "kWh",
+  "context": { "target": "kwh", "requested_at": "2026-03-01T08:00:00+00:00" } }
 
 // ← 你们返回的（只有 value 必填）
-{ "value": 132, "unit": "portions", "baseline": 143, "confidence": 87,
-  "explanation": "Friday demand is historically lower, and rain is expected.",
-  "model": "canteen-xgb-v3" }
+{ "value": 640, "unit": "kWh", "baseline": 693, "confidence": 91,
+  "explanation": "Cold weather and a term week push the lab load above normal.",
+  "model": "load-xgb-v3" }
 ```
 
 ---
@@ -147,10 +163,10 @@ Hackathon/
 
 | 指标 | 数值 |
 |---|---|
-| 回测 MAPE | **7.5%**（准确率 92.5% → 界面 confidence 93%） |
-| 平均绝对误差 | 5.58 份 |
-| 参照系（每天都按典型工作日备餐） | 32.02 份 / MAPE 68.7% |
-| **相对参照系减少的误差** | **82.6%** |
+| 回测 MAPE | **6.6%**（准确率 93.4% → 界面 confidence 93%） |
+| 平均绝对误差 | 45.26 kWh |
+| 参照系（每天都按"典型工作日"估算） | 256.14 kWh / MAPE 46.8% |
+| **相对参照系减少的误差** | MAE **82.3%** / MAPE **85.9%** |
 
 这些数字由 `backtest_group_baseline()` 现算并随响应返回（`meta.backtest`），
 也可以从 `GET /api/config` 的 `model.backtest` 取到，**不是写死的宣传数字**。
@@ -165,7 +181,7 @@ Hackathon/
 |---|---|
 | `js/services/api.js` | 新增真实 `analyze()` / `fetchConfig()`（含超时、候选地址、错误信息），保留 `analyzeMock()` 作离线回退 |
 | `js/app.js` | 启动时用 `/api/config` 覆盖 `CONFIG.inputs`；改用 `analyze()`；结果渲染对 `null` 做兜底 |
-| `js/config.js` | 示例值换成食堂/减浪费场景；`inputs` 变为离线兜底；Metrics/Impact 换成回测实测值 |
+| `js/config.js` | 文案对齐到能耗场景（**你们自己改的 projectName / title 原样保留**）；`inputs` 变为离线兜底；Metrics/Impact 换成能耗回测实测值 |
 | `index.html · css/style.css · components/*` | **未改动** |
 
 字段的分工：外壳文案在 `config.js`，分析字段与输出单位在 `template.json`。
@@ -176,17 +192,18 @@ Hackathon/
 
 | 文件 | 规模 | 用途 | 重新生成 |
 |---|---|---|---|
-| `data/menu_demand.csv` | 3,655 行 / 730 天 / 5 菜单 | 默认模板 | `python data/generate_menu_demand.py` |
-| `data/sales.csv` | 14,620 行 / 731 天 / 4 门店 × 5 品类 | 备用模板 + ML 插件 | `python data/generate_sales.py` |
+| `data/energy_consumption.csv` | 3,655 行 / 731 天 / 5 栋楼 | **默认模板** | `python data/generate_energy.py` |
+| `data/menu_demand.csv` | 3,655 行 / 730 天 / 5 菜单 | `templates/food-demand.json` | `python data/generate_menu_demand.py` |
+| `data/sales.csv` | 14,620 行 / 731 天 / 4 门店 × 5 品类 | `templates/retail-sales.json` + ML 插件 | `python data/generate_sales.py` |
 
-两个生成器都用固定随机种子，完全可复现，并内置了模型该学的真实信号（周末效应、天气、假日等）。
+三个生成器都用固定随机种子，完全可复现，并内置了模型该学的真实信号（工作日/周末、天气、假期、促销等）。
 
 ---
 
 ## 测试
 
 ```bash
-python -m unittest discover -s tests -v      # 61 个用例，仅用标准库
+python -m unittest discover -s tests -v      # 66 个用例，仅用标准库
 pytest -q                                    # 装了 pytest 也可以
 ```
 

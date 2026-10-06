@@ -1,0 +1,97 @@
+{
+  "_readme": [
+    "默认模板：校园食堂需求预测 / 减少食物浪费（对应 frontend 的 AI FOR SUSTAINABILITY 主题）。",
+    "这是唯一需要改的后端配置文件：字段、下拉项、模型插件、输出文案全在这里。",
+    "用法：换成 templates/retail-sales.json 可切到零售销售场景；或用 TEMPLATE_FILE 环境变量指定。",
+    "详细字段说明见 TEMPLATE.md。"
+  ],
+
+  "id": "food-demand",
+  "app": {
+    "brand": "CAMPUS",
+    "title": "SMART FOOD FORECAST",
+    "subtitle": "AI-powered Campus Food Forecast",
+    "footer": "FastAPI · 模板驱动 · 外接模型 API 见 TEMPLATE.md"
+  },
+
+  "dataset": {
+    "path": "data/menu_demand.csv",
+    "date_column": "date",
+    "target": "portions",
+    "unit": "portions",
+    "target_label": "需求份数"
+  },
+
+  "model": {
+    "plugin": "group-baseline",
+    "options": {
+      "effect_min_rows": 5,
+      "baseline_filter": {
+        "weekday": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      },
+      "baseline_label": "a typical weekday",
+      "fallback_plugin": "group-baseline"
+    }
+  },
+
+  "fields": [
+    {
+      "name": "menu",
+      "label": "Menu",
+      "type": "select",
+      "source": "dataset",
+      "column": "menu",
+      "required": true,
+      "default": "Chicken Rice"
+    },
+    {
+      "name": "day",
+      "label": "Day",
+      "type": "select",
+      "source": "dataset",
+      "column": "weekday",
+      "required": true,
+      "default": "Friday",
+      "help": "预测哪一天"
+    },
+    {
+      "name": "weather",
+      "label": "Weather",
+      "type": "select",
+      "source": "dataset",
+      "column": "weather",
+      "required": true,
+      "default": "Rain"
+    },
+    {
+      "name": "event",
+      "label": "Event",
+      "type": "select",
+      "source": "dataset",
+      "column": "event",
+      "required": true,
+      "default": "None",
+      "help": "无特殊事件时选 None"
+    },
+    {
+      "name": "notes",
+      "label": "Additional Information",
+      "type": "text",
+      "source": "input",
+      "required": false,
+      "placeholder": "Enter extra context...",
+      "help": "自由文本：会被原样发给外接模型 api，本地统计插件忽略它"
+    }
+  ],
+
+  "output": {
+    "locale": "en",
+    "headline": "Tomorrow's predicted demand",
+    "subheadline": "基于历史条件的需求预测",
+    "unit": "portions",
+    "decimals": 0,
+    "delta_label": "vs. normal",
+    "explanation_title": "AI Explanation",
+    "submit_label": "Predict Demand"
+  }
+}

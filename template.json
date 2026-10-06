@@ -1,25 +1,25 @@
 {
   "_readme": [
-    "默认模板：校园食堂需求预测 / 减少食物浪费（对应 frontend 的 AI FOR SUSTAINABILITY 主题）。",
-    "这是唯一需要改的后端配置文件：字段、下拉项、模型插件、输出文案全在这里。",
-    "用法：换成 templates/retail-sales.json 可切到零售销售场景；或用 TEMPLATE_FILE 环境变量指定。",
-    "详细字段说明见 TEMPLATE.md。"
+    "默认模板：校园用电量预测（对应 frontend/js/config.js 的 ENERGY CONSUMPTION FORECAST）。",
+    "这是后端唯一配置源：字段、下拉项、模型插件、输出文案全在这里。",
+    "其他模板：templates/food-demand.json（食堂需求）、templates/retail-sales.json（零售+ML）。",
+    "字段说明见 TEMPLATE.md，数据格式见 DATA_FORMAT.md。"
   ],
 
-  "id": "food-demand",
+  "id": "energy-forecast",
   "app": {
-    "brand": "CAMPUS",
-    "title": "SMART FOOD FORECAST",
-    "subtitle": "AI-powered Campus Food Forecast",
-    "footer": "FastAPI · 模板驱动 · 外接模型 API 见 TEMPLATE.md"
+    "brand": "CAMPUS ENERGY",
+    "title": "ENERGY CONSUMPTION FORECAST",
+    "subtitle": "AI-powered campus load prediction",
+    "footer": "group-baseline · 模板驱动 · DATA_FORMAT.md"
   },
 
   "dataset": {
-    "path": "data/menu_demand.csv",
+    "path": "data/energy_consumption.csv",
     "date_column": "date",
-    "target": "portions",
-    "unit": "portions",
-    "target_label": "需求份数"
+    "target": "kwh",
+    "unit": "kWh",
+    "target_label": "用电量"
   },
 
   "model": {
@@ -27,32 +27,33 @@
     "options": {
       "effect_min_rows": 5,
       "baseline_filter": {
-        "weekday": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        "day_type": ["Weekday"]
       },
-      "baseline_label": "a typical weekday",
+      "baseline_label": "a normal weekday",
       "fallback_plugin": "group-baseline"
     }
   },
 
   "fields": [
     {
-      "name": "menu",
-      "label": "Menu",
+      "name": "building",
+      "label": "Building",
       "type": "select",
       "source": "dataset",
-      "column": "menu",
+      "column": "building",
       "required": true,
-      "default": "Chicken Rice"
+      "default": "Teaching Block A",
+      "help": "哪栋楼"
     },
     {
-      "name": "day",
-      "label": "Day",
+      "name": "day_type",
+      "label": "Day Type",
       "type": "select",
       "source": "dataset",
-      "column": "weekday",
+      "column": "day_type",
       "required": true,
-      "default": "Friday",
-      "help": "预测哪一天"
+      "default": "Weekday",
+      "help": "工作日 / 周末"
     },
     {
       "name": "weather",
@@ -61,17 +62,18 @@
       "source": "dataset",
       "column": "weather",
       "required": true,
-      "default": "Rain"
+      "default": "Sunny",
+      "help": "高温和低温都会推高空调/采暖负荷"
     },
     {
-      "name": "event",
-      "label": "Event",
+      "name": "term_phase",
+      "label": "Term Phase",
       "type": "select",
       "source": "dataset",
-      "column": "event",
+      "column": "term_phase",
       "required": true,
-      "default": "None",
-      "help": "无特殊事件时选 None"
+      "default": "Term",
+      "help": "考试周上升、假期骤降"
     },
     {
       "name": "notes",
@@ -79,19 +81,19 @@
       "type": "text",
       "source": "input",
       "required": false,
-      "placeholder": "Enter extra context...",
-      "help": "自由文本：会被原样发给外接模型 api，本地统计插件忽略它"
+      "placeholder": "Extra context for your model...",
+      "help": "自由文本：会被原样发给外接模型，本地统计插件忽略它"
     }
   ],
 
   "output": {
     "locale": "en",
-    "headline": "Tomorrow's predicted demand",
-    "subheadline": "基于历史条件的需求预测",
-    "unit": "portions",
+    "headline": "Predicted daily consumption",
+    "subheadline": "基于历史条件的用电量预测",
+    "unit": "kWh",
     "decimals": 0,
-    "delta_label": "vs. normal",
+    "delta_label": "vs. a normal weekday",
     "explanation_title": "AI Explanation",
-    "submit_label": "Predict Demand"
+    "submit_label": "Predict Consumption"
   }
 }
