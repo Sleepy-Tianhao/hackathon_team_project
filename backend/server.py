@@ -217,7 +217,9 @@ class ApiHandler(BaseHTTPRequestHandler):
         self.send_response(204)
         for key, value in JSON_HEADERS.items():
             self.send_header(key, value)
-        self.send_header("Access-Control-Allow-Methods", "GET, OPTIONS")
+        # POST must be listed: /analyze and /api/predict are POST-only, and a
+        # browser preflight that does not see POST blocks the real request.
+        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.send_header("Content-Length", "0")
         self.end_headers()
@@ -312,6 +314,15 @@ class ApiHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def handle_one_request(self) -> None:  # noqa: N802
+        # A client that closes the connection (tab closed, curl killed) makes the
+        # read or the response write fail. That is normal traffic, not a bug, so
+        # keep it off the console instead of printing a traceback per disconnect.
+        try:
+            super().handle_one_request()
+        except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+            self.close_connection = True
+
     def _json(self, status: int, payload: dict) -> None:
         body = json.dumps(payload, ensure_ascii=False, default=_json_default).encode("utf-8")
         self.send_response(status)
@@ -320,7 +331,10 @@ class ApiHandler(BaseHTTPRequestHandler):
         for key, value in JSON_HEADERS.items():
             self.send_header(key, value)
         self.end_headers()
-        self.wfile.write(body)
+        try:
+            self.wfile.write(body)
+        except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+            self.close_connection = True
 
     def log_message(self, fmt: str, *args) -> None:  # keep the console readable
         if os.getenv("API_VERBOSE") == "1":
