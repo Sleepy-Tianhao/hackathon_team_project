@@ -124,6 +124,7 @@ INSERT INTO "rooms" VALUES (6, 'C-301', '图书馆C', 200, '自习室');
 INSERT INTO "rooms" VALUES (7, 'D-101', '行政楼D', 20, '办公室');
 INSERT INTO "rooms" VALUES (8, 'D-102', '行政楼D', 20, '办公室');
 
+/*
 -- ----------------------------
 -- Table structure for sqlite_sequence
 -- ----------------------------
@@ -139,6 +140,7 @@ CREATE TABLE "sqlite_sequence" (
 INSERT INTO "sqlite_sequence" VALUES ('rooms', 8);
 INSERT INTO "sqlite_sequence" VALUES ('devices', 20);
 INSERT INTO "sqlite_sequence" VALUES ('energy_logs', 30);
+*/
 
 -- ----------------------------
 -- Auto increment value for devices
