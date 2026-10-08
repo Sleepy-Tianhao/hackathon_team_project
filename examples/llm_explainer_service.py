@@ -270,13 +270,24 @@ class ExplainerHandler(BaseHTTPRequestHandler):
             self._json(400, {"detail": f"body is not valid JSON: {exc}"})
             return None
 
+    def handle_one_request(self) -> None:  # noqa: N802
+        # A browser that closes a tab mid-request makes the write below fail.
+        # That is normal, not an error worth a traceback on the console.
+        try:
+            super().handle_one_request()
+        except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+            self.close_connection = True
+
     def _json(self, status: int, payload: dict) -> None:
         body = json.dumps(payload, ensure_ascii=False, default=str).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
-        self.wfile.write(body)
+        try:
+            self.wfile.write(body)
+        except (BrokenPipeError, ConnectionResetError, ConnectionAbortedError):
+            self.close_connection = True
 
     def log_message(self, fmt: str, *args) -> None:
         if os.getenv("EXPLAINER_VERBOSE") == "1":

@@ -342,6 +342,36 @@ class TestHttpServer(unittest.TestCase):
         self.assertIn("application/json", content_type)
         return status, json.loads(body.decode("utf-8"))
 
+    def test_cors_preflight_allows_post(self) -> None:
+        """A cross-origin browser preflight must see POST, or it blocks /analyze.
+
+        This was a real bug: the header said "GET, OPTIONS", so opening the
+        dashboard from another origin (VS Code Live Server on :5500, say) failed
+        on the actual POST even though the server would have answered it.
+        """
+        base = f"http://127.0.0.1:{self.port}"
+        origin = {"Origin": "http://127.0.0.1:5500"}
+
+        preflight = urllib.request.Request(
+            base + "/analyze", method="OPTIONS",
+            headers=dict(origin, **{"Access-Control-Request-Method": "POST",
+                                    "Access-Control-Request-Headers": "Content-Type"}))
+        with urllib.request.urlopen(preflight, timeout=60) as response:
+            self.assertEqual(response.status, 204)
+            self.assertEqual(response.headers.get("Access-Control-Allow-Origin"), "*")
+            allowed = response.headers.get("Access-Control-Allow-Methods") or ""
+        for method in ("GET", "POST", "OPTIONS"):
+            self.assertIn(method, allowed)
+
+        # the real cross-origin POST must carry the allow-origin header too
+        actual = urllib.request.Request(
+            base + "/analyze", method="POST",
+            data=json.dumps(dict(ENERGY_FORM)).encode("utf-8"),
+            headers=dict(origin, **{"Content-Type": "application/json"}))
+        with urllib.request.urlopen(actual, timeout=180) as response:
+            self.assertEqual(response.status, 200)
+            self.assertEqual(response.headers.get("Access-Control-Allow-Origin"), "*")
+
     def test_health_endpoint(self) -> None:
         status, payload = self.get_json("/api/health")
         self.assertEqual(status, 200)
