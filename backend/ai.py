@@ -22,11 +22,25 @@ import requests
 
 LLM_TIMEOUT = float(os.getenv("OPENAI_TIMEOUT", "25"))
 
-SYSTEM_PROMPT = (
-    "你是一名资深零售数据分析师。请根据给定的经营数据与已计算出的洞察，"
-    "写一段 120-200 字的中文经营简报：先给结论，再点出最关键的风险或机会，"
-    "最后给出一条可执行的建议。不要罗列数字清单，不要编造数据中不存在的信息。"
-)
+def system_prompt(context: dict) -> str:
+    """Derive the analyst role from the metrics actually present in the context,
+    instead of hardcoding "retail" - the wording follows the data, not the module."""
+    kpis = context.get("kpis") or {}
+    labels: list[str] = []
+    for key, label in (
+        ("revenue", "营收"),
+        ("units", "销量"),
+        ("orders", "订单量"),
+        ("profit", "利润"),
+    ):
+        if key in kpis:
+            labels.append(label)
+    subject = "、".join(labels) or "经营指标"
+    return (
+        f"你是一名数据分析师。请根据给定的数据与已计算出的洞察，围绕「{subject}」"
+        "写一段 120-200 字的中文简报：先给结论，再点出最关键的风险或机会，"
+        "最后给出一条可执行的建议。不要罗列数字清单，不要编造数据中不存在的信息。"
+    )
 
 
 # --------------------------------------------------------------------------- #
@@ -314,7 +328,8 @@ def build_prompt(context: dict, insights: list[dict]) -> str:
 
 
 def llm_narrative(prompt: str, api_key: str | None = None,
-                  base_url: str | None = None, model: str | None = None) -> str | None:
+                  base_url: str | None = None, model: str | None = None,
+                  system: str | None = None) -> str | None:
     """Call any OpenAI-compatible chat endpoint. Returns None on any failure."""
     api_key = api_key or os.getenv("OPENAI_API_KEY")
     if not api_key:
@@ -329,7 +344,7 @@ def llm_narrative(prompt: str, api_key: str | None = None,
                 "model": model,
                 "temperature": 0.4,
                 "messages": [
-                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "system", "content": system or system_prompt({})},
                     {"role": "user", "content": prompt},
                 ],
             },
@@ -356,7 +371,7 @@ def generate_insights(context: dict, use_llm: bool = True) -> dict:
     narrative = None
     source = "rules"
     if use_llm and os.getenv("OPENAI_API_KEY"):
-        narrative = llm_narrative(build_prompt(context, insights))
+        narrative = llm_narrative(build_prompt(context, insights), system=system_prompt(context))
         if narrative:
             source = "llm"
     if not narrative:
