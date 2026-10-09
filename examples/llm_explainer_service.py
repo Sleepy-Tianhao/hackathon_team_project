@@ -50,11 +50,24 @@ except ImportError:  # pragma: no cover - direct execution from elsewhere
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
     from backend import model_api, template_config
 
-SYSTEM_PROMPT = (
-    "你是一名零售/食堂运营分析师。根据给定的条件与预测数字，写一句 40-70 字的中文备餐建议："
-    "先给结论，再说一个最关键的原因，最后给一条可执行动作。"
-    "只使用给定信息，不要编造数据里没有的内容，不要罗列数字清单。"
-)
+def system_prompt(template: dict) -> str:
+    """Derive the analyst role from the template so the wording follows the data.
+
+    The target and unit come straight from template.json, so an energy template
+    yields "用电量（kWh）", a food template "需求份数（portions）" and so on - no
+    hardcoded domain.
+    """
+    dataset = template.get("dataset") or {}
+    target = dataset.get("target_label") or dataset.get("target") or "预测目标"
+    unit = dataset.get("unit") or ""
+    subject = f"{target}（{unit}）" if unit else target
+    return (
+        f"你是一名数据分析师，正在解读预测目标「{subject}」。"
+        "根据给定的条件与预测数字，写一句 40-70 字的中文解读与建议："
+        "先给结论，再说一个最关键的原因，最后给一条可执行动作。"
+        "只使用给定信息，不要编造数据里没有的内容，不要罗列数字清单。"
+    )
+
 
 USER_PROMPT = """预测目标：{target_label}（{unit}）
 条件：{conditions}
@@ -63,7 +76,7 @@ USER_PROMPT = """预测目标：{target_label}（{unit}）
 相对变化：{change}
 模型看到的因子：{evidence}
 
-请写一句备餐建议。"""
+请写一句解读与建议。"""
 
 
 # --------------------------------------------------------------------------- #
@@ -136,7 +149,7 @@ class Explainer:
                     "model": self.llm_model,
                     "temperature": 0.4,
                     "messages": [
-                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "system", "content": system_prompt(self.template)},
                         {"role": "user", "content": prompt},
                     ],
                 },
