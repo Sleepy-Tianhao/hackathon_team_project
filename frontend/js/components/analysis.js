@@ -72,30 +72,39 @@ export function Analysis(config) {
   `;
 }
 
+/*
+--------------------------------------------------------
+表单字段渲染
+相比上游：每个字段外面包一层 .field，用途有两个
+  1) 校验失败时能只标红出错的那一个字段（见 app.js 的 validate）
+  2) 可选字段可以单独标注，不参与必填校验
+控件本身的属性、选项顺序与上游一致。
+--------------------------------------------------------
+*/
 function renderInputs(inputs) {
   return inputs.map(input => {
+    const optional = input.optional === true;
+    const hint = optional ? ` <span class="optional">可选</span>` : "";
 
-    if (input.type === "select") {
-      return `
-        <label for="${input.id}">${input.label}</label>
-
-        <select id="${input.id}" name="${input.id}">
+    const control = input.type === "select"
+      ? `<select id="${input.id}" name="${input.id}">
           ${input.options.map(option =>
             `<option value="${option}">${option}</option>`
           ).join("")}
-        </select>
-      `;
-    }
+        </select>`
+      : `<input
+          id="${input.id}"
+          name="${input.id}"
+          type="${input.type}"
+          ${optional ? 'data-optional="true"' : ""}
+          placeholder="${input.placeholder || ""}"
+        >`;
 
     return `
-      <label for="${input.id}">${input.label}</label>
-
-      <input
-        id="${input.id}"
-        name="${input.id}"
-        type="${input.type}"
-        placeholder="${input.placeholder || ""}"
-      >
-    `;
+        <div class="field">
+          <label for="${input.id}">${input.label}${hint}</label>
+          ${control}
+        </div>
+      `;
   }).join("");
 }
