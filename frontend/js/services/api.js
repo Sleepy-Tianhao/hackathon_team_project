@@ -141,23 +141,85 @@ export async function analyze(data) {
 --------------------------------------------------------
 MOCK API
 后端不可用时的离线演示数据。字段与返回结构与真实接口一致。
+相比上游：由 Math.random() 换成"由输入决定的确定性算法"，
+同样的输入永远得到同样的结果，方便现场演示与复现。
 --------------------------------------------------------
 */
-export async function analyzeMock(data) {
-  await new Promise(resolve => setTimeout(resolve, 900));
 
-  const prediction = Math.floor(110 + Math.random() * 50);
-  const average = 143;
-  const change = Number(
-    (((prediction - average) / average) * 100).toFixed(1)
-  );
+/* 楼栋基准负荷 kWh（与 data/energy_consumption.csv 的量级保持一致） */
+const BUILDING_BASE = {
+  "Canteen": 168,
+  "Dormitory C": 132,
+  "Laboratory B": 196,
+  "Library": 118,
+  "Teaching Block A": 126
+};
+
+const WEATHER_FACTOR = {
+  "Cloudy": 1.00,
+  "Cold": 1.12,
+  "Hot": 1.18,
+  "Rain": 1.06,
+  "Sunny": 0.97
+};
+
+const HISTORY_AVERAGE = 143;
+
+/* 简易字符串散列，用来做 ±3% 的确定性抖动：让数字像实测值而不是整数 */
+function hash(text) {
+  let value = 2166136261;
+
+  for (let i = 0; i < text.length; i += 1) {
+    value ^= text.charCodeAt(i);
+    value = Math.imul(value, 16777619);
+  }
+
+  return value >>> 0;
+}
+
+export async function analyzeMock(data) {
+  await new Promise(resolve => setTimeout(resolve, 700));
+
+  const building = String((data && data.building) || "Canteen");
+  const dayType = String((data && data.day_type) || "Weekday");
+  const weather = String((data && data.weather) || "Cloudy");
+  const termPhase = String((data && data.term_phase) || "Term");
+  const notes = String((data && data.notes) || "").trim();
+
+  const base = BUILDING_BASE[building] || 140;
+  const weatherFactor = WEATHER_FACTOR[weather] || 1;
+
+  const dayFactor = dayType === "Weekend" ? 0.62 : 1;
+  const termFactor =
+    termPhase === "Vacation" ? 0.55 :
+      termPhase === "Exam Week" ? 1.08 : 1;
+
+  const jitter = 1 + (((hash(building + "|" + weather) % 601) - 300) / 10000);
+
+  const prediction = Math.round(base * weatherFactor * dayFactor * termFactor * jitter);
+  const average = HISTORY_AVERAGE;
+  const change = Number((((prediction - average) / average) * 100).toFixed(1));
+
+  const reasons = [
+    building + " 的基准负荷约 " + base + " kWh",
+    weather + " 天气系数 " + weatherFactor.toFixed(2),
+    dayType === "Weekend" ? "周末负荷约为工作日的 62%" : "工作日满负荷",
+    "学期阶段：" + termPhase
+  ];
+
+  /* 置信度：离历史均值越远越保守 */
+  const confidence = Math.max(72, Math.min(95, Math.round(93 - Math.abs(change) * 0.4)));
 
   return {
-    prediction,
-    average,
+    prediction: prediction,
+    average: average,
     change_percent: change,
-    confidence: 87,
+    confidence: confidence,
     explanation:
-      "Demo analysis completed. Connect your FastAPI backend to return the real model prediction and explanation."
+      "预测 " + prediction + " kWh（历史均值 " + average + " kWh，偏差 " + change + "%）。" +
+      "主要依据：" + reasons.join("；") + "。" +
+      (notes ? " 你补充的信息：" + notes + "。" : "") +
+      " 当前为离线演示数据（Mock），启动后端后会自动切换为真实模型结果。",
+    meta: { source: "mock" }
   };
 }

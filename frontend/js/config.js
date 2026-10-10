@@ -23,10 +23,49 @@ export const CONFIG = {
   description:
     "Pick a building, a day type, the weather and the term phase; the model predicts how much electricity that building will draw. Same shell, any problem statement - swap this file and template.json.",
 
+  /*
+  --------------------------------------------------------
+  主题配色（唯一来源）
+  --------------------------------------------------------
+  改这里的颜色就能换整套视觉，不用动 css/style.css：
+  app.js 启动时把下面几个值写成 :root 上的 CSS 变量
+  （--primary / --primary-dark / --primary-soft）。
+  style.css 里另有一份相同的兜底值，保证 JS 尚未执行时也是绿色。
+  --------------------------------------------------------
+  */
+  palette: {
+    primary: "#059669",                          // 主色：按钮 / 折线 / 结果数字 / logo
+    primaryDark: "#047857",                      // 悬停加深
+    primaryOnDark: "#10b981",                    // 深色主题下的主色（深底上要提亮）
+    primaryDarkOnDark: "#059669",
+    primarySoft: "#e6f7ef",                      // 徽章底色（浅色主题）
+    primarySoftDark: "rgba(16, 185, 129, 0.16)", // 徽章底色（深色主题）
+    accent: "#10b981"
+  },
+
+  /* 主题：默认跟随系统；点过右上角按钮后记录在 localStorage */
+  theme: {
+    storageKey: "sdc-theme",
+    respectSystem: true
+  },
+
   hero: {
-    primaryButton: "Try It Now →",
+    // 箭头图标由 components/hero.js 生成，文案里不再写 "→"
+    primaryButton: "Try It Now",
     secondaryButton: "About Project",
-    chartTitle: "Load by day type"
+    chartTitle: "Load by day type",
+
+    /*
+    折线图数据（原先的柱状图是写死在 hero.js 里的）。
+    只写数值，坐标由 hero.js 按 viewBox 自动换算，
+    增删数据点不必改任何布局或 CSS。
+    */
+    chart: {
+      points: [42, 65, 52, 82, 72, 94, 78],
+      dayLabels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      peakLabel: "PEAK",
+      note: "Demo visualization — replace with real data."
+    }
   },
 
   analysis: {
@@ -66,6 +105,7 @@ export const CONFIG = {
       id: "notes",
       label: "Additional Information",
       type: "text",
+      optional: true, // 可选项：留空也能预测（analysis.js / app.js 会遵守这个标记）
       placeholder: "Extra context for your model..."
     }
   ],
