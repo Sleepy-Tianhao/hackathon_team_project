@@ -10,14 +10,18 @@
   --text: #172033;
   --muted: #697386;
 
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
+  /* 主色由蓝改绿；JS 可用时 js/config.js 的 palette 会覆盖这两个值 */
+  --primary: #059669;
+  --primary-dark: #047857;
+
+  /* 徽章底色 / 主色淡色调，深色主题下由 JS 换成带透明度的版本 */
+  --primary-soft: #e6f7ef;
 
   --accent: #10b981;
 
   --border: #e3e8ef;
 
-  --shadow: 0 14px 40px rgba(23, 32, 51, 0.08);
+  --shadow: 0 14px 40px rgba(20, 41, 35, 0.10);
 
   --radius: 20px;
 }
@@ -96,7 +100,7 @@ button {
   padding: 22px;
 
   box-shadow:
-    0 6px 22px rgba(23, 32, 51, 0.04);
+    0 6px 22px rgba(20, 41, 35, 0.05);
 }
 
 .badge {
@@ -105,7 +109,7 @@ button {
 
   padding: 8px 12px;
 
-  background: #eaf1ff;
+  background: var(--primary-soft);
   color: var(--primary);
 
   border-radius: 999px;
@@ -269,26 +273,22 @@ button {
   box-shadow: var(--shadow);
 }
 
+/* 折线图容器：结构由 js/components/hero.js 生成 SVG */
 .mock-chart {
   height: 210px;
-
-  display: flex;
-
-  align-items: end;
-
-  gap: 12px;
 
   margin-top: 20px;
 }
 
-.bar {
-  flex: 1;
+.mock-chart svg {
+  display: block;
 
-  background: var(--primary);
+  width: 100%;
+  height: 100%;
+}
 
-  border-radius: 10px 10px 4px 4px;
-
-  opacity: 0.85;
+.chart-title {
+  font-size: 18px;
 }
 
 .chart-note {
@@ -382,6 +382,13 @@ button {
   flex-direction: column;
 
   justify-content: center;
+}
+
+/* 修正：.result-card 是 flex 列容器，子项默认 stretch 会把
+   .badge（inline-flex）撑满整行；Hero 里的徽章只有 90px 宽，
+   这里限制成只占自身宽度，两处视觉才一致。 */
+.result-card .badge {
+  align-self: flex-start;
 }
 
 .result-number {
@@ -552,5 +559,331 @@ button {
 
   .result-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================================
+   表单字段容器（由 components/analysis.js 生成）
+   上游 CSS 直接写 .form-card label / input / select；
+   这里每个字段被包进 .field，所以下探一层，规则本身不变。
+===================================================== */
+
+.form-card .field label {
+  display: block;
+
+  font-weight: 700;
+
+  font-size: 14px;
+
+  margin: 16px 0 7px;
+}
+
+.form-card .field input,
+.form-card .field select {
+  width: 100%;
+
+  padding: 12px 13px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 11px;
+
+  background: white;
+
+  outline: none;
+}
+
+.form-card .field input:focus,
+.form-card .field select:focus {
+  border-color: var(--primary);
+}
+
+.optional {
+  color: var(--muted);
+
+  font-weight: 500;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   主题切换按钮（由 js/app.js 动态插入导航栏）
+===================================================== */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--surface-2);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  font-size: 17px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+}
+
+
+/* =====================================================
+   "Try It Now" 箭头图标
+   由 components/hero.js 生成内联 SVG（stroke: currentColor），
+   动效刻意做得很轻：hover 右移 + 空闲极缓呼吸 + 按钮淡光晕
+===================================================== */
+
+.btn-arrow {
+  display: inline-block;
+
+  width: 1.05em;
+  height: 1.05em;
+
+  margin-left: 8px;
+
+  vertical-align: -0.16em;
+
+  overflow: visible;
+
+  transition: transform 0.22s ease;
+}
+
+.btn-arrow path {
+  fill: none;
+
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn:hover .btn-arrow path {
+  animation: arrow-slide 0.9s ease-in-out infinite;
+}
+
+.btn:active {
+  transform: scale(0.985);
+}
+
+@keyframes arrow-slide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(2px); }
+}
+
+/* 空闲时的呼吸感：只影响箭头与非常淡的光晕，不改变布局 */
+.btn-primary .btn-arrow {
+  animation: arrow-breathe 2.8s ease-in-out 1.2s infinite;
+}
+
+@keyframes arrow-breathe {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(2.5px);
+    opacity: 0.85;
+  }
+}
+
+.btn-primary {
+  box-shadow: 0 0 0 0 rgba(5, 150, 105, 0);
+
+  animation: btn-halo 3.4s ease-in-out 1.2s infinite;
+}
+
+.btn-primary:hover,
+.btn-primary:disabled {
+  animation: none;
+}
+
+@keyframes btn-halo {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+  50% { box-shadow: 0 0 0 6px rgba(5, 150, 105, 0.13); }
+}
+
+
+/* =====================================================
+   折线图入场动画（SVG 由 components/hero.js 生成）
+===================================================== */
+
+.chart-line {
+  fill: none;
+
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+
+  animation: chart-draw 1.4s ease-out 0.3s forwards;
+}
+
+@keyframes chart-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+.chart-area {
+  opacity: 0;
+
+  animation: chart-fade 0.9s ease-out 0.8s forwards;
+}
+
+@keyframes chart-fade {
+  to { opacity: 1; }
+}
+
+.chart-dot {
+  stroke: var(--surface);
+  stroke-width: 1.6;
+
+  opacity: 0;
+
+  animation: chart-dot 0.4s ease-out forwards;
+}
+
+@keyframes chart-dot {
+  to { opacity: 1; }
+}
+
+.chart-dot:nth-of-type(1) { animation-delay: 0.95s; }
+.chart-dot:nth-of-type(2) { animation-delay: 1.05s; }
+.chart-dot:nth-of-type(3) { animation-delay: 1.15s; }
+.chart-dot:nth-of-type(4) { animation-delay: 1.25s; }
+.chart-dot:nth-of-type(5) { animation-delay: 1.35s; }
+.chart-dot:nth-of-type(6) { animation-delay: 1.45s; }
+.chart-dot:nth-of-type(7) { animation-delay: 1.55s; }
+
+.chart-dot:hover {
+  r: 5;
+}
+
+
+/* =====================================================
+   校验错误态（由 js/app.js 的 validate 添加）
+===================================================== */
+
+.field-error input,
+.field-error select {
+  border-color: #e11d48;
+  background: #fff5f6;
+}
+
+
+/* =====================================================
+   深色主题（由 js/app.js 的 data-theme 属性切换）
+===================================================== */
+
+html[data-theme="dark"] {
+  --bg: #0b1020;
+  --surface: #141b2e;
+  --surface-2: #1d2740;
+
+  --text: #e8edf8;
+  --muted: #97a3bd;
+
+  --border: #253150;
+
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .nav {
+  background: rgba(15, 21, 38, 0.86);
+}
+
+html[data-theme="dark"] .btn-secondary,
+html[data-theme="dark"] .form-card .field input,
+html[data-theme="dark"] .form-card .field select {
+  background: var(--surface);
+  color: var(--text);
+}
+
+html[data-theme="dark"] .insight {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.28);
+}
+
+html[data-theme="dark"] .insight strong {
+  color: #6ee7b7;
+}
+
+html[data-theme="dark"] .field-error input,
+html[data-theme="dark"] .field-error select {
+  background: rgba(225, 29, 72, 0.12);
+}
+
+html[data-theme="dark"] .toast {
+  background: #e8edf8;
+  color: #0b1020;
+}
+
+
+/* =====================================================
+   键盘焦点 / 减少动效 / 打印
+===================================================== */
+
+:focus-visible {
+  outline: 3px solid rgba(5, 150, 105, 0.45);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-arrow,
+  .btn-arrow path,
+  .btn-primary,
+  .chart-line,
+  .chart-area,
+  .chart-dot {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .chart-line {
+    stroke-dashoffset: 0;
+  }
+
+  .chart-area,
+  .chart-dot {
+    opacity: 1;
+  }
+}
+
+@media print {
+  .nav,
+  .actions,
+  .analysis-button,
+  .theme-toggle,
+  .toast {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .card,
+  .hero-card {
+    box-shadow: none;
   }
 }
